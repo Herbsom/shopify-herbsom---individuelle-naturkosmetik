@@ -7,12 +7,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { useCart } from "@/contexts/CartContext";
-import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 export default function Cleaners() {
   const { t } = useTranslation();
-  const { addItem } = useCart();
   const cleaners = [
     {
       id: "gel",
@@ -22,6 +21,7 @@ export default function Cleaners() {
       benefits: ["Intensive Reinigung", "Unreinheiten-vorbeugend", "Feuchtigkeitsspendend"],
       image: "/manus-storage/Reinigungsgel_1x1_db035e0b.webp",
       slug: "cleaner",
+      handle: "reinigungsgel",
     },
     {
       id: "milk",
@@ -31,6 +31,7 @@ export default function Cleaners() {
       benefits: ["Sanfte Reinigung", "Feuchtigkeitsspendend", "Hautberuhigung"],
       image: "/manus-storage/Reinigungsmilch_1x1_02140d62.webp",
       slug: "cleaner-milk",
+      handle: "reinigungs-milch",
     }
   ];
   return (
@@ -80,9 +81,14 @@ export default function Cleaners() {
                       >
                         {cleaner.name}
                       </h3>
-                      <p className="font-body text-base text-[#4A4A48] leading-relaxed mb-6">
+                      <p className="font-body text-base text-[#4A4A48] leading-relaxed mb-4">
                         {cleaner.description}
                       </p>
+                      <ShopifyProductPrice
+                        handle={cleaner.handle}
+                        showFrom={false}
+                        className="mb-6 font-display text-2xl text-[#5B5B38]"
+                      />
                       {/* Benefits */}
                       <div className="mb-8 space-y-2">
                         {cleaner.benefits.map((benefit) => (
@@ -100,23 +106,18 @@ export default function Cleaners() {
                           Mehr erfahren
                           <ArrowRight size={16} />
                         </Link>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            addItem({
-                              id: cleaner.id,
-                              name: cleaner.name,
-                              price: 28,
-                              quantity: 1,
-                              description: cleaner.subtitle,
-                            });
-                            toast.success(`${cleaner.name} zum Warenkorb hinzugefügt!`);
+                        <ShopifyPurchaseButton
+                          item={{
+                            id: cleaner.id,
+                            name: cleaner.name,
+                            quantity: 1,
+                            description: cleaner.subtitle,
                           }}
+                          wrapperClassName="w-full"
                           className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300"
                         >
                           In den Warenkorb
-                        </button>
+                        </ShopifyPurchaseButton>
                       </div>
                     </div>
                   </div>

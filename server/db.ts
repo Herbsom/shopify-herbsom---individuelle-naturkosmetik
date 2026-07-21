@@ -163,6 +163,18 @@ export async function getReviewsByProductId(productId: string, status: 'approved
   return db.select().from(reviews).where(eq(reviews.productId, productId)).orderBy(desc(reviews.createdAt));
 }
 
+export async function getTopApprovedReviews(limit = 3) {
+  const db = await getDb();
+  if (!db) return [];
+
+  return db
+    .select()
+    .from(reviews)
+    .where(eq(reviews.status, "approved"))
+    .orderBy(desc(reviews.helpfulCount), desc(reviews.createdAt))
+    .limit(limit);
+}
+
 export async function getReviewById(reviewId: number) {
   const db = await getDb();
   if (!db) return null;

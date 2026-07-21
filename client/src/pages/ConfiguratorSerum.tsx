@@ -8,14 +8,13 @@ import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
+import ShopifyLegacyProductPrice from "@/components/ShopifyLegacyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 import ReviewList from "@/components/ReviewList";
 import { Check, ArrowRight, Beaker, Leaf, Recycle, Star } from "lucide-react";
 import IngredientDetailModal, { SERUM_INGREDIENT_DETAILS, type IngredientDetail } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
-const SERUM_PRICE = 55;
 const BASE_SERUM_IMAGE = "/manus-storage/Basisserum_554e7d2b.webp";
 const INGREDIENT_IMAGES: Record<string, string> = {
   willow: "/manus-storage/Weidenrindenexktrakt10ml_3504f8dd.webp",
@@ -74,7 +73,6 @@ export default function ConfiguratorSerum() {
   const [baseSerum] = useState(true);
   const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
   const [detailIngredient, setDetailIngredient] = useState<IngredientDetail | null>(null);
-  const { user, loading } = useAuth();
 
   // Prefill from query params (e.g. from Hauttest results)
   useEffect(() => {
@@ -141,7 +139,6 @@ export default function ConfiguratorSerum() {
     const newItem = {
       id: `serum-${baseSerum}-${selectedIngredients.sort().join("-")}`,
       name: `Individuelles Serum (${selectedIngredients.length} Wirkstoffe)`,
-      price: SERUM_PRICE,
       quantity: 1,
       description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
     };
@@ -150,7 +147,7 @@ export default function ConfiguratorSerum() {
             navigate("/cart");
     } else {
       addItem(newItem);
-      toast.success(`Serum (€${SERUM_PRICE}) zum Warenkorb hinzugefügt!`);
+      toast.success("Serum wurde zum Shopify-Warenkorb hinzugefügt!");
     }
   };
   return (
@@ -193,7 +190,7 @@ export default function ConfiguratorSerum() {
               {[
                 { number: "1", label: "Basisserum", desc: "Hochwertige Grundlage" },
                 { number: "3", label: "Wirkstoffe", desc: "Nach deinen Bedürfnissen" },
-                { number: "€55", label: "Preis", desc: "Transparent & fair" },
+                { number: "Aktuell", label: "Preis", desc: "Direkt aus Shopify" },
               ].map((item, i) => (
                 <div key={i} className="text-center">
                   <div
@@ -373,9 +370,15 @@ export default function ConfiguratorSerum() {
                 </h2>
               </div>
               <div className="bg-[#5B5B38] text-[#F8F5F0] p-8 md:p-12 rounded-lg text-center">
-                <p className="font-display text-4xl md:text-5xl font-light mb-4">
-                  €{SERUM_PRICE}
-                </p>
+                <ShopifyLegacyProductPrice
+                  item={{
+                    id: `serum-${baseSerum}-${selectedIngredients.slice().sort().join("-")}`,
+                    name: `Individuelles Serum (${selectedIngredients.length} Wirkstoffe)`,
+                    description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
+                  }}
+                  showFrom={false}
+                  className="block font-display text-4xl md:text-5xl font-light mb-4"
+                />
                 <p className="font-body text-sm text-[#E8E3DB] mb-4">
                   1 Basisserum + 3 Wirkstoffe · Alle Preise inkl. MwSt. zzgl. Versand
                 </p>
@@ -392,22 +395,28 @@ export default function ConfiguratorSerum() {
                     </ul>
                   </div>
                 )}
-                <button
-                  onClick={handleAddToCart}
+                <ShopifyPurchaseButton
+                  item={canAddToCart ? {
+                    id: `serum-${baseSerum}-${selectedIngredients.slice().sort().join("-")}`,
+                    name: `Individuelles Serum (${selectedIngredients.length} Wirkstoffe)`,
+                    quantity: 1,
+                    description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
+                  } : undefined}
+                  onPurchase={handleAddToCart}
                   disabled={!canAddToCart}
+                  disabledReason={selectedIngredients.length < 3
+                    ? `Bitte wähle ${3 - selectedIngredients.length} weitere Wirkstoffe.`
+                    : "Bitte vervollständige die Konfiguration."}
+                  wrapperClassName="w-full items-center"
+                  messageClassName="text-[#F2D7CE]"
                   className={`px-8 py-3 font-body text-xs tracking-[0.12em] uppercase border transition-all ${
                     canAddToCart
                       ? "bg-[#F8F5F0] text-[#5B5B38] border-[#F8F5F0] hover:bg-transparent hover:text-[#F8F5F0]"
                       : "bg-transparent text-[#7D7D5D] border-[#7D7D5D] cursor-not-allowed opacity-50"
                   }`}
                 >
-                  {canAddToCart ? (editingCartItemId ? "Serum aktualisieren" : "Zum Warenkorb hinzufügen") : "Bitte alle Schritte ausfüllen"}
-                </button>
-                {!canAddToCart && (
-                  <p className="font-body text-xs text-[#E8E3DB] mt-4">
-                    {selectedIngredients.length < 3 && `→ ${3 - selectedIngredients.length} weitere Wirkstoffe auswählen`}
-                  </p>
-                )}
+                  {editingCartItemId ? "Serum aktualisieren" : "Zum Warenkorb hinzufügen"}
+                </ShopifyPurchaseButton>
               </div>
             </div>
           </div>
@@ -497,23 +506,7 @@ export default function ConfiguratorSerum() {
             </div>
             {/* Review Form - Below Reviews */}
             <div className="max-w-2xl mx-auto">
-              {loading ? (
-                <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>
-              ) : !user ? (
-                <div className="bg-[#F0EBE3] p-6 rounded-lg text-center">
-                  <p className="font-body text-sm text-[#6B6B69] mb-4">
-                    Melde dich an, um eine Bewertung zu hinterlassen.
-                  </p>
-                  <a
-                    href={getLoginUrl()}
-                    className="inline-block bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300"
-                  >
-                    Anmelden
-                  </a>
-                </div>
-              ) : (
-                <ReviewForm productId="serum" />
-              )}
+              <ReviewSubmissionNotice />
             </div>
           </div>
         </div>

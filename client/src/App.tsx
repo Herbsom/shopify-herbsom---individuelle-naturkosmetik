@@ -38,8 +38,7 @@ import RoutineNormaleHaut from "./pages/routines/RoutineNormaleHaut";
 import RoutineSensibleHaut from "./pages/routines/RoutineSensibleHaut";
 import SkinTest from "./pages/SkinTest";
 import Gutschein from "./pages/Gutschein";
-import Account from "./pages/Account";
-import Subscriptions from "./pages/Subscriptions";
+import ShopifyAccountRedirect from "./pages/ShopifyAccountRedirect";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
@@ -91,9 +90,10 @@ function Router() {
       <Route path={"/routines/normale-haut"} component={RoutineNormaleHaut} />
       <Route path={"/routines/sensible-haut"} component={RoutineSensibleHaut} />
       <Route path={"/hauttest"} component={SkinTest} />
+      <Route path={"/skin-test"} component={SkinTest} />
       <Route path={"/gutschein"} component={Gutschein} />
-      <Route path={"/account"} component={Account} />
-      <Route path={"/account/subscriptions"} component={Subscriptions} />
+      <Route path={"/account"} component={ShopifyAccountRedirect} />
+      <Route path={"/account/subscriptions"} component={ShopifyAccountRedirect} />
       <Route path={"/cart"} component={Cart} />
       <Route path={"/checkout"} component={Checkout} />
       <Route path={"/order-confirmation"} component={OrderConfirmation} />

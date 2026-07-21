@@ -7,12 +7,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { useCart } from "@/contexts/CartContext";
-import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 export default function Peelings() {
   const { t } = useTranslation();
-  const { addItem } = useCart();
   const peelings = [
     {
       id: "bha",
@@ -22,6 +21,7 @@ export default function Peelings() {
       benefits: ["Porentief-Reinigung", "Talg-Entfernung", "Gegen Mitesser & Pickel"],
       image: "/manus-storage/BHAAzelainsaeurePeeling_1x1_e9bcbca7.webp",
       slug: "peeling",
+      handle: "bha-azelainsaure-peeling",
     },
     {
       id: "aha",
@@ -31,6 +31,7 @@ export default function Peelings() {
       benefits: ["Sanfte Exfoliation", "Zellerneuerung", "Strahlende Haut"],
       image: "/manus-storage/AHA&PHAPeeling_1x1_c777c7c7.webp",
       slug: "peeling-aha",
+      handle: "aha-pha-peeling",
     }
   ];
   return (
@@ -80,9 +81,14 @@ export default function Peelings() {
                       >
                         {peeling.name}
                       </h3>
-                      <p className="font-body text-base text-[#4A4A48] leading-relaxed mb-6">
+                      <p className="font-body text-base text-[#4A4A48] leading-relaxed mb-4">
                         {peeling.description}
                       </p>
+                      <ShopifyProductPrice
+                        handle={peeling.handle}
+                        showFrom={false}
+                        className="mb-6 font-display text-2xl text-[#5B5B38]"
+                      />
                       {/* Benefits */}
                       <div className="mb-8 space-y-2">
                         {peeling.benefits.map((benefit) => (
@@ -100,23 +106,18 @@ export default function Peelings() {
                           Mehr erfahren
                           <ArrowRight size={16} />
                         </Link>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            addItem({
-                              id: peeling.id,
-                              name: peeling.name,
-                              price: 32,
-                              quantity: 1,
-                              description: peeling.subtitle,
-                            });
-                            toast.success(`${peeling.name} zum Warenkorb hinzugefügt!`);
+                        <ShopifyPurchaseButton
+                          item={{
+                            id: peeling.id,
+                            name: peeling.name,
+                            quantity: 1,
+                            description: peeling.subtitle,
                           }}
+                          wrapperClassName="w-full"
                           className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300"
                         >
                           In den Warenkorb
-                        </button>
+                        </ShopifyPurchaseButton>
                       </div>
                     </div>
                   </div>

@@ -271,3 +271,30 @@
 - [x] Vitest-Tests für i18n-Funktionen (121 Tests bestanden)
 - [x] Sprachumschalter-Tests
 - [x] Übersetzungs-Fallback-Tests
+
+- [x] Bestehende Commerce-, Login-, Warenkorb-, Checkout- und Stripe-Pfade der Projektkopie erfassen
+- [x] Bestehenden Shopify-Shop als Headless-Commerce-Backend mit der Projektkopie verbinden
+- [x] Alle sichtbaren Produktseiten, Übersichten, Gutschein- und Hauttest-Kaufpfade einschließlich Add-to-Cart-Daten strikt ohne lokale Preisquellen an Shopify binden
+- [x] Defekten sichtbaren Skin-Test-Navigationspfad reparieren und den Hauttest mobil sowie auf Desktop erreichbar prüfen
+- [x] Shopify-Warenkorb und Weiterleitung in den Shopify-Checkout im vorhandenen Herbsom-Design integrieren
+- [x] Commerce-Kundenkonto, Bestellhistorie und Login-Einstieg auf Shopify Customer Accounts umstellen
+- [x] Stripe-, SUBSCRIBE15- und nicht angeforderte Abo-spezifische Logik aus aktiven Storefront-Flows entfernen
+- [x] Unreferenzierte Stripe-Abo-Services, Webhook-/Routermodule und den hängenden Alt-Test aus dem aktiven Quellbestand entfernen
+- [x] Shopify-Integrationspfade mit Vitest sowie Desktop- und Mobilansicht verifizieren
+- [ ] Stabilen Shopify-Storefront-Stand als neuen Checkpoint dokumentieren
+- [x] Shopify-Commerce-Router in der zentralen tRPC-Routerstruktur registrieren
+- [x] Shopify-Store-Domain und Storefront-Zugriffstoken über die zentrale Server-Umgebung exportieren
+- [x] Vorhandene kundenspezifische CartContext-Funktionen mit dem Shopify-Warenkorb-Scaffold zusammenführen
+- [x] Bestehenden Shopify-Katalog inklusive Varianten, Preise, Bilder und Verkaufskanal-Veröffentlichung prüfen
+- [x] Verbleibende lokale Kunden-Login-Einstiege aus Produkt- und Konfiguratorseiten entfernen oder klar auf interne Review-Verwaltung begrenzen
+- [x] Shopify-Warenkorb und Checkout mit echten Lade-, Fehler- und Leerzuständen in der laufenden Storefront nachweisen
+- [x] Fest codierte oder nicht verifizierte Testimonials, Bewertungsnamen und Sterne aus der Storefront entfernen; ausschließlich echte gespeicherte Bewertungen anzeigen
+- [x] Lokale Preisfallbacks aus ShopifyLegacyProductPrice entfernen und explizite Lade- sowie Fehlerzustände anzeigen
+- [x] Produktseiten, Übersichten, Gutschein, Hauttest, Routinen und Konfiguratoren mit gezielten Quellpfadtests auf Shopify-Preis- und Variantenherkunft prüfen
+- [x] Runtime-Tests für fehlende und unverfügbare Shopify-Produkte sowie blockierte Add-to-Cart- und Checkout-Aktionen ergänzen
+- [x] Alle Produktseiten, Übersichten, Gutschein, Hauttest, Routinen und Konfiguratoren mit sichtbaren Shopify-Lade-/Fehlerzuständen und deaktivierten Kaufbuttons versehen
+- [x] Routine-Produktdetail-Modal vom Platzhalter-Kaufbutton auf den echten Shopify-Warenkorb und den zentralen Verfügbarkeitsguard umstellen
+- [x] Komponenten- oder Flow-Tests für deaktivierte Kaufbuttons und sichtbare Shopify-Fehlerzustände je Kaufpfadklasse ergänzen
+- [x] Laufende Storefront mit Browserprüfung für Produktpreis-, Warenkorb-, Checkout-, Konto-, Lade-, Fehler- und Leerzustände dokumentieren
+- [x] Fehlerhafte oder statische Produktbilder auf sichtbaren Detailseiten durch verfügbare Shopify-Produktbilder ersetzen
+- [x] Nicht verfügbare Shopify-Produktdaten in allen Kaufpfaden sichtbar und kaufblockierend behandeln

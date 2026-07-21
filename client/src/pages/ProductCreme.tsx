@@ -3,15 +3,14 @@
  * Design: Elegante Serif-Typografie, Grüntöne #5B5B38, #7D7D5D, #424226
  */
 import { useEffect, useRef, useState } from "react";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
 import ReviewList from "@/components/ReviewList";
 import ProductRatingHeader from "@/components/ProductRatingHeader";
-import { toast } from "sonner";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
+import ShopifyProductGallery from "@/components/ShopifyProductGallery";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useCart } from "@/contexts/CartContext";
 import { ArrowRight, Star, Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 // Scroll reveal hook
@@ -37,10 +36,6 @@ function useScrollReveal() {
 export default function ProductCreme() {
   const { t } = useTranslation();
   const pageRef = useScrollReveal();
-  const [isSubscription, setIsSubscription] = useState(false);
-  const [subscriptionFrequency, setSubscriptionFrequency] = useState<'weekly' | 'biweekly' | 'monthly' | 'quarterly'>('monthly');
-  const { addItem } = useCart();
-  const { user, loading } = useAuth();
   return (
     <div ref={pageRef} className="min-h-screen bg-[#F8F5F0]">
       <Navigation />
@@ -50,12 +45,11 @@ export default function ProductCreme() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
             {/* Image */}
             <div className="reveal">
-              <div className="aspect-square bg-gradient-to-br from-[#F0EBE3] to-[#E8E3DB] rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🧴</div>
-                  <p className="text-[#7D7D5D]">Produktbild</p>
-                </div>
-              </div>
+              <ShopifyProductGallery
+                handle="erstelle-deine-creme"
+                alt="Individuelle Gesichtscreme"
+                className="aspect-square rounded-lg bg-gradient-to-br from-[#F0EBE3] to-[#E8E3DB]"
+              />
             </div>
             {/* Content */}
             <div>
@@ -71,11 +65,10 @@ export default function ProductCreme() {
                 <ProductRatingHeader productId="creme" productName="Individuelle Gesichtscreme" />
               </div>
               <div className="mb-8 reveal reveal-delay-1">
-                <p
-                  className="font-display text-3xl text-[#5B5B38] font-light mb-4"
-                >
-                  Ab €26,00
-                </p>
+                <ShopifyProductPrice
+                  handle="erstelle-deine-creme"
+                  className="mb-4 block font-display text-3xl font-light text-[#5B5B38]"
+                />
                 <p className="font-body text-base text-[#6B6B69] leading-relaxed mb-6">
                   Reichhaltige Pflege mit botanischen Extrakten. Formuliert nach deiner persönlichen Hautanalyse für optimale Hydration und Regeneration.
                 </p>
@@ -95,56 +88,18 @@ export default function ProductCreme() {
                 ))}
               </div>
               <div className="space-y-4 reveal reveal-delay-3">
-                {/* Subscription Toggle */}
-                <div className="border border-[#E5E0D8] rounded-sm p-4">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isSubscription}
-                      onChange={(e) => setIsSubscription(e.target.checked)}
-                      className="w-4 h-4 accent-[#5B5B38]"
-                    />
-                    <span className="font-body text-sm text-[#6B6B69]">
-                      Als Abonnement bestellen
-                    </span>
-                  </label>
-                  {isSubscription && (
-                    <div className="mt-3 ml-7">
-                      <label className="block font-body text-xs text-[#7D7D5D] mb-2 uppercase tracking-[0.1em]">
-                        Lieferhäufigkeit
-                      </label>
-                      <select
-                        value={subscriptionFrequency}
-                        onChange={(e) => setSubscriptionFrequency(e.target.value as any)}
-                        className="w-full border border-[#E5E0D8] rounded-sm p-2 font-body text-sm text-[#6B6B69] bg-white"
-                      >
-                        <option value="weekly">Wöchentlich</option>
-                        <option value="biweekly">Alle 2 Wochen</option>
-                        <option value="monthly">Monatlich</option>
-                        <option value="quarterly">Vierteljährlich</option>
-                      </select>
-                    </div>
-                  )}
-                </div>
-                
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button
-                    onClick={() => {
-                      addItem({ 
-                        id: "creme-individuell", 
-                        name: "Individuelle Gesichtscreme", 
-                        price: 39, 
-                        quantity: 1,
-                        isSubscription,
-                        subscriptionFrequency: isSubscription ? subscriptionFrequency : undefined
-                      });
-                      toast.success(isSubscription ? 'Abonnement hinzugefügt!' : 'Zum Warenkorb hinzugefügt!');
+                  <ShopifyPurchaseButton
+                    item={{
+                      id: "creme-individuell",
+                      name: "Individuelle Gesichtscreme",
+                      quantity: 1,
                     }}
                     className="btn-outline-dark"
                   >
-                    {isSubscription ? 'Abonnement starten' : 'In den Warenkorb'}
-                  </button>
-                  <a href="/#hauttest" className="btn-outline-dark">
+                    In den Shopify-Warenkorb
+                  </ShopifyPurchaseButton>
+                  <a href="/hauttest" className="btn-outline-dark">
                     Hauttest starten
                   </a>
                 </div>
@@ -250,23 +205,7 @@ export default function ProductCreme() {
             </div>
             {/* Review Form */}
             <div className="max-w-2xl mx-auto">
-              {loading ? (
-                <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>
-              ) : !user ? (
-                <div className="bg-[#F0EBE3] p-6 rounded-lg text-center">
-                  <p className="font-body text-sm text-[#6B6B69] mb-4">
-                    Melde dich an, um eine Bewertung zu hinterlassen.
-                  </p>
-                  <a
-                    href={getLoginUrl()}
-                    className="inline-block bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300"
-                  >
-                    Anmelden
-                  </a>
-                </div>
-              ) : (
-                <ReviewForm productId="creme" />
-              )}
+              <ReviewSubmissionNotice />
             </div>
           </div>
         </div>
@@ -361,7 +300,7 @@ export default function ProductCreme() {
               Starte unseren intelligenten Hauttest und erhalte deine persönliche Creme-Empfehlung.
             </p>
             <a
-              href="/#hauttest"
+              href="/hauttest"
               className="btn-outline-light inline-flex items-center gap-2 reveal reveal-delay-2"
             >
               Hauttest starten <ArrowRight size={14} strokeWidth={1.5} />

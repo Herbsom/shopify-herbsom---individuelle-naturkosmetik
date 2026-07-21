@@ -2,15 +2,10 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
-import { accountRouter } from "./routers/account";
-import { stripeRouter } from "./routers/stripe";
-import { discountsRouter } from "./routers/discounts";
 import { reviewsRouter } from "./routers/reviews";
 import { importRouter } from "./routers/import";
-import { subscriptionsRouter } from "./routers/subscriptions";
-import { stripeSubscriptionsRouter } from "./routers/stripe-subscriptions";
-import { shopifyProductsRouter } from "./routers/shopify-products";
 import { translationRouter } from "./routers/translation";
+import { commerceRouter } from "./routers/commerce";
 
 export const appRouter = router({
   system: systemRouter,
@@ -25,15 +20,10 @@ export const appRouter = router({
     }),
   }),
 
-  account: accountRouter,
-  stripe: stripeRouter,
-  discounts: discountsRouter,
   reviews: reviewsRouter,
   import: importRouter,
-  subscriptions: subscriptionsRouter,
-  stripeSubscriptions: stripeSubscriptionsRouter,
-  shopifyProducts: shopifyProductsRouter,
   translation: translationRouter,
+  commerce: commerceRouter,
 });
 
 export type AppRouter = typeof appRouter;

@@ -8,27 +8,22 @@ import { useState } from "react";
 import { Star, ChevronRight, Minus, Plus } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
 import ReviewList from "@/components/ReviewList";
 import ProductRatingHeader from "@/components/ProductRatingHeader";
-import { toast } from "sonner";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
+import ShopifyProductGallery from "@/components/ShopifyProductGallery";
+import ShopifyProductCardImage from "@/components/ShopifyProductCardImage";
 import { useTranslation } from "react-i18next";
 export default function ProductSerum() {
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
-  const [isSubscription, setIsSubscription] = useState(false);
-  const [subscriptionFrequency, setSubscriptionFrequency] = useState<'weekly' | 'biweekly' | 'monthly' | 'quarterly'>('monthly');
-  const { addItem } = useCart();
   const [activeTab, setActiveTab] = useState("effects");
-  const [activeImage, setActiveImage] = useState(0);
-  const { user, loading } = useAuth();
   const relatedProducts = [
-    { name: "Individuelle Gesichtscreme", href: "/product/creme" },
-    { name: "Reiniger", href: "/product/cleaner" },
-    { name: "Peelings", href: "/product/peeling" },
+    { name: "Individuelle Gesichtscreme", href: "/product/creme", handle: "erstelle-deine-creme" },
+    { name: "Reiniger", href: "/product/cleaner", handle: "reinigungsgel" },
+    { name: "Peelings", href: "/product/peeling", handle: "bha-azelainsaure-peeling" },
   ];
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
@@ -36,12 +31,6 @@ export default function ProductSerum() {
     { id: "ingredients", label: "Inhaltsstoffe" },
     { id: "usage", label: "Anwendung" },
     { id: "details", label: "Details" },
-  ];
-  const images = [
-    { id: 0, emoji: "🧴" },
-    { id: 1, emoji: "🧴" },
-    { id: 2, emoji: "🧴" },
-    { id: 3, emoji: "🧴" },
   ];
   return (
     <div className="min-h-screen bg-[#F8F5F0] flex flex-col">
@@ -52,30 +41,11 @@ export default function ProductSerum() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Product Gallery */}
-              <div className="flex flex-col gap-4">
-                {/* Main Image */}
-                <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center overflow-hidden group cursor-zoom-in">
-                  <div className="text-9xl group-hover:scale-110 transition-transform duration-500">
-                    {images[activeImage].emoji}
-                  </div>
-                </div>
-                {/* Thumbnail Gallery */}
-                <div className="grid grid-cols-4 gap-2">
-                  {images.map((img, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveImage(i)}
-                      className={`bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center text-4xl transition-all ${
-                        activeImage === i
-                          ? "ring-2 ring-[#5B5B38]"
-                          : "hover:opacity-70"
-                      }`}
-                    >
-                      {img.emoji}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <ShopifyProductGallery
+                handle="individuelle-serum-creme"
+                alt="Individuelles Serum"
+                className="aspect-square rounded-sm bg-[#F0EBE3]"
+              />
               {/* Product Info */}
               <div className="flex flex-col">
                 <div className="mb-6">
@@ -88,9 +58,11 @@ export default function ProductSerum() {
                     Individuelles Serum
                   </h1>
                   <ProductRatingHeader productId="serum" productName="Individuelles Serum" />
-                  <p className="font-display text-3xl text-[#5B5B38] font-light">
-                    €55,00
-                  </p>
+                  <ShopifyProductPrice
+                    handle="individuelle-serum-creme"
+                    showFrom={false}
+                    className="font-display text-3xl font-light text-[#5B5B38]"
+                  />
                 </div>
                 <p className="font-body text-base text-[#6B6B69] leading-relaxed mb-8">
                   Hochkonzentrierte Wirkstoffe, präzise auf deinen Hauttyp
@@ -138,55 +110,18 @@ export default function ProductSerum() {
                     </div>
                   </div>
                   
-                  {/* Subscription Toggle */}
-                  <div className="border-t border-[#E5E0D8] pt-4">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={isSubscription}
-                        onChange={(e) => setIsSubscription(e.target.checked)}
-                        className="w-4 h-4 accent-[#5B5B38]"
-                      />
-                      <span className="font-body text-sm text-[#6B6B69]">
-                        Als Abonnement bestellen
-                      </span>
-                    </label>
-                    {isSubscription && (
-                      <div className="mt-3 ml-7">
-                        <label className="block font-body text-xs text-[#7D7D5D] mb-2 uppercase tracking-[0.1em]">
-                          Lieferhäufigkeit
-                        </label>
-                        <select
-                          value={subscriptionFrequency}
-                          onChange={(e) => setSubscriptionFrequency(e.target.value as any)}
-                          className="w-full border border-[#E5E0D8] rounded-sm p-2 font-body text-sm text-[#6B6B69] bg-white"
-                        >
-                          <option value="weekly">Wöchentlich</option>
-                          <option value="biweekly">Alle 2 Wochen</option>
-                          <option value="monthly">Monatlich</option>
-                          <option value="quarterly">Vierteljährlich</option>
-                        </select>
-                      </div>
-                    )}
-                  </div>
-                  
                   <div className="flex gap-4">
-                    <button
-                      onClick={() => {
-                        addItem({ 
-                          id: "serum-individuell", 
-                          name: "Individuelles Serum", 
-                          price: 55, 
-                          quantity,
-                          isSubscription,
-                          subscriptionFrequency: isSubscription ? subscriptionFrequency : undefined
-                        });
-                        toast.success(isSubscription ? 'Abonnement hinzugefügt!' : 'Zum Warenkorb hinzugefügt!');
+                    <ShopifyPurchaseButton
+                      item={{
+                        id: "serum-individuell",
+                        name: "Individuelles Serum",
+                        quantity,
                       }}
+                      wrapperClassName="w-full"
                       className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300 active:scale-[0.97]"
                     >
-                      {isSubscription ? 'Abonnement starten' : 'In den Warenkorb'}
-                    </button>
+                      In den Shopify-Warenkorb
+                    </ShopifyPurchaseButton>
                   </div>
                   <div className="pt-4 border-t border-[#E5E0D8] space-y-2 text-center">
                     <p className="font-body text-xs text-[#6B6B69]">
@@ -401,23 +336,7 @@ export default function ProductSerum() {
               </div>
               {/* Review Form */}
             <div className="max-w-2xl mx-auto">
-              {loading ? (
-                  <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>
-                ) : !user ? (
-                  <div className="bg-[#F0EBE3] p-6 rounded-lg text-center">
-                    <p className="font-body text-sm text-[#6B6B69] mb-4">
-                      Melde dich an, um eine Bewertung zu hinterlassen.
-                    </p>
-                    <a
-                      href={getLoginUrl()}
-                      className="inline-block bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300"
-                    >
-                      Anmelden
-                    </a>
-                  </div>
-                ) : (
-                  <ReviewForm productId="serum" />
-                )}
+              <ReviewSubmissionNotice />
               </div>
             </div>
           </div>
@@ -438,7 +357,7 @@ export default function ProductSerum() {
                   className="group border border-[#E5E0D8] p-6 hover:shadow-lg transition-shadow duration-300"
                 >
                   <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-4 group-hover:bg-[#E5DFD3] transition-colors">
-                    <div className="text-5xl">🧴</div>
+                    <ShopifyProductCardImage handle={product.handle} alt={product.name} />
                   </div>
                   <p className="font-body text-base text-[#1C1C1A] group-hover:text-[#5B5B38] transition-colors">
                     {product.name}
@@ -465,7 +384,7 @@ export default function ProductSerum() {
               Serum-Empfehlung.
             </p>
             <a
-              href="/#hauttest"
+              href="/hauttest"
               className="inline-block border border-[#F8F5F0] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#F8F5F0] hover:text-[#5B5B38] transition-all duration-300"
             >
               Hauttest starten

@@ -1136,7 +1136,7 @@ export default function ComponentsShowcase() {
                       <DropdownMenuItem>Profile</DropdownMenuItem>
                       <DropdownMenuItem>Billing</DropdownMenuItem>
                       <DropdownMenuItem>Team</DropdownMenuItem>
-                      <DropdownMenuItem>Subscription</DropdownMenuItem>
+                      <DropdownMenuItem>Orders</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
 
@@ -1148,7 +1148,7 @@ export default function ComponentsShowcase() {
                       <ContextMenuItem>Profile</ContextMenuItem>
                       <ContextMenuItem>Billing</ContextMenuItem>
                       <ContextMenuItem>Team</ContextMenuItem>
-                      <ContextMenuItem>Subscription</ContextMenuItem>
+                      <ContextMenuItem>Orders</ContextMenuItem>
                     </ContextMenuContent>
                   </ContextMenu>
 

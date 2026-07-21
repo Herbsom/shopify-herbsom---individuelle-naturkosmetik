@@ -7,20 +7,18 @@ import { Star, ChevronRight, Minus, Plus, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link, useRouter } from "wouter";
-import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
 import ReviewList from "@/components/ReviewList";
 import ProductRatingHeader from "@/components/ProductRatingHeader";
-import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
+import ShopifyProductGallery from "@/components/ShopifyProductGallery";
+import ShopifyProductCardImage from "@/components/ShopifyProductCardImage";
 export default function ProductCleanerMilk() {
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
-  const { addItem } = useCart();
   const [activeTab, setActiveTab] = useState("effects");
-  const [activeImage, setActiveImage] = useState(0);
 
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
@@ -29,12 +27,9 @@ export default function ProductCleanerMilk() {
     { id: "usage", label: "Anwendung" },
     { id: "details", label: "Details" },
   ];
-  const images = [
-    { id: 0, src: "/manus-storage/Reinigungsmilch_9b8c254d.webp" },
-  ];
   const relatedProducts = [
-    { name: "AHA & PHA Peeling", href: "/product/peeling/aha", src: "/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp" },
-    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", src: "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png" },
+    { name: "AHA & PHA Peeling", href: "/product/peeling/aha", handle: "aha-pha-peeling" },
+    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", handle: "sonnenschutzfluid-spf-50" },
   ];
   return (
     <div className="min-h-screen bg-[#F8F5F0] flex flex-col">
@@ -56,28 +51,11 @@ export default function ProductCleanerMilk() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Product Gallery */}
-              <div className="flex flex-col gap-4">
-                <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center overflow-hidden group cursor-zoom-in">
-                  <img src={images[activeImage].src} alt="Reinigungsmilch" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                {images.length > 1 && (
-                  <div className="grid grid-cols-1 gap-2">
-                    {images.map((img, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setActiveImage(i)}
-                        className={`bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center overflow-hidden transition-all ${
-                          activeImage === i
-                            ? "ring-2 ring-[#5B5B38]"
-                            : "hover:opacity-70"
-                        }`}
-                      >
-                        <img src={img.src} alt={`Product ${i}`} className="w-full h-full object-cover" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <ShopifyProductGallery
+                handle="reinigungs-milch"
+                alt="Reinigungsmilch"
+                className="aspect-square rounded-sm bg-[#F0EBE3]"
+              />
               {/* Product Info */}
               <div className="flex flex-col">
                 <div className="mb-6">
@@ -90,9 +68,11 @@ export default function ProductCleanerMilk() {
                     Reinigungsmilch
                   </h1>
                   <ProductRatingHeader productId="cleaner-milk" productName="Reinigungsmilch" />
-                  <p className="font-display text-3xl text-[#5B5B38] font-light">
-                    €28,00
-                  </p>
+                  <ShopifyProductPrice
+                    handle="reinigungs-milch"
+                    showFrom={false}
+                    className="font-display text-3xl text-[#5B5B38] font-light"
+                  />
                   <p className="font-body text-sm text-[#6B6B69]">200ml</p>
                 </div>
                 <p className="font-body text-base text-[#6B6B69] leading-relaxed mb-8">
@@ -138,14 +118,13 @@ export default function ProductCleanerMilk() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <button
-                      onClick={() => {
-                        addItem({ id: "cleaner-milk", name: "Reinigungsmilch", price: 24, quantity });
-                                              }}
+                    <ShopifyPurchaseButton
+                      item={{ id: "cleaner-milk", name: "Reinigungsmilch", quantity }}
+                      wrapperClassName="w-full"
                       className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300 active:scale-[0.97]"
                     >
                       In den Warenkorb
-                    </button>
+                    </ShopifyPurchaseButton>
                   </div>
                   <div className="pt-4 border-t border-[#E5E0D8] space-y-2 text-center">
                     <p className="font-body text-xs text-[#6B6B69]">
@@ -354,26 +333,7 @@ export default function ProductCleanerMilk() {
               </div>
               {/* Review Form - Below Reviews */}
               <div className="max-w-2xl mx-auto">
-                {(() => {
-                  const { user, loading } = useAuth();
-                  if (loading) return <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>;
-                  if (!user) {
-                    return (
-                      <div className="bg-[#F0EBE3] p-6 rounded-lg text-center">
-                        <p className="font-body text-sm text-[#6B6B69] mb-4">
-                          Melde dich an, um eine Bewertung zu hinterlassen.
-                        </p>
-                        <a
-                          href={getLoginUrl()}
-                          className="inline-block bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300"
-                        >
-                          Anmelden
-                        </a>
-                      </div>
-                    );
-                  }
-                  return <ReviewForm productId="cleaner-milk" />;
-                })()}
+                <ReviewSubmissionNotice />
               </div>
             </div>
           </div>
@@ -391,7 +351,7 @@ export default function ProductCleanerMilk() {
                 <Link key={i} href={prod.href}>
                   <div className="group cursor-pointer">
                     <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <img src={prod.src} alt={prod.name} className="w-full h-full object-cover" />
+                      <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
                     </div>
                     <h3
                       className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2"
@@ -420,7 +380,7 @@ export default function ProductCleanerMilk() {
               Nicht sicher, welche Produkte zu dir passen? Starte unseren Hauttest und erhalte personalisierte Empfehlungen.
             </p>
             <a
-              href="/#hauttest"
+              href="/hauttest"
               className="inline-block border border-[#F8F5F0] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#F8F5F0] hover:text-[#5B5B38] transition-all duration-300"
             >
               Hauttest starten

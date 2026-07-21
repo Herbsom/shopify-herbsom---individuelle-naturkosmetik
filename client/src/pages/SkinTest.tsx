@@ -7,9 +7,11 @@ import { useCart } from "@/contexts/CartContext";
 import { toast } from "sonner";
 import ProductDetailModal, { STANDARD_PRODUCT_DETAILS, type ProductDetail } from "@/components/ProductDetailModal";
 import { SERUM_INGREDIENT_DETAILS, CREME_INGREDIENT_DETAILS } from "@/components/IngredientDetailModal";
-import { calculateRecommendation, type QuizAnswer, type SkinTestResult, SERUM_INGREDIENTS, CREME_INGREDIENTS, CREME_PRICES, SERUM_PRICE } from "@/lib/skinTestRecommendation";
+import { calculateRecommendation, type QuizAnswer, type SkinTestResult, SERUM_INGREDIENTS, CREME_INGREDIENTS } from "@/lib/skinTestRecommendation";
 import IngredientEditor from "@/components/IngredientEditor";
 import { useTranslation } from "react-i18next";
+import ShopifyLegacyProductPrice from "@/components/ShopifyLegacyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 
 const QUIZ_QUESTIONS = [
   {
@@ -318,15 +320,11 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
   const [selectedProduct, setSelectedProduct] = useState<ProductDetail | null>(null);
 
   // Dynamic pricing
-  const serumPrice = SERUM_PRICE; // Fixed at 55€
-  const cremePrice = CREME_PRICES[cremeIngredients.length] || 36;
-
   const handleAddSerum = () => {
     const ingredientIds = serumIngredients.map((i) => i.id).sort();
     addItem({
       id: `serum-true-${ingredientIds.join("-")}`,
       name: `Individuelles Serum (${serumIngredients.length} Wirkstoffe)`,
-      price: serumPrice,
       quantity: 1,
       description: `Wirkstoffe: ${serumIngredients.map((i) => i.name).join(", ")}`,
     });
@@ -338,7 +336,6 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
     addItem({
       id: `creme-${result.cremeBase}-${ingredientIds.join("-")}`,
       name: `Individuelle Creme (${result.cremeBase === "light" ? "Leicht" : "Reichhaltig"}, ${cremeIngredients.length} Wirkstoffe)`,
-      price: cremePrice,
       quantity: 1,
       description: `Wirkstoffe: ${cremeIngredients.map((i) => i.name).join(", ")}`,
     });
@@ -349,7 +346,6 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
     addItem({
       id: result.cleanser.id,
       name: result.cleanser.name,
-      price: result.cleanser.price,
       quantity: 1,
     });
     toast.success(`${result.cleanser.name} wurde in den Warenkorb gelegt!`);
@@ -359,7 +355,6 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
     addItem({
       id: result.peeling.id,
       name: result.peeling.name,
-      price: result.peeling.price,
       quantity: 1,
     });
     toast.success(`${result.peeling.name} wurde in den Warenkorb gelegt!`);
@@ -369,7 +364,6 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
     addItem({
       id: "sonnenschutzfluid",
       name: "Sonnenschutzfluid SPF 50+",
-      price: 35,
       quantity: 1,
     });
     toast.success("Sonnenschutzfluid wurde in den Warenkorb gelegt!");
@@ -432,8 +426,6 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
     }
   };
 
-  const totalPrice = result.cleanser.price + result.peeling.price + serumPrice + cremePrice + 35;
-
   // Build configurator links with current (possibly edited) ingredients
   const serumConfigLink = `/configurator/serum?ingredients=${serumIngredients.map((i) => i.id).join(",")}`;
   const cremeConfigLink = `/configurator/creme?base=${result.cremeBase}&ingredients=${cremeIngredients.map((i) => i.id).join(",")}`;
@@ -480,14 +472,19 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                   {result.cleanser.description}
                 </p>
                 <div className="flex items-center gap-6">
-                  <span className="font-display text-xl text-[#5B5B38]">{result.cleanser.price}€</span>
-                  <button
-                    onClick={handleAddCleanser}
+                  <ShopifyLegacyProductPrice
+                    item={{ id: result.cleanser.id, name: result.cleanser.name}}
+                    showFrom={false}
+                    className="font-display text-xl text-[#5B5B38]"
+                  />
+                  <ShopifyPurchaseButton
+                    item={{ id: result.cleanser.id, name: result.cleanser.name, quantity: 1 }}
+                    onPurchase={handleAddCleanser}
                     className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-5 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ShoppingBag size={14} />
                     In den Warenkorb
-                  </button>
+                  </ShopifyPurchaseButton>
                   <button
                     onClick={() => handleProductClick(result.cleanser)}
                     className="font-body text-xs tracking-[0.12em] uppercase text-[#5B5B38] hover:text-[#424226] transition-colors flex items-center gap-1"
@@ -518,14 +515,19 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                   {result.peeling.description}
                 </p>
                 <div className="flex items-center gap-6">
-                  <span className="font-display text-xl text-[#5B5B38]">{result.peeling.price}€</span>
-                  <button
-                    onClick={handleAddPeeling}
+                  <ShopifyLegacyProductPrice
+                    item={{ id: result.peeling.id, name: result.peeling.name}}
+                    showFrom={false}
+                    className="font-display text-xl text-[#5B5B38]"
+                  />
+                  <ShopifyPurchaseButton
+                    item={{ id: result.peeling.id, name: result.peeling.name, quantity: 1 }}
+                    onPurchase={handleAddPeeling}
                     className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-5 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ShoppingBag size={14} />
                     In den Warenkorb
-                  </button>
+                  </ShopifyPurchaseButton>
                   <button
                     onClick={() => handleProductClick(result.peeling)}
                     className="font-body text-xs tracking-[0.12em] uppercase text-[#5B5B38] hover:text-[#424226] transition-colors flex items-center gap-1"
@@ -568,14 +570,28 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                 />
 
                 <div className="flex flex-wrap items-center gap-4">
-                  <span className="font-display text-xl text-[#5B5B38]">{serumPrice}€</span>
-                  <button
-                    onClick={handleAddSerum}
+                  <ShopifyLegacyProductPrice
+                    item={{
+                      id: `serum-true-${serumIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                      name: `Individuelles Serum (${serumIngredients.length} Wirkstoffe)`,
+                      description: `Wirkstoffe: ${serumIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                    }}
+                    showFrom={false}
+                    className="font-display text-xl text-[#5B5B38]"
+                  />
+                  <ShopifyPurchaseButton
+                    item={{
+                      id: `serum-true-${serumIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                      name: `Individuelles Serum (${serumIngredients.length} Wirkstoffe)`,
+                      quantity: 1,
+                      description: `Wirkstoffe: ${serumIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                    }}
+                    onPurchase={handleAddSerum}
                     className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-5 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ShoppingBag size={14} />
                     In den Warenkorb
-                  </button>
+                  </ShopifyPurchaseButton>
                   <button
                     onClick={() => handleProductClick({ id: "serum" })}
                     className="font-body text-xs tracking-[0.12em] uppercase text-[#5B5B38] hover:text-[#424226] transition-colors flex items-center gap-1"
@@ -623,14 +639,28 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                 />
 
                 <div className="flex flex-wrap items-center gap-4">
-                  <span className="font-display text-xl text-[#5B5B38]">{cremePrice}€</span>
-                  <button
-                    onClick={handleAddCreme}
+                  <ShopifyLegacyProductPrice
+                    item={{
+                      id: `creme-${result.cremeBase}-${cremeIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                      name: `Individuelle Creme (${result.cremeBase === "light" ? "Leicht" : "Reichhaltig"}, ${cremeIngredients.length} Wirkstoffe)`,
+                      description: `Wirkstoffe: ${cremeIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                    }}
+                    showFrom={false}
+                    className="font-display text-xl text-[#5B5B38]"
+                  />
+                  <ShopifyPurchaseButton
+                    item={{
+                      id: `creme-${result.cremeBase}-${cremeIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                      name: `Individuelle Creme (${result.cremeBase === "light" ? "Leicht" : "Reichhaltig"}, ${cremeIngredients.length} Wirkstoffe)`,
+                      quantity: 1,
+                      description: `Wirkstoffe: ${cremeIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                    }}
+                    onPurchase={handleAddCreme}
                     className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-5 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ShoppingBag size={14} />
                     In den Warenkorb
-                  </button>
+                  </ShopifyPurchaseButton>
                   <button
                     onClick={() => handleProductClick({ id: "creme" })}
                     className="font-body text-xs tracking-[0.12em] uppercase text-[#5B5B38] hover:text-[#424226] transition-colors flex items-center gap-1"
@@ -664,14 +694,19 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                   Leichtes Sonnenschutzfluid mit Breitbandschutz vor UVA, UVB und Blaulicht. Kein weißer Schleier, ideal für jeden Tag.
                 </p>
                 <div className="flex items-center gap-6">
-                  <span className="font-display text-xl text-[#5B5B38]">35€</span>
-                  <button
-                    onClick={handleAddSunscreen}
+                  <ShopifyLegacyProductPrice
+                    item={{ id: "sonnenschutzfluid", name: "Sonnenschutzfluid SPF 50+"}}
+                    showFrom={false}
+                    className="font-display text-xl text-[#5B5B38]"
+                  />
+                  <ShopifyPurchaseButton
+                    item={{ id: "sonnenschutzfluid", name: "Sonnenschutzfluid SPF 50+", quantity: 1 }}
+                    onPurchase={handleAddSunscreen}
                     className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-5 py-3 rounded-sm hover:bg-[#424226] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ShoppingBag size={14} />
                     In den Warenkorb
-                  </button>
+                  </ShopifyPurchaseButton>
                   <button
                     onClick={() => handleProductClick({ id: "sunscreen" })}
                     className="font-body text-xs tracking-[0.12em] uppercase text-[#5B5B38] hover:text-[#424226] transition-colors flex items-center gap-1"
@@ -690,17 +725,36 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div>
                 <p className="font-body text-xs tracking-[0.15em] uppercase text-[#7D7D5D] mb-2">Gesamte Routine</p>
-                <p className="font-display text-4xl md:text-5xl text-[#F8F5F0] font-light">{totalPrice}€</p>
-                <p className="font-body text-sm text-[#A8B8A6] mt-2">5 Produkte · Individuell für dich zusammengestellt</p>
+                <p className="font-display text-3xl md:text-4xl text-[#F8F5F0] font-light">Aktuelle Shopify-Preise</p>
+                <p className="font-body text-sm text-[#A8B8A6] mt-2">5 Produkte · Der exakte Gesamtpreis erscheint im Warenkorb</p>
               </div>
-              <button
-                onClick={handleAddAll}
+              <ShopifyPurchaseButton
+                items={[
+                  { id: result.cleanser.id, name: result.cleanser.name, quantity: 1 },
+                  { id: result.peeling.id, name: result.peeling.name, quantity: 1 },
+                  {
+                    id: `serum-true-${serumIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                    name: `Individuelles Serum (${serumIngredients.length} Wirkstoffe)`,
+                    quantity: 1,
+                    description: `Wirkstoffe: ${serumIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                  },
+                  {
+                    id: `creme-${result.cremeBase}-${cremeIngredients.map((ingredient) => ingredient.id).sort().join("-")}`,
+                    name: `Individuelle Creme (${result.cremeBase === "light" ? "Leicht" : "Reichhaltig"}, ${cremeIngredients.length} Wirkstoffe)`,
+                    quantity: 1,
+                    description: `Wirkstoffe: ${cremeIngredients.map((ingredient) => ingredient.name).join(", ")}`,
+                  },
+                  { id: "sonnenschutzfluid", name: "Sonnenschutzfluid SPF 50+", quantity: 1 },
+                ]}
+                onPurchase={handleAddAll}
+                wrapperClassName="items-center"
+                messageClassName="text-[#F2D7CE]"
                 className="bg-[#F8F5F0] text-[#5B5B38] font-body text-xs tracking-[0.12em] uppercase px-8 py-4 rounded-sm hover:bg-white transition-colors duration-300 flex items-center gap-3 group whitespace-nowrap"
               >
                 <ShoppingBag size={18} />
                 Gesamte Routine in den Warenkorb
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </ShopifyPurchaseButton>
             </div>
           </div>
         </section>

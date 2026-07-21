@@ -9,32 +9,29 @@ import { Star, ChevronRight, Minus, Plus, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link, useRouter } from "wouter";
-import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
 import ReviewList from "@/components/ReviewList";
 import ProductRatingHeader from "@/components/ProductRatingHeader";
-import { toast } from "sonner";
-import { trpc } from "@/lib/trpc";
 import { useTranslation } from "react-i18next";
+import ShopifyProductPrice from "@/components/ShopifyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
+import ShopifyProductGallery from "@/components/ShopifyProductGallery";
+import ShopifyProductCardImage from "@/components/ShopifyProductCardImage";
 export default function ProductCleaner() {
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("200ml");
-  const { addItem } = useCart();
   const [activeTab, setActiveTab] = useState("effects");
-  const [activeImage, setActiveImage] = useState(0);
 
   const sizes = [
-    { id: "200ml", label: "200ml", price: 32 },
-    { id: "50ml", label: "50ml", price: 12 },
+    { id: "200ml", label: "200ml", handle: "reinigungsgel" },
+    { id: "50ml", label: "50ml", handle: "mini-reiniger" },
   ];
 
-  const currentPrice = sizes.find(s => s.id === selectedSize)?.price || 32;
+  const selectedProduct = sizes.find((size) => size.id === selectedSize) ?? sizes[0];
   const relatedProducts = [
-    { name: "BHA & Azelainsäure Peeling", href: "/product/peeling", src: "/manus-storage/bha_azelainsaeure_peeling_1x1_white_f4b48e3e.webp" },
-    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", src: "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png" },
+    { name: "BHA & Azelainsäure Peeling", href: "/product/peeling", handle: "bha-azelainsaure-peeling" },
+    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", handle: "sonnenschutzfluid-spf-50" },
   ];
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
@@ -42,9 +39,6 @@ export default function ProductCleaner() {
     { id: "ingredients", label: "Inhaltsstoffe" },
     { id: "usage", label: "Anwendung" },
     { id: "details", label: "Details" },
-  ];
-  const images = [
-    { id: 0, src: "/manus-storage/Reinigungsgel_bcbacfba.webp" },
   ];
   return (
     <div className="min-h-screen bg-[#F8F5F0] flex flex-col">
@@ -66,28 +60,11 @@ export default function ProductCleaner() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Product Gallery */}
-              <div className="flex flex-col gap-4">
-                <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center overflow-hidden group cursor-zoom-in">
-                  <img src={images[activeImage].src} alt="Reinigungsgel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                {images.length > 1 && (
-                  <div className="grid grid-cols-1 gap-2">
-                    {images.map((img, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setActiveImage(i)}
-                        className={`bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center overflow-hidden transition-all ${
-                          activeImage === i
-                            ? "ring-2 ring-[#5B5B38]"
-                            : "hover:opacity-70"
-                        }`}
-                      >
-                        <img src={img.src} alt={`Product ${i}`} className="w-full h-full object-cover" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <ShopifyProductGallery
+                handle={selectedProduct.handle}
+                alt={`Reinigungsgel ${selectedSize}`}
+                className="aspect-square rounded-sm bg-[#F0EBE3]"
+              />
               {/* Product Info */}
               <div className="flex flex-col">
                 <div className="mb-6">
@@ -100,9 +77,11 @@ export default function ProductCleaner() {
                     Reinigungsgel
                   </h1>
                   <ProductRatingHeader productId="cleaner-gel" productName="Reinigungsgel" />
-                  <p className="font-display text-3xl text-[#5B5B38] font-light">
-                    €{currentPrice},00
-                  </p>
+                  <ShopifyProductPrice
+                    handle={selectedProduct.handle}
+                    showFrom={false}
+                    className="font-display text-3xl text-[#5B5B38] font-light"
+                  />
                 </div>
                 <p className="font-body text-base text-[#6B6B69] leading-relaxed mb-8">
                   Reinigt intensiv & beugt Unreinheiten vor. Spendet Feuchtigkeit & erhält die Hautschutzbarriere. Perfekt für Mischhaut, ölige und normale Haut.
@@ -138,7 +117,11 @@ export default function ProductCleaner() {
                             : "bg-[#E8E3DB] text-[#1C1C1A] hover:bg-[#D8D3CB]"
                         }`}
                       >
-                        {size.label} – €{size.price}
+                        <span>{size.label} – </span>
+                        <ShopifyProductPrice
+                          handle={size.handle}
+                          showFrom={false}
+                        />
                       </button>
                     ))}
                   </div>
@@ -166,14 +149,13 @@ export default function ProductCleaner() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <button
-                      onClick={() => {
-                        addItem({ id: `cleaner-gel-${selectedSize}`, name: `Reinigungsgel ${selectedSize}`, price: currentPrice, quantity });
-                                              }}
+                    <ShopifyPurchaseButton
+                      item={{ id: `cleaner-gel-${selectedSize}`, name: `Reinigungsgel ${selectedSize}`, quantity }}
+                      wrapperClassName="w-full"
                       className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300 active:scale-[0.97]"
                     >
                       In den Warenkorb
-                    </button>
+                    </ShopifyPurchaseButton>
                   </div>
                   <div className="pt-4 border-t border-[#E5E0D8] space-y-2 text-center">
                     <p className="font-body text-xs text-[#6B6B69]">
@@ -389,26 +371,7 @@ export default function ProductCleaner() {
               </div>
               {/* Review Form - Below Reviews */}
               <div className="max-w-2xl mx-auto">
-                {(() => {
-                  const { user, loading } = useAuth();
-                  if (loading) return <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>;
-                  if (!user) {
-                    return (
-                      <div className="bg-white border-l-4 border-[#5B9B5B] p-6 rounded-sm shadow-sm">
-                        <p className="font-body text-sm text-[#6B6B69] mb-4">
-                          Melde dich an, um eine Bewertung zu hinterlassen.
-                        </p>
-                        <a
-                          href={getLoginUrl()}
-                          className="inline-block bg-[#5B9B5B] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#4A8A4A] transition-all duration-300"
-                        >
-                          Anmelden
-                        </a>
-                      </div>
-                    );
-                  }
-                  return <ReviewForm productId="cleaner-gel" />;
-                })()}
+                <ReviewSubmissionNotice />
               </div>
             </div>
           </div>
@@ -425,7 +388,7 @@ export default function ProductCleaner() {
                 <Link key={i} href={product.href}>
                   <div className="group cursor-pointer">
                     <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <img src={product.src} alt={product.name} className="w-full h-full object-cover" />
+                      <ShopifyProductCardImage handle={product.handle} alt={product.name} />
                     </div>
                     <h3 className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2">
                       {product.name}

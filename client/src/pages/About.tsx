@@ -195,7 +195,7 @@ export default function About() {
             </p>
             <a
               href="#"
-              onClick={(e) => { e.preventDefault(); window.location.href = "/#hauttest"; }}
+              onClick={(e) => { e.preventDefault(); window.location.href = "/hauttest"; }}
               className="btn-outline-dark inline-flex items-center gap-2 reveal reveal-delay-2"
             >
               Hauttest starten <ArrowRight size={14} strokeWidth={1.5} />

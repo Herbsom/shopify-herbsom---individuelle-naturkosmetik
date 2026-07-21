@@ -1,18 +1,16 @@
 /*
  * Home Page – Herbsom Skandinavisches Labor
- * Sektionen: Hero, Produkte, Hauttest, Über uns, Werte, Testimonials, Newsletter
+ * Sektionen: Hero, Produkte, Hauttest, Über uns, Werte, echte Bewertungen, Newsletter
  * Design: Nordischer Minimalismus × Pharmazeutische Präzision
  * Farben: Cremeweiß (#F8F5F0) ↔ Dunkelgrün (#5B5B38), Salbeigrün (#7D7D5D), Tiefgrün (#424226)
  * Typografie: Cormorant Garamond (Display) + Inter (Body)
  */
 import { useEffect, useRef } from "react";
-import { useAuth } from "@/_core/hooks/useAuth";
 import { useTranslation } from "react-i18next";
-import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TopReviews from "@/components/TopReviews";
-import { ArrowRight, Star, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 // Image URLs from generated assets
 const IMAGES = {
   hero: "/manus-storage/hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9.png",
@@ -42,9 +40,6 @@ function useScrollReveal() {
   return ref;
 }
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
   const { t } = useTranslation();
 
   const pageRef = useScrollReveal();
@@ -103,23 +98,6 @@ export default function Home() {
       text: t("homepage.effective_desc"),
     },
   ];
-  const testimonials = [
-    {
-      text: t("homepage.testimonial_1"),
-      author: "Sarah M.",
-      location: "Hamburg",
-    },
-    {
-      text: t("homepage.testimonial_2"),
-      author: "Julia K.",
-      location: "München",
-    },
-    {
-      text: t("homepage.testimonial_3"),
-      author: "Anna L.",
-      location: "Berlin",
-    },
-  ];
   return (
     <div ref={pageRef} className="min-h-screen bg-[#F8F5F0]">
       <Navigation />
@@ -155,17 +133,6 @@ export default function Home() {
                 {t("homepage.cta_shop")}
               </a>
             </div>
-          </div>
-          {/* Social Proof */}
-          <div className="absolute bottom-8 right-0 md:right-8 flex items-center gap-3 reveal reveal-delay-4">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} size={12} className="text-[#7D7D5D] fill-[#7D7D5D]" />
-              ))}
-            </div>
-            <span className="font-body text-xs text-[#4A4A48] tracking-wide">
-              {t("homepage.rating")}
-            </span>
           </div>
         </div>
       </section>
@@ -453,47 +420,10 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* ─── TESTIMONIALS ─────────────────────────────────────────────── */}
-      <section id="wissen" className="py-24 md:py-36 bg-[#5B5B38]">
-        <div className="container">
-          <div className="mb-16 reveal">
-            <p className="section-label text-[#7D7D5D] mb-3">Kundenstimmen</p>
-            <h2
-              className="font-display text-4xl md:text-6xl text-[#F8F5F0] font-light"
-            >
-              Was unsere Kunden<br />
-              <em className="italic">sagen.</em>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#6B6B52]">
-            {testimonials.map((testimonial, i) => (
-              <div key={i} className={`bg-[#5B5B38] p-10 md:p-12 reveal reveal-delay-${i + 1}`}>
-                <div className="flex mb-6">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} size={12} className="text-[#7D7D5D] fill-[#7D7D5D]" />
-                  ))}
-                </div>
-                <p
-                  className="font-display text-xl text-[#F8F5F0] font-light leading-relaxed mb-8 italic"
-                >
-                  „{testimonial.text}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#6B6B52] flex items-center justify-center">
-                    <span className="font-body text-xs text-[#7D7D5D]">
-                      {testimonial.author.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-body text-sm text-[#F8F5F0]">{testimonial.author}</p>
-                    <p className="font-body text-xs text-[#7D7D5D]">{testimonial.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ─── ECHTE FREIGEGEBENE BEWERTUNGEN ───────────────────────────── */}
+      <div id="wissen">
+        <TopReviews />
+      </div>
       {/* ─── TEXTURE / PRODUCT CLOSE-UP ───────────────────────────────── */}
       <section className="relative h-[50vh] min-h-[300px] overflow-hidden">
         <div

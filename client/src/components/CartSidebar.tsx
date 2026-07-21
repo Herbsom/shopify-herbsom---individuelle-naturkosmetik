@@ -1,120 +1,189 @@
-import { X, ShoppingBag, ArrowRight } from "lucide-react";
-import { useCart } from "@/contexts/CartContext";
+import { ArrowRight, Loader2, Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { Link } from "wouter";
+import { useCart } from "@/contexts/CartContext";
+import { formatMoney } from "@/lib/format";
 
 export default function CartSidebar() {
-  const { showCartSidebar, setShowCartSidebar, items, total, lastAddedItem } = useCart();
+  const {
+    cart,
+    isOpen,
+    closeCart,
+    loading,
+    lastAddedItem,
+    updateQuantity,
+    removeItem,
+    proceedToCheckout,
+  } = useCart();
 
-  if (!showCartSidebar) return null;
+  if (!isOpen) return null;
+
+  const items = cart?.items ?? [];
 
   return (
     <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black/50 z-50 transition-opacity duration-300"
-        onClick={() => setShowCartSidebar(false)}
+      <button
+        type="button"
+        className="fixed inset-0 z-50 bg-black/50 transition-opacity duration-200"
+        onClick={closeCart}
+        aria-label="Warenkorb schließen"
       />
 
-      {/* Sidebar */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-[#F8F5F0] shadow-2xl z-[60] flex flex-col overflow-hidden animate-in slide-in-from-right duration-300">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-[#E5E0D8]">
-          <h2 className="font-display text-2xl text-[#1C1C1A] font-light">Warenkorb</h2>
+      <aside
+        className="fixed right-0 top-0 z-[60] flex h-full w-full max-w-md flex-col overflow-hidden bg-[#F8F5F0] shadow-2xl"
+        aria-label="Shopify-Warenkorb"
+      >
+        <div className="flex items-center justify-between border-b border-[#E5E0D8] p-6">
+          <div>
+            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-[#7D7D5D]">
+              Sicher über Shopify
+            </p>
+            <h2 className="font-display text-2xl font-light text-[#1C1C1A]">Warenkorb</h2>
+          </div>
           <button
-            onClick={() => setShowCartSidebar(false)}
-            className="w-12 h-12 flex items-center justify-center bg-[#E8E3DB] hover:bg-[#5B5B38] rounded-sm transition-all duration-200 flex-shrink-0"
-            title="Warenkorb schließen"
+            type="button"
+            onClick={closeCart}
+            className="flex h-11 w-11 items-center justify-center rounded-sm bg-[#E8E3DB] text-[#1C1C1A] transition-all duration-200 hover:bg-[#5B5B38] hover:text-[#F8F5F0] active:scale-[0.97]"
             aria-label="Warenkorb schließen"
           >
-            <X size={28} className="text-[#1C1C1A] hover:text-[#F8F5F0]" />
+            <X size={22} />
           </button>
         </div>
 
-        {/* Content */}
         <div className="flex-1 overflow-y-auto p-6">
           {items.length === 0 ? (
-            <div className="flex flex-col items-center justify-center h-full text-center">
-              <ShoppingBag size={48} className="text-[#7D7D5D] mb-4 opacity-50" />
+            <div className="flex h-full flex-col items-center justify-center text-center">
+              <ShoppingBag size={48} className="mb-4 text-[#7D7D5D] opacity-50" />
               <p className="font-body text-[#4A4A48]">Dein Warenkorb ist leer</p>
+              <p className="mt-2 max-w-xs font-body text-xs leading-relaxed text-[#7D7D5D]">
+                Deine Auswahl wird direkt als Shopify-Warenkorb gespeichert.
+              </p>
             </div>
           ) : (
-            <div className="space-y-4">
-              {/* Last Added Item Highlight */}
+            <div className="space-y-5">
               {lastAddedItem && (
-                <div className="bg-[#F0EBE3] p-4 rounded-sm border-l-4 border-[#5B5B38]">
-                  <p className="font-body text-xs text-[#7D7D5D] mb-1">Gerade hinzugefügt</p>
-                  <p className="font-display text-sm text-[#1C1C1A] font-light mb-2">{lastAddedItem.name}</p>
-                  <p className="font-body text-sm text-[#5B5B38]">
-                    {lastAddedItem.quantity}x à {lastAddedItem.price}€
+                <div className="border-l-4 border-[#5B5B38] bg-[#F0EBE3] p-4">
+                  <p className="mb-1 font-body text-[10px] uppercase tracking-[0.16em] text-[#7D7D5D]">
+                    Gerade hinzugefügt
+                  </p>
+                  <p className="font-display text-base font-light text-[#1C1C1A]">
+                    {lastAddedItem.productTitle}
                   </p>
                 </div>
               )}
 
-              {/* All Items */}
-              <div className="space-y-3 mt-6">
-                <p className="font-body text-xs text-[#7D7D5D] uppercase tracking-wider mb-4">
-                  Alle Artikel ({items.length})
-                </p>
-                {items.map((item) => (
-                  <div key={item.id} className="flex justify-between items-start pb-3 border-b border-[#E5E0D8]">
-                    <div className="flex-1">
-                      <p className="font-body text-sm text-[#1C1C1A] font-medium">{item.name}</p>
-                      <p className="font-body text-xs text-[#7D7D5D] mt-1">
-                        {item.quantity}x à {item.price}€
-                      </p>
+              {items.map(item => {
+                const visibleAttributes = item.attributes.filter(attribute => !attribute.key.startsWith("_"));
+                return (
+                  <article key={item.lineId} className="border-b border-[#E5E0D8] pb-5">
+                    <div className="flex gap-4">
+                      {item.image && (
+                        <img
+                          src={item.image.url}
+                          alt={item.image.altText ?? item.productTitle}
+                          className="h-20 w-20 flex-none bg-[#F0EBE3] object-cover"
+                        />
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-start justify-between gap-3">
+                          <div>
+                            <h3 className="font-display text-base font-light text-[#1C1C1A]">
+                              {item.productTitle}
+                            </h3>
+                            {item.variantTitle !== "Default Title" && (
+                              <p className="mt-0.5 font-body text-xs text-[#7D7D5D]">
+                                Variante: {item.variantTitle}
+                              </p>
+                            )}
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => void removeItem(item.lineId)}
+                            disabled={loading}
+                            className="p-1 text-[#7D7D5D] transition-colors hover:text-red-700 disabled:opacity-40"
+                            aria-label={`${item.productTitle} entfernen`}
+                          >
+                            <Trash2 size={15} />
+                          </button>
+                        </div>
+
+                        {visibleAttributes.map(attribute => (
+                          <p key={`${item.lineId}-${attribute.key}`} className="mt-1 font-body text-[11px] leading-relaxed text-[#5B5B38]">
+                            <span className="font-medium">{attribute.key}:</span> {attribute.value}
+                          </p>
+                        ))}
+
+                        <div className="mt-3 flex items-center justify-between gap-3">
+                          <div className="flex items-center border border-[#D9D2C8]">
+                            <button
+                              type="button"
+                              onClick={() => void updateQuantity(item.lineId, item.quantity - 1)}
+                              disabled={loading}
+                              className="p-2 transition-colors hover:bg-[#F0EBE3] disabled:opacity-40"
+                              aria-label="Menge verringern"
+                            >
+                              <Minus size={12} />
+                            </button>
+                            <span className="min-w-8 px-1 text-center font-body text-xs">{item.quantity}</span>
+                            <button
+                              type="button"
+                              onClick={() => void updateQuantity(item.lineId, item.quantity + 1)}
+                              disabled={loading}
+                              className="p-2 transition-colors hover:bg-[#F0EBE3] disabled:opacity-40"
+                              aria-label="Menge erhöhen"
+                            >
+                              <Plus size={12} />
+                            </button>
+                          </div>
+                          <p className="font-display text-base font-light text-[#5B5B38]">
+                            {formatMoney(item.lineTotal)}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p className="font-display text-sm text-[#5B5B38] font-light">
-                      {(item.price * item.quantity).toFixed(2)}€
-                    </p>
-                  </div>
-                ))}
-              </div>
+                  </article>
+                );
+              })}
             </div>
           )}
         </div>
 
-        {/* Footer */}
-        {items.length > 0 && (
-          <div className="border-t border-[#E5E0D8] p-6 space-y-4">
-            {/* Total */}
-            <div className="flex justify-between items-center pb-4 border-b border-[#E5E0D8]">
-              <p className="font-body text-[#4A4A48]">Gesamtpreis:</p>
-              <p className="font-display text-2xl text-[#5B5B38] font-light">{total.toFixed(2)}€</p>
+        {cart && items.length > 0 && (
+          <div className="space-y-4 border-t border-[#E5E0D8] p-6">
+            <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
+              <p className="font-body text-sm text-[#4A4A48]">Zwischensumme</p>
+              <p className="font-display text-2xl font-light text-[#5B5B38]">
+                {formatMoney(cart.subtotal)}
+              </p>
             </div>
-
-            {/* Buttons */}
-            <div className="space-y-3">
-              {/* Proceed to Checkout */}
-              <Link
-                href="/checkout"
-                className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center justify-center gap-2 group shadow-sm hover:shadow-md"
-                onClick={() => setShowCartSidebar(false)}
-              >
-                <span>Zur Kasse</span>
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              {/* View Cart */}
-              <Link
-                href="/cart"
-                className="w-full bg-white text-[#5B5B38] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm border border-[#E5E0D8] hover:bg-[#F8F5F0] transition-all duration-300 flex items-center justify-center gap-2 group"
-                onClick={() => setShowCartSidebar(false)}
-              >
-                <span>Zum Warenkorb</span>
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              {/* Continue Shopping */}
-              <button
-                onClick={() => setShowCartSidebar(false)}
-                className="w-full bg-transparent text-[#5B5B38] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#F0EBE3] transition-all duration-300"
-              >
-                Weiter einkaufen
-              </button>
-            </div>
+            <p className="font-body text-[11px] leading-relaxed text-[#7D7D5D]">
+              Versand, Rabatte, Steuern und Bezahlung werden sicher im Shopify-Checkout berechnet.
+            </p>
+            <button
+              type="button"
+              onClick={proceedToCheckout}
+              disabled={loading}
+              className="flex w-full items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.12em] text-[#F8F5F0] transition-all duration-200 hover:bg-[#424226] active:scale-[0.97] disabled:cursor-wait disabled:opacity-60"
+            >
+              {loading ? <Loader2 size={15} className="animate-spin" /> : <ArrowRight size={15} />}
+              Sicher zur Shopify-Kasse
+            </button>
+            <Link
+              href="/cart"
+              onClick={closeCart}
+              className="flex w-full items-center justify-center border border-[#D9D2C8] bg-white px-6 py-3 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] transition-colors hover:bg-[#F0EBE3]"
+            >
+              Warenkorb ansehen
+            </Link>
+            <button
+              type="button"
+              onClick={closeCart}
+              className="w-full px-6 py-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38]"
+            >
+              Weiter einkaufen
+            </button>
           </div>
         )}
-      </div>
+      </aside>
     </>
   );
 }

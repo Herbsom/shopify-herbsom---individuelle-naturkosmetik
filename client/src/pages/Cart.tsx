@@ -1,124 +1,59 @@
-/*
- * Warenkorb – Herbsom
- * Übersicht aller Artikel mit Mengenänderung, Entfernen und Weiter zum Checkout
- */
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import { useCart } from "@/contexts/CartContext";
+import { formatMoney } from "@/lib/format";
+import type { CartItem } from "@shared/commerce/types";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Loader2,
+  Minus,
+  Pencil,
+  Plus,
+  ShieldCheck,
+  ShoppingBag,
+  Trash2,
+} from "lucide-react";
 import { Link } from "wouter";
-import { Minus, Plus, Trash2, ShoppingBag, ArrowRight, ArrowLeft, Pencil } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
-function formatPrice(price: number) {
-  return price.toFixed(2).replace(".", ",") + " €";
-}
+function getConfiguratorLink(item: CartItem): string | null {
+  const configurationId = item.attributes.find(
+    attribute => attribute.key === "_Herbsom-Konfiguration-ID"
+  )?.value;
 
-function CompactRecommendationCard({ name, price, image, productId }: any) {
-  const { addItem } = useCart();
-  return (
-    <div className="bg-[#F8F5F0] rounded-sm overflow-hidden group">
-      <div className="aspect-square bg-[#F0EBE3] flex items-center justify-center overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
-      </div>
-      <div className="p-3">
-        <h4 className="font-display text-sm text-[#1C1C1A] font-light mb-2 line-clamp-2">
-          {name}
-        </h4>
-        <div className="flex items-center justify-between">
-          <span className="font-display text-base text-[#5B5B38] font-light">€{price}</span>
-          <button
-            onClick={() => addItem({ id: productId, name, price, quantity: 1 })}
-            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-2 py-1 hover:bg-[#424226] transition-all duration-300 active:scale-[0.97]"
-          >
-            +
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function RecommendationCard({ name, description, price, image, productId }: any) {
-  const { addItem } = useCart();
-  return (
-    <div className="bg-[#F8F5F0] rounded-sm overflow-hidden group">
-      <div className="aspect-square bg-[#F0EBE3] flex items-center justify-center overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="font-display text-xl text-[#1C1C1A] font-light mb-2">
-          {name}
-        </h3>
-        <p className="font-body text-sm text-[#6B6B69] mb-4">
-          {description}
-        </p>
-        <div className="flex items-center justify-between">
-          <span className="font-display text-2xl text-[#5B5B38] font-light">€{price},00</span>
-          <button
-            onClick={() => addItem({ id: productId, name, price, quantity: 1 })}
-            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-4 py-2 hover:bg-[#424226] transition-all duration-300 active:scale-[0.97]"
-          >
-            Hinzufügen
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Parses the cart item ID to generate a configurator link.
- * Serum IDs: "serum-true-ingredient1-ingredient2-ingredient3"
- * Creme IDs: "creme-light-ingredient1-ingredient2" or "creme-rich-ingredient1-ingredient2"
- */
-function getConfiguratorLink(itemId: string): string | null {
-  if (itemId.startsWith("serum-")) {
-    // Format: serum-true-ing1-ing2-ing3
-    const parts = itemId.replace("serum-true-", "").split("-");
-    if (parts.length > 0 && parts[0] !== "") {
-      return `/configurator/serum?ingredients=${parts.join(",")}&editingCartItem=${encodeURIComponent(itemId)}`;
-    }
+  if (!configurationId) return null;
+  if (configurationId.startsWith("serum-")) {
+    const ingredients = configurationId.replace("serum-true-", "").split("-").filter(Boolean);
+    return `/configurator/serum?ingredients=${ingredients.join(",")}&editingCartItem=${encodeURIComponent(item.lineId)}`;
   }
-  if (itemId.startsWith("creme-")) {
-    // Format: creme-light-ing1-ing2 or creme-rich-ing1-ing2
-    const withoutPrefix = itemId.replace("creme-", "");
-    let base = "light";
-    let ingredientStr = withoutPrefix;
-    if (withoutPrefix.startsWith("light-")) {
-      base = "light";
-      ingredientStr = withoutPrefix.replace("light-", "");
-    } else if (withoutPrefix.startsWith("rich-")) {
-      base = "rich";
-      ingredientStr = withoutPrefix.replace("rich-", "");
-    }
-    const parts = ingredientStr.split("-");
-    if (parts.length > 0 && parts[0] !== "") {
-      return `/configurator/creme?base=${base}&ingredients=${parts.join(",")}&editingCartItem=${encodeURIComponent(itemId)}`;
-    }
+  if (configurationId.startsWith("creme-")) {
+    const withoutPrefix = configurationId.replace("creme-", "");
+    const base = withoutPrefix.startsWith("rich-") ? "rich" : "light";
+    const ingredients = withoutPrefix.replace(/^(light|rich)-/, "").split("-").filter(Boolean);
+    return `/configurator/creme?base=${base}&ingredients=${ingredients.join(",")}&editingCartItem=${encodeURIComponent(item.lineId)}`;
   }
   return null;
 }
 
 export default function Cart() {
-  const { t } = useTranslation();
-  const { items, updateQuantity, removeItem, clearCart, total } = useCart();
+  const {
+    cart,
+    items,
+    loading,
+    updateQuantity,
+    removeItem,
+    clearCart,
+    proceedToCheckout,
+  } = useCart();
 
   return (
     <div className="min-h-screen bg-[#F8F5F0]">
       <Navigation />
 
-      <section className="pt-32 pb-12 md:pt-40 md:pb-16">
+      <section className="pb-12 pt-32 md:pb-16 md:pt-40">
         <div className="container">
-          <p className="section-label mb-3">Dein Warenkorb</p>
-          <h1 className="font-display text-4xl md:text-6xl text-[#1C1C1A] font-light">
+          <p className="section-label mb-3">Direkt mit Shopify verbunden</p>
+          <h1 className="font-display text-4xl font-light text-[#1C1C1A] md:text-6xl">
             Warenkorb
           </h1>
         </div>
@@ -127,204 +62,190 @@ export default function Cart() {
       <section className="pb-24 md:pb-36">
         <div className="container">
           {items.length === 0 ? (
-            <div className="bg-white border border-[#E5E0D8] p-12 md:p-16 text-center">
-              <ShoppingBag size={48} className="text-[#E5E0D8] mx-auto mb-6" />
-              <h3 className="font-display text-2xl text-[#1C1C1A] font-light mb-3">
+            <div className="border border-[#E5E0D8] bg-white p-12 text-center md:p-16">
+              <ShoppingBag size={48} className="mx-auto mb-6 text-[#E5E0D8]" />
+              <h2 className="mb-3 font-display text-2xl font-light text-[#1C1C1A]">
                 Dein Warenkorb ist leer
-              </h3>
-              <p className="font-body text-sm text-[#6B6B69] mb-8 max-w-sm mx-auto">
-                Entdecke unsere individuellen Produkte und finde die perfekte Pflege für deine Haut.
+              </h2>
+              <p className="mx-auto mb-8 max-w-sm font-body text-sm leading-relaxed text-[#6B6B69]">
+                Entdecke individuelle Naturkosmetik. Deine Auswahl wird als Shopify-Warenkorb gespeichert.
               </p>
               <Link href="/#produkte" className="btn-outline-dark">
                 Produkte entdecken
               </Link>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Cart Items */}
-              <div className="lg:col-span-2 space-y-4">
-                {items.map((item) => (
-                  <div
-                    key={item.id}
-                    className="bg-white border border-[#E5E0D8] p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#7D7D5D] transition-colors duration-300"
-                  >
-                    <div className="flex-1">
-                      <h3 className="font-display text-lg text-[#1C1C1A] font-light mb-1">
-                        {item.name}
-                      </h3>
-                      {item.description && (
-                        <p className="font-body text-xs text-[#5B5B38] mb-1 leading-relaxed">
-                          {item.description}
-                        </p>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              <div className="space-y-4 lg:col-span-2">
+                {items.map(item => {
+                  const configuratorLink = getConfiguratorLink(item);
+                  const visibleAttributes = item.attributes.filter(attribute => !attribute.key.startsWith("_"));
+
+                  return (
+                    <article
+                      key={item.lineId}
+                      className="flex flex-col gap-5 border border-[#E5E0D8] bg-white p-6 transition-colors hover:border-[#7D7D5D] sm:flex-row md:p-8"
+                    >
+                      {item.image && (
+                        <img
+                          src={item.image.url}
+                          alt={item.image.altText ?? item.productTitle}
+                          className="h-28 w-28 flex-none bg-[#F0EBE3] object-cover sm:h-32 sm:w-32"
+                        />
                       )}
-                      <div className="flex items-center gap-4">
-                        <p className="font-body text-sm text-[#7D7D5D]">
-                          {formatPrice(item.price)} pro Stück
-                        </p>
-                        {getConfiguratorLink(item.id) && (
-                          <Link
-                            href={getConfiguratorLink(item.id)!}
-                            className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200"
+
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <h2 className="font-display text-xl font-light text-[#1C1C1A]">
+                              {item.productTitle}
+                            </h2>
+                            {item.variantTitle !== "Default Title" && (
+                              <p className="mt-1 font-body text-xs text-[#7D7D5D]">
+                                Variante: {item.variantTitle}
+                              </p>
+                            )}
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => void removeItem(item.lineId)}
+                            disabled={loading}
+                            className="p-2 text-[#7D7D5D] transition-colors hover:text-red-700 disabled:opacity-40"
+                            aria-label={`${item.productTitle} entfernen`}
                           >
-                            <Pencil size={12} />
-                            Anpassen
-                          </Link>
+                            <Trash2 size={17} />
+                          </button>
+                        </div>
+
+                        {visibleAttributes.length > 0 && (
+                          <div className="mt-3 space-y-1 border-l-2 border-[#C7C7A5] pl-3">
+                            {visibleAttributes.map(attribute => (
+                              <p key={`${item.lineId}-${attribute.key}`} className="font-body text-xs leading-relaxed text-[#5B5B38]">
+                                <span className="font-medium">{attribute.key}:</span> {attribute.value}
+                              </p>
+                            ))}
+                          </div>
                         )}
+
+                        <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center border border-[#E5E0D8]">
+                              <button
+                                type="button"
+                                onClick={() => void updateQuantity(item.lineId, item.quantity - 1)}
+                                disabled={loading}
+                                className="p-2.5 transition-colors hover:bg-[#F0EBE3] disabled:opacity-40"
+                                aria-label="Menge verringern"
+                              >
+                                <Minus size={14} />
+                              </button>
+                              <span className="min-w-10 px-2 text-center font-body text-sm">
+                                {item.quantity}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => void updateQuantity(item.lineId, item.quantity + 1)}
+                                disabled={loading}
+                                className="p-2.5 transition-colors hover:bg-[#F0EBE3] disabled:opacity-40"
+                                aria-label="Menge erhöhen"
+                              >
+                                <Plus size={14} />
+                              </button>
+                            </div>
+                            {configuratorLink && (
+                              <Link
+                                href={configuratorLink}
+                                className="flex items-center gap-1 font-body text-xs text-[#5B5B38] transition-colors hover:text-[#424226]"
+                              >
+                                <Pencil size={13} />
+                                Anpassen
+                              </Link>
+                            )}
+                          </div>
+
+                          <div className="text-right">
+                            <p className="font-display text-xl font-light text-[#5B5B38]">
+                              {formatMoney(item.lineTotal)}
+                            </p>
+                            <p className="font-body text-[10px] text-[#7D7D5D]">
+                              {formatMoney(item.unitPrice)} pro Stück
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </article>
+                  );
+                })}
 
-                    {/* Quantity Controls */}
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center border border-[#E5E0D8]">
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="p-2 hover:bg-[#F0EBE3] transition-colors duration-200 active:scale-[0.97]"
-                          aria-label="Menge verringern"
-                        >
-                          <Minus size={14} className="text-[#5B5B38]" />
-                        </button>
-                        <span className="px-4 py-2 font-body text-sm text-[#1C1C1A] min-w-[40px] text-center">
-                          {item.quantity}
-                        </span>
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-2 hover:bg-[#F0EBE3] transition-colors duration-200 active:scale-[0.97]"
-                          aria-label="Menge erhöhen"
-                        >
-                          <Plus size={14} className="text-[#5B5B38]" />
-                        </button>
-                      </div>
-
-                      <span className="font-body text-sm text-[#1C1C1A] font-medium min-w-[80px] text-right">
-                        {formatPrice(item.price * item.quantity)}
-                      </span>
-
-                      <button
-                        onClick={() => removeItem(item.id)}
-                        className="p-2 text-[#7D7D5D] hover:text-red-600 transition-colors duration-200 active:scale-[0.97]"
-                        aria-label="Artikel entfernen"
-                      >
-                        <Trash2 size={16} />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-
-                {/* Actions Row */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4">
+                <div className="flex flex-col items-start justify-between gap-4 pt-4 sm:flex-row sm:items-center">
                   <Link
                     href="/#produkte"
-                    className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-[#5B5B38] hover:gap-4 transition-all duration-300"
+                    className="flex items-center gap-2 font-body text-xs uppercase tracking-[0.15em] text-[#5B5B38] transition-all hover:gap-4"
                   >
-                    <ArrowLeft size={14} strokeWidth={1.5} />
+                    <ArrowLeft size={14} />
                     Weiter einkaufen
                   </Link>
                   <button
+                    type="button"
                     onClick={clearCart}
-                    className="font-body text-xs tracking-[0.15em] uppercase text-[#7D7D5D] hover:text-red-600 transition-colors duration-200"
+                    className="font-body text-xs uppercase tracking-[0.15em] text-[#7D7D5D] transition-colors hover:text-red-700"
                   >
                     Warenkorb leeren
                   </button>
                 </div>
               </div>
 
-              {/* Order Summary */}
-              <div className="lg:col-span-1">
-                <div className="bg-white border border-[#E5E0D8] p-8 sticky top-32">
-                  <h3 className="font-display text-xl text-[#1C1C1A] font-light mb-6">
+              <aside className="lg:col-span-1">
+                <div className="sticky top-32 border border-[#E5E0D8] bg-white p-8">
+                  <h2 className="mb-6 font-display text-xl font-light text-[#1C1C1A]">
                     Zusammenfassung
-                  </h3>
+                  </h2>
 
-                  <div className="space-y-3 mb-6">
+                  <div className="mb-6 space-y-3">
+                    <div className="flex justify-between font-body text-sm text-[#6B6B69]">
+                      <span>Artikel</span>
+                      <span>{cart?.itemCount ?? 0}</span>
+                    </div>
                     <div className="flex justify-between font-body text-sm text-[#6B6B69]">
                       <span>Zwischensumme</span>
-                      <span>{formatPrice(total)}</span>
+                      <span>{cart ? formatMoney(cart.subtotal) : "—"}</span>
                     </div>
-                    <div className="flex justify-between font-body text-sm text-[#6B6B69]">
-                      <span>Versand</span>
-                      <span>{total >= 50 ? "Kostenlos" : "4,90 €"}</span>
-                    </div>
-                    {total < 50 && (
-                      <p className="font-body text-xs text-[#7D7D5D] italic">
-                        Noch {formatPrice(50 - total)} bis zum kostenlosen Versand
-                      </p>
-                    )}
                   </div>
 
-                  <div className="border-t border-[#E5E0D8] pt-4 mb-8">
-                    <div className="flex justify-between font-body text-base text-[#1C1C1A] font-medium">
-                      <span>Gesamt</span>
+                  <div className="mb-7 border-t border-[#E5E0D8] pt-4">
+                    <div className="flex justify-between font-body text-base font-medium text-[#1C1C1A]">
+                      <span>Summe</span>
                       <span className="text-[#5B5B38]">
-                        {formatPrice(total + (total >= 50 ? 0 : 4.9))}
+                        {cart ? formatMoney(cart.total) : "—"}
                       </span>
                     </div>
-                    <p className="font-body text-xs text-[#7D7D5D] mt-1">
-                      inkl. MwSt.
+                    <p className="mt-2 font-body text-[11px] leading-relaxed text-[#7D7D5D]">
+                      Versand, Steuern und mögliche Rabatte werden im Shopify-Checkout verbindlich berechnet.
                     </p>
                   </div>
 
-                  <Link
-                    href="/checkout"
-                    className="w-full flex items-center justify-center gap-2 font-body text-[11px] tracking-[0.15em] uppercase text-[#F8F5F0] bg-[#5B5B38] px-6 py-4 hover:bg-[#424226] transition-all duration-200 active:scale-[0.97]"
+                  <button
+                    type="button"
+                    onClick={proceedToCheckout}
+                    disabled={loading || !cart?.checkoutUrl}
+                    className="flex w-full items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-[11px] uppercase tracking-[0.15em] text-[#F8F5F0] transition-all duration-200 hover:bg-[#424226] active:scale-[0.97] disabled:cursor-wait disabled:opacity-60"
                   >
-                    Zur Kasse
-                    <ArrowRight size={14} />
-                  </Link>
+                    {loading ? <Loader2 size={14} className="animate-spin" /> : <ArrowRight size={14} />}
+                    Zur Shopify-Kasse
+                  </button>
 
-                  <p className="font-body text-xs text-[#7D7D5D] text-center mt-4">
-                    Sichere Bezahlung · 30 Tage Rückgabe
-                  </p>
+                  <div className="mt-5 flex items-start gap-2 text-[#7D7D5D]">
+                    <ShieldCheck size={16} className="mt-0.5 flex-none" />
+                    <p className="font-body text-[11px] leading-relaxed">
+                      Kunden-Login, Lieferadresse, Zahlung und Bestellung werden sicher von Shopify verarbeitet.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </aside>
             </div>
           )}
         </div>
       </section>
-
-      {/* Free Shipping Progress */}
-      {items.length > 0 && total < 60 && (
-        <section className="py-3 md:py-4 bg-[#F0EBE3] border-t border-[#E5E0D8]">
-          <div className="container">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-body text-sm text-[#6B6B69]">Versandkostenfrei ab 60€</span>
-              <span className="font-body text-sm font-medium text-[#5B5B38]">{formatPrice(60 - total)} fehlen noch</span>
-            </div>
-            <div className="w-full bg-[#E5E0D8] rounded-full h-2 overflow-hidden">
-              <div
-                className="bg-[#5B5B38] h-full transition-all duration-300"
-                style={{ width: `${(total / 60) * 100}%` }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Recommendations Section */}
-      {items.length > 0 && (
-        <section className="py-4 md:py-6 bg-white border-t border-[#E5E0D8]">
-          <div className="container">
-            <h3 className="font-display text-lg md:text-xl text-[#1C1C1A] font-light mb-3">
-              Das könnte dir auch gefallen
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-              {/* Reinigungsgel 50ml */}
-              <CompactRecommendationCard
-                name="Reinigungsgel 50ml"
-                price={12}
-                image="/manus-storage/hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5.jpeg"
-                productId="cleaner-gel-50ml"
-              />
-              {/* GuaSha Tool */}
-              <CompactRecommendationCard
-                name="GuaSha Jade Tool"
-                price={14}
-                image="/manus-storage/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9.png"
-                productId="guasha-jade"
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
       <Footer />
     </div>

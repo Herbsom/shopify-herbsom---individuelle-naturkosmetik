@@ -15,6 +15,8 @@ import { ROUTINE_UNREINE_HAUT } from "@/lib/routineRecommendations";
 import ProductDetailModal, { STANDARD_PRODUCT_DETAILS, type ProductDetail } from "@/components/ProductDetailModal";
 import { SERUM_INGREDIENT_DETAILS, CREME_INGREDIENT_DETAILS } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
+import ShopifyLegacyProductPrice from "@/components/ShopifyLegacyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 
 export default function RoutineReifHaut() {
   const { t } = useTranslation();
@@ -43,8 +45,6 @@ export default function RoutineReifHaut() {
       label: "05",
     },
   ];
-
-  const totalPrice = products.reduce((sum, p) => sum + p.price, 0);
   const [selectedProduct, setSelectedProduct] = useState<ProductDetail | null>(null);
 
 
@@ -100,7 +100,6 @@ export default function RoutineReifHaut() {
     addItem({
       id: product.id,
       name: product.name,
-      price: product.price,
       quantity: 1,
       description: product.description,
     });
@@ -192,15 +191,21 @@ export default function RoutineReifHaut() {
                         )}
 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <span className="font-display text-2xl text-[#5B5B38]">{product.price}€</span>
-                          <button
-                            onClick={() => handleAddToCart(product)}
+                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
+                          <ShopifyPurchaseButton
+                            item={{
+                              id: product.id,
+                              name: product.name,
+                              quantity: 1,
+                              description: product.description,
+                            }}
+                            onPurchase={() => handleAddToCart(product)}
                             className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
                           >
                             <ShoppingBag size={16} />
                             In den Warenkorb
                             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </button>
+                          </ShopifyPurchaseButton>
                                                     <button
                             onClick={() => handleProductClick(product)}
                             className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
@@ -272,15 +277,21 @@ export default function RoutineReifHaut() {
                         )}
 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <span className="font-display text-2xl text-[#5B5B38]">{product.price}€</span>
-                          <button
-                            onClick={() => handleAddToCart(product)}
+                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
+                          <ShopifyPurchaseButton
+                            item={{
+                              id: product.id,
+                              name: product.name,
+                              quantity: 1,
+                              description: product.description,
+                            }}
+                            onPurchase={() => handleAddToCart(product)}
                             className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
                           >
                             <ShoppingBag size={16} />
                             In den Warenkorb
                             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </button>
+                          </ShopifyPurchaseButton>
                                                     <button
                             onClick={() => handleProductClick(product)}
                             className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
@@ -311,16 +322,26 @@ export default function RoutineReifHaut() {
               <div className="bg-gradient-to-r from-[#5B5B38] to-[#424226] rounded-lg p-8 md:p-16 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg">
                 <div className="text-center md:text-left">
                   <p className="font-body text-sm text-[#E8E3DB] mb-2">Gesamtpreis der Routine</p>
-                  <p className="font-display text-5xl lg:text-6xl text-[#F8F5F0] font-light">{totalPrice}€</p>
+                  <p className="font-display text-3xl lg:text-4xl text-[#F8F5F0] font-light">Aktueller Gesamtpreis im Shopify-Warenkorb</p>
                 </div>
-                <Link
-                  href="/hauttest"
+                <ShopifyPurchaseButton
+                  items={products.map((product) => ({
+                    id: product.id,
+                    name: product.name,
+                    quantity: 1,
+                    description: product.description,
+                  }))}
+                  onPurchase={() => {
+                    products.forEach((product) => handleAddToCart(product));
+                  }}
+                  wrapperClassName="items-center"
+                  messageClassName="text-[#F2D7CE]"
                   className="bg-[#F8F5F0] text-[#5B5B38] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-8 lg:px-10 py-4 lg:py-5 rounded-sm hover:bg-[#E8E3DB] transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-lg hover:scale-105"
                 >
                   <ShoppingBag size={18} className="flex-shrink-0" />
                   <span className="whitespace-nowrap">Gesamte Routine hinzufügen</span>
                   <ArrowRight size={16} className="flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </ShopifyPurchaseButton>
               </div>
             </div>
           </div>

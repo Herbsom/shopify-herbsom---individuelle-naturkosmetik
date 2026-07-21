@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { protectedProcedure, publicProcedure, router } from "../_core/trpc";
-import { getReviewsByProductId, createReview, updateReviewStatus, updateReviewHelpful, getPendingReviews, getReviewById } from "../db";
+import { getReviewsByProductId, getTopApprovedReviews, createReview, updateReviewStatus, updateReviewHelpful, getPendingReviews, getReviewById } from "../db";
 import { TRPCError } from "@trpc/server";
 
 export const reviewsRouter = router({
@@ -10,6 +10,11 @@ export const reviewsRouter = router({
     .query(async ({ input }) => {
       return getReviewsByProductId(input.productId, 'approved');
     }),
+
+  // Get the most helpful approved reviews across products
+  getTop: publicProcedure
+    .input(z.object({ limit: z.number().int().min(1).max(6).default(3) }))
+    .query(async ({ input }) => getTopApprovedReviews(input.limit)),
 
   // Get average rating for a product
   getAverageRating: publicProcedure

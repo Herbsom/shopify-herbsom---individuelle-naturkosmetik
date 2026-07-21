@@ -8,18 +8,13 @@ import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import ReviewForm from "@/components/ReviewForm";
+import ReviewSubmissionNotice from "@/components/ReviewSubmissionNotice";
+import ShopifyLegacyProductPrice from "@/components/ShopifyLegacyProductPrice";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 import ReviewList from "@/components/ReviewList";
 import { Check, ArrowRight, Beaker, Leaf, Recycle, Star } from "lucide-react";
 import IngredientDetailModal, { SERUM_INGREDIENT_DETAILS, type IngredientDetail } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
-const CREME_PRICES = {
-  2: 36,
-  3: 41,
-  4: 46,
-};
 const BASE_CREAM_IMAGES: Record<string, string> = {
   light: "/manus-storage/Basiscreme_3e6c66de.webp",
   rich: "/manus-storage/Basiscreme_3e6c66de.webp",
@@ -95,7 +90,6 @@ export default function ConfiguratorCreme() {
   const [baseCream, setBaseCream] = useState<string | null>(null);
   const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
   const [detailIngredient, setDetailIngredient] = useState<IngredientDetail | null>(null);
-  const { user, loading } = useAuth();
 
   // Prefill from query params (e.g. from Hauttest results)
   useEffect(() => {
@@ -145,7 +139,6 @@ export default function ConfiguratorCreme() {
     }
   };
   const ingredientCount = selectedIngredients.length;
-  const price = ingredientCount >= 2 && ingredientCount <= 4 ? CREME_PRICES[ingredientCount as 2 | 3 | 4] : null;
   const canAddToCart = baseCream && ingredientCount >= 2 && ingredientCount <= 4;
   const { addItem, replaceItem } = useCart();
 
@@ -162,14 +155,13 @@ export default function ConfiguratorCreme() {
     .filter(Boolean) as string[];
 
   const handleAddToCart = () => {
-    if (!canAddToCart || !price) {
+    if (!canAddToCart) {
       toast.error("Bitte Basiscreme und 2-4 Wirkstoffe auswählen");
       return;
     }
     const newItem = {
       id: `creme-${baseCream}-${selectedIngredients.sort().join("-")}`,
       name: `Individuelle Creme (${baseCream === "light" ? "Leicht" : "Reichhaltig"}, ${ingredientCount} Wirkstoffe)`,
-      price,
       quantity: 1,
       description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
     };
@@ -178,7 +170,7 @@ export default function ConfiguratorCreme() {
             navigate("/cart");
     } else {
       addItem(newItem);
-      toast.success(`Creme (€${price}) zum Warenkorb hinzugefügt!`);
+      toast.success("Creme wurde zum Shopify-Warenkorb hinzugefügt!");
     }
   };
   return (
@@ -220,7 +212,7 @@ export default function ConfiguratorCreme() {
               {[
                 { number: "1", label: "Basiscreme", desc: "Hochwertige Grundlage" },
                 { number: "2-4", label: "Wirkstoffe", desc: "Nach deinen Bedürfnissen" },
-                { number: "ab €36", label: "Preis", desc: "Transparent & fair" },
+                { number: "Aktuell", label: "Preis", desc: "Direkt aus Shopify" },
               ].map((item, i) => (
                 <div key={i} className="text-center">
                   <div
@@ -415,9 +407,18 @@ export default function ConfiguratorCreme() {
                 </h2>
               </div>
               <div className="bg-[#5B5B38] text-[#F8F5F0] p-8 md:p-12 rounded-lg text-center">
-                <p className="font-display text-4xl md:text-5xl font-light mb-4">
-                  {price ? `€${price}` : "ab €36"}
-                </p>
+                <ShopifyLegacyProductPrice
+                  item={canAddToCart ? {
+                    id: `creme-${baseCream}-${selectedIngredients.slice().sort().join("-")}`,
+                    name: `Individuelle Creme (${baseCream === "light" ? "Leicht" : "Reichhaltig"}, ${ingredientCount} Wirkstoffe)`,
+                    description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
+                  } : {
+                    id: "individuelle-gesichtscreme",
+                    name: "Individuelle Creme",
+                  }}
+                  showFrom={!canAddToCart}
+                  className="block font-display text-4xl md:text-5xl font-light mb-4"
+                />
                 <p className="font-body text-sm text-[#E8E3DB] mb-4">
                   1 Basiscreme + {ingredientCount} Wirkstoffe · Alle Preise inkl. MwSt. zzgl. Versand
                 </p>
@@ -434,24 +435,30 @@ export default function ConfiguratorCreme() {
                     </ul>
                   </div>
                 )}
-                <button
-                  onClick={handleAddToCart}
+                <ShopifyPurchaseButton
+                  item={canAddToCart ? {
+                    id: `creme-${baseCream}-${selectedIngredients.slice().sort().join("-")}`,
+                    name: `Individuelle Creme (${baseCream === "light" ? "Leicht" : "Reichhaltig"}, ${ingredientCount} Wirkstoffe)`,
+                    quantity: 1,
+                    description: `Wirkstoffe: ${selectedIngredientNames.join(", ")}`,
+                  } : undefined}
+                  onPurchase={handleAddToCart}
                   disabled={!canAddToCart}
+                  disabledReason={!baseCream
+                    ? "Bitte wähle zuerst eine Basiscreme."
+                    : ingredientCount < 2
+                      ? `Bitte wähle ${2 - ingredientCount} weitere Wirkstoffe.`
+                      : "Bitte wähle höchstens 4 Wirkstoffe."}
+                  wrapperClassName="w-full items-center"
+                  messageClassName="text-[#F2D7CE]"
                   className={`px-8 py-3 font-body text-xs tracking-[0.12em] uppercase border transition-all ${
                     canAddToCart
                       ? "bg-[#F8F5F0] text-[#5B5B38] border-[#F8F5F0] hover:bg-transparent hover:text-[#F8F5F0]"
                       : "bg-transparent text-white border-white cursor-not-allowed opacity-70"
                   }`}
                 >
-                  {canAddToCart ? (editingCartItemId ? "Creme aktualisieren" : "Zum Warenkorb hinzufügen") : "Bitte alle Schritte ausfüllen"}
-                </button>
-                {!canAddToCart && (
-                  <p className="font-body text-xs text-[#E8E3DB] mt-4">
-                    {!baseCream && "→ Basiscreme auswählen"}
-                    {baseCream && ingredientCount < 2 && `→ ${2 - ingredientCount} weitere Wirkstoffe auswählen`}
-                    {baseCream && ingredientCount > 4 && "→ Maximal 4 Wirkstoffe"}
-                  </p>
-                )}
+                  {editingCartItemId ? "Creme aktualisieren" : "Zum Warenkorb hinzufügen"}
+                </ShopifyPurchaseButton>
                             </div>
             </div>
           </div>
@@ -535,23 +542,7 @@ export default function ConfiguratorCreme() {
             </div>
             {/* Review Form - Below Reviews */}
             <div className="max-w-2xl mx-auto">
-              {loading ? (
-                <div className="text-center py-8 text-[#6B6B69]">Wird geladen...</div>
-              ) : !user ? (
-                <div className="bg-[#F0EBE3] p-6 rounded-lg text-center">
-                  <p className="font-body text-sm text-[#6B6B69] mb-4">
-                    Melde dich an, um eine Bewertung zu hinterlassen.
-                  </p>
-                  <a
-                    href={getLoginUrl()}
-                    className="inline-block bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] transition-all duration-300"
-                  >
-                    Anmelden
-                  </a>
-                </div>
-              ) : (
-                <ReviewForm productId="creme" />
-              )}
+              <ReviewSubmissionNotice />
             </div>
           </div>
         </div>

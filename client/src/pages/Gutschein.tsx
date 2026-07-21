@@ -1,19 +1,34 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useCart } from "@/contexts/CartContext";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { trpc } from "@/lib/trpc";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 
 export default function Gutschein() {
   const { t } = useTranslation();
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [quantity, setQuantity] = useState(1);
 
-  const amounts = [25, 50, 75, 100, 150, 200];
+  const giftProductQuery = trpc.commerce.products.byHandle.useQuery({
+    handle: "unser-gutschein-1",
+  });
+  const amounts = useMemo(() => {
+    const values = giftProductQuery.data?.variants
+      .filter((variant) => variant.availableForSale)
+      .map((variant) => Number(variant.price.amount))
+      .filter((amount) => Number.isFinite(amount) && amount > 0) ?? [];
+    return Array.from(new Set(values)).sort((a, b) => a - b);
+  }, [giftProductQuery.data]);
+  const selectedVariant = useMemo(
+    () => giftProductQuery.data?.variants.find(
+      (variant) => variant.availableForSale && Number(variant.price.amount) === selectedAmount
+    ) ?? null,
+    [giftProductQuery.data, selectedAmount]
+  );
 
   const { addItem } = useCart();
   const handleAddToCart = () => {
@@ -21,12 +36,11 @@ export default function Gutschein() {
       toast.error("Bitte wählen Sie einen Gutschein-Betrag");
       return;
     }
-    addItem({
-      id: `gutschein-${selectedAmount}`,
-      name: `Geschenkgutschein ${selectedAmount}€`,
-      price: selectedAmount,
-      quantity,
-    });
+    if (!selectedVariant) {
+      toast.error("Dieser Shopify-Gutscheinwert ist derzeit nicht verfügbar");
+      return;
+    }
+    void addItem(selectedVariant.id, quantity);
     toast.success(`${quantity}x Gutschein(e) à ${selectedAmount}€ in den Warenkorb`);
   };
 
@@ -94,21 +108,33 @@ export default function Gutschein() {
           </h2>
 
           {/* Amount Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            {amounts.map((amount) => (
-              <button
-                key={amount}
-                onClick={() => setSelectedAmount(amount)}
-                className={`p-6 rounded-sm border-2 transition-all duration-300 ${
-                  selectedAmount === amount
-                    ? "border-[#5B5B38] bg-[#5B5B38] text-[#F8F5F0]"
-                    : "border-[#E5E0D8] bg-white text-[#1C1C1A] hover:border-[#5B5B38]"
-                }`}
-              >
-                <div className="font-display text-2xl md:text-3xl font-light">{amount}€</div>
-              </button>
-            ))}
-          </div>
+          {giftProductQuery.isLoading ? (
+            <div className="mb-12 grid grid-cols-2 md:grid-cols-3 gap-4" aria-label="Gutscheinwerte werden geladen">
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <div key={item} className="h-24 animate-pulse bg-white border border-[#E5E0D8]" />
+              ))}
+            </div>
+          ) : giftProductQuery.isError || amounts.length === 0 ? (
+            <div role="alert" className="mb-12 border border-[#E5E0D8] bg-white p-6 text-center font-body text-sm text-[#6B6B69]">
+              Die verfügbaren Shopify-Gutscheinwerte konnten nicht geladen werden. Bitte versuche es später erneut.
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+              {amounts.map((amount) => (
+                <button
+                  key={amount}
+                  onClick={() => setSelectedAmount(amount)}
+                  className={`p-6 rounded-sm border-2 transition-all duration-300 ${
+                    selectedAmount === amount
+                      ? "border-[#5B5B38] bg-[#5B5B38] text-[#F8F5F0]"
+                      : "border-[#E5E0D8] bg-white text-[#1C1C1A] hover:border-[#5B5B38]"
+                  }`}
+                >
+                  <div className="font-display text-2xl md:text-3xl font-light">{amount.toLocaleString("de-DE")} €</div>
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Quantity Selector */}
           {selectedAmount && (
@@ -137,6 +163,11 @@ export default function Gutschein() {
           )}
 
           {/* Total Price */}
+          {selectedAmount && !selectedVariant && !giftProductQuery.isLoading && (
+            <div role="alert" className="mb-8 border border-[#B98072] bg-[#FFF8F6] p-4 font-body text-sm text-[#7A3E32]">
+              Der gewählte Gutscheinwert ist im Shopify-Verkaufskanal derzeit nicht kaufbar.
+            </div>
+          )}
           {selectedAmount && (
             <div className="mb-8 p-6 bg-[#F8F5F0] border border-[#E5E0D8] rounded-sm">
               <div className="flex justify-between items-center mb-6">
@@ -145,14 +176,24 @@ export default function Gutschein() {
                   {selectedAmount * quantity}€
                 </span>
               </div>
-              <button
-                onClick={handleAddToCart}
+              <ShopifyPurchaseButton
+                item={{ id: "unser-gutschein-1", name: "Herbsom Gutschein", quantity }}
+                onPurchase={handleAddToCart}
+                disabled={giftProductQuery.isLoading || giftProductQuery.isError || !selectedVariant}
+                disabledReason={giftProductQuery.isLoading
+                  ? "Der gewählte Gutscheinwert wird bei Shopify geprüft …"
+                  : giftProductQuery.isError
+                    ? "Die Shopify-Gutscheinwerte konnten nicht geladen werden."
+                    : !selectedVariant
+                      ? "Der gewählte Gutscheinwert ist im Shopify-Verkaufskanal derzeit nicht kaufbar."
+                      : undefined}
+                wrapperClassName="w-full"
                 className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center justify-center gap-2 group shadow-sm hover:shadow-md"
               >
                 <ShoppingBag size={16} />
                 In den Warenkorb
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </ShopifyPurchaseButton>
             </div>
           )}
 
@@ -179,61 +220,6 @@ export default function Gutschein() {
                 <span>Der Empfänger kann seinen Gutschein einlösen und seine Routine zusammenstellen</span>
               </li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-[#F8F5F0] py-8 md:py-12 px-4">
-        <div className="container max-w-4xl">
-          <h2 className="font-display text-2xl md:text-3xl text-[#1C1C1A] mb-12 text-center font-light">
-            Das sagen unsere Kunden
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Anna M.",
-                location: "München",
-                text: "Das perfekte Geschenk für meine Schwester! Sie konnte sich ihre Routine selbst zusammenstellen.",
-              },
-              {
-                name: "Lisa K.",
-                location: "Berlin",
-                text: "Schnelle Lieferung und wunderschön verpackt. Der Gutschein war sofort verfügbar!",
-              },
-              {
-                name: "Sarah B.",
-                location: "Hamburg",
-                text: "Meine beste Freundin liebt ihre neue Hautpflege-Routine. Ein wirklich durchdachtes Geschenk.",
-              },
-            ].map((testimonial, idx) => (
-              <Card key={idx} className="p-6 bg-white border border-[#E5E0D8]">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-[#5B5B38]">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="font-body text-sm text-[#4A4A48] mb-4 leading-relaxed">
-                  {testimonial.text}
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#5B5B38] flex items-center justify-center">
-                    <span className="font-display text-sm text-[#F8F5F0]">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-body text-xs font-light text-[#1C1C1A]">
-                      {testimonial.name}
-                    </p>
-                    <p className="font-body text-xs text-[#7D7D5D]">{testimonial.location}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

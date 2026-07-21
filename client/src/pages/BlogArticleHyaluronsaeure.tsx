@@ -236,7 +236,7 @@ export default function BlogArticleHyaluronsaeure() {
               Starte unseren intelligenten Hauttest und erhalte personalisierte Produktempfehlungen mit Hyaluronsäure und anderen Wirkstoffen.
             </p>
             <a
-              href="/#hauttest"
+              href="/hauttest"
               className="inline-block border border-[#F8F5F0] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#F8F5F0] hover:text-[#5B5B38] transition-all duration-300"
             >
               Hauttest starten

@@ -6,6 +6,8 @@
 import { useEffect, useState } from "react";
 import { X, Leaf, Beaker, Heart, Droplets, ShoppingCart, ArrowRight } from "lucide-react";
 import { SERUM_INGREDIENT_DETAILS } from "./IngredientDetailModal";
+import { useCart } from "@/contexts/CartContext";
+import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 
 export interface ProductDetail {
   id: string;
@@ -262,13 +264,27 @@ export const STANDARD_PRODUCT_DETAILS: Record<string, ProductDetail> = {
 
 export default function ProductDetailModal({ product, onClose }: ProductDetailModalProps) {
   const [isAdding, setIsAdding] = useState(false);
+  const { addItem } = useCart();
 
-  const handleAddToCart = () => {
+  const detailCartItem = product
+    ? {
+        id: product.id,
+        name: product.name,
+        quantity: 1,
+        description: product.selectedIngredients?.length
+          ? `Wirkstoffe: ${product.selectedIngredients.map((ingredient) => ingredient.name).join(", ")}`
+          : undefined,
+      }
+    : null;
+
+  const handleAddToCart = async () => {
+    if (!detailCartItem) return;
     setIsAdding(true);
-    setTimeout(() => {
+    try {
+      await addItem(detailCartItem);
+    } finally {
       setIsAdding(false);
-      console.log(`${product?.name} added to cart`);
-    }, 500);
+    }
   };
 
   // Close on Escape key
@@ -511,15 +527,19 @@ export default function ProductDetailModal({ product, onClose }: ProductDetailMo
 
           {/* Add to Cart Button */}
           <div className="border-t border-[#5B5B38]/20 pt-5 mt-6">
-            <button
-              onClick={handleAddToCart}
-              disabled={isAdding}
-              className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md disabled:opacity-75"
-            >
-              <ShoppingCart size={16} />
-              {isAdding ? "Wird hinzugefügt..." : "In den Warenkorb"}
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            {detailCartItem && (
+              <ShopifyPurchaseButton
+                item={detailCartItem}
+                onPurchase={handleAddToCart}
+                disabled={isAdding}
+                disabledReason={isAdding ? "Der Artikel wird dem Shopify-Warenkorb hinzugefügt …" : undefined}
+                className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md disabled:opacity-75"
+              >
+                <ShoppingCart size={16} />
+                {isAdding ? "Wird hinzugefügt..." : "In den Warenkorb"}
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </ShopifyPurchaseButton>
+            )}
           </div>
         </div>
       </div>

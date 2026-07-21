@@ -89,7 +89,7 @@ export default function RoutineOverview() {
           <p className="font-body text-lg text-muted-foreground mb-8">
             Mache unseren Hauttest und erhalte personalisierte Empfehlungen basierend auf deinem Hauttyp.
           </p>
-          <Link href="/product/creme">
+          <Link href="/hauttest">
             <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90">
               Jetzt Hauttest starten
             </Button>
