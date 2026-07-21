@@ -281,7 +281,7 @@
 - [x] Stripe-, SUBSCRIBE15- und nicht angeforderte Abo-spezifische Logik aus aktiven Storefront-Flows entfernen
 - [x] Unreferenzierte Stripe-Abo-Services, Webhook-/Routermodule und den hängenden Alt-Test aus dem aktiven Quellbestand entfernen
 - [x] Shopify-Integrationspfade mit Vitest sowie Desktop- und Mobilansicht verifizieren
-- [ ] Stabilen Shopify-Storefront-Stand als neuen Checkpoint dokumentieren
+- [x] Stabilen Shopify-Storefront-Stand als neuen Checkpoint dokumentieren
 - [x] Shopify-Commerce-Router in der zentralen tRPC-Routerstruktur registrieren
 - [x] Shopify-Store-Domain und Storefront-Zugriffstoken über die zentrale Server-Umgebung exportieren
 - [x] Vorhandene kundenspezifische CartContext-Funktionen mit dem Shopify-Warenkorb-Scaffold zusammenführen
