@@ -85,7 +85,7 @@ export default function About() {
             {/* Founders Image */}
             <div className="reveal">
               <img
-                src="/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_6932f904.jpg"
+                src="/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg"
                 alt="Herbsom Store mit Gründerinnen"
                 className="w-full h-auto rounded-sm"
               />

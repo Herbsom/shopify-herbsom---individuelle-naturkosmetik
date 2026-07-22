@@ -1,0 +1,689 @@
+{
+  "generatedAt": "2026-07-22T14:45:28.951Z",
+  "summary": {
+    "totalReferences": 79,
+    "localPublicReferences": 0,
+    "missingLocalPublicFiles": 0,
+    "webAssetReferences": 79
+  },
+  "references": [
+    {
+      "reference": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/routineRecommendations.ts",
+        "client/src/lib/skinTestRecommendation.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts",
+        "client/src/pages/Peelings.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/routineRecommendations.ts",
+        "client/src/lib/skinTestRecommendation.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/pages/Peelings.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_3fa210dd.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx",
+        "client/src/lib/homeAssets.ts",
+        "client/src/lib/routineRecommendations.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts",
+        "client/src/lib/routineRecommendations.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_dd7db882.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts",
+        "client/src/lib/routineRecommendations.ts",
+        "client/src/lib/skinTestRecommendation.ts",
+        "client/src/pages/Cleaners.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/routineRecommendations.ts",
+        "client/src/lib/skinTestRecommendation.ts",
+        "client/src/pages/Cleaners.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/034-disteloel2ml_87d83e0a-1b229cba_e31dd53b.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/pages/About.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02_8e779bd6.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_45729ddd.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/routineRecommendations.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da_8cb305f8.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_4aa7e8a9.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.ts",
+        "client/src/pages/About.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/076-sanddornoel2ml_ec59d504-5f9b3865_ee4e6a6e.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/077-trauberkernoel2ml_5d373859-a1917112_bc48743f.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/078-wildrosenoel2ml_0f0e1f86-f6fb2885_355f4a80.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-home-hero_67cba1c9.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-home-skincare_7e8e0204.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/routines/RoutineEmpfindlichHaut.tsx",
+        "client/src/pages/routines/RoutineMischhaut.tsx",
+        "client/src/pages/routines/RoutineNormaleHaut.tsx",
+        "client/src/pages/routines/RoutineReifHaut.tsx",
+        "client/src/pages/routines/RoutineSensibleHaut.tsx",
+        "client/src/pages/routines/RoutineTrockenHaut.tsx",
+        "client/src/pages/routines/RoutineUnreineHaut.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-skin-test_d56a3a43.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-story-detail_797f9e01.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-story-portrait_a73126e1.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/editorial-story-wide_14bfe783.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-hero_cae59246.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-philosophy_88b5b235.jpeg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-product-cleanser_7661ffa0.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-product-cream_c54c24fe.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-product-peeling_632e04ea.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-product-serum_24a1f600.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-skin-test_08c5aab8.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-story_9311d007.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-sunscreen_3c736033.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/herbsom-site-texture_85e0b708.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/homeAssets.test.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-creme-basic-basiscreme-rich_564937b6.webp",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/SkinTest.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/SkinTest.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/SkinTest.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-algenextrakt_2dd0d1ef.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-hyaluronkomplex_65604b67.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-malvenextrakt_c9e29a4e.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-niacinamide_cc34ad82.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-retinolkomplex_f783a663.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-rosskastanienextrakt_25117b5a.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-vitaminkomplex_13a7064d.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-weidenrindenextrakt_0bb34194.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorCreme.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/components/IngredientDetailModal.tsx",
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts"
+      ]
+    },
+    {
+      "reference": "/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg",
+      "kind": "web_asset",
+      "localFileExists": null,
+      "referencedBy": [
+        "client/src/lib/recoveredAssets.ts",
+        "client/src/pages/ConfiguratorSerum.tsx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-07-22T14:45:16.215Z",
+  "changedFiles": [
+    "client/src/components/IngredientDetailModal.tsx",
+    "client/src/lib/homeAssets.ts",
+    "client/src/lib/routineRecommendations.ts",
+    "client/src/lib/skinTestRecommendation.ts",
+    "client/src/pages/About.tsx",
+    "client/src/pages/Cleaners.tsx"
+  ],
+  "replacements": [
+    {
+      "from": "/images/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
+      "to": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/images/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
+      "to": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/images/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
+      "to": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/images/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
+      "to": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/images/024-Creme_1x1_87ae5318-73737373_61616161_5d7f2a3b.webp",
+      "to": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/images/025-Serum_1x1_59b5acd0-73737373_61616161_8c7d5e3f.webp",
+      "to": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/images/026-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161_9f7e3c4d.webp",
+      "to": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png",
+      "occurrences": 7
+    },
+    {
+      "from": "/manus-storage/001-product-ingredient-serum-weidenrindenextrakt-serum_df236911-3783777d_44641861.png",
+      "to": "/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/manus-storage/002-product-ingredient-serum-niacinamide-serum_2e906fce-20387431_79320292.png",
+      "to": "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/003-product-ingredient-serum-vitaminkomplex-serum_dc12670a-0498711e_92330833.png",
+      "to": "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/004-product-ingredient-serum-retinolkomplex-serum_556455dc-63746761_67119022.png",
+      "to": "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/005-product-ingredient-serum-spilantholkomplex_07997302-3031327f_41113033.png",
+      "to": "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/006-product-ingredient-serum-malvenextrakt-serum_9b59eeb9-1037337f_32320833.png",
+      "to": "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/007-product-ingredient-serum-rosskastanienextrakt-serum_047-hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c464dfc9-10fbe749_5d7cb66c.png",
+      "to": "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/008-Algenextrakt10ml_004e3f2d-710e9e81_bc6d6486.webp",
+      "to": "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/009-Hyaluronkomplex10ml_fcad0b2d-cc151f90_fee908b4.webp",
+      "to": "/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/012-product-creme-basic-basiscreme_6b980eea-73737373_61616161.jpg",
+      "to": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/013-product-creme-basic-basiscreme-rich_564937b6-73737373_61616161.webp",
+      "to": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/009-Creme_1x1_e0123456-7890-4321-abcd-1234567890ab_142cd424.webp",
+      "to": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_142cd424.webp",
+      "to": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
+      "occurrences": 2
+    },
+    {
+      "from": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_142cd424.webp",
+      "to": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/021-Serum_1x1_e0123456-7890-4321-abcd-1234567890ab_142cd424.webp",
+      "to": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/046-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_f6b3083b.png",
+      "to": "/manus-storage/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_4aa7e8a9.png",
+      "occurrences": 1
+    },
+    {
+      "from": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_6932f904.jpg",
+      "to": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
+      "occurrences": 2
+    }
+  ]
+}

@@ -335,3 +335,11 @@
 - [x] Jede Referenzseite den entsprechenden aktuellen Herbsom-Seiten und den betroffenen Bildverweisen zuordnen
 - [x] Sämtliche noch fehlenden Referenzbilder als langlebige Projekt-Assets übernehmen und die passenden Seitenverweise ersetzen
 - [x] Die Bildübernahme auf allen betroffenen Seiten in Desktop- und Mobilansicht sowie im Produktions-Build prüfen
+
+## Nachbesserung Bildladefehler – 2026-07-22
+
+- [x] Alle im Client verwendeten Bild-URLs gegen den tatsächlich verfügbaren Bildbestand prüfen
+- [x] Fehlende, fehlerhafte und inkonsistent benannte Bildpfade vollständig korrigieren
+- [x] Automatisierten Test für die Konsistenz lokaler Referenzbildpfade ergänzen und ausführen
+- [x] Betroffene Produkt-, Routine-, Hauttest- und Inhaltsstoffansichten auf Desktop und Mobil visuell prüfen
+- [ ] Korrigierte Bildauslieferung in einer neuen überprüften Projektversion sichern

@@ -19,7 +19,7 @@ export default function Cleaners() {
       subtitle: "Für Mischhaut, ölige & normale Haut",
       description: "Reinigt intensiv & beugt Unreinheiten vor. Spendet Feuchtigkeit & erhält die Hautschutzbarriere.",
       benefits: ["Intensive Reinigung", "Unreinheiten-vorbeugend", "Feuchtigkeitsspendend"],
-      image: "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_142cd424.webp",
+      image: "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
       slug: "cleaner",
       handle: "reinigungsgel",
     },
@@ -29,7 +29,7 @@ export default function Cleaners() {
       subtitle: "Für trockene & sensible Haut",
       description: "Sanfte Reinigung mit Feuchtigkeit. Entfernt Make-up und Schmutz ohne die Haut zu reizen.",
       benefits: ["Sanfte Reinigung", "Feuchtigkeitsspendend", "Hautberuhigung"],
-      image: "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_142cd424.webp",
+      image: "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
       slug: "cleaner-milk",
       handle: "reinigungs-milch",
     }
