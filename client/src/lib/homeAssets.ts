@@ -3,9 +3,9 @@
  * Alle statischen Dateien werden über langlebige Projekt-Web-Assets bereitgestellt.
  */
 export const HOME_IMAGES = {
-  hero: "/manus-storage/editorial-home-hero_67cba1c9.jpg",
-  ingredients: "/manus-storage/editorial-home-skincare_7e8e0204.jpg",
-  ritual: "/manus-storage/shared-task-ritual_0fdefbb5.jpg",
-  texture: "/manus-storage/shared-task-texture_55eb63e2.jpg",
-  products: "/manus-storage/editorial-story-wide_14bfe783.jpg",
+  hero: "/manus-storage/herbsom-reference-hero_bbea9f3d.webp",
+  ingredients: "/manus-storage/herbsom-reference-ingredients_efc10a47.webp",
+  ritual: "/manus-storage/herbsom-reference-ritual_d9ac2a9e.webp",
+  texture: "/manus-storage/herbsom-reference-texture_f285c3ae.webp",
+  products: "/manus-storage/herbsom-reference-products_d6c6bf77.webp",
 } as const;

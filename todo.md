@@ -316,3 +316,9 @@
 - [x] Bildplatzierung, Bildverhältnisse und Bildzuschnitte der referenzierten Manus-Aufgabe gegenüber der aktuellen Herbsom-Startseite erfassen
 - [x] Startseiten-Bildintegration gemäß Referenzaufgabe aktualisieren, einschließlich Positionierung, Ausschnitt und responsiver Bildverhalten
 - [x] Referenzähnlichkeit sowie Bilddarstellung in Desktop- und Mobilansicht technisch prüfen
+
+## Korrektur auf Originalbilder der Referenzaufgabe – 2026-07-22
+
+- [x] Die fünf tatsächlichen Originalbilddateien der Referenz-Startseite aus dem angehängten Aufgabenbestand identifizieren und visuell gegen die aktuelle Startseite abgleichen
+- [x] Die abweichenden aktuellen Startseitenmotive durch die Originalbilder der Referenzaufgabe als langlebige Projekt-Assets ersetzen
+- [x] Motivgleichheit, Bildausschnitt und responsive Darstellung der korrigierten Originalbilder auf Desktop und Mobil prüfen
