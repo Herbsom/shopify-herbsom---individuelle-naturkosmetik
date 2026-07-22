@@ -15,7 +15,7 @@ import ShopifyProductPrice from "@/components/ShopifyProductPrice";
 import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 import ShopifyProductGallery from "@/components/ShopifyProductGallery";
 import ShopifyProductCardImage from "@/components/ShopifyProductCardImage";
-import { HOME_IMAGES } from "@/lib/homeAssets";
+import { SERUM_PRODUCT_REFERENCE_GALLERY } from "@/lib/productReferenceImages";
 import { useTranslation } from "react-i18next";
 export default function ProductSerum() {
   const { t } = useTranslation();
@@ -45,12 +45,7 @@ export default function ProductSerum() {
               <ShopifyProductGallery
                 handle="individuelle-serum-creme"
                 alt="Individuelles Serum"
-                referenceImages={[
-                  {
-                    url: HOME_IMAGES.productSerum,
-                    altText: "Individuelles Herbsom Serum",
-                  },
-                ]}
+                referenceImages={SERUM_PRODUCT_REFERENCE_GALLERY}
                 className="aspect-square rounded-sm bg-[#F0EBE3]"
               />
               {/* Product Info */}

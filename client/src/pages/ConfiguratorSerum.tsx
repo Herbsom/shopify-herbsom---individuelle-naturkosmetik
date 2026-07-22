@@ -15,17 +15,19 @@ import ReviewList from "@/components/ReviewList";
 import { Check, ArrowRight, Beaker, Leaf, Recycle, Star } from "lucide-react";
 import IngredientDetailModal, { SERUM_INGREDIENT_DETAILS, type IngredientDetail } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
-const BASE_SERUM_IMAGE = "/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg";
+import { SERUM_REFERENCE_IMAGES } from "@/lib/productReferenceImages";
+
+const BASE_SERUM_IMAGE = SERUM_REFERENCE_IMAGES.baseSerum;
 const INGREDIENT_IMAGES: Record<string, string> = {
-  willow: "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
-  niacinamide: "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
-  vitaminc: "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
-  retinol: "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
-  spilanthol: "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
-  mallow: "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
-  horsechestnut: "/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
-  algae: "/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
-  hyaluronic: "/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
+  willow: SERUM_REFERENCE_IMAGES.willow,
+  niacinamide: SERUM_REFERENCE_IMAGES.niacinamide,
+  vitaminc: SERUM_REFERENCE_IMAGES.vitaminc,
+  retinol: SERUM_REFERENCE_IMAGES.retinol,
+  spilanthol: SERUM_REFERENCE_IMAGES.spilanthol,
+  mallow: SERUM_REFERENCE_IMAGES.mallow,
+  horsechestnut: SERUM_REFERENCE_IMAGES.horsechestnut,
+  algae: SERUM_REFERENCE_IMAGES.algae,
+  hyaluronic: SERUM_REFERENCE_IMAGES.hyaluronic,
 };
 const ACTIVE_INGREDIENTS = {
   "Unreinheiten, ölige Haut & Mischhaut": [

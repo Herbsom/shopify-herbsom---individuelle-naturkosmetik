@@ -359,3 +359,12 @@
 - [x] Bildpfade und Produktschnittstellen mit Tests sowie einer Erreichbarkeitsprüfung absichern
 - [x] Serum- und Creme-Seiten auf Desktop und Mobil visuell gegen die Referenzbildwelt prüfen
 - [x] Die geprüfte Produktbildübernahme in einer neuen Projektversion sichern
+
+## Vollständige Referenzbildübernahme für Serum und Creme – 2026-07-22
+
+- [x] Alle serum- und cremebezogenen Bildmotive der Referenzseite einschließlich Produkt-, Wirkstoff-, Basis- und Detailbilder vollständig erfassen
+- [x] Jede Bildfläche der individuellen Serum- und Creme-Produktseiten sowie der zugehörigen Konfiguratoren der passenden Referenzbildquelle zuordnen
+- [x] Fehlende Referenzbilder als langlebige Projekt-Web-Assets bereitstellen und alle Produkt-, Konfigurator- und Detailbildverweise aktualisieren
+- [x] Bildreihenfolge, Bildpfade und Produktbildzuordnungen automatisiert testen
+- [x] Vollständige Serum- und Creme-Bilddarstellung auf Desktop und Mobil visuell prüfen
+- [x] Die geprüfte vollständige Bildübernahme in einer neuen Projektversion sichern
