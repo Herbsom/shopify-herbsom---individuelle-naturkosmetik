@@ -342,4 +342,4 @@
 - [x] Fehlende, fehlerhafte und inkonsistent benannte Bildpfade vollständig korrigieren
 - [x] Automatisierten Test für die Konsistenz lokaler Referenzbildpfade ergänzen und ausführen
 - [x] Betroffene Produkt-, Routine-, Hauttest- und Inhaltsstoffansichten auf Desktop und Mobil visuell prüfen
-- [ ] Korrigierte Bildauslieferung in einer neuen überprüften Projektversion sichern
+- [x] Korrigierte Bildauslieferung in einer neuen überprüften Projektversion sichern
