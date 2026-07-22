@@ -11,14 +11,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TopReviews from "@/components/TopReviews";
 import { ArrowRight, ChevronRight } from "lucide-react";
-// Image URLs from generated assets
-const IMAGES = {
-  hero: "/manus-storage/editorial-home-hero_67cba1c9.jpg",
-  products: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_products-Fmbh64pac5dTHRXeAbTgFq.webp",
-  ingredients: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_ingredients-c8AQXo84iWy7eDcG8t9BQD.webp",
-  ritual: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_ritual-cyDUZcaiBvq2pqEYikgjfm.webp",
-  texture: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_texture-m7ZGot83zn66cGJVLtA6wB.webp",
-};
+import { HOME_IMAGES } from "@/lib/homeAssets";
 // Scroll reveal hook
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -106,7 +99,7 @@ export default function Home() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${IMAGES.hero})` }}
+          style={{ backgroundImage: `url(${HOME_IMAGES.hero})` }}
         />
         {/* Subtle overlay for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F0]/80 via-[#F8F5F0]/30 to-transparent" />
@@ -301,7 +294,7 @@ export default function Home() {
             <div className="relative reveal reveal-delay-2">
               <div
                 className="aspect-[3/4] bg-cover bg-center"
-                style={{ backgroundImage: `url(/manus-storage/editorial-story-detail_797f9e01.jpg)` }}
+                style={{ backgroundImage: `url(${HOME_IMAGES.ritual})` }}
               />
               {/* Floating stat card */}
               <div className="absolute -bottom-6 -left-6 bg-[#5B5B38] p-6 hidden md:block">
@@ -428,7 +421,7 @@ export default function Home() {
       <section className="relative h-[50vh] min-h-[300px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${IMAGES.texture})` }}
+          style={{ backgroundImage: `url(${HOME_IMAGES.texture})` }}
         />
         <div className="absolute inset-0 bg-[#F8F5F0]/30" />
         <div className="relative h-full container flex items-center justify-center">

@@ -304,3 +304,9 @@
 - [x] Fehlende Bildverweise der aktuellen Shopify-Storefront erfassen und die passenden Quelldateien aus dem vorherigen Arbeitsbestand zuordnen
 - [x] Freigegebene Altbilder außerhalb des Projektordners ablegen, als Web-Assets bereitstellen und die betroffenen Storefront-Verweise aktualisieren
 - [x] Übernommene Bilddarstellung auf den betroffenen Seiten in Desktop- und Mobilansicht prüfen
+
+## Bildübernahme aus verlinkter Manus-Aufgabe – 2026-07-22
+
+- [x] Bilddateien und Nutzungszusammenhang der verlinkten Manus-Aufgabe erfassen und den jeweiligen Storefront-Bereichen zuordnen
+- [x] Freigegebene Bilddateien aus der verlinkten Aufgabe als Web-Assets bereitstellen und die betroffenen Herbsom-Verweise aktualisieren
+- [x] Übernommene Bilder in Desktop- und Mobilansicht sowie im Produktions-Build prüfen
