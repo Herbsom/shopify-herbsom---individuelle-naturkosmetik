@@ -350,4 +350,4 @@
 - [x] Abweichende Bildauswahl auf den entsprechenden Startseiten- und Storefront-Bereichen auf die Referenzmotive ausrichten
 - [x] Alle geänderten Bildpfade automatisiert auf Erreichbarkeit prüfen und die bestehenden Bildtests aktualisieren
 - [x] Referenzähnlichkeit sowie Bilddarstellung in Desktop- und Mobilansicht visuell prüfen
-- [ ] Die geprüfte Bildausrichtung in einer neuen Projektversion sichern
+- [x] Die geprüfte Bildausrichtung in einer neuen Projektversion sichern
