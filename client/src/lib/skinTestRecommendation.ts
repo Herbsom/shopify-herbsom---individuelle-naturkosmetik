@@ -290,7 +290,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksame Reinigung für ölige und unreine Haut. Entfernt überschüssigen Talg und befreit verstopfte Poren.",
         price: 32,
         href: "/product/cleaner",
-        image: "/manus-storage/013-Reinigungsgel_1x1_9a8e77c6-73737373_61616161.webp",
+        image: "/images/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
       }
     : {
         id: "reinigungsmilch",
@@ -298,7 +298,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Sanfte, cremige Reinigung für trockene und empfindliche Haut. Reinigt gründlich ohne Austrocknen.",
         price: 32,
         href: "/product/cleaner-milk",
-        image: "/manus-storage/014-Reinigungsmilch_1x1_7d3e023f-73737373_61616161.webp",
+        image: "/images/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
       };
 
   // ─── PEELING ──────────────────────────────────────────────────────────
@@ -321,7 +321,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksames Peeling mit Salicylsäure und Azelainsäure. Befreit verstopfte Poren, reduziert Unreinheiten und reguliert die Talgproduktion.",
         price: 38,
         href: "/product/peeling",
-        image: "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
+        image: "/images/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
       }
     : {
         id: "aha-pha-peeling",
@@ -329,7 +329,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Sanftes Fruchtsäure-Peeling mit PHA für eine verfeinerte Hautstruktur. Ideal für empfindliche, trockene und reife Haut.",
         price: 38,
         href: "/product/peeling-aha",
-        image: "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
+        image: "/images/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
       };
 
   // ─── PREISE ───────────────────────────────────────────────────────────
