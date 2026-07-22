@@ -328,3 +328,10 @@
 - [x] Alle auf der angegebenen Referenzseite verwendeten Bilddateien und ihre jeweiligen Storefront-Positionen erfassen
 - [x] Die vollständige Bildsammlung der Referenzseite als langlebige Projekt-Assets bereitstellen und die aktuellen Storefront-Verweise ersetzen
 - [x] Vollständigkeit, Bildreihenfolge und Darstellung der übernommenen Referenzbilder auf Desktop und Mobil prüfen
+
+## Seitenübergreifende Bildübernahme von herbsomweb-zgqpcjfd.manus.space – 2026-07-22
+
+- [x] Alle navigierbaren Referenzseiten sowie ihre gerenderten Bilddateien und Bildpositionen vollständig erfassen
+- [x] Jede Referenzseite den entsprechenden aktuellen Herbsom-Seiten und den betroffenen Bildverweisen zuordnen
+- [x] Sämtliche noch fehlenden Referenzbilder als langlebige Projekt-Assets übernehmen und die passenden Seitenverweise ersetzen
+- [x] Die Bildübernahme auf allen betroffenen Seiten in Desktop- und Mobilansicht sowie im Produktions-Build prüfen

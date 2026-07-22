@@ -1,0 +1,662 @@
+{
+  "client/src/components/Footer.tsx": [
+    {
+      "asset": "/manus-storage/hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9.png",
+      "offset": 548056,
+      "source_file": "client/src/components/Footer.tsx",
+      "marker_distance": 197
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c.png",
+      "offset": 548788,
+      "source_file": "client/src/components/Footer.tsx",
+      "marker_distance": 929
+    }
+  ],
+  "client/src/pages/Home.tsx": [
+    {
+      "asset": "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png",
+      "offset": 549022,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 986
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953.png",
+      "offset": 549233,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 775
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047.png",
+      "offset": 549442,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 566
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf.jpeg",
+      "offset": 557256,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 104
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853.png",
+      "offset": 560967,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 103
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696.jpg",
+      "offset": 563357,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 102
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e.png",
+      "offset": 566817,
+      "source_file": "client/src/pages/Home.tsx",
+      "marker_distance": 111
+    }
+  ],
+  "client/src/pages/About.tsx": [
+    {
+      "asset": "/manus-storage/pasted_file_Uwbp89_IMG_6177_9f3c4d13.jpg",
+      "offset": 575660,
+      "source_file": "client/src/pages/About.tsx",
+      "marker_distance": 48
+    },
+    {
+      "asset": "/manus-storage/gruenderin_norderney2_adb1f6a3.jpg",
+      "offset": 577616,
+      "source_file": "client/src/pages/About.tsx",
+      "marker_distance": 49
+    }
+  ],
+  "client/src/pages/BlogArticleVitaminC.tsx": [
+    {
+      "asset": "/manus-storage/Reinigungsgel_1x1_db035e0b.webp",
+      "offset": 687271,
+      "source_file": "client/src/pages/BlogArticleVitaminC.tsx",
+      "marker_distance": 392
+    }
+  ],
+  "client/src/pages/Cleaners.tsx": [
+    {
+      "asset": "/manus-storage/Reinigungsmilch_1x1_02140d62.webp",
+      "offset": 687590,
+      "source_file": "client/src/pages/Cleaners.tsx",
+      "marker_distance": 93
+    },
+    {
+      "asset": "/manus-storage/BHAAzelainsaeurePeeling_1x1_e9bcbca7.webp",
+      "offset": 693183,
+      "source_file": "client/src/pages/Cleaners.tsx",
+      "marker_distance": 379
+    }
+  ],
+  "client/src/pages/Peelings.tsx": [
+    {
+      "asset": "/manus-storage/AHA&PHAPeeling_1x1_c777c7c7.webp",
+      "offset": 693503,
+      "source_file": "client/src/pages/Peelings.tsx",
+      "marker_distance": 91
+    }
+  ],
+  "client/src/pages/ProductCreme.tsx": [
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_1x1_white_f4b48e3e.webp",
+      "offset": 747824,
+      "source_file": "client/src/pages/ProductCreme.tsx",
+      "marker_distance": 371
+    }
+  ],
+  "client/src/pages/ProductCleaner.tsx": [
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "offset": 747956,
+      "source_file": "client/src/pages/ProductCleaner.tsx",
+      "marker_distance": 357
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_bcbacfba.webp",
+      "offset": 748246,
+      "source_file": "client/src/pages/ProductCleaner.tsx",
+      "marker_distance": 67
+    }
+  ],
+  "client/src/pages/ProductCleanerMilk.tsx": [
+    {
+      "asset": "/manus-storage/Reinigungsmilch_9b8c254d.webp",
+      "offset": 768624,
+      "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+      "marker_distance": 340
+    },
+    {
+      "asset": "/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
+      "offset": 768734,
+      "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+      "marker_distance": 230
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "offset": 768856,
+      "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+      "marker_distance": 108
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_8698b809.webp",
+      "offset": 788528,
+      "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+      "marker_distance": 231
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "offset": 788638,
+      "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+      "marker_distance": 341
+    }
+  ],
+  "client/src/pages/ProductPeeling.tsx": [
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_efb61fca.webp",
+      "offset": 788928,
+      "source_file": "client/src/pages/ProductPeeling.tsx",
+      "marker_distance": 149
+    },
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_2_2dc2890a.webp",
+      "offset": 788996,
+      "source_file": "client/src/pages/ProductPeeling.tsx",
+      "marker_distance": 81
+    },
+    {
+      "asset": "/manus-storage/Reinigungsmilch_9b8c254d.webp",
+      "offset": 809884,
+      "source_file": "client/src/pages/ProductPeeling.tsx",
+      "marker_distance": 234
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "offset": 809996,
+      "source_file": "client/src/pages/ProductPeeling.tsx",
+      "marker_distance": 346
+    }
+  ],
+  "client/src/pages/ProductPeelingAHA.tsx": [
+    {
+      "asset": "/manus-storage/aha_pha_peeling_28c54361.webp",
+      "offset": 810286,
+      "source_file": "client/src/pages/ProductPeelingAHA.tsx",
+      "marker_distance": 129
+    },
+    {
+      "asset": "/manus-storage/aha_pha_peeling_2_1b8c68dd.webp",
+      "offset": 810344,
+      "source_file": "client/src/pages/ProductPeelingAHA.tsx",
+      "marker_distance": 71
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_bcbacfba.webp",
+      "offset": 830086,
+      "source_file": "client/src/pages/ProductPeelingAHA.tsx",
+      "marker_distance": 230
+    },
+    {
+      "asset": "/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
+      "offset": 830190,
+      "source_file": "client/src/pages/ProductPeelingAHA.tsx",
+      "marker_distance": 334
+    }
+  ],
+  "client/src/pages/ProductSunscreen.tsx": [
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "offset": 830451,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 205
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3.png",
+      "offset": 830548,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 108
+    },
+    {
+      "asset": "/manus-storage/pasted_file_tEV7V6_Component109_0d22f905.webp",
+      "offset": 854333,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 2545
+    },
+    {
+      "asset": "/manus-storage/pasted_file_Ta9hrm_Component110_b3c36e98.webp",
+      "offset": 855606,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 3818
+    },
+    {
+      "asset": "/manus-storage/pasted_file_doaleU_Component111_8af3e786.webp",
+      "offset": 856542,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 4754
+    },
+    {
+      "asset": "/manus-storage/pasted_file_newInc_Component112_f44bbc3a.webp",
+      "offset": 857904,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 6116
+    },
+    {
+      "asset": "/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+      "offset": 860056,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 8268
+    },
+    {
+      "asset": "/manus-storage/pasted_file_PMIVkd_Component114_62c2385a.webp",
+      "offset": 861090,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 9302
+    },
+    {
+      "asset": "/manus-storage/pasted_file_mAGk9C_Component103_4f97ff70.webp",
+      "offset": 865815,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 14027
+    },
+    {
+      "asset": "/manus-storage/pasted_file_B34Ixl_Component106_615ffead.webp",
+      "offset": 866770,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 14982
+    },
+    {
+      "asset": "/manus-storage/pasted_file_4QmjxL_Component104_ca797fd6.webp",
+      "offset": 867713,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 15925
+    },
+    {
+      "asset": "/manus-storage/pasted_file_v8y1VS_Component105_00a2c359.webp",
+      "offset": 868729,
+      "source_file": "client/src/pages/ProductSunscreen.tsx",
+      "marker_distance": 16941
+    }
+  ],
+  "client/src/components/IngredientDetailModal.tsx": [
+    {
+      "asset": "/manus-storage/pasted_file_NyfxqL_Component135_2a6aa513.webp",
+      "offset": 872096,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 14819
+    },
+    {
+      "asset": "/manus-storage/pasted_file_9gl5S4_Component133_87058f30.webp",
+      "offset": 873339,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 13576
+    },
+    {
+      "asset": "/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+      "offset": 881919,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 4996
+    },
+    {
+      "asset": "/manus-storage/Basisserum_554e7d2b.webp",
+      "offset": 895001,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 348
+    },
+    {
+      "asset": "/manus-storage/Weidenrindenexktrakt10ml_3504f8dd.webp",
+      "offset": 895054,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 401
+    },
+    {
+      "asset": "/manus-storage/Niacinamide10ml_33886026.webp",
+      "offset": 895122,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 469
+    },
+    {
+      "asset": "/manus-storage/VitaminCKomplex10ml_0c8eb29b.webp",
+      "offset": 895178,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 525
+    },
+    {
+      "asset": "/manus-storage/Retinolkomplex10ml_f568e46a.webp",
+      "offset": 895237,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 584
+    },
+    {
+      "asset": "/manus-storage/Retinolkomplex10ml_f568e46a.webp",
+      "offset": 895298,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 645
+    },
+    {
+      "asset": "/manus-storage/Malvenextrakt10ml_58cfd435.webp",
+      "offset": 895355,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 702
+    },
+    {
+      "asset": "/manus-storage/Rosskastanienexktrakt10ml_40fc0471.webp",
+      "offset": 895418,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 765
+    },
+    {
+      "asset": "/manus-storage/Algenextrakt10ml_004e3f2d.webp",
+      "offset": 895481,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 828
+    },
+    {
+      "asset": "/manus-storage/Hyaluronkomplex10ml_fcad0b2d.webp",
+      "offset": 895540,
+      "source_file": "client/src/components/IngredientDetailModal.tsx",
+      "marker_distance": 887
+    }
+  ],
+  "client/src/pages/ConfiguratorSerum.tsx": [
+    {
+      "asset": "/manus-storage/Basiscreme_3e6c66de.webp",
+      "offset": 916223,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 131
+    },
+    {
+      "asset": "/manus-storage/Basiscreme_3e6c66de.webp",
+      "offset": 916270,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 178
+    },
+    {
+      "asset": "/manus-storage/Weidenrindenextrakt2ml_b6097f0f.webp",
+      "offset": 916324,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 232
+    },
+    {
+      "asset": "/manus-storage/Niacinamide2ml_46f08c8a.webp",
+      "offset": 916390,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 298
+    },
+    {
+      "asset": "/manus-storage/VitaminCKomplex2ml_2f8cd87d.webp",
+      "offset": 916445,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 353
+    },
+    {
+      "asset": "/manus-storage/Retinolkomplex2ml_dff84f9f.webp",
+      "offset": 916503,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 411
+    },
+    {
+      "asset": "/manus-storage/Spilantholkomplex2ml_2a92a4a7.webp",
+      "offset": 916563,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 471
+    },
+    {
+      "asset": "/manus-storage/Malvenextrakt2ml_1aa8ab0c.webp",
+      "offset": 916622,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 530
+    },
+    {
+      "asset": "/manus-storage/Rosskastanienextrakt2ml_1d2515bb.webp",
+      "offset": 916684,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 592
+    },
+    {
+      "asset": "/manus-storage/wildrosenoel2ml_0f0e1f86.webp",
+      "offset": 916747,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 655
+    },
+    {
+      "asset": "/manus-storage/sanddornoel2ml_ec59d504.webp",
+      "offset": 916807,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 715
+    },
+    {
+      "asset": "/manus-storage/trauberkernoel2ml_5d373859.webp",
+      "offset": 916863,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 771
+    },
+    {
+      "asset": "/manus-storage/disteloel2ml_87d83e0a.webp",
+      "offset": 916920,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 828
+    },
+    {
+      "asset": "/manus-storage/Algenextrakt2ml_fda34039.webp",
+      "offset": 916970,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 878
+    },
+    {
+      "asset": "/manus-storage/Hyaluronkomplex2ml_7b904451.webp",
+      "offset": 917028,
+      "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+      "marker_distance": 936
+    }
+  ],
+  "client/src/pages/RoutineOverview.tsx": [
+    {
+      "asset": "/manus-storage/pasted_file_qfb2y0_image_ac627d53.png",
+      "offset": 947038,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 4726
+    },
+    {
+      "asset": "/manus-storage/pasted_file_YWbHYW_image_12482aa8.png",
+      "offset": 947295,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 4983
+    },
+    {
+      "asset": "/manus-storage/pasted_file_NEzmdL_image_262b2ef1.png",
+      "offset": 947870,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 5558
+    },
+    {
+      "asset": "/manus-storage/pasted_file_wUv95O_image_5914599f.png",
+      "offset": 948150,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 5838
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62(1",
+      "offset": 950200,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 7888
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88.png",
+      "offset": 950292,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 7980
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
+      "offset": 950381,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 8069
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png",
+      "offset": 950470,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 8158
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png",
+      "offset": 950559,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 8247
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792.png",
+      "offset": 950648,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 8336
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 951886,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 9574
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 953253,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 10941
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 954602,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 12290
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 955911,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 13599
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 957160,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 14848
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 958424,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 16112
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "offset": 959711,
+      "source_file": "client/src/pages/RoutineOverview.tsx",
+      "marker_distance": 17399
+    }
+  ],
+  "client/src/pages/routines/RoutineReifHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1014420,
+      "source_file": "client/src/pages/routines/RoutineReifHaut.tsx",
+      "marker_distance": 68
+    }
+  ],
+  "client/src/pages/routines/RoutineTrockenHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1036367,
+      "source_file": "client/src/pages/routines/RoutineTrockenHaut.tsx",
+      "marker_distance": 71
+    }
+  ],
+  "client/src/pages/routines/RoutineUnreineHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1058346,
+      "source_file": "client/src/pages/routines/RoutineUnreineHaut.tsx",
+      "marker_distance": 71
+    }
+  ],
+  "client/src/pages/routines/RoutineMischhaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1079421,
+      "source_file": "client/src/pages/routines/RoutineMischhaut.tsx",
+      "marker_distance": 69
+    }
+  ],
+  "client/src/pages/routines/RoutineEmpfindlichHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1101798,
+      "source_file": "client/src/pages/routines/RoutineEmpfindlichHaut.tsx",
+      "marker_distance": 75
+    }
+  ],
+  "client/src/pages/routines/RoutineNormaleHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1123863,
+      "source_file": "client/src/pages/routines/RoutineNormaleHaut.tsx",
+      "marker_distance": 71
+    }
+  ],
+  "client/src/pages/routines/RoutineSensibleHaut.tsx": [
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "offset": 1145902,
+      "source_file": "client/src/pages/routines/RoutineSensibleHaut.tsx",
+      "marker_distance": 72
+    }
+  ],
+  "client/src/pages/SkinTest.tsx": [
+    {
+      "asset": "/manus-storage/pasted_file_0gngqR_image_17760fe2.png",
+      "offset": 1164523,
+      "source_file": "client/src/pages/SkinTest.tsx",
+      "marker_distance": 1340
+    },
+    {
+      "asset": "/manus-storage/pasted_file_m336Xg_image_eaac4384.png",
+      "offset": 1165300,
+      "source_file": "client/src/pages/SkinTest.tsx",
+      "marker_distance": 563
+    },
+    {
+      "asset": "/manus-storage/pasted_file_0gngqR_image_17760fe2.png",
+      "offset": 1172583,
+      "source_file": "client/src/pages/SkinTest.tsx",
+      "marker_distance": 52
+    },
+    {
+      "asset": "/manus-storage/pasted_file_m336Xg_image_eaac4384.png",
+      "offset": 1175583,
+      "source_file": "client/src/pages/SkinTest.tsx",
+      "marker_distance": 52
+    },
+    {
+      "asset": "/manus-storage/pasted_file_gMyydd_image_3170d2ee.png",
+      "offset": 1178813,
+      "source_file": "client/src/pages/SkinTest.tsx",
+      "marker_distance": 52
+    }
+  ],
+  "client/src/pages/Cart.tsx": [
+    {
+      "asset": "/manus-storage/hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5.jpeg",
+      "offset": 1236899,
+      "source_file": "client/src/pages/Cart.tsx",
+      "marker_distance": 85
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9.png",
+      "offset": 1237109,
+      "source_file": "client/src/pages/Cart.tsx",
+      "marker_distance": 83
+    }
+  ]
+}

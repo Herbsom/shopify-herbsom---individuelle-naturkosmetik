@@ -1,0 +1,98 @@
+[
+  {
+    "source_file": "client/src/components/Footer.tsx",
+    "asset_count": 2
+  },
+  {
+    "source_file": "client/src/pages/Home.tsx",
+    "asset_count": 7
+  },
+  {
+    "source_file": "client/src/pages/About.tsx",
+    "asset_count": 2
+  },
+  {
+    "source_file": "client/src/pages/BlogArticleVitaminC.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/Cleaners.tsx",
+    "asset_count": 2
+  },
+  {
+    "source_file": "client/src/pages/Peelings.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/ProductCreme.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/ProductCleaner.tsx",
+    "asset_count": 2
+  },
+  {
+    "source_file": "client/src/pages/ProductCleanerMilk.tsx",
+    "asset_count": 5
+  },
+  {
+    "source_file": "client/src/pages/ProductPeeling.tsx",
+    "asset_count": 4
+  },
+  {
+    "source_file": "client/src/pages/ProductPeelingAHA.tsx",
+    "asset_count": 4
+  },
+  {
+    "source_file": "client/src/pages/ProductSunscreen.tsx",
+    "asset_count": 12
+  },
+  {
+    "source_file": "client/src/components/IngredientDetailModal.tsx",
+    "asset_count": 13
+  },
+  {
+    "source_file": "client/src/pages/ConfiguratorSerum.tsx",
+    "asset_count": 15
+  },
+  {
+    "source_file": "client/src/pages/RoutineOverview.tsx",
+    "asset_count": 17
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineReifHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineTrockenHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineUnreineHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineMischhaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineEmpfindlichHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineNormaleHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/routines/RoutineSensibleHaut.tsx",
+    "asset_count": 1
+  },
+  {
+    "source_file": "client/src/pages/SkinTest.tsx",
+    "asset_count": 5
+  },
+  {
+    "source_file": "client/src/pages/Cart.tsx",
+    "asset_count": 2
+  }
+]

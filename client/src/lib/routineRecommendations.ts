@@ -60,12 +60,12 @@ function buildCremeProduct(base: "light" | "rich", ingredientIds: string[]): Rou
 }
 
 // Produktbilder für individuelle Produkte auf allen Routine-Seiten
-const CREME_IMAGE = "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg";
-const SERUM_IMAGE = "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg";
-const CLEANSER_GEL_IMAGE = "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png";
-const CLEANSER_MILK_IMAGE = "/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png";
-const AHA_PHA_PEELING_IMAGE = "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png";
-const BHA_AZELAINSAEURE_PEELING_IMAGE = "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png";
+const CREME_IMAGE = "/manus-storage/009-Creme_1x1_87ae5318-73737373_61616161.webp";
+const SERUM_IMAGE = "/manus-storage/021-Serum_1x1_59b5acd0-73737373_61616161.webp";
+const CLEANSER_GEL_IMAGE = "/manus-storage/013-Reinigungsgel_1x1_9a8e77c6-73737373_61616161.webp";
+const CLEANSER_MILK_IMAGE = "/manus-storage/014-Reinigungsmilch_1x1_7d3e023f-73737373_61616161.webp";
+const AHA_PHA_PEELING_IMAGE = "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp";
+const BHA_AZELAINSAEURE_PEELING_IMAGE = "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp";
 
 /**
  * Routine: Reife Haut
@@ -106,7 +106,7 @@ export const ROUTINE_REIFE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };
@@ -150,7 +150,7 @@ export const ROUTINE_TROCKENE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };
@@ -194,7 +194,7 @@ export const ROUTINE_UNREINE_HAUT: RoutineRecommendation = {
     description: "Leichtes, nicht-komedogenes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Nicht-komedogene Formel", "Mattierendes Finish", "Schützt vor UV-Schäden"],
   },
 };
@@ -238,7 +238,7 @@ export const ROUTINE_MISCHHAUT: RoutineRecommendation = {
     description: "Leichtes, mattierendes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Mattierendes Finish", "Nicht-komedogene Formel", "Langanhaltender Schutz"],
   },
 };
@@ -282,7 +282,7 @@ export const ROUTINE_EMPFINDLICHE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Hypoallergene Formel", "Schützt empfindliche Haut", "Beruhigende Inhaltsstoffe"],
   },
 };
@@ -326,7 +326,7 @@ export const ROUTINE_SENSIBLE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Hypoallergene Formel", "Schützt sensible Haut", "Beruhigende Inhaltsstoffe"],
   },
 };
@@ -370,7 +370,7 @@ export const ROUTINE_NORMALE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+    image: "/manus-storage/022-Sonnenschutzfluid_1x1_870ad93a-73737373_61616161.webp",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };

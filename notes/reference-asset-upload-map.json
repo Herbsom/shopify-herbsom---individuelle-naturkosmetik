@@ -1,0 +1,784 @@
+{
+  "generatedAt": "2026-07-22T11:56:38.440Z",
+  "manifestPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/manifest.json",
+  "entries": [
+    {
+      "asset": "/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
+      "localFilename": "027-aha_pha_peeling_1x1_white_aad680df-f316e64c.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/027-aha_pha_peeling_1x1_white_aad680df-f316e64c.webp",
+      "uploadedPath": "/manus-storage/027-aha_pha_peeling_1x1_white_aad680df-f316e64c_7f798c8f.webp",
+      "contentType": "image/webp",
+      "bytes": 96492,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/aha_pha_peeling_2_1b8c68dd.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/aha_pha_peeling_2_1b8c68dd.webp",
+      "localFilename": "029-aha_pha_peeling_2_1b8c68dd-c1a12d51.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/029-aha_pha_peeling_2_1b8c68dd-c1a12d51.webp",
+      "uploadedPath": "/manus-storage/029-aha_pha_peeling_2_1b8c68dd-c1a12d51_d08eb2f8.webp",
+      "contentType": "image/webp",
+      "bytes": 52900,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/aha_pha_peeling_28c54361.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/aha_pha_peeling_28c54361.webp",
+      "localFilename": "028-aha_pha_peeling_28c54361-b01b3abf.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/028-aha_pha_peeling_28c54361-b01b3abf.webp",
+      "uploadedPath": "/manus-storage/028-aha_pha_peeling_28c54361-b01b3abf_415d6150.webp",
+      "contentType": "image/webp",
+      "bytes": 45852,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/AHA&PHAPeeling_1x1_c777c7c7.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/AHA&PHAPeeling_1x1_c777c7c7.webp",
+      "localFilename": "001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796.webp",
+      "uploadedPath": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
+      "contentType": "image/webp",
+      "bytes": 96846,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Algenextrakt10ml_004e3f2d.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Algenextrakt10ml_004e3f2d.webp",
+      "localFilename": "002-Algenextrakt10ml_004e3f2d-710e9e81.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/002-Algenextrakt10ml_004e3f2d-710e9e81.webp",
+      "uploadedPath": "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_bc6d6486.webp",
+      "contentType": "image/webp",
+      "bytes": 17928,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Algenextrakt2ml_fda34039.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Algenextrakt2ml_fda34039.webp",
+      "localFilename": "003-Algenextrakt2ml_fda34039-4b00d00f.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/003-Algenextrakt2ml_fda34039-4b00d00f.webp",
+      "uploadedPath": "/manus-storage/003-Algenextrakt2ml_fda34039-4b00d00f_c9efb900.webp",
+      "contentType": "image/webp",
+      "bytes": 16608,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/application-image_b29f3e02.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/application-image_b29f3e02.webp",
+      "localFilename": "030-application-image_b29f3e02-ee262420.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/030-application-image_b29f3e02-ee262420.webp",
+      "uploadedPath": "/manus-storage/030-application-image_b29f3e02-ee262420_a09a4315.webp",
+      "contentType": "image/webp",
+      "bytes": 73496,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Basiscreme_3e6c66de.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Basiscreme_3e6c66de.webp",
+      "localFilename": "005-Basiscreme_3e6c66de-e4b561e1.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/005-Basiscreme_3e6c66de-e4b561e1.webp",
+      "uploadedPath": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_3fa210dd.webp",
+      "contentType": "image/webp",
+      "bytes": 26044,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Basisserum_554e7d2b.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Basisserum_554e7d2b.webp",
+      "localFilename": "006-Basisserum_554e7d2b-2df68e64.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/006-Basisserum_554e7d2b-2df68e64.webp",
+      "uploadedPath": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_dd7db882.webp",
+      "contentType": "image/webp",
+      "bytes": 31976,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_1x1_white_f4b48e3e.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/bha_azelainsaeure_peeling_1x1_white_f4b48e3e.webp",
+      "localFilename": "031-bha_azelainsaeure_peeling_1x1_white_f4b48e3e-ac6c3483.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/031-bha_azelainsaeure_peeling_1x1_white_f4b48e3e-ac6c3483.webp",
+      "uploadedPath": "/manus-storage/031-bha_azelainsaeure_peeling_1x1_white_f4b48e3e-ac6c3483_4d8497f5.webp",
+      "contentType": "image/webp",
+      "bytes": 75054,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_2_2dc2890a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/bha_azelainsaeure_peeling_2_2dc2890a.webp",
+      "localFilename": "032-bha_azelainsaeure_peeling_2_2dc2890a-8167a398.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/032-bha_azelainsaeure_peeling_2_2dc2890a-8167a398.webp",
+      "uploadedPath": "/manus-storage/032-bha_azelainsaeure_peeling_2_2dc2890a-8167a398_11657174.webp",
+      "contentType": "image/webp",
+      "bytes": 42522,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/bha_azelainsaeure_peeling_efb61fca.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/bha_azelainsaeure_peeling_efb61fca.webp",
+      "localFilename": "033-bha_azelainsaeure_peeling_efb61fca-e5b45db1.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/033-bha_azelainsaeure_peeling_efb61fca-e5b45db1.webp",
+      "uploadedPath": "/manus-storage/033-bha_azelainsaeure_peeling_efb61fca-e5b45db1_c577be7e.webp",
+      "contentType": "image/webp",
+      "bytes": 38350,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/BHAAzelainsaeurePeeling_1x1_e9bcbca7.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/BHAAzelainsaeurePeeling_1x1_e9bcbca7.webp",
+      "localFilename": "004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c.webp",
+      "uploadedPath": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
+      "contentType": "image/webp",
+      "bytes": 74648,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/disteloel2ml_87d83e0a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/disteloel2ml_87d83e0a.webp",
+      "localFilename": "034-disteloel2ml_87d83e0a-1b229cba.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/034-disteloel2ml_87d83e0a-1b229cba.webp",
+      "uploadedPath": "/manus-storage/034-disteloel2ml_87d83e0a-1b229cba_e31dd53b.webp",
+      "contentType": "image/webp",
+      "bytes": 17718,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/gruenderin_norderney2_adb1f6a3.jpg",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/gruenderin_norderney2_adb1f6a3.jpg",
+      "localFilename": "035-gruenderin_norderney2_adb1f6a3-98e15ceb.jpg",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/035-gruenderin_norderney2_adb1f6a3-98e15ceb.jpg",
+      "uploadedPath": "/manus-storage/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 255169,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+      "localFilename": "036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02.png",
+      "uploadedPath": "/manus-storage/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02_8e779bd6.png",
+      "contentType": "image/png",
+      "bytes": 628246,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      "localFilename": "037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66.png",
+      "uploadedPath": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_45729ddd.png",
+      "contentType": "image/png",
+      "bytes": 560805,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3.png",
+      "localFilename": "038-hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3-4dd0e77f.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/038-hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3-4dd0e77f.png",
+      "uploadedPath": "/manus-storage/038-hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3-4dd0e77f_8e7eb95c.png",
+      "contentType": "image/png",
+      "bytes": 713911,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png",
+      "localFilename": "039-hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2-8188b88d.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/039-hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2-8188b88d.png",
+      "uploadedPath": "/manus-storage/039-hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2-8188b88d_40123486.png",
+      "contentType": "image/png",
+      "bytes": 1126707,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png",
+      "localFilename": "041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4.png",
+      "uploadedPath": "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
+      "contentType": "image/png",
+      "bytes": 1003940,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88.png",
+      "localFilename": "042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da.png",
+      "uploadedPath": "/manus-storage/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da_8cb305f8.png",
+      "contentType": "image/png",
+      "bytes": 1058872,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c.png",
+      "localFilename": "043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20.png",
+      "uploadedPath": "/manus-storage/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20_f6b3083b.png",
+      "contentType": "image/png",
+      "bytes": 1058872,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
+      "localFilename": "044-hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690-e0e76609.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/044-hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690-e0e76609.png",
+      "uploadedPath": "/manus-storage/044-hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690-e0e76609_52a3608b.png",
+      "contentType": "image/png",
+      "bytes": 638556,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792.png",
+      "localFilename": "045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0.png",
+      "uploadedPath": "/manus-storage/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_3b78a86e.png",
+      "contentType": "image/png",
+      "bytes": 992900,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png",
+      "localFilename": "046-hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66-9382857d.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/046-hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66-9382857d.png",
+      "uploadedPath": "/manus-storage/046-hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66-9382857d_8b63a667.png",
+      "contentType": "image/png",
+      "bytes": 1116460,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9.png",
+      "localFilename": "047-hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9-10fbe749.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/047-hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9-10fbe749.png",
+      "uploadedPath": "/manus-storage/047-hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_c464dfc9-10fbe749_5d7cb66c.png",
+      "contentType": "image/png",
+      "bytes": 732243,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5.jpeg",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5.jpeg",
+      "localFilename": "048-hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5-abc4e140.jpeg",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/048-hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5-abc4e140.jpeg",
+      "uploadedPath": "/manus-storage/048-hf_20260618_101915_99effe47-93fd-45a7-8c5d-5d248d4c1acb_882032b5-abc4e140_94daec11.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 196517,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e.png",
+      "localFilename": "049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2.png",
+      "uploadedPath": "/manus-storage/049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2_c221b6bc.png",
+      "contentType": "image/png",
+      "bytes": 1234233,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf.jpeg",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf.jpeg",
+      "localFilename": "050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865.jpeg",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865.jpeg",
+      "uploadedPath": "/manus-storage/050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865_3c34b529.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 537371,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853.png",
+      "localFilename": "051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d.png",
+      "uploadedPath": "/manus-storage/051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d_f8b34b50.png",
+      "contentType": "image/png",
+      "bytes": 2297691,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9.png",
+      "localFilename": "052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2.png",
+      "uploadedPath": "/manus-storage/052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2_237927c2.png",
+      "contentType": "image/png",
+      "bytes": 2422322,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047.png",
+      "localFilename": "053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab.png",
+      "uploadedPath": "/manus-storage/053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab_022ebc08.png",
+      "contentType": "image/png",
+      "bytes": 1061271,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953.png",
+      "localFilename": "054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5.png",
+      "uploadedPath": "/manus-storage/054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5_5438a7a0.png",
+      "contentType": "image/png",
+      "bytes": 996649,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696.jpg",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696.jpg",
+      "localFilename": "055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9.jpg",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9.jpg",
+      "uploadedPath": "/manus-storage/055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9_cf403b2b.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 166401,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Hyaluronkomplex10ml_fcad0b2d.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Hyaluronkomplex10ml_fcad0b2d.webp",
+      "localFilename": "007-Hyaluronkomplex10ml_fcad0b2d-cc151f90.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90.webp",
+      "uploadedPath": "/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_fee908b4.webp",
+      "contentType": "image/webp",
+      "bytes": 21322,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Hyaluronkomplex2ml_7b904451.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Hyaluronkomplex2ml_7b904451.webp",
+      "localFilename": "008-Hyaluronkomplex2ml_7b904451-ea01a6a3.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/008-Hyaluronkomplex2ml_7b904451-ea01a6a3.webp",
+      "uploadedPath": "/manus-storage/008-Hyaluronkomplex2ml_7b904451-ea01a6a3_dd0089cf.webp",
+      "contentType": "image/webp",
+      "bytes": 19202,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Malvenextrakt10ml_58cfd435.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Malvenextrakt10ml_58cfd435.webp",
+      "localFilename": "009-Malvenextrakt10ml_58cfd435-2c10d31f.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/009-Malvenextrakt10ml_58cfd435-2c10d31f.webp",
+      "uploadedPath": "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_3cebe2f2.webp",
+      "contentType": "image/webp",
+      "bytes": 20146,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Malvenextrakt2ml_1aa8ab0c.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Malvenextrakt2ml_1aa8ab0c.webp",
+      "localFilename": "010-Malvenextrakt2ml_1aa8ab0c-4cbf49fb.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/010-Malvenextrakt2ml_1aa8ab0c-4cbf49fb.webp",
+      "uploadedPath": "/manus-storage/010-Malvenextrakt2ml_1aa8ab0c-4cbf49fb_02f0506b.webp",
+      "contentType": "image/webp",
+      "bytes": 18200,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Niacinamide10ml_33886026.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Niacinamide10ml_33886026.webp",
+      "localFilename": "011-Niacinamide10ml_33886026-6ab6b8a9.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/011-Niacinamide10ml_33886026-6ab6b8a9.webp",
+      "uploadedPath": "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_830eaaaa.webp",
+      "contentType": "image/webp",
+      "bytes": 17790,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Niacinamide2ml_46f08c8a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Niacinamide2ml_46f08c8a.webp",
+      "localFilename": "012-Niacinamide2ml_46f08c8a-c06d7af0.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/012-Niacinamide2ml_46f08c8a-c06d7af0.webp",
+      "uploadedPath": "/manus-storage/012-Niacinamide2ml_46f08c8a-c06d7af0_637a9afe.webp",
+      "contentType": "image/webp",
+      "bytes": 16736,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_0gngqR_image_17760fe2.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_0gngqR_image_17760fe2.png",
+      "localFilename": "056-pasted_file_0gngqR_image_17760fe2-b3cf9162.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/056-pasted_file_0gngqR_image_17760fe2-b3cf9162.png",
+      "uploadedPath": "/manus-storage/056-pasted_file_0gngqR_image_17760fe2-b3cf9162_e1859c90.png",
+      "contentType": "image/png",
+      "bytes": 1123967,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_4QmjxL_Component104_ca797fd6.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_4QmjxL_Component104_ca797fd6.webp",
+      "localFilename": "057-pasted_file_4QmjxL_Component104_ca797fd6-23b9941e.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/057-pasted_file_4QmjxL_Component104_ca797fd6-23b9941e.webp",
+      "uploadedPath": "/manus-storage/057-pasted_file_4QmjxL_Component104_ca797fd6-23b9941e_9565b21b.webp",
+      "contentType": "image/webp",
+      "bytes": 16736,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_9gl5S4_Component133_87058f30.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_9gl5S4_Component133_87058f30.webp",
+      "localFilename": "058-pasted_file_9gl5S4_Component133_87058f30-44d25e32.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/058-pasted_file_9gl5S4_Component133_87058f30-44d25e32.webp",
+      "uploadedPath": "/manus-storage/058-pasted_file_9gl5S4_Component133_87058f30-44d25e32_af31b504.webp",
+      "contentType": "image/webp",
+      "bytes": 17928,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_B34Ixl_Component106_615ffead.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_B34Ixl_Component106_615ffead.webp",
+      "localFilename": "059-pasted_file_B34Ixl_Component106_615ffead-6932f904.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/059-pasted_file_B34Ixl_Component106_615ffead-6932f904.webp",
+      "uploadedPath": "/manus-storage/059-pasted_file_B34Ixl_Component106_615ffead-6932f904_5c039761.webp",
+      "contentType": "image/webp",
+      "bytes": 18500,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_doaleU_Component111_8af3e786.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_doaleU_Component111_8af3e786.webp",
+      "localFilename": "066-pasted_file_doaleU_Component111_8af3e786-083df41f.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/066-pasted_file_doaleU_Component111_8af3e786-083df41f.webp",
+      "uploadedPath": "/manus-storage/066-pasted_file_doaleU_Component111_8af3e786-083df41f_cdc3c6e7.webp",
+      "contentType": "image/webp",
+      "bytes": 18372,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_gMyydd_image_3170d2ee.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_gMyydd_image_3170d2ee.png",
+      "localFilename": "067-pasted_file_gMyydd_image_3170d2ee-6c0db30f.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/067-pasted_file_gMyydd_image_3170d2ee-6c0db30f.png",
+      "uploadedPath": "/manus-storage/067-pasted_file_gMyydd_image_3170d2ee-6c0db30f_4e008c38.png",
+      "contentType": "image/png",
+      "bytes": 759985,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+      "localFilename": "068-pasted_file_kLZtbX_Component113_4cce2ac9-8ac65db4.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/068-pasted_file_kLZtbX_Component113_4cce2ac9-8ac65db4.webp",
+      "uploadedPath": "/manus-storage/068-pasted_file_kLZtbX_Component113_4cce2ac9-8ac65db4_74394e6a.webp",
+      "contentType": "image/webp",
+      "bytes": 17744,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_m336Xg_image_eaac4384.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_m336Xg_image_eaac4384.png",
+      "localFilename": "069-pasted_file_m336Xg_image_eaac4384-a04df88a.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/069-pasted_file_m336Xg_image_eaac4384-a04df88a.png",
+      "uploadedPath": "/manus-storage/069-pasted_file_m336Xg_image_eaac4384-a04df88a_1f316d5a.png",
+      "contentType": "image/png",
+      "bytes": 1078045,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_mAGk9C_Component103_4f97ff70.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_mAGk9C_Component103_4f97ff70.webp",
+      "localFilename": "070-pasted_file_mAGk9C_Component103_4f97ff70-0638c334.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/070-pasted_file_mAGk9C_Component103_4f97ff70-0638c334.webp",
+      "uploadedPath": "/manus-storage/070-pasted_file_mAGk9C_Component103_4f97ff70-0638c334_88ec3152.webp",
+      "contentType": "image/webp",
+      "bytes": 17718,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_newInc_Component112_f44bbc3a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_newInc_Component112_f44bbc3a.webp",
+      "localFilename": "071-pasted_file_newInc_Component112_f44bbc3a-e474891a.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/071-pasted_file_newInc_Component112_f44bbc3a-e474891a.webp",
+      "uploadedPath": "/manus-storage/071-pasted_file_newInc_Component112_f44bbc3a-e474891a_1e6ce092.webp",
+      "contentType": "image/webp",
+      "bytes": 18200,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_NEzmdL_image_262b2ef1.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_NEzmdL_image_262b2ef1.png",
+      "localFilename": "060-pasted_file_NEzmdL_image_262b2ef1-556300f3.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/060-pasted_file_NEzmdL_image_262b2ef1-556300f3.png",
+      "uploadedPath": "/manus-storage/060-pasted_file_NEzmdL_image_262b2ef1-556300f3_9629a95a.png",
+      "contentType": "image/png",
+      "bytes": 1113985,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_NyfxqL_Component135_2a6aa513.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_NyfxqL_Component135_2a6aa513.webp",
+      "localFilename": "061-pasted_file_NyfxqL_Component135_2a6aa513-03d0e3e5.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/061-pasted_file_NyfxqL_Component135_2a6aa513-03d0e3e5.webp",
+      "uploadedPath": "/manus-storage/061-pasted_file_NyfxqL_Component135_2a6aa513-03d0e3e5_0b0fec9b.webp",
+      "contentType": "image/webp",
+      "bytes": 20146,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_PMIVkd_Component114_62c2385a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_PMIVkd_Component114_62c2385a.webp",
+      "localFilename": "062-pasted_file_PMIVkd_Component114_62c2385a-06b1c183.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/062-pasted_file_PMIVkd_Component114_62c2385a-06b1c183.webp",
+      "uploadedPath": "/manus-storage/062-pasted_file_PMIVkd_Component114_62c2385a-06b1c183_90ef8358.webp",
+      "contentType": "image/webp",
+      "bytes": 19202,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_qfb2y0_image_ac627d53.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_qfb2y0_image_ac627d53.png",
+      "localFilename": "072-pasted_file_qfb2y0_image_ac627d53-c229e521.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/072-pasted_file_qfb2y0_image_ac627d53-c229e521.png",
+      "uploadedPath": "/manus-storage/072-pasted_file_qfb2y0_image_ac627d53-c229e521_21b3b1e3.png",
+      "contentType": "image/png",
+      "bytes": 752529,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_Ta9hrm_Component110_b3c36e98.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_Ta9hrm_Component110_b3c36e98.webp",
+      "localFilename": "063-pasted_file_Ta9hrm_Component110_b3c36e98-040ca9fc.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/063-pasted_file_Ta9hrm_Component110_b3c36e98-040ca9fc.webp",
+      "uploadedPath": "/manus-storage/063-pasted_file_Ta9hrm_Component110_b3c36e98-040ca9fc_ccd97992.webp",
+      "contentType": "image/webp",
+      "bytes": 18520,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_tEV7V6_Component109_0d22f905.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_tEV7V6_Component109_0d22f905.webp",
+      "localFilename": "073-pasted_file_tEV7V6_Component109_0d22f905-99c195cb.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/073-pasted_file_tEV7V6_Component109_0d22f905-99c195cb.webp",
+      "uploadedPath": "/manus-storage/073-pasted_file_tEV7V6_Component109_0d22f905-99c195cb_98f6561f.webp",
+      "contentType": "image/webp",
+      "bytes": 17864,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_Uwbp89_IMG_6177_9f3c4d13.jpg",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_Uwbp89_IMG_6177_9f3c4d13.jpg",
+      "localFilename": "064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e.jpg",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e.jpg",
+      "uploadedPath": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_942ebd87.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 323063,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_v8y1VS_Component105_00a2c359.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_v8y1VS_Component105_00a2c359.webp",
+      "localFilename": "074-pasted_file_v8y1VS_Component105_00a2c359-777facf3.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/074-pasted_file_v8y1VS_Component105_00a2c359-777facf3.webp",
+      "uploadedPath": "/manus-storage/074-pasted_file_v8y1VS_Component105_00a2c359-777facf3_960877e5.webp",
+      "contentType": "image/webp",
+      "bytes": 20116,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_wUv95O_image_5914599f.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_wUv95O_image_5914599f.png",
+      "localFilename": "075-pasted_file_wUv95O_image_5914599f-87154a55.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/075-pasted_file_wUv95O_image_5914599f-87154a55.png",
+      "uploadedPath": "/manus-storage/075-pasted_file_wUv95O_image_5914599f-87154a55_f2ebba05.png",
+      "contentType": "image/png",
+      "bytes": 1207415,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/pasted_file_YWbHYW_image_12482aa8.png",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/pasted_file_YWbHYW_image_12482aa8.png",
+      "localFilename": "065-pasted_file_YWbHYW_image_12482aa8-4edd8b37.png",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/065-pasted_file_YWbHYW_image_12482aa8-4edd8b37.png",
+      "uploadedPath": "/manus-storage/065-pasted_file_YWbHYW_image_12482aa8-4edd8b37_d3221ab5.png",
+      "contentType": "image/png",
+      "bytes": 1196497,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_1x1_db035e0b.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Reinigungsgel_1x1_db035e0b.webp",
+      "localFilename": "013-Reinigungsgel_1x1_db035e0b-fa696024.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/013-Reinigungsgel_1x1_db035e0b-fa696024.webp",
+      "uploadedPath": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_7b3ee1e6.webp",
+      "contentType": "image/webp",
+      "bytes": 69316,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_8698b809.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Reinigungsgel_8698b809.webp",
+      "localFilename": "014-Reinigungsgel_8698b809-d604d4b3.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/014-Reinigungsgel_8698b809-d604d4b3.webp",
+      "uploadedPath": "/manus-storage/014-Reinigungsgel_8698b809-d604d4b3_bb006539.webp",
+      "contentType": "image/webp",
+      "bytes": 34152,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Reinigungsgel_bcbacfba.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Reinigungsgel_bcbacfba.webp",
+      "localFilename": "015-Reinigungsgel_bcbacfba-384d207f.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/015-Reinigungsgel_bcbacfba-384d207f.webp",
+      "uploadedPath": "/manus-storage/015-Reinigungsgel_bcbacfba-384d207f_4741a65d.webp",
+      "contentType": "image/webp",
+      "bytes": 34152,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Reinigungsmilch_1x1_02140d62.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Reinigungsmilch_1x1_02140d62.webp",
+      "localFilename": "016-Reinigungsmilch_1x1_02140d62-da2b525c.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/016-Reinigungsmilch_1x1_02140d62-da2b525c.webp",
+      "uploadedPath": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_4360e6b9.webp",
+      "contentType": "image/webp",
+      "bytes": 63940,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Reinigungsmilch_9b8c254d.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Reinigungsmilch_9b8c254d.webp",
+      "localFilename": "017-Reinigungsmilch_9b8c254d-42c5d9fc.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/017-Reinigungsmilch_9b8c254d-42c5d9fc.webp",
+      "uploadedPath": "/manus-storage/017-Reinigungsmilch_9b8c254d-42c5d9fc_89670832.webp",
+      "contentType": "image/webp",
+      "bytes": 34312,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Retinolkomplex10ml_f568e46a.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Retinolkomplex10ml_f568e46a.webp",
+      "localFilename": "018-Retinolkomplex10ml_f568e46a-6c0d91b1.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/018-Retinolkomplex10ml_f568e46a-6c0d91b1.webp",
+      "uploadedPath": "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_af5ab184.webp",
+      "contentType": "image/webp",
+      "bytes": 20414,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Retinolkomplex2ml_dff84f9f.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Retinolkomplex2ml_dff84f9f.webp",
+      "localFilename": "019-Retinolkomplex2ml_dff84f9f-83b59f5b.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/019-Retinolkomplex2ml_dff84f9f-83b59f5b.webp",
+      "uploadedPath": "/manus-storage/019-Retinolkomplex2ml_dff84f9f-83b59f5b_fcd8be06.webp",
+      "contentType": "image/webp",
+      "bytes": 20116,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Rosskastanienexktrakt10ml_40fc0471.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Rosskastanienexktrakt10ml_40fc0471.webp",
+      "localFilename": "020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e.webp",
+      "uploadedPath": "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_7d5bbd91.webp",
+      "contentType": "image/webp",
+      "bytes": 18876,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Rosskastanienextrakt2ml_1d2515bb.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Rosskastanienextrakt2ml_1d2515bb.webp",
+      "localFilename": "021-Rosskastanienextrakt2ml_1d2515bb-0e29d62e.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/021-Rosskastanienextrakt2ml_1d2515bb-0e29d62e.webp",
+      "uploadedPath": "/manus-storage/021-Rosskastanienextrakt2ml_1d2515bb-0e29d62e_d866a5a0.webp",
+      "contentType": "image/webp",
+      "bytes": 17744,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/sanddornoel2ml_ec59d504.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/sanddornoel2ml_ec59d504.webp",
+      "localFilename": "076-sanddornoel2ml_ec59d504-5f9b3865.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/076-sanddornoel2ml_ec59d504-5f9b3865.webp",
+      "uploadedPath": "/manus-storage/076-sanddornoel2ml_ec59d504-5f9b3865_ee4e6a6e.webp",
+      "contentType": "image/webp",
+      "bytes": 18500,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Spilantholkomplex2ml_2a92a4a7.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Spilantholkomplex2ml_2a92a4a7.webp",
+      "localFilename": "022-Spilantholkomplex2ml_2a92a4a7-7ee9370b.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b.webp",
+      "uploadedPath": "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_be9eacc1.webp",
+      "contentType": "image/webp",
+      "bytes": 18372,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/trauberkernoel2ml_5d373859.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/trauberkernoel2ml_5d373859.webp",
+      "localFilename": "077-trauberkernoel2ml_5d373859-a1917112.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/077-trauberkernoel2ml_5d373859-a1917112.webp",
+      "uploadedPath": "/manus-storage/077-trauberkernoel2ml_5d373859-a1917112_bc48743f.webp",
+      "contentType": "image/webp",
+      "bytes": 18520,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/VitaminCKomplex10ml_0c8eb29b.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/VitaminCKomplex10ml_0c8eb29b.webp",
+      "localFilename": "023-VitaminCKomplex10ml_0c8eb29b-45103e9a.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/023-VitaminCKomplex10ml_0c8eb29b-45103e9a.webp",
+      "uploadedPath": "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_638005b8.webp",
+      "contentType": "image/webp",
+      "bytes": 19260,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/VitaminCKomplex2ml_2f8cd87d.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/VitaminCKomplex2ml_2f8cd87d.webp",
+      "localFilename": "024-VitaminCKomplex2ml_2f8cd87d-529be79a.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/024-VitaminCKomplex2ml_2f8cd87d-529be79a.webp",
+      "uploadedPath": "/manus-storage/024-VitaminCKomplex2ml_2f8cd87d-529be79a_1d271521.webp",
+      "contentType": "image/webp",
+      "bytes": 18204,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Weidenrindenexktrakt10ml_3504f8dd.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Weidenrindenexktrakt10ml_3504f8dd.webp",
+      "localFilename": "025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a.webp",
+      "uploadedPath": "/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_02e4241a.webp",
+      "contentType": "image/webp",
+      "bytes": 20608,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/Weidenrindenextrakt2ml_b6097f0f.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/Weidenrindenextrakt2ml_b6097f0f.webp",
+      "localFilename": "026-Weidenrindenextrakt2ml_b6097f0f-33908979.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/026-Weidenrindenextrakt2ml_b6097f0f-33908979.webp",
+      "uploadedPath": "/manus-storage/026-Weidenrindenextrakt2ml_b6097f0f-33908979_da025edb.webp",
+      "contentType": "image/webp",
+      "bytes": 17636,
+      "status": "uploaded"
+    },
+    {
+      "asset": "/manus-storage/wildrosenoel2ml_0f0e1f86.webp",
+      "sourceUrl": "https://herbsomweb-zgqpcjfd.manus.space/manus-storage/wildrosenoel2ml_0f0e1f86.webp",
+      "localFilename": "078-wildrosenoel2ml_0f0e1f86-f6fb2885.webp",
+      "localPath": "/home/ubuntu/webdev-static-assets/herbsom-reference-all-pages/078-wildrosenoel2ml_0f0e1f86-f6fb2885.webp",
+      "uploadedPath": "/manus-storage/078-wildrosenoel2ml_0f0e1f86-f6fb2885_355f4a80.webp",
+      "contentType": "image/webp",
+      "bytes": 17864,
+      "status": "uploaded"
+    }
+  ],
+  "unavailable": [
+    {
+      "asset": "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62(1)_b174e817.png",
+      "reason": "Die Quell-URL liefert aus der Referenzseite selbst HTTP 403.",
+      "substituteAsset": "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png"
+    }
+  ],
+  "failedUploads": []
+}

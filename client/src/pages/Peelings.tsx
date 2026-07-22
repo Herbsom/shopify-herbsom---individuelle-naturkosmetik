@@ -19,7 +19,7 @@ export default function Peelings() {
       subtitle: "Für Mischhaut, ölige & normale Haut",
       description: "Entfernt überschüssigen Talg porentief. Sichtbar reinere Haut: Gegen Mitesser & Pickel.",
       benefits: ["Porentief-Reinigung", "Talg-Entfernung", "Gegen Mitesser & Pickel"],
-      image: "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
+      image: "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
       slug: "peeling",
       handle: "bha-azelainsaure-peeling",
     },
@@ -29,7 +29,7 @@ export default function Peelings() {
       subtitle: "Für alle Hauttypen",
       description: "Sanfte chemische Exfoliation für strahlende Haut. Mit AHA & PHA für optimale Zellerneuerung.",
       benefits: ["Sanfte Exfoliation", "Zellerneuerung", "Strahlende Haut"],
-      image: "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
+      image: "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
       slug: "peeling-aha",
       handle: "aha-pha-peeling",
     }
