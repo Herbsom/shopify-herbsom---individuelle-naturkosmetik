@@ -13,7 +13,7 @@ import TopReviews from "@/components/TopReviews";
 import { ArrowRight, ChevronRight } from "lucide-react";
 // Image URLs from generated assets
 const IMAGES = {
-  hero: "/manus-storage/hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9.png",
+  hero: "/manus-storage/editorial-home-hero_67cba1c9.jpg",
   products: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_products-Fmbh64pac5dTHRXeAbTgFq.webp",
   ingredients: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_ingredients-c8AQXo84iWy7eDcG8t9BQD.webp",
   ritual: "https://d2xsxph8kpxj0f.cloudfront.net/310519663746048126/RCXWGckFA9VwPfc2J3kKJs/herbsom_ritual-cyDUZcaiBvq2pqEYikgjfm.webp",
@@ -51,7 +51,7 @@ export default function Home() {
       description: t("homepage.products_serum_desc"),
       tag: t("homepage.bestseller"),
       href: "/hauttest?product=serum",
-      image: "/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c.png",
+      image: "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ export default function Home() {
       description: t("homepage.products_cream_desc"),
       tag: t("homepage.new"),
       href: "/hauttest?product=creme",
-      image: "/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png",
+      image: "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ export default function Home() {
       description: t("homepage.products_cleanser_desc"),
       tag: "",
       href: "/cleaners",
-      image: "/manus-storage/hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953.png",
+      image: "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
     },
     {
       id: 4,
@@ -78,7 +78,7 @@ export default function Home() {
       description: t("homepage.products_peeling_desc"),
       tag: "",
       href: "/peelings",
-      image: "/manus-storage/hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047.png",
+      image: "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
     },
   ];
   const values = [
@@ -232,7 +232,7 @@ export default function Home() {
           {/* Image */}
           <div
             className="relative h-72 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: `url(/manus-storage/hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf.jpeg)` }}
+            style={{ backgroundImage: `url(/manus-storage/editorial-home-skincare_7e8e0204.jpg)` }}
           />
           {/* Content */}
           <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 md:py-24">
@@ -301,7 +301,7 @@ export default function Home() {
             <div className="relative reveal reveal-delay-2">
               <div
                 className="aspect-[3/4] bg-cover bg-center"
-                style={{ backgroundImage: `url(/manus-storage/hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853.png)` }}
+                style={{ backgroundImage: `url(/manus-storage/editorial-story-detail_797f9e01.jpg)` }}
               />
               {/* Floating stat card */}
               <div className="absolute -bottom-6 -left-6 bg-[#5B5B38] p-6 hidden md:block">
@@ -357,7 +357,7 @@ export default function Home() {
             <div className="relative reveal">
               <div
                 className="aspect-[4/3] bg-cover bg-center"
-                style={{ backgroundImage: `url(/manus-storage/hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696.jpg)` }}
+                style={{ backgroundImage: `url(/manus-storage/editorial-story-portrait_a73126e1.jpg)` }}
               />
               <div className="absolute top-6 left-6 bg-[#5B5B38] px-4 py-2">
                 <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#7D7D5D]">Neu</span>
@@ -416,7 +416,7 @@ export default function Home() {
           {/* Image */}
           <div
             className="relative h-72 md:h-auto bg-cover bg-center order-1 md:order-2"
-            style={{ backgroundImage: `url(/manus-storage/hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e.png)` }}
+            style={{ backgroundImage: `url(/manus-storage/editorial-story-wide_14bfe783.jpg)` }}
           />
         </div>
       </section>

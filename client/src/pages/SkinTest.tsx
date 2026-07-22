@@ -393,7 +393,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
         name: "Individuelles Serum",
         subtitle: "Individuelles Serum",
         description: "Dein Serum mit hochkonzentrierten Wirkstoffen, speziell auf deine Hautbedürfnisse abgestimmt.",
-        image: "/manus-storage/pasted_file_0gngqR_image_17760fe2.png",
+        image: "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
         anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
         hautprobleme: "Individuell angepasst",
         hauttypen: "Alle Hauttypen",
@@ -414,7 +414,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
         name: `Individuelle Creme (${result.cremeBase === "light" ? "Leicht" : "Reichhaltig"})`,
         subtitle: "Individuelle Creme",
         description: "Deine Creme mit hochkonzentrierten Wirkstoffen, speziell auf deine Hautbedürfnisse abgestimmt.",
-        image: "/manus-storage/pasted_file_m336Xg_image_eaac4384.png",
+        image: "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
         anwendung: "Morgens und abends nach dem Serum auf das Gesicht auftragen.",
         hautprobleme: "Individuell angepasst",
         hauttypen: "Alle Hauttypen",
@@ -546,7 +546,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/pasted_file_0gngqR_image_17760fe2.png" alt="Individuelles Serum" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg" alt="Individuelles Serum" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">
@@ -613,7 +613,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/pasted_file_m336Xg_image_eaac4384.png" alt="Individuelle Creme" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg" alt="Individuelle Creme" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">
@@ -682,7 +682,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/pasted_file_gMyydd_image_3170d2ee.png" alt="Sonnenschutzfluid SPF 50+" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg" alt="Sonnenschutzfluid SPF 50+" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">

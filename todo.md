@@ -298,3 +298,9 @@
 - [x] Laufende Storefront mit Browserprüfung für Produktpreis-, Warenkorb-, Checkout-, Konto-, Lade-, Fehler- und Leerzustände dokumentieren
 - [x] Fehlerhafte oder statische Produktbilder auf sichtbaren Detailseiten durch verfügbare Shopify-Produktbilder ersetzen
 - [x] Nicht verfügbare Shopify-Produktdaten in allen Kaufpfaden sichtbar und kaufblockierend behandeln
+
+## Bildübernahme aus vorheriger Aufgabe – 2026-07-22
+
+- [x] Fehlende Bildverweise der aktuellen Shopify-Storefront erfassen und die passenden Quelldateien aus dem vorherigen Arbeitsbestand zuordnen
+- [x] Freigegebene Altbilder außerhalb des Projektordners ablegen, als Web-Assets bereitstellen und die betroffenen Storefront-Verweise aktualisieren
+- [x] Übernommene Bilddarstellung auf den betroffenen Seiten in Desktop- und Mobilansicht prüfen

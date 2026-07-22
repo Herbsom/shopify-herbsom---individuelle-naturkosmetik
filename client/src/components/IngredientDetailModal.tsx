@@ -49,7 +49,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   willow: {
     subtitle: "Reiner Bio Weidenrindenextrakt",
-    image: "/manus-storage/pasted_file_tEV7V6_Component109_0d22f905.webp",
+    image: "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Glanz, Mitesser, Pickel, Entzündungen",
     hauttypen: "Fettige Haut, Mischhaut",
@@ -62,7 +62,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   niacinamide: {
     subtitle: "Reiner Niacinamide-Komplex",
-    image: "/manus-storage/pasted_file_Ta9hrm_Component110_b3c36e98.webp",
+    image: "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Vergrößerte Poren, Unreinheiten, ungleichmäßiger Hautton",
     hauttypen: "Alle Hauttypen, besonders Mischhaut",
@@ -75,7 +75,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   vitaminc: {
     subtitle: "Reiner Vitamin C-Komplex",
-    image: "/manus-storage/pasted_file_doaleU_Component111_8af3e786.webp",
+    image: "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Pigmentflecken, Hautalterung, fahle Haut",
     hauttypen: "Alle Hauttypen",
@@ -92,7 +92,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   retinol: {
     subtitle: "Reiner Retinolkomplex",
-    image: "/manus-storage/pasted_file_newInc_Component112_f44bbc3a.webp",
+    image: "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum mit Retinol nur abends auf das Gesicht auftragen, da die Haut lichtempfindlicher wird. Tagsüber unbedingt Sonnenschutz verwenden.",
     hautprobleme: "Falten, feine Linien, Hautalterung, Pigmentflecken",
     hauttypen: "Reife Haut, Normale Haut",
@@ -111,7 +111,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   spilanthol: {
     subtitle: "Reiner Spilantholkomplex",
-    image: "/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+    image: "/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Mimikfalten, Spannungsgefühl, feine Linien",
     hauttypen: "Alle Hauttypen",
@@ -124,7 +124,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   mallow: {
     subtitle: "Reiner Bio Malvenextrakt",
-    image: "/manus-storage/pasted_file_PMIVkd_Component114_62c2385a.webp",
+    image: "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
     anwendung: "In das Basisserum geben und schütteln. Das fertige Serum morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Rötungen, Irritationen, empfindliche Haut, Trockenheit",
     hauttypen: "Empfindliche Haut, Trockene Haut",
@@ -179,7 +179,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   // Creme-specific ingredients
   rosehip: {
     subtitle: "Reines Bio Wildrosenöl",
-    image: "/manus-storage/pasted_file_mAGk9C_Component103_4f97ff70.webp",
+    image: "/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
     anwendung: "In die Basiscreme einrühren. Die fertige Creme morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Trockenheit, Narben, ungleichmäßiger Hautton",
     hauttypen: "Trockene Haut, Reife Haut",
@@ -193,7 +193,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   seabuckthorn: {
     subtitle: "Reines Bio Sanddornöl",
-    image: "/manus-storage/pasted_file_B34Ixl_Component106_615ffead.webp",
+    image: "/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
     anwendung: "In die Basiscreme einrühren. Die fertige Creme morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Trockenheit, Falten, strapazierte Haut",
     hauttypen: "Trockene Haut, Reife Haut",
@@ -207,7 +207,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   grapeseed: {
     subtitle: "Reines Bio Traubenkernöl",
-    image: "/manus-storage/pasted_file_4QmjxL_Component104_ca797fd6.webp",
+    image: "/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
     anwendung: "In die Basiscreme einrühren. Die fertige Creme morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Trockenheit, vorzeitige Hautalterung, freie Radikale",
     hauttypen: "Alle Hauttypen, besonders trockene Haut",
@@ -221,7 +221,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   thistle: {
     subtitle: "Reines Bio Distelöl",
-    image: "/manus-storage/pasted_file_v8y1VS_Component105_00a2c359.webp",
+    image: "/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
     anwendung: "In die Basiscreme einrühren. Die fertige Creme morgens und abends auf das Gesicht auftragen.",
     hautprobleme: "Trockene Stellen, verstopfte Poren, Mischhaut",
     hauttypen: "Mischhaut, Trockene Haut",
@@ -257,7 +257,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   light: {
     subtitle: "Derma Membran Struktur Creme",
-    image: "/manus-storage/pasted_file_NyfxqL_Component135_2a6aa513.webp",
+    image: "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
     anwendung: "Wirkstoffe in die Basiscreme geben, mit dem mitgelieferten Holzspatel 2 Minuten umrühren. Die fertige individuelle Creme morgens und abends auf die gereinigte Haut auftragen.",
     hautprobleme: "Geschwächte Hautbarriere, Feuchtigkeitsmangel",
     hauttypen: "Alle Hauttypen, besonders Normale bis Mischhaut",
@@ -273,7 +273,7 @@ export const SERUM_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   rich: {
     subtitle: "Derma Membran Struktur Creme Reichhaltig",
-    image: "/manus-storage/pasted_file_9gl5S4_Component133_87058f30.webp",
+    image: "/manus-storage/product-creme-basic-basiscreme-rich_564937b6.webp",
     anwendung: "Wirkstoffe in die Basiscreme geben, mit dem mitgelieferten Holzspatel 2 Minuten umrühren. Die fertige individuelle Creme morgens und abends auf die gereinigte Haut auftragen.",
     hautprobleme: "Starke Trockenheit, rissige Haut, geschwächte Hautbarriere",
     hauttypen: "Trockene Haut, Sehr trockene Haut",
@@ -374,7 +374,7 @@ export const CREME_INGREDIENT_DETAILS: Record<string, Omit<IngredientDetail, "id
   },
   spilanthol: {
     subtitle: "Reiner Spilantholkomplex",
-    image: "/manus-storage/pasted_file_kLZtbX_Component113_4cce2ac9.webp",
+    image: "/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
     anwendung: "Wirkstoffe in die Basiscreme geben, mit dem mitgelieferten Holzspatel 2 Minuten umrühren. Die fertige individuelle Creme morgens und abends auf die gereinigte Haut auftragen.",
     hautprobleme: "Mimikfalten, Spannungsgefühl, feine Linien",
     hauttypen: "Alle Hauttypen",

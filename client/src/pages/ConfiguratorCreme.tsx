@@ -16,23 +16,23 @@ import { Check, ArrowRight, Beaker, Leaf, Recycle, Star } from "lucide-react";
 import IngredientDetailModal, { SERUM_INGREDIENT_DETAILS, type IngredientDetail } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
 const BASE_CREAM_IMAGES: Record<string, string> = {
-  light: "/manus-storage/Basiscreme_3e6c66de.webp",
-  rich: "/manus-storage/Basiscreme_3e6c66de.webp",
+  light: "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
+  rich: "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
 };
 const INGREDIENT_IMAGES: Record<string, string> = {
-  willow: "/manus-storage/Weidenrindenextrakt2ml_b6097f0f.webp",
-  niacinamide: "/manus-storage/Niacinamide2ml_46f08c8a.webp",
-  vitaminc: "/manus-storage/VitaminCKomplex2ml_2f8cd87d.webp",
-  retinol: "/manus-storage/Retinolkomplex2ml_dff84f9f.webp",
-  spilanthol: "/manus-storage/Spilantholkomplex2ml_2a92a4a7.webp",
-  mallow: "/manus-storage/Malvenextrakt2ml_1aa8ab0c.webp",
-  horsechestnut: "/manus-storage/Rosskastanienextrakt2ml_1d2515bb.webp",
-  rosehip: "/manus-storage/wildrosenoel2ml_0f0e1f86.webp",
-  seabuckthorn: "/manus-storage/sanddornoel2ml_ec59d504.webp",
-  grapeseed: "/manus-storage/trauberkernoel2ml_5d373859.webp",
-  thistle: "/manus-storage/disteloel2ml_87d83e0a.webp",
-  algae: "/manus-storage/Algenextrakt2ml_fda34039.webp",
-  hyaluronic: "/manus-storage/Hyaluronkomplex2ml_7b904451.webp",
+  willow: "/manus-storage/product-ingredient-creme-weidenrindenextrakt_0bb34194.png",
+  niacinamide: "/manus-storage/product-ingredient-creme-niacinamide_cc34ad82.png",
+  vitaminc: "/manus-storage/product-ingredient-creme-vitaminkomplex_13a7064d.png",
+  retinol: "/manus-storage/product-ingredient-creme-retinolkomplex_f783a663.png",
+  spilanthol: "/manus-storage/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png",
+  mallow: "/manus-storage/product-ingredient-creme-malvenextrakt_c9e29a4e.png",
+  horsechestnut: "/manus-storage/product-ingredient-creme-rosskastanienextrakt_25117b5a.png",
+  rosehip: "/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
+  seabuckthorn: "/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
+  grapeseed: "/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
+  thistle: "/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
+  algae: "/manus-storage/product-ingredient-creme-algenextrakt_2dd0d1ef.png",
+  hyaluronic: "/manus-storage/product-ingredient-creme-hyaluronkomplex_65604b67.png",
 };
 const BASE_CREAMS = [
   { id: "light", name: "Basiscreme", description: "Derma Membran Struktur Creme – Baut mit hauteigenen Lipiden die Hautbarriere auf und zieht mit ihrer leichten Textur schnell ein." },

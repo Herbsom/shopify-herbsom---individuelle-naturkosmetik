@@ -290,7 +290,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksame Reinigung für ölige und unreine Haut. Entfernt überschüssigen Talg und befreit verstopfte Poren.",
         price: 32,
         href: "/product/cleaner",
-        image: "/manus-storage/pasted_file_qfb2y0_image_ac627d53.png",
+        image: "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
       }
     : {
         id: "reinigungsmilch",
@@ -298,7 +298,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Sanfte, cremige Reinigung für trockene und empfindliche Haut. Reinigt gründlich ohne Austrocknen.",
         price: 32,
         href: "/product/cleaner-milk",
-        image: "/manus-storage/pasted_file_YWbHYW_image_12482aa8.png",
+        image: "/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png",
       };
 
   // ─── PEELING ──────────────────────────────────────────────────────────
@@ -321,7 +321,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksames Peeling mit Salicylsäure und Azelainsäure. Befreit verstopfte Poren, reduziert Unreinheiten und reguliert die Talgproduktion.",
         price: 38,
         href: "/product/peeling",
-        image: "/manus-storage/pasted_file_NEzmdL_image_262b2ef1.png",
+        image: "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
       }
     : {
         id: "aha-pha-peeling",
@@ -329,7 +329,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Sanftes Fruchtsäure-Peeling mit PHA für eine verfeinerte Hautstruktur. Ideal für empfindliche, trockene und reife Haut.",
         price: 38,
         href: "/product/peeling-aha",
-        image: "/manus-storage/pasted_file_wUv95O_image_5914599f.png",
+        image: "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
       };
 
   // ─── PREISE ───────────────────────────────────────────────────────────

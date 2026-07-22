@@ -380,7 +380,7 @@ export default function RoutineReifHaut() {
               {/* Application image on right for desktop */}
               <div className="hidden lg:flex items-center justify-center">
                 <img
-                  src="/manus-storage/application-image_b29f3e02.webp"
+                  src="/manus-storage/editorial-home-skincare_7e8e0204.jpg"
                   alt="Hautpflege-Anwendung"
                   className="w-full h-auto object-cover rounded-lg shadow-lg"
                 />

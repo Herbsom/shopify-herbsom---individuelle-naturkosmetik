@@ -15,17 +15,17 @@ import ReviewList from "@/components/ReviewList";
 import { Check, ArrowRight, Beaker, Leaf, Recycle, Star } from "lucide-react";
 import IngredientDetailModal, { SERUM_INGREDIENT_DETAILS, type IngredientDetail } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
-const BASE_SERUM_IMAGE = "/manus-storage/Basisserum_554e7d2b.webp";
+const BASE_SERUM_IMAGE = "/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg";
 const INGREDIENT_IMAGES: Record<string, string> = {
-  willow: "/manus-storage/Weidenrindenexktrakt10ml_3504f8dd.webp",
-  niacinamide: "/manus-storage/Niacinamide10ml_33886026.webp",
-  vitaminc: "/manus-storage/VitaminCKomplex10ml_0c8eb29b.webp",
-  retinol: "/manus-storage/Retinolkomplex10ml_f568e46a.webp",
-  spilanthol: "/manus-storage/Retinolkomplex10ml_f568e46a.webp",
-  mallow: "/manus-storage/Malvenextrakt10ml_58cfd435.webp",
-  horsechestnut: "/manus-storage/Rosskastanienexktrakt10ml_40fc0471.webp",
-  algae: "/manus-storage/Algenextrakt10ml_004e3f2d.webp",
-  hyaluronic: "/manus-storage/Hyaluronkomplex10ml_fcad0b2d.webp",
+  willow: "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
+  niacinamide: "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
+  vitaminc: "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
+  retinol: "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
+  spilanthol: "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
+  mallow: "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
+  horsechestnut: "/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
+  algae: "/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
+  hyaluronic: "/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
 };
 const ACTIVE_INGREDIENTS = {
   "Unreinheiten, ölige Haut & Mischhaut": [
