@@ -358,4 +358,4 @@
 - [x] Referenzmotive für Serum und Creme als langlebige Projekt-Web-Assets zuordnen und einsetzen
 - [x] Bildpfade und Produktschnittstellen mit Tests sowie einer Erreichbarkeitsprüfung absichern
 - [x] Serum- und Creme-Seiten auf Desktop und Mobil visuell gegen die Referenzbildwelt prüfen
-- [ ] Die geprüfte Produktbildübernahme in einer neuen Projektversion sichern
+- [x] Die geprüfte Produktbildübernahme in einer neuen Projektversion sichern
