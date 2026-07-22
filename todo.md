@@ -310,3 +310,9 @@
 - [x] Bilddateien und Nutzungszusammenhang der verlinkten Manus-Aufgabe erfassen und den jeweiligen Storefront-Bereichen zuordnen
 - [x] Freigegebene Bilddateien aus der verlinkten Aufgabe als Web-Assets bereitstellen und die betroffenen Herbsom-Verweise aktualisieren
 - [x] Übernommene Bilder in Desktop- und Mobilansicht sowie im Produktions-Build prüfen
+
+## Referenzgetreue Bildintegration – 2026-07-22
+
+- [x] Bildplatzierung, Bildverhältnisse und Bildzuschnitte der referenzierten Manus-Aufgabe gegenüber der aktuellen Herbsom-Startseite erfassen
+- [x] Startseiten-Bildintegration gemäß Referenzaufgabe aktualisieren, einschließlich Positionierung, Ausschnitt und responsiver Bildverhalten
+- [x] Referenzähnlichkeit sowie Bilddarstellung in Desktop- und Mobilansicht technisch prüfen

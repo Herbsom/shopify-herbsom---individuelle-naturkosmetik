@@ -225,7 +225,7 @@ export default function Home() {
           {/* Image */}
           <div
             className="relative h-72 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: `url(/manus-storage/editorial-home-skincare_7e8e0204.jpg)` }}
+            style={{ backgroundImage: `url(${HOME_IMAGES.ingredients})` }}
           />
           {/* Content */}
           <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 md:py-24">
@@ -350,7 +350,7 @@ export default function Home() {
             <div className="relative reveal">
               <div
                 className="aspect-[4/3] bg-cover bg-center"
-                style={{ backgroundImage: `url(/manus-storage/editorial-story-portrait_a73126e1.jpg)` }}
+                style={{ backgroundImage: `url(${HOME_IMAGES.texture})` }}
               />
               <div className="absolute top-6 left-6 bg-[#5B5B38] px-4 py-2">
                 <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#7D7D5D]">Neu</span>
@@ -409,7 +409,7 @@ export default function Home() {
           {/* Image */}
           <div
             className="relative h-72 md:h-auto bg-cover bg-center order-1 md:order-2"
-            style={{ backgroundImage: `url(/manus-storage/editorial-story-wide_14bfe783.jpg)` }}
+            style={{ backgroundImage: `url(${HOME_IMAGES.products})` }}
           />
         </div>
       </section>
