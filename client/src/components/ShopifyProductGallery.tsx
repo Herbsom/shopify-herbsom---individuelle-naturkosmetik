@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 import { trpc } from "@/lib/trpc";
 
+type ProductGalleryImage = {
+  url: string;
+  altText?: string | null;
+};
+
 type ShopifyProductGalleryProps = {
   handle: string;
   alt: string;
+  /**
+   * Kuratierte Referenzmotive für das sichtbare Produktbild. Sie werden
+   * bewusst vor dynamischen Shopify-Bildern eingesetzt, ohne Preise,
+   * Verfügbarkeit oder Warenkorb-Daten vom Shopify-Produkt zu entkoppeln.
+   */
+  referenceImages?: readonly ProductGalleryImage[];
   className?: string;
   imageClassName?: string;
 };
@@ -11,6 +22,7 @@ type ShopifyProductGalleryProps = {
 export default function ShopifyProductGallery({
   handle,
   alt,
+  referenceImages = [],
   className = "aspect-square rounded-sm bg-[#F0EBE3]",
   imageClassName = "h-full w-full object-cover",
 }: ShopifyProductGalleryProps) {
@@ -20,13 +32,14 @@ export default function ShopifyProductGallery({
     { staleTime: 5 * 60 * 1000 }
   );
 
-  const images = product?.images ?? [];
+  const images = referenceImages.length > 0 ? referenceImages : product?.images ?? [];
+  const usesReferenceImages = referenceImages.length > 0;
 
   useEffect(() => {
     setActiveIndex(0);
   }, [handle]);
 
-  if (isLoading) {
+  if (isLoading && !usesReferenceImages) {
     return (
       <div className={`flex items-center justify-center ${className}`} role="status" aria-live="polite">
         <div className="text-center text-sm text-[#7D7D5D]">
@@ -37,7 +50,7 @@ export default function ShopifyProductGallery({
     );
   }
 
-  if (isError || images.length === 0) {
+  if ((isError && !usesReferenceImages) || images.length === 0) {
     return (
       <div className={`flex items-center justify-center border border-[#D9C2BC] ${className}`} role="alert">
         <p className="max-w-52 px-6 text-center text-sm text-[#8A3F35]">

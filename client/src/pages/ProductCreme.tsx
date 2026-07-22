@@ -12,6 +12,7 @@ import ShopifyProductGallery from "@/components/ShopifyProductGallery";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, Star, Check } from "lucide-react";
+import { HOME_IMAGES } from "@/lib/homeAssets";
 import { useTranslation } from "react-i18next";
 // Scroll reveal hook
 function useScrollReveal() {
@@ -48,6 +49,12 @@ export default function ProductCreme() {
               <ShopifyProductGallery
                 handle="erstelle-deine-creme"
                 alt="Individuelle Gesichtscreme"
+                referenceImages={[
+                  {
+                    url: HOME_IMAGES.productCream,
+                    altText: "Individuelle Herbsom Gesichtscreme",
+                  },
+                ]}
                 className="aspect-square rounded-lg bg-gradient-to-br from-[#F0EBE3] to-[#E8E3DB]"
               />
             </div>

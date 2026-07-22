@@ -351,3 +351,11 @@
 - [x] Alle geänderten Bildpfade automatisiert auf Erreichbarkeit prüfen und die bestehenden Bildtests aktualisieren
 - [x] Referenzähnlichkeit sowie Bilddarstellung in Desktop- und Mobilansicht visuell prüfen
 - [x] Die geprüfte Bildausrichtung in einer neuen Projektversion sichern
+
+## Referenzproduktbilder für individuelle Serum- und Creme-Seiten – 2026-07-22
+
+- [x] Produktbildflächen der individuellen Serum- und Creme-Seite mit den passenden Referenzmotiven vergleichen
+- [x] Referenzmotive für Serum und Creme als langlebige Projekt-Web-Assets zuordnen und einsetzen
+- [x] Bildpfade und Produktschnittstellen mit Tests sowie einer Erreichbarkeitsprüfung absichern
+- [x] Serum- und Creme-Seiten auf Desktop und Mobil visuell gegen die Referenzbildwelt prüfen
+- [ ] Die geprüfte Produktbildübernahme in einer neuen Projektversion sichern

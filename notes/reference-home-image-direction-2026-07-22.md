@@ -47,3 +47,20 @@ Die Startseite wurde nach der Zuordnung auf Desktop (1280 × 720 px, vollständi
 | Texturabschluss | Referenz-Texturmotiv vollständig sichtbar | Responsiver Ausschnitt ohne Unterbrechung | Bestanden |
 
 Zusätzlich meldete die Laufzeitprüfung für alle 79 verwendeten Projekt-Web-Assets eine gültige Bildantwort; es bestehen keine nicht erreichbaren oder ungültigen Bildpfade.
+
+## Referenzproduktbilder für individuelle Serum- und Creme-Seiten
+
+Die verlinkte Referenzseite führt im Abschnitt „Our Range“ die beiden Produkte „Personalized Serum“ und „Personalized Face Cream“. Die direkt aus den berechneten Styles der Seite ermittelten Produktmotive sollen auch auf den individuellen Detail- und Konfiguratorseiten verwendet werden:
+
+| Produkt | Referenzbild | Bereitgestellter Projekt-Web-Asset |
+|---|---|---|
+| Individuelles Serum | `https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c.png` | `/manus-storage/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20_f6b3083b.png` |
+| Individuelle Creme | `https://herbsomweb-zgqpcjfd.manus.space/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7.png` | `/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png` |
+
+Die Referenzwebsite verlinkt diese beiden Kategorien auf `/hauttest?product=serum` und `/hauttest?product=creme`; der aktuelle Storefront stellt zusätzlich separate Detailseiten sowie Konfiguratoren bereit. Deshalb werden beide Bildflächenklassen auf die gleichen semantisch passenden Referenzmotive ausgerichtet.
+
+## Umsetzung auf individuellen Produktseiten
+
+Die Detailseiten `/product/serum` und `/product/creme` nutzen die oben dokumentierten Referenzmotive jetzt direkt in ihrer sichtbaren Produktgalerie. Die Shopify-Datenanbindung für Preis, Verfügbarkeit und Warenkorb bleibt dabei unverändert; nur das kuratierte Hauptmotiv wird priorisiert. Die Umsetzung wurde am 2026-07-22 sowohl in der Desktopansicht (1440 × 960) als auch in der Mobilansicht (390 × 844) geprüft. In beiden Ansichten sind das Serum- und Cremeprodukt vollständig sichtbar und ohne Ladeplatzhalter dargestellt.
+
+Technische Prüfung: 15 Vitest-Dateien mit 141 bestandenen Tests und einem übersprungenen Test; Produktions-Build erfolgreich. Die Laufzeitprüfung aller 79 verwendeten Projekt-Web-Assets meldete 79 verfügbare und 0 nicht verfügbare Bildpfade.
