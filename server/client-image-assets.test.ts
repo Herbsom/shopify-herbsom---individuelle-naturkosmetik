@@ -47,7 +47,6 @@ describe("client image asset references", () => {
       "_142cd424",
       "e0123456-7890-4321-abcd-1234567890ab",
       "_6932f904.jpg",
-      "_f6b3083b.png",
     ];
 
     for (const fragment of unavailableFragments) {

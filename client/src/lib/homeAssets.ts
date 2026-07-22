@@ -4,14 +4,15 @@
  * von https://herbsomweb-zgqpcjfd.manus.space und werden als Projekt-Web-Assets bereitgestellt.
  */
 export const HOME_IMAGES = {
-  hero: "/manus-storage/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_4aa7e8a9.png",
-  productSerum: "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
-  productCream: "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
-  productCleanser: "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
-  productPeeling: "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
-  ingredients: "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
-  ritual: "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
-  sunscreen: "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_45729ddd.png",
-  products: "/manus-storage/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02_8e779bd6.png",
-  texture: "/manus-storage/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da_8cb305f8.png"
+  // Exakte Bildabfolge der Referenzstartseite herbsomweb-zgqpcjfd.manus.space.
+  hero: "/manus-storage/052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2_237927c2.png",
+  productSerum: "/manus-storage/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20_f6b3083b.png",
+  productCream: "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
+  productCleanser: "/manus-storage/054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5_5438a7a0.png",
+  productPeeling: "/manus-storage/053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab_022ebc08.png",
+  ingredients: "/manus-storage/050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865_3c34b529.jpeg",
+  ritual: "/manus-storage/051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d_f8b34b50.png",
+  sunscreen: "/manus-storage/055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9_cf403b2b.jpg",
+  products: "/manus-storage/049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2_c221b6bc.png",
+  texture: "/manus-storage/herbsom-reference-texture_aabae8f7.webp"
 } as const;
