@@ -44,7 +44,7 @@ export default function Home() {
       description: t("homepage.products_serum_desc"),
       tag: t("homepage.bestseller"),
       href: "/hauttest?product=serum",
-      image: "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
+      image: HOME_IMAGES.productSerum,
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ export default function Home() {
       description: t("homepage.products_cream_desc"),
       tag: t("homepage.new"),
       href: "/hauttest?product=creme",
-      image: "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
+      image: HOME_IMAGES.productCream,
     },
     {
       id: 3,
@@ -62,7 +62,7 @@ export default function Home() {
       description: t("homepage.products_cleanser_desc"),
       tag: "",
       href: "/cleaners",
-      image: "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
+      image: HOME_IMAGES.productCleanser,
     },
     {
       id: 4,
@@ -71,7 +71,7 @@ export default function Home() {
       description: t("homepage.products_peeling_desc"),
       tag: "",
       href: "/peelings",
-      image: "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
+      image: HOME_IMAGES.productPeeling,
     },
   ];
   const values = [
@@ -350,7 +350,7 @@ export default function Home() {
             <div className="relative reveal">
               <div
                 className="aspect-[4/3] bg-cover bg-center"
-                style={{ backgroundImage: `url(${HOME_IMAGES.texture})` }}
+                style={{ backgroundImage: `url(${HOME_IMAGES.sunscreen})` }}
               />
               <div className="absolute top-6 left-6 bg-[#5B5B38] px-4 py-2">
                 <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#7D7D5D]">Neu</span>

@@ -322,3 +322,9 @@
 - [x] Die fünf tatsächlichen Originalbilddateien der Referenz-Startseite aus dem angehängten Aufgabenbestand identifizieren und visuell gegen die aktuelle Startseite abgleichen
 - [x] Die abweichenden aktuellen Startseitenmotive durch die Originalbilder der Referenzaufgabe als langlebige Projekt-Assets ersetzen
 - [x] Motivgleichheit, Bildausschnitt und responsive Darstellung der korrigierten Originalbilder auf Desktop und Mobil prüfen
+
+## Vollständige Bildübernahme von herbsomweb-zgqpcjfd.manus.space – 2026-07-22
+
+- [x] Alle auf der angegebenen Referenzseite verwendeten Bilddateien und ihre jeweiligen Storefront-Positionen erfassen
+- [x] Die vollständige Bildsammlung der Referenzseite als langlebige Projekt-Assets bereitstellen und die aktuellen Storefront-Verweise ersetzen
+- [x] Vollständigkeit, Bildreihenfolge und Darstellung der übernommenen Referenzbilder auf Desktop und Mobil prüfen

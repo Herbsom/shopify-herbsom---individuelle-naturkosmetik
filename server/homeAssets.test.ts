@@ -1,13 +1,22 @@
 import { describe, expect, it } from "vitest";
 import { HOME_IMAGES } from "../client/src/lib/homeAssets";
 
+const expectedReferenceAssets = {
+  hero: "/manus-storage/herbsom-site-hero_cae59246.png",
+  productSerum: "/manus-storage/herbsom-site-product-serum_24a1f600.png",
+  productCream: "/manus-storage/herbsom-site-product-cream_c54c24fe.png",
+  productCleanser: "/manus-storage/herbsom-site-product-cleanser_7661ffa0.png",
+  productPeeling: "/manus-storage/herbsom-site-product-peeling_632e04ea.png",
+  ingredients: "/manus-storage/herbsom-site-philosophy_88b5b235.jpeg",
+  ritual: "/manus-storage/herbsom-site-skin-test_08c5aab8.png",
+  sunscreen: "/manus-storage/herbsom-site-sunscreen_3c736033.jpg",
+  products: "/manus-storage/herbsom-site-story_9311d007.png",
+  texture: "/manus-storage/herbsom-site-texture_85e0b708.webp",
+} as const;
+
 describe("HOME_IMAGES", () => {
-  it("uses project-hosted assets for every image position of the reference layout", () => {
-    expect(HOME_IMAGES.hero).toBe("/manus-storage/herbsom-reference-hero_bbea9f3d.webp");
-    expect(HOME_IMAGES.ingredients).toBe("/manus-storage/herbsom-reference-ingredients_efc10a47.webp");
-    expect(HOME_IMAGES.ritual).toBe("/manus-storage/herbsom-reference-ritual_d9ac2a9e.webp");
-    expect(HOME_IMAGES.texture).toBe("/manus-storage/herbsom-reference-texture_f285c3ae.webp");
-    expect(HOME_IMAGES.products).toBe("/manus-storage/herbsom-reference-products_d6c6bf77.webp");
+  it("maps every rendered content image of the specified reference page", () => {
+    expect(HOME_IMAGES).toEqual(expectedReferenceAssets);
   });
 
   it("keeps every home image on an absolute project asset path", () => {
