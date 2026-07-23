@@ -1,1004 +1,746 @@
 {
-  "generatedAt": "2026-07-22T15:38:34.245Z",
-  "summary": {
-    "totalWebAssetReferences": 79,
-    "availableImageAssets": 79,
-    "unavailableOrInvalidAssets": 0
-  },
+  "generatedAt": "2026-07-23T14:24:48.962Z",
+  "previewBase": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer",
+  "scannedFiles": 159,
+  "totalUrls": 92,
+  "availableUrls": 92,
+  "brokenUrls": 0,
   "results": [
     {
-      "reference": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/routineRecommendations.ts",
-        "client/src/lib/skinTestRecommendation.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp?Expires=1784738313&Signature=SDCs8hqh4iMS4D18X60C-7PogBWbjN6UBXzz3snn~mLjQwZumxYsCGPXPZx9R08IGVYuwJTDUeYqhdTLpGLJsf1AKmLFQiqFMQ~YwBo5eIMQBKfokPYVivpiuxTxJsIu6DMkLsgrLuKxUyDWKmalZQ47Rrf2r-y5CQKzPL45GrPm0LSL1lhReO8rGG7NOKzHiA8ZkLvcn4wX4TOpKCPXx93sBrEJ2-7tDSEItsydZpFcp935-s0lbE03YH2hpTx~kXti2reqYiyCYqwzyYZvaNMytpFeEWe9q0cAKZD7ppGRxHtea5J8mCJ~j6VAWco6seQBFoo8QXY9wkmG8ag1uw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 209
     },
     {
-      "reference": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts",
-        "client/src/pages/Peelings.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_ee21ec00.webp?Expires=1784738313&Signature=F4MNsRPrrZ75F3aIE85kX6W8whAtny12~x64BSbMcJvCr2nK87PnhSKit--0aR7Vll3Xxx6AuCVB3F3ZBsCDCYgRMYjpLhbV3iJrosSzOfXUguGO9I6gaaymIcDrIwvlZWnWdiQBxS1EOM6TlWmnGCyEg2xsV6O9Hu3h0iG-Occv~lNBNGsxd1iL-yoqC5cV3SSUXw61-4nU7ejSEkU9~TTXkBm2FTVYECTa0e-IF3y7LMWp79bLoqCfyKyvl0OLniRIGibmo6HEu5no3vjhM7oGGvkkaU6delB7FXC0ShdAlpCHlQEujhW~yOoiKF~SSPdz9r8LJ2Vir7GyJ0yt~A__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 143
     },
     {
-      "reference": "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp?Expires=1784738313&Signature=g1vhP9IK6QrW5SieJ7OP8qZHPRN6F7YI4oPbG6NhrBgBOOw~5xlldmE2RlD7mrBpFtZILNua89yzbc3j2iI4Lf05iDoobwCKILxF1Xl96dnNLeh4PTxudiM6toDDzhHm6ukR5z~CUROB6dMcQlvX~6OVAgdNQMKVannJ~PC-4kF2~Q9hvtK1eDWrs5TEgw7Tue68RA0sd3odF8wFlJtl~JNxmNFbuPk7dxpXf-uqYz884PuyXZsUCFNhMFh-rcvYevELBTHaOWlPZiLdOmU8KM3oryoVgW9PeqgAt6X-WIQMPD65Xz-TYaVipLhgB-hr0PukSXaaeCMwiOIEHYAXmw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 98
     },
     {
-      "reference": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/routineRecommendations.ts",
-        "client/src/lib/skinTestRecommendation.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/003-Algenextrakt2ml_fda34039-4b00d00f_54fead5c.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/003-Algenextrakt2ml_fda34039-4b00d00f_54fead5c.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp?Expires=1784738313&Signature=rJBfn8RkBF7VXwhyXrX8s5WUkDDl~8hm~9vd4ePOnwhGjh1VxNdi4ZN-zFxq4jmTXnWXOcEukYHh~tAPAHeWRdLqgWTmGuNojUIDNTPeLcpvR6BgzYrt94iB1jLCHfGYfQV7moedTLAIYKpExI5-fMejyoIToHhj8e-DKXwTTsc7hVAchSXhNOWnL7t~rBVq8GbQyCYsI-gFK9oH07qr-X569j1noexuX8h2eqhKm0XGrdMuiZ6RXfWmQL9DumyY8KXY-cdgoqYdmSfqp0FEKkCp5cMjG3TPtKWCudVGVTXf8a-9JzeFSAfrx2O4-8ZO3YBFedpkXyP2fYobPYdLyA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 102
     },
     {
-      "reference": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/pages/Peelings.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp?Expires=1784738313&Signature=n90nj6kuv0usq5BEXOgDPNtB63z6bsFikyguQq9Gj5TqJFye4CwFFxsHjAc~2JKhaUXEFdid-4-3go36WHdVLngRBbFfcTmaGs0Ipa5EvRhr9mIalApT4nI7iwQpYR4Bp80V2rA9bGxt8fkrSg0lA0r25M6-AtC69utaMGtoJCAg97S20sKjTz36f5WQGsT7Hjs0TkWDiNZ6LyAOwSJqvSO532HFAejCKPRXY5-PNYYWuJB-5poSCBx067w16iWjGXEDTdadBhZdbkyVfX0pin6LZbbS7n~puvxoklzJ3E-itzBz5Fg27Af0hA4oKQnOmCpDfn7Ld2LG00RHCnv7Lg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 111
     },
     {
-      "reference": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_3fa210dd.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_7ffc4f85.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/005-Basiscreme_3e6c66de-e4b561e1_3fa210dd.webp?Expires=1784738313&Signature=EljliRjZwjUpT1I7uQ6-fVLHL3iNJIRSKP2TT~n3feTzjU6QwgGaMt3GhfCnKjKMSl75nceNuO1mILBm9SGv1eaK0mu1W0XiDq2XVCqaxhJSGiDT0N8iv8H0AD3O~5XBLtP~u~D2PEe1U3BMOFL24IGrH7mpZvzQnDhx9pTOvrrgD44tpGIjcXhJY6Maq-H0L6taU8J9wU8b4MnRd09CHApgCN6f4Yoah3RckEQ3ud2AkkKQmQMxuIepcryQM~bHEEfDMy1XPgkEZAdAjzSX5-KqbgtoL0SE8A3qymmJN25K7rDlRk4TT2zaEl689uE10yGolBq-rwCKwRKS7Qj0oQ__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 147
     },
     {
-      "reference": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx",
-        "client/src/lib/homeAssets.ts",
-        "client/src/lib/routineRecommendations.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp?Expires=1784738313&Signature=uo36neOXG6tyhU4Q0H91W2XuD9QfMY6mkXm6Aa34hfppvYrIQR94fzPy0s39IFTFdAAYPgNmuynhSOvCeblM5nTK6wjx~fEV5yIpdVBwyS00tbo-n2nZo8KdpzZcRBAMwE~bTWLJbi-U60J7I0PWLMoQV8BAWSu~tmcqi3izH5ndY5QhuIccIg1GvZakWcxLe6TubQ9z6buUeyDjBT8iM~t2LiFcJ7AGnmms-qadA48ExmRaYlXuG5CltYDZOKOFOKVKvF0QC51Kef0s7yr3D3xihiQLUrPg0b-e4N1Kg-sl0vE5n5cdo8ecF-EbbueipBr0JyGG1SI8yDCHNT6Gpg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 148
     },
     {
-      "reference": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts",
-        "client/src/lib/routineRecommendations.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp?Expires=1784738313&Signature=YKVQfeP~ZutvH4HQRAFM9cLcqRc5hIrj7HGq3QDvPDEz1j2a7mlSqQ56bts9mg0hT8XCjeTStS9BXolGOKhPNMGsn-HswD3WDoiTl-NcSFw5eAaUBB2LWZspSJ-JVS~MH73m7Rb8KgODpWkf5ubx58dV5iMBIHfVlnw3zieycAauYY8-OlSh45eh8wZaUnf7mSTkIcRtFh-HVsCq40Z2YrgUyJdAeSc6v5u7WXjE2h~OH9J31MUzj-LmQ3yeHZfdPL73xbTx5FL8vqYfVPzyKU6NtQAhHY4s2r2qvWQpqVqnxBj-ZWA9VbyZFKomaujRJ0Jur~ly77iE0M610sQqzw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 193
     },
     {
-      "reference": "/manus-storage/006-Basisserum_554e7d2b-2df68e64_dd7db882.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/006-Basisserum_554e7d2b-2df68e64_dd7db882.webp?Expires=1784738313&Signature=Hhmcf7HReA3dwjeF-K4E5GHj7wUh6vE4Cd23WnYVFztLpJIatps2HllBMSWWVOAxj8rx06MCok4MAxmor0CUIOsZNtIkTKTLN5admiBwCqjIZam4b3sjW84t6XrtuAfZRRHgbtZKnCa5M557TCElqfJZrEJsst1rgMZrQ77C3levvOcxUZ3ZtyLX8m4yu4gXjk9p0TL-rDNQc0PVsSQr2xZMaQW9JE~8x1eh~wrrOiTH9W2UNSh9iXR9NZm1yJSVGFeS~DdSfsze03FvVCRdEiEmGYKnZpoS68DBm2xTJ6hpD6QZDnUNAfBm5PdXB6TQXG22oLly1QOjhF~6dVL7cA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 142
     },
     {
-      "reference": "/manus-storage/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/008-Hyaluronkomplex2ml_7b904451-ea01a6a3_891087a9.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/008-Hyaluronkomplex2ml_7b904451-ea01a6a3_891087a9.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/007-Hyaluronkomplex10ml_fcad0b2d-cc151f90_8f8b954d.webp?Expires=1784738313&Signature=njQ9yjDAdR756r~15dkHNajezPMWMNEAki-hNWS29jIMLHzLLm3O4KPrUXHTu7jXppyEdiQgYX3xyXVw-Sk5w4-pvwem3VR-PLY2lx0uOeuzutDyx555EuFRbNWgMJzDetueaD8pOoFHP9Ds6TfCQCoVskmw9hXm4hlkbzPSrRF5qoPxZmCX-zZkp5Th90qZ~plFvdTdi9FXOjsFuvk3qwWCOUL4r6e2k71N4uZj~a5zSJVn3hJzL8WBAtxmXa0-aDky3rs3IetYICNKBxWOwk-fa123eovDkdD8Bf-CFa-~weROXyXX4loNIvF3zdXqJXHYc64DBpwXq7EhxjDTtQ__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 121
     },
     {
-      "reference": "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp?Expires=1784738313&Signature=HiQQ9~0h96~hGhOKfm8OV92wb0keyjqWN~h7z2YX5ODiEGkPrvzPd5oGEs~LSPvWYEORgnLJd0eiFF6R0kM1f5U-UUD-COA~XocGhknb80w8BaiEMKpeOiFMscc0TQaDeydk26tEdUoXLW67LHDZIj8t3T5Arzf4eSleTpx0dAguzT3XcP3eN9m6dFb6uYbRXK-BfAAVSVI~xPHaJ3h4ZtUJqfjEnV2s~wQzfugmvhsLEzNavSKL5mlqRQFn9UWv50Uqv6m0NYxR86A8uiAUxLsBk36-ZozhovIqds~8jOI1UXjChSdmFUFp129AcsRKENI3ifyfgYBKk16pyH-fAA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 81
     },
     {
-      "reference": "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/010-Malvenextrakt2ml_1aa8ab0c-4cbf49fb_3dc09546.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/010-Malvenextrakt2ml_1aa8ab0c-4cbf49fb_3dc09546.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp?Expires=1784738313&Signature=OaG6AxtyR-lDQOGQs7dZqEbWdk4UG5cSjKpdS38k~ze0eNeJ-tpho0KKuejyC1g2aLw0pwncWArgxrnubuviQsLJ0hAdtgz6J7ALIQkBIEB-5CodfmQCI4~k8plV~LskKNaWk1y0jJ7z9oFk69~mewPegTsqc89MexdI7VJYrQ8PqrMCwoMNjoZfVTTrq2FlCuBdGRVyYpAqQ6IZ2xOb1bl-GbBYK7x1Jn-8qI05peEIEXBv3NSxmM-bMIg914tdP7IPtMO~Zfyhjl8xL9~Y6Pnk5ZCCvwxW2W96QYsAzyu0Yx5DAAmmUFDFIpe4ZEQkafifmvFBwX4AnlzjE3z73w__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 76
     },
     {
-      "reference": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts",
-        "client/src/lib/routineRecommendations.ts",
-        "client/src/lib/skinTestRecommendation.ts",
-        "client/src/pages/Cleaners.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp?Expires=1784738313&Signature=wa4lY9iBBRR2HTUCwFvFtDz3u8~RUJ1ajYxzi1hOiDAi7S3sdRAxr0FdABIBtQxb9fw~YYZmNAcop1QMIjR457x7ZVUXj3XkpLhDxB76YGYwJwR8mp9plgW90FDiWnAn2o9ZTw-ziX60vBojNWKbnSvUHljMBMrayIBB2kK~u2D9VP-odRTdxc0zMsj93RJI-YiXssb05uRDnPCJmqGdNthPff3PoMaWFkmSBSJies28c4abT1EDOO25ChsILzHIw7IZEgPVOgA~gX5V6vYl05CKUzI2NJl0-KGK1bbat3y18jgtHcavcKvtGGTqzXlGeDU0Mexc6WO6JHOhNyUn1w__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 56
     },
     {
-      "reference": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/routineRecommendations.ts",
-        "client/src/lib/skinTestRecommendation.ts",
-        "client/src/pages/Cleaners.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/012-Niacinamide2ml_46f08c8a-c06d7af0_8cce647d.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/012-Niacinamide2ml_46f08c8a-c06d7af0_8cce647d.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp?Expires=1784738313&Signature=loSD4Xpn6RjlPOanxCw~PjinKAbmTO65jixtBGg81abYEzyvTnWp4m1iyNt2aIOTRaM-ctGDlDCIiz5iF-XI5mDtbKzsHBPyouirz80OrWXxaNS95AXY17GvK693Nu64Q0YkvckBnCwaHtF4DsdZolO~2IWT2XVYPo4fOZDj5xqW2FhgPilVN31uXuFiLpw0vv4jVd1zIPTG-O-l~ZJTRxugEg5hMEau313bItKXyKbApXxyxipPP5nw5X~76gaJKkh8e3wzrSVw1z3~hCvdg6a63uM93wAcbp8Eezl4n-3ESqmuqRtFuwn2JEIZ8KyB~EKlDdcnrj~3t-U~7E-e-Q__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 77
     },
     {
-      "reference": "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp?Expires=1784738313&Signature=NNv32w5T~N9x8-dxJuwAzNmNkEmBucd2X7OGBakd95G7EpY7czHPi4MEKoxfUXmNeXdccz0KQuuHf2SXPXoYHRQFHKZZAak1UrfsFi3y2f0ZzMb32qg9uJq1U0A5SZdubmwktPIf3PlqT6mhENXm7RLbX52k-Q6JPERDkTxYRMNsYxYZpW84HkGyzx6ERUZ3SKiWnwcTICyAVRxaD-ja2BX4lVOSsksg6OfGNozdZIUHsHDMONp0U6jvZ4PH3wKZaKy0MLL-NusBG-fyXeEEP~7Po7r2-N~YDbKPPkbOKaUvA4gdkbJ2XzSHrhg~C01u5xnN2EHajMo1hQA4BAlbdg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 73
     },
     {
-      "reference": "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp?Expires=1784738313&Signature=CWwmA0F~BylcBGtg79oAjpNyYVH1mikUpd3U6iuuy521M6X43Kwcyz~9rTtL1GlU-5HTAeXW~UWof7cFMNHICORKlIyuMvt3K2ai2DvAQGUwxuyKfQsCJCGHqWjBpNheE~VT0YFTrjpp40kKjRPjtgT43QP0NXlm~t9uHtlbsdROrYE~2MWUQSgn7P4RN6ifz457j~HnXN2r9y1gJyREMS-o-50xLFjaSRHgnXG8lsAhomPY8bApHGmLzmHxzIn5LlO8NW6znrQdChiJEryLoD42rm-9Xl8CpVXV5bWX~hnjZn96YkP0HGlTr5cMVN7sucRoqgB1v05q~bOKJmyG6A__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 76
     },
     {
-      "reference": "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp?Expires=1784738313&Signature=HUMvKAAARORdEYMIoQU4vJYLiefHQlCidGh6MKHeSAYUy3rQEV5Pcb0lkfLUncApYtmBkAab1D82qtTUuvtkEgs95wy8mak-QI-sdK1PhuY1sYP5HBfDSqvasEXHIh2WB6d1i4NYK4mFcbQ-oHPp9BDZE8U~jPDdR-hZ~bX8L1d1npBvrvncWfpCjfY8h9nhX-Eixh7061lGdERqOq0FchMMk-lhPeQtt-5YatrkEwdeOwkhBtHaYQYcEcerlwuwC3ZJSritiBK7yakgpz05gZIpEumOH~rpAAMyPb7dTlxU5VV7GJyEH2s8~P0fpeV2xXQkMb~3ShTn9DJflairUw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 55
     },
     {
-      "reference": "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/019-Retinolkomplex2ml_dff84f9f-83b59f5b_ff2929a2.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/019-Retinolkomplex2ml_dff84f9f-83b59f5b_ff2929a2.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp?Expires=1784738313&Signature=LRno~hPlIfzJ7z0vR8t2TnlQPL9uBXql7NV9jpzdVxQmbIETCLcGxZEH0uw0mccRZU0C4OqL1n8i4~jqQf-hZ7gnCss3Yb~OTpPwSI~i5wwi0wSRf-dnltM2RjaGa6nx3z1t-k8u2l4GgHb68OECqwI9~PMNmTQFRaFhmWruEhmqcMr7NE~Wz9N2A~i1QIkiVIrhVd6JfJ5mVhjfhQFonmMaVzoaWNtKxN-p7aZ51~0aW1gdbJbyDKDwsyLRP0Vu-JGR2GjWq7t4wAgRytJADIiRHFuLfmVzqMNaladmiJNxO6j-irm7FznqC51bp7PAHesQ4r4Pq9WAEvddMX5ZGg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 64
     },
     {
-      "reference": "/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp?Expires=1784738313&Signature=G9DgBfEzgm5YXh8Gd3QdJ6BBn33qYKBjMFzsLTMxIT~1XSNA0qxqt~-TMHdrCo7alcwIpIMQSBgQ9P5Af94S~fBAe~3frl8dGQdvDa7hp04scyhHFBnyYL6qQ4WBqLZVCnwFEdQWENY1pb3kGCoP1wPU726blcZ~USlrbyN3zrMqilyFcY55pRQPWekhyp-JGMS-dxamqfU7KIVVRrfZ09sCVcE~ZOfxF-Qs~dDkGnI8fRHkYJ3dS5zylJsic8qlx3d6wJSbzHxAs2pPMnRxy3LFVCvB9ytVi7UVSSp46n8t5NiA7kEHMmDrFZcnE0UdahGqAkLEVnbQ0u5uzet8ow__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 75
     },
     {
-      "reference": "/manus-storage/034-disteloel2ml_87d83e0a-1b229cba_e31dd53b.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/021-Rosskastanienextrakt2ml_1d2515bb-0e29d62e_78023a20.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/021-Rosskastanienextrakt2ml_1d2515bb-0e29d62e_78023a20.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/034-disteloel2ml_87d83e0a-1b229cba_e31dd53b.webp?Expires=1784738313&Signature=aba9iG4Mxs9~6kD01ZwY3zHoiJ0VUrlPKc41MoypowCPvtTkqrUK9ct~mIlmPyIiOd13tDMLtLHNawI7TodjF3WrJFuMrf4cxwl-oft5sxje-sy5vrIlAWTdWiiDQG16XqPL7~y8ua12frzJ4jKMHi0YP9DXWP9FRMuotjAC2-I30iqtRc-Vgok9I114HYduyQ-7HrZERXyu4zpsxZ4Mcs6qbbDmyDhIyfj8s~HKD5ZbhN10YoxpSWfdSXCyOPmniJSgSR98ISbHM3AGcSv4d-oq0HtylKfrVAITgVGJOkYPxZVU8YWCXndDZgE6BiEN2Lgg9e32SYnm56uYT902bg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 82
     },
     {
-      "reference": "/manus-storage/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/pages/About.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
       "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 53
+    },
+    {
+      "sourceUrl": "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 46
+    },
+    {
+      "sourceUrl": "/manus-storage/024-VitaminCKomplex2ml_2f8cd87d-529be79a_f65ba7c9.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/024-VitaminCKomplex2ml_2f8cd87d-529be79a_f65ba7c9.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 50
+    },
+    {
+      "sourceUrl": "/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/025-Weidenrindenexktrakt10ml_3504f8dd-f773fa5a_3e589372.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 62
+    },
+    {
+      "sourceUrl": "/manus-storage/026-Weidenrindenextrakt2ml_b6097f0f-33908979_e5ddf35f.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/026-Weidenrindenextrakt2ml_b6097f0f-33908979_e5ddf35f.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 60
+    },
+    {
+      "sourceUrl": "/manus-storage/034-disteloel2ml_87d83e0a-1b229cba_4587cecd.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/034-disteloel2ml_87d83e0a-1b229cba_4587cecd.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 48
+    },
+    {
+      "sourceUrl": "/manus-storage/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg",
+      "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/035-gruenderin_norderney2_adb1f6a3-98e15ceb_01bba88d.jpg?Expires=1784738313&Signature=NSqvMHtapWzNTL4PwONl952~W009tCPDNO78ysSVnEGC3CSFUH4Bt1t~YbwRXZKRLfLpMUgvpCo0YMZaAIVVHwK7DkiGv4gdJsaZJeZ0YYKJNRs5-66u6SROjEhMa1VM5DwyJJxD4Yzg4UU9wIOCHGD3N8bHs~Lwfppmi04fLJegONvr9GqZo9Nq9VmmkUyRpLVqNiZyyqBzaaDn1pN4G4GyWBucR-mHLeCmNthw4kZdtMR5sbPP3AUPfwro0U8FsUhrwbM~HsveLyIGH-rcP9E7Qah8oukf94gEIMJrH6o8NzdNlW8lLoJpsOVTdCCKXN-bRQDVGuQv7DFSfXSdgw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 59
     },
     {
-      "reference": "/manus-storage/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02_8e779bd6.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/036-hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6-2d260b02_8e779bd6.png?Expires=1784738313&Signature=DiyiOIHjjOjIPYp3cBs~LN0bfZFd1KAEzoClaPnObNmui0OeYuydhd9NcTaidDLlFMV5zb8RscRYytZ4oO7SzM6tW6SlPWxsa5S0GOaf3WcTEn1wUpGaQf1wRKvB~HvYbO-d~auA4nvhVQbsaS4dsCctR5ZYwig227pTIleMjjaavzmJra9HP9l0nP~U2rwzg8ASLpzvLNQ9WVA6Iz-GF58ffSoQ3qHLnQOUyEbni61Mec~DpKkhBJYHmM-r2TeizOKRDnJdEyVQHH4I~HnVc5AM-zMOADuPrJpFQ8RvoPfhbsRaclGZEG~HBa4HDyoJOsLcPOB0Cd3HL59kgWEcvw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 57
     },
     {
-      "reference": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_45729ddd.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_45729ddd.png?Expires=1784738313&Signature=QBcjY7PxKpdBzjvSC~Ip3TUcYNiG~wlVup7mxK~JjW33-Qpsw4iiDia3bUwvIsVxsLwf7QElqJZHVxrHgUcLPIIPMCHgvtSpwBS6SoynqZhd-7Q3iAHhYlNNuUyNLyeg31FcLeKxhJqInrDFJxX4QJsxwYGCmc430ZjFpelSWQrQXtYAq8OfsM7hCz27S08DMYyEnDS9hjukwqE0eU5H2k8ioknGKRwo16j2ovyG9lfEL1DdhWCK4WiIF-enS-7dTNm7tsCA7B7u4udL0VwIbKtKjvVO2yWefRh1qB-JxPes88DsFrVxacxzEy9eeGnmukMTRYgcuzk0c-gO6IpSWQ__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 71
     },
     {
-      "reference": "/manus-storage/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/routineRecommendations.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20_f6b3083b.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/043-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_ebeb789c-c4532b20_f6b3083b.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/037-hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957-b33f8d66_b679cdc4.png?Expires=1784738313&Signature=UZEQ4XhUoftkivhz2h4tojBr802z0DZpY4nSWem067sgc3MpYis8-v03JEA4yH3HIGzGJTa7oI3EgAmDKi9zYCH-f-ASuJnfMsSg~QUA6vVfrL3M5DexiNUbdDpJJ6pbsMqGe93ACo8QPMSTq11~Y4S50pBDL7dhGWNEE0S5dwhmVTseezvARmkKwo2N0rI8FuYMATKfGHSMzgcmSQPB2G~9Ozrb44Lf7F-VkaV-bx5ZpUgJlyGVbFGtDdsZs8JVhI43DAe2zU~P00VpgFArjay-H9Bk6qaIWvxAysRXc0ApajPk5b20n2-ISshIiGHr3v49Rlnh4VsUfI~istmuTQ__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 57
     },
     {
-      "reference": "/manus-storage/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2_c221b6bc.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/049-hf_20260618_145722_30c0e49d-6997-40c2-ab11-dfd6b32e31e8_72ed495e-b80f4ec2_c221b6bc.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/041-hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62_252bdac7-e4a887b4_7374fc29.png?Expires=1784738313&Signature=H8WCSSJHUPWS1XZo5FtFOI5dsHItWtRGWXEJ8Wo4-FL-Q~lxqrpEEtBiBG~4zeo8LFHiMNmnMJm5pOtMkenqLsMhQCNbNsPjTaHDnIt~rt5EzuwhakK43ups9uVULxNWCNM6HPU~ZWA7bbv4i2h7Ige2BGF9xI6x79ZSQWCEXY70wg0snmRAEM2RT4Vd6M5OXk~OYleLheRo9qT1vwyC5wRC1JOwhnwaASba4~fFgtPFcFkhXZBIg38FmpvfQkOHrR7dbt40sG7DKv~tmmEyk0Ux7xu9WkSWjtIS7bsbz8GXHv-pPaeX9jm-IpPJO5sEjG3IbXQ632FIHp-baTEDGw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 53
     },
     {
-      "reference": "/manus-storage/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da_8cb305f8.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865_3c34b529.jpeg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/050-hf_20260618_150349_e74cda09-e004-4a10-bd54-95dc0d3d61c1_bce52ddf-4d233865_3c34b529.jpeg",
       "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/042-hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88-f852a3da_8cb305f8.png?Expires=1784738313&Signature=odb~XMp7j5-4G61g~i423GVLjLs5XSHFGNkrzIfoaIP-d0wwuS2wThn-m6VV6Ru7HBeS29PD3bS-W3VSOUt7Cgf2AdCAxZ9XVE-DgQ4ZVnuO-IeFFAIJbn3uZT5aeh8q5ENdJqpMfDVF38wFQdxaNDGxtQma49ps7DwOaP-de6mJBz~klQgP5oCVRz2WCuD0h4ZdMyRkleR1niwifB5~BlgspdabtLsr6NT1IjjGltYR3w8A7mVdER9QpynuUyiJEimA2ykDrFwcfkK~VrrbEJkoC~8NGTJMOAo1AUTXAPVVztRyLDHW2QemNJiuh80w1z4Rjk5XpEt0NggdKCm44w__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_4aa7e8a9.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts"
-      ],
       "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/045-hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792-1a250dc0_4aa7e8a9.png?Expires=1784738313&Signature=GMYmMHHL35wAJck7VF2Gaw~EaLXQwycu963HL7wvAdATzc6dQfcNwCIc-QmURtvw4lE45vtwR1Cl7DEaDk84rDs4jZs93DGUW7jGiRHlOgCJd05xjbbdKbuODmX6BrujlUQwhfSP~0lEk2CquOhfMq9TncjnkeVJtw6DzU8oo213Xi7ZxU8mj4sBa2Md5fsz2GHFx3euQ8J~pdOgrdlTkQLWjkOQPADuCwrRs3Zz6zr8DvMFZHDrUg6eNNsML~nI~u0bFg4rJvO3yWuGXZG85tJRHQyGjv8UAjUyYjEW0Rtmzw2y4Qy-r8l8-UvN2cSXwNH5yQpx03-pvg1QnVQHoA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.ts",
-        "client/src/pages/About.tsx"
-      ],
-      "status": 200,
-      "ok": true,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg?Expires=1784738313&Signature=Fi0bfxGzDb59kFMjyV2MyYdtXbTrp8ilwyrpHxoZtaoXv82pMVgs7OyHVvO8E006o~9EIR6wwdkINR7I9U4hs~o~L6Q-GDgAjB8eUS~ww8EFAv4K6xttdYlYd24nwQy55Xjc5~--A8tP8CKdjRVPHM~T2SojX15tC05IAbj5chVAYRaz4Pr3eAPgepBidzStkKF6OfMqyajaP-~5rXOr~81tW8uRn5WZhRxAGwbsSlAin4pHb6B1-8MAWCKVHGrNxGX2SYXA1g3ezPN7ZPg0~nMqkmvU97bQsz~Db~TijnZTz0FIWUkc8F9Y7EZBpUfi7Vw039lM2U7Mxp4dC0Q8Rg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 51
     },
     {
-      "reference": "/manus-storage/076-sanddornoel2ml_ec59d504-5f9b3865_ee4e6a6e.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d_f8b34b50.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/051-hf_20260618_151841_443bf9a7-7126-4b40-ae16-32ebd8d1a8c7_51243853-033d615d_f8b34b50.png",
       "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 53
+    },
+    {
+      "sourceUrl": "/manus-storage/052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2_237927c2.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/052-hf_20260619_071336_d8dc704a-9533-4aa9-8ee0-58f26120ded1_2f2d57e9-717b73f2_237927c2.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 53
+    },
+    {
+      "sourceUrl": "/manus-storage/053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab_022ebc08.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/053-hf_20260619_073141_d999c29b-9237-4e52-88e0-3c2d0ddb8754_a735f047-2afca9ab_022ebc08.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 89
+    },
+    {
+      "sourceUrl": "/manus-storage/054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5_5438a7a0.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/054-hf_20260619_073327_842ecf4c-75f8-4b61-90d4-e93de49dea3c_79976953-1db499e5_5438a7a0.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 51
+    },
+    {
+      "sourceUrl": "/manus-storage/055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9_cf403b2b.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/055-hf_20260619_074101_cd1a4e38-3c45-437b-9a33-069a28aa5c6b_b086c696-a5121dc9_cf403b2b.jpg",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/jpeg",
+      "durationMs": 47
+    },
+    {
+      "sourceUrl": "/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/064-pasted_file_Uwbp89_IMG_6177_9f3c4d13-9e69e26e_9f0cfa2d.jpg",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/jpeg",
+      "durationMs": 47
+    },
+    {
+      "sourceUrl": "/manus-storage/076-sanddornoel2ml_ec59d504-5f9b3865_b1b40390.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/076-sanddornoel2ml_ec59d504-5f9b3865_b1b40390.webp",
+      "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/076-sanddornoel2ml_ec59d504-5f9b3865_ee4e6a6e.webp?Expires=1784738313&Signature=qqdFb6DwEUb6r2LYGe89VElymcWEZqsSgGZ7xXiiFe246DTHXW9VNqRHr3o8wjydqOpabuaCU3u5doG~bbGCFHKA~Px0M~JSOUls7YXPpPhPtYReGHDxtYxAyZUgOsIqJHWBlsPbuVKyRjYS2ZBuVaI0OI3FpUQGxMnzoEqFzPlDAR2ang36kt0Az3zYMOIz1cEoNOFY66kxp49B-7AQwNHiBc-kt69R~8s4CQGAwPlpxZeGDJgIkqHgcqekGIqfLLXCcZ7N0au5eE1Csqr3n43Hr5tFBihezN~1qwHhotil3NUkgIE2OiwhSXCMf-XOnMkdsznChjUkSXgOfHea2g__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 65
     },
     {
-      "reference": "/manus-storage/077-trauberkernoel2ml_5d373859-a1917112_bc48743f.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/077-trauberkernoel2ml_5d373859-a1917112_b1d3e704.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/077-trauberkernoel2ml_5d373859-a1917112_b1d3e704.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/077-trauberkernoel2ml_5d373859-a1917112_bc48743f.webp?Expires=1784738313&Signature=pYxRCDP-3CF18~ADqTnezokObSa~Rmqm54Uk8j2B8RjmPYWvkT0Jo59AWQpbnCPYrDvWTeLw6LvXddFnv39EJ0dEiYJUqmbRAc0Zb1Myq-9xC6UxiD2Dy4OA~RczZ5PzSKP0~IT2QCYY8iZ6oq0CIlz5OzDX3FMCfGV1Txxr1UcQK10fzATY21cXWO6klWsnUZ4ZGj7AlRNkUeJbcBFkYJfWXOgvLqd6vPHEviMpSOWp20NIkGQnD3qjBvyfFquQdRqFdOBuyVYikXeo-Ay7s1zi8WLAb2njBgV2ObgC3pjayEdHxOANXAykwJddL~aoU2y51DSscfGUvQ8qXKqowg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 44
     },
     {
-      "reference": "/manus-storage/078-wildrosenoel2ml_0f0e1f86-f6fb2885_355f4a80.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/078-wildrosenoel2ml_0f0e1f86-f6fb2885_da5b3023.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/078-wildrosenoel2ml_0f0e1f86-f6fb2885_da5b3023.webp",
       "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/078-wildrosenoel2ml_0f0e1f86-f6fb2885_355f4a80.webp?Expires=1784738313&Signature=LFWcGxUuEeX19vCAWYhYUl4pFMt4-GTq3xpURYbbHziRUEyM4nw2CHSv2No7pJcZobCK17M8zip6PA77M-lAg-pyLvef1XBpi7m58JlGEKp9~wqqyqZozOMLuBJRIxhzekrJ2lCykLiPUa4JsX9rA1D9EFB37HVM9Wh2gtQJz8YBMyMd4p5Pe1zbRaXDfOVCzwnlJNbjvKflAX6uPbDeh3OYeAotQTT8XAPF~H88tlYSXpt~2sWlLJGX791~Jj2gWvsbF1gvDJrhikDBzJkglEbh~fsvEQuFm7I7-rKG12VdErXSdYFM8XI1fqcZZJBUb43l0kr8xBWdBohi0TylLA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 66
     },
     {
-      "reference": "/manus-storage/editorial-home-hero_67cba1c9.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-home-hero_67cba1c9.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-home-hero_67cba1c9.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-home-hero_67cba1c9.jpg?Expires=1784738313&Signature=Arr281oGQneSBf4VFa46oktapeY8Zi5WtEYIBhKSu~Gc2Vq491EJVaTMLNPZ~67-NrHWd8NbskdxFSGWLnhzWvZjxw8ftYQH3wINn~PkhIhEuVSD4tIvwfWoeXat0W5~egQs0CxIxC2Ms6zQ~aVVmoppMS6PeAqMnuMlxW51gYFiAgkUo0-j7Xk98eGoq1HE01iOBT7ElOxvg6cwEUzjll9BK1yq9hVfhfd1HBIQ59XVJfv1EcObO2xarkybAQZ1iJBRoykIvTlqrxTeQls0IIyUT00UmubJzQCE2VSNcgp3Lg1C7n5-aa7utzumCDWNimnLx9XywScWE1zQoBx2KA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 92
     },
     {
-      "reference": "/manus-storage/editorial-home-skincare_7e8e0204.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/routines/RoutineEmpfindlichHaut.tsx",
-        "client/src/pages/routines/RoutineMischhaut.tsx",
-        "client/src/pages/routines/RoutineNormaleHaut.tsx",
-        "client/src/pages/routines/RoutineReifHaut.tsx",
-        "client/src/pages/routines/RoutineSensibleHaut.tsx",
-        "client/src/pages/routines/RoutineTrockenHaut.tsx",
-        "client/src/pages/routines/RoutineUnreineHaut.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-home-skincare_7e8e0204.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-home-skincare_7e8e0204.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-home-skincare_7e8e0204.jpg?Expires=1784738313&Signature=S9ZAQAaryIZNRUigPCUi~CcTQHO9ofrRAQCMeYnG1w-zCVANYSM3Cpm2DvFuaLZf6vZPgmIvbi9ZTHOnb941eZpXHOS5HZ6PUq7wCsc7aWiF9JDjIBBObieCXpmh9oFiHlkVYlkNTjlIXUUZ7njGKNN3NsxQzMfGQLQ9GEj1WYgHA5AVrQyh10TbVzpaT4t4twierle5f0LV2cQiJS3k~cDI6Iuc3QY5Lr7VTHg4gQkYgGLvSg6mJaYTz7Am2L-qZKY~T-0rC1wkGky5rYxJV7jSMmJIzeRvcYKFAUz61pCIAtfhFpHRciB1gX6XNRBYv5nzjS~K-Ot3hsy-8TZcXw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 84
     },
     {
-      "reference": "/manus-storage/editorial-skin-test_d56a3a43.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-skin-test_d56a3a43.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-skin-test_d56a3a43.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-skin-test_d56a3a43.png?Expires=1784738313&Signature=Ey3DdoKE-T6NcUizpJqH4LVsIyRD25IXQRtWy4Aqzrtx8IU2GGsKGzNseOYsTHEXFk5hwM1j2s2a4NhVDumtwC8gm6KIlNrt8l97pQBWwPBo23sKlVfdZ46pdkWcLyT7NeMhOQy4M0cFuwbzd9fDkAsvE4MMGZczvs3U~i09Tt24gBWUabdbWKEEhKto66ajq9dvLVFnayojqPqTS3RW~vmoeaFX8Op7kAyjC4cvU1E~WEmyuoTcm6LENaR5-~-awxBykQbkG4axs4kgu2IFQ3GpBxJqD~StHsUmD9kDdA9w05Ne2BpUb73P~ww0x-Im3mBkaGB-YsgtZ08H2Jsl2w__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 83
     },
     {
-      "reference": "/manus-storage/editorial-story-detail_797f9e01.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-story-detail_797f9e01.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-story-detail_797f9e01.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-story-detail_797f9e01.jpg?Expires=1784738313&Signature=i-6H85wFjcASHVFQ8OmkgUSjiY9xvvE7dCggVdMX3wK2FCU8wLT4BDLaFOzhN3HRIIAIVdbNbuN0ivBp2zLoaXcsn-a00oxsQmG~u4xESr-WjI3srdPtRMtDDsUJJOOJnrt4hIPh53AkycoTPl5eLb3SOH-ja0YF77n5r-mr7nPpRYCHh0aE5GjCbYOHrebJJwd~hDz5RcYAWlnmAPkvaCtSm0o3E1tN5JrNuJIbr~Ma0rhLm2C~eyGdo~fgDA-ctCrUugmMEdFgHj2escSJ712PjXkVCVFW-fOfe8YKA2LBsDIfy6RPD6kLACD619NIpg2jycUB50aE-LeklkNScQ__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 126
     },
     {
-      "reference": "/manus-storage/editorial-story-portrait_a73126e1.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-story-portrait_a73126e1.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-story-portrait_a73126e1.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-story-portrait_a73126e1.jpg?Expires=1784738313&Signature=lEmHZpZnQkZ9diSrxMMpHZSGgSd-caPFM29yFu-XqKeBXW85hr2NJkNFmvQX-FHkjyOlXdRz6~4kJEiJGLR88JpmSvBl8JDKP3~rjsGVlkAKWR~vzd2jVSkXcj5QIhNWnvCVIFzoE-g-b8gu6~ZpjiGvAjn0VRfVTWVABiiz0kKWWOcgaq1hJvRPFyIaPtIxVp5n~t1yz8iIgXJkEROQNKuxTzXn-v2b5yGICZ1coNWZCPIX66cy1SbZLVQJ~jHEVTWRCX~tVOdfs2-57tojD7LSxWQ7EbZRBATcZA~jLMTZSgQqHp41Kw-L4MHvrlRhxszy8JoVAJ5ddBLGf3~8cg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 63
     },
     {
-      "reference": "/manus-storage/editorial-story-wide_14bfe783.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/editorial-story-wide_14bfe783.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/editorial-story-wide_14bfe783.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/editorial-story-wide_14bfe783.jpg?Expires=1784738313&Signature=enKApmNiEjW5hzPyHMuXVGy2vVGvPU0gCHXiJWqIPpRdtmAe-1VPTOMjOC8ll-MTwH5HHlaqvZyPbt9B-kp4wIyE6rsWbXEdRwusp4BHulpe33tCqsUwsy0PhppnXNoEevG23s6tUVjGLq3mwEDxmaEDFWJr4H3G9aHt-bjffj0sRX3aCd2-jGzf3TrX1y6PWeR-15ELTzTn0sHdf7QJxvn5GdvPN753iIdah1JY6lySodSkVa64xuRBJkCXFhU3oR91uVDir7gGhy~bXaPwoB4SekOFBuypMbQU-FtoEJfMp3N6Yp1eJ4jntcNEa6eWCx4rQ8-2Nl~dUkIOw~EMzg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 83
     },
     {
-      "reference": "/manus-storage/herbsom-site-hero_cae59246.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/herbsom-reference-texture_aabae8f7.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-reference-texture_aabae8f7.webp",
       "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-hero_cae59246.png?Expires=1784738313&Signature=MIEK10T5yZRnqsRl~0Tf4I7GJy57cPMu0eF8KZF99t01u1xSl19iSDX7NYkVythUl0TBVwlE6F7oWSHAaAMUudyVQWurkm3tR-7XURMPgHFnXJQ~sIAjXdrPgNmKPF240gb3ZhlfCHRXCqYzqgxpfNx1nGjzh0wjK85SsfhO7qXBNnEM09nP2TNhvcQftx04lEprd2vN0Si~jeBOw3WCtENzfLzIutwJ1JMpVm8R2tnei~0We5piBnqpzIp4RgQ67weuFPUFfUnxTV9Zu2LyOOR08KkiLXgI~R2A~FYkf~cpe15eo0~n17WLLf8lkDpT0s4uZqu~gSwSFBjIgBD3sA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-philosophy_88b5b235.jpeg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
       "status": 200,
-      "ok": true,
-      "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-philosophy_88b5b235.jpeg?Expires=1784738313&Signature=Ws-tknCyzXIo~H8o~DzMkrNQhMQKjgPWY3p10TH4LTpkDr2WqeH7PJ9hNgKvwoKGar9bCX74eyHsSNNEi~SM~8EhecYmvtD4QqmDHdIJ0Ea26MSuORFc4wFqyC3bqyCi1BCwzblPenrHg1SdiQg6PrP9seDmHZ-F6Z43Gi1Io2WGe9bbEE9vP~u~zupYaV5gSgL1sRGcQAsQYEx0rCjE-jTzwe4dq184nnD~q8RLKJMHWSBjhvu6lkfKGWXrpnbM12oYVPGSEDWOBb7VUbOmooXDmW1B5K0xgi2EbaRwAFPMAfhywXf-KFZ4VeKXq0OPCjQjtBoL8KZiSCZyCk1EmQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-product-cleanser_7661ffa0.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-product-cleanser_7661ffa0.png?Expires=1784738313&Signature=G8X9jbha1brMiUnDaIC85DuTsR2S2LN6H7whtxNE0iM8LI5ivFY369xfu7UxqypExjtth9ZcxCnMP~EB8Wm5r4gZOmer9h4z5jZcIox9nA6w6aBIKsigZ3J3wcdQu2xqI4E-rjIsrfchAJtEnuNk2GuMBMncOOwKZZ-nqH0tcDV668YbrBBRZbmSeCqJBHvcU4y~FnYEKFwPRk6yhJLvZKWXz-SPUi7zt1fqCGdKB-yMkjzcLituFbuMMHXpGS6X4BoVzD1RoKdczNs2cDdQVza42KA00bYDFC2F3stC1QmNEVwlmmjePMf~QyLsPikxEsffcODbftP3zhowniPwdQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-product-cream_c54c24fe.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-product-cream_c54c24fe.png?Expires=1784738313&Signature=RyaCeyIoMEzQ-7Vg469SWAaU4EMThDHptatgo9eyI1scLF~NQ5Xlb8tuF9swIWWXqd4~EY5wES74ZS1lHjZkWK3EsjO-3wX9hZ56kwTUEGklRZtlQdshgxhRxvuCwHveDtc59I2qCysor8HCMLdBEnsQa14Z2Q5UvQHiDTi9fXfbo9clZwMdmnw7Mnq9ppH0Yf0vFoZHvox88yxpeoTCi0afGhgedQ4f-jLUow37-zBStOG4p-43kaVKGB3v6xkRiREKR7GzvbTCdukAv7fLUSwE190W8NP~gqezFux22zeH0E4sHtxjOcEJVVRTYIFlgqmbc6lQWd9AHvUyZZmgmA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-product-peeling_632e04ea.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-product-peeling_632e04ea.png?Expires=1784738313&Signature=R9LyC3Ib5sAya-c5rBmGKqmt1C-gCBA6xxzJZ2M2cwLPjNL7y1hkNwvd6DtRmG0ar2D71SXBkmyJMj~BZ3-8IbezCw4HFC~cx~Kd72ZALA62b7XjS7JYTbvBNFKUVGu556SbODLaguIE3M79HqlaJGQrpMpc74tQeMWoOOSlUIqy3FnYosbNQmKy60eh5EyFJeIik7T4aS850vnDXFD0TrsReR9q70h8FHkKuOw-ub7mmd2mL1mWXIuN-3D0H~lSCSrKmbLvf4orgL1rtWcZNmd~qzSjAe~Mugt7AWv~iQs~FRpTfhGYg2COW9gcLHuiuoS5kfENAC6M7IDx6GQIRg__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-product-serum_24a1f600.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-product-serum_24a1f600.png?Expires=1784738313&Signature=eIYlWC1XNR-zOlE3pqwL6CLsr0z8N1jcwgjttjMgunJcIerrQlVRIF3~S5RnoI3W33XGx2ysJvXK01TkZWAKDRvqrjeFpFiGDxiJ~xwRd09S8COL50fUKV~Ld-uX-PMWXyq3BAEX5TrfZjLeAanjH32LcKZO3gd7LcAXj9SmrO15ol3debiZBw513xrodmMBx0dbx26eMVfWAP8ShIDwB8NpAz~ufq93qghJYpP6lJwrOilnakD5CnwJo0Jt1NE~AM5MLr12I2FcXg9kMdWzYQz5SWNvH5l56RVvERbXp9hCV-cXlcm-nlmhB7J4-uccIzRBX-ccc~K6h~m5CGeiUw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-skin-test_08c5aab8.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-skin-test_08c5aab8.png?Expires=1784738313&Signature=jPUjGHBK5bCFWACQebwypZrNNOWlKmN-Dqv4tZPaDp8YXrScFnpn6CrrlCHHXAhmwK838tS~hQBHexpUZEaz5ejYB0ttdAMkZkGFBWEJ3QsqHDG0JpSgKvF12ty93M1sdI0T4348zOF58dLwRj4Yo-Ut10ip~0Rcm7yCfj1z0Z9YZrw8nAM1xcXypSSqLQmSR0OHEZk6-uOUvMedAmMv2mubmv3hjx8biq~WaCGWdqF3Ze69MfVwWbPzHPl-4a5Xp9c4hLlSeeQkqevcu9r892BfONiRT81gRMs6uUg9Oyd7qXYDfscymBcCRj2mGNIphT4WfSveqnrKGFUlaNYc2Q__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-story_9311d007.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-story_9311d007.png?Expires=1784738313&Signature=r3sGERuhVXHzG6AwMuifrBtRRci~UVumB2iT74iCc3HgFqki8CZu5GmMpOf3WcRwgmQQpLQjfiWgeXM~raOfKvimUrrwTlt6QdY0LrBeO8aTe3ynkNq32O4GUQPIkf5qfg80yKUUclWiFkCuI3XzqfmpUvOV9xWvporhjH5aIWamkUp3EnuzJpnO~aLAMeVTHjL7o71ydRyCehoxu3xJPX8pZGiME3a6QJXiZQv-7H0s470QR5slVysrC5wUwEV9XbLFX5UQY~F0wi10R1FG0dvlKkLZq1By3XjU71eLR4jSAVOD1RRr0diHS-TyxgNgUF3YMrLZcmWFzVgkcctpUA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-sunscreen_3c736033.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-sunscreen_3c736033.jpg?Expires=1784738313&Signature=JfXQEnnJFon2wm-sCbatEgLoup8iDePIsy8N83MSsBHbQrIVYZYdkwvq3g963HcU8mpCGJj1fPXuVE7kz5Q40cSdNwoaqgat94PiXP6yCu2wI-Cn6G-PgPnkvPf39hMXhm6fzcdw5O2cvy2HUCZHOLRK8Ze1tMQM~v5NzpS0qPozURkwTGLm2csuwQno6AY6ftCG5~QPiAG4LnZ5pzaOhfAWgxPDH8bOkx2g4I-DbVZlGHRexvg0uryjA3u7WcDW3wl8AsJakGNZwNT4yajtxWQplVHV0RmQkdqmVtA6wheGKgCIxF8aVt1bAvXizM8pKEWJlaErERpBRt4SCGQvDQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/herbsom-site-texture_85e0b708.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/homeAssets.test.ts"
-      ],
-      "status": 200,
-      "ok": true,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/herbsom-site-texture_85e0b708.webp?Expires=1784738313&Signature=htS7aoB~z6cpAeOfgzdyDNGeTp-XtO4ryg~Eqvp-wSFyDVjM-EQvRWvBShX6B0nmoqHQzpBiBw~-n3wB6W4cKklq3CocGQsXEa7dSLNHgTDt4UvikdTndU9hfkKyNgYO2k~04Nplh4YiBAKA9U7GuK1YR3PuRkuFDsbDH03xYC6TYqyirqY0N5BuvRvghZb4FOk~ujwPj-AUxtFJ-4KTIYG5lTGQJJTPig~vHHXUxGfgfXlnwN0F89gcRbjCoZsDKfFOtThumoVHOAgVd9uhzFtsGlVyjGgPN41xVgQnVe4hLxI8Zg3iI7w5mitfLS94LV-fdL8qqGAlH5WKaItpFg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 54
     },
     {
-      "reference": "/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/herbsom-site-hero_cae59246.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-hero_cae59246.png",
       "ok": true,
+      "status": 200,
       "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-cleaner-reinigungs-milch_7d3e023f.png?Expires=1784738313&Signature=LaG238aDcPiHEYZekDH3XTr5vVI7f~xA6lpzmY1EXHuAwrtNCtf-zeCKl63sEJQKt~XI2C93Zs-R8quzRlH5MA7MQeOeiaafCVc4d4E0aXcATE9TxosgaUpJbggWU8Qz~RO5qaMBTBXhz9xe-elImLw3bBg1RZ4kgvicNVINxrRvaJF4Z1WZwOoLN6KwI2BbdiPO1-G1vWAT5vC-WZJePyk8UUESFbY5l2dmjnP9Hx-XhJQpFxwXgnPXXf-eN776gUn3-eRUnccLfwE6Zwno3gAtDjUj7EyUW2h0l4symF3fvyPzfaamEKPVPWV9qwRDdiRdLJtNfk7W6RjnJj4-3w__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 82
     },
     {
-      "reference": "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/herbsom-site-philosophy_88b5b235.jpeg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-philosophy_88b5b235.jpeg",
       "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-cleaner-reinigungsgel_9a8e77c6.png?Expires=1784738313&Signature=rysSmDUx9daK4RKcaTHsBdzEoLNByF2DP-hh-xhLGripFRnV59EEhMcEvqp2Fxuj7U3eMcbkysVWlzcFCC7u0z-Meq5LDA9R1a-kCz4h-RfC7eRdEqkaOjzn21mNwsQPOPRx2biotjnfgLGlRInE4XlDcrk-PaR1GvnCSWsNhosVghnLPy5An7B9Hf1trqjhI25gxiTOtl9qtcC9rGM1yZx7zv8SP1usEUxim1O9t0CJgb9INs3jkkzysdvD5WEWy5haT-ACQhcPmI21DZYbYD8FCpJqpTnJIna8l1aYqnFgyD3HUcJmVDFNZFvtiM5YMN4eu9rm5ZfKHydIkiMOig__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
       "status": 200,
-      "ok": true,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-creme-basic-basiscreme_6b980eea.jpg?Expires=1784738313&Signature=JI7c5r4Ss3TtEL10IbEmwhhutV6yedhRbnPNsiqzfDpH7RtSU829Vx13IJ1K1EsLaa64qTeX4OzfI8LJFO9IC2xkWzVIEGW~xrctwI8izYK7ieW82rT04krwZ9IBLJlltvNej~KoX-EZpw-yGaPmuDEsVbe0QE9BeHYN-HePfmtFBhQRskzZAGyChFt9hnnarxP-XgmdO11z3TOKWL59jNWakHoSox-50-cRYawoe4k4A1kZRtEZQyf7-M2PszSUkZsey7k6ZnbZpkU6q3yCHcO59qyiMmLkAmqRJ5E5yUL4Lu3DYR~8XAsv2hhrlgS1UBbR53-kvd0BinkX9ICT~g__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 87
     },
     {
-      "reference": "/manus-storage/product-creme-basic-basiscreme-rich_564937b6.webp",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/herbsom-site-product-cleanser_7661ffa0.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-product-cleanser_7661ffa0.png",
       "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 92
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-product-cream_c54c24fe.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-product-cream_c54c24fe.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 81
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-product-peeling_632e04ea.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-product-peeling_632e04ea.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 85
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-product-serum_24a1f600.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-product-serum_24a1f600.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 81
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-skin-test_08c5aab8.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-skin-test_08c5aab8.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 78
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-story_9311d007.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-story_9311d007.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 80
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-sunscreen_3c736033.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-sunscreen_3c736033.jpg",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/jpeg",
+      "durationMs": 90
+    },
+    {
+      "sourceUrl": "/manus-storage/herbsom-site-texture_85e0b708.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/herbsom-site-texture_85e0b708.webp",
+      "ok": true,
+      "status": 200,
       "contentType": "image/webp",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-creme-basic-basiscreme-rich_564937b6.webp?Expires=1784738313&Signature=wfxUPsMneX0KenIasbVzYbcr5xJwQcBOlLdSIjqZk~BH5SvGKQbcT7Puy0cfkkV1sKZZPLcFIE8TJgFbbDN6lDA-h5Ezfp2JcIxkR~0XkQ~Jfxw01G07E6V4oMK3T8e46gGHA~Uf7E~EfRlxHZDZcOL2QWBGQvVST5qdaq~09CJSqGtXGE~TYzFNvJzG9mf5TMHIIkf~3N8cvCuye1rnFZXGPy5muez4Ahwi3f8YL64Vihsqlrtzu5Pte~wlKLvPTj6ht-jTjDspM0dwcBWL03ZF2CCYuf~D8gBE8M88CK68QAHuURsfCoWnH-1vZ2ToGGAJyBsBemd-KFGQWFk7NA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 77
     },
     {
-      "reference": "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/SkinTest.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-cleaner-reinigungs-milch_7d3e023f.png",
       "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 77
+    },
+    {
+      "sourceUrl": "/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-cleaner-reinigungsgel_9a8e77c6.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 83
+    },
+    {
+      "sourceUrl": "/manus-storage/product-creme-basic-basiscreme-rich_564937b6.webp",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-creme-basic-basiscreme-rich_564937b6.webp",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/webp",
+      "durationMs": 93
+    },
+    {
+      "sourceUrl": "/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-creme-basic-basiscreme_6b980eea.jpg",
+      "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg?Expires=1784738313&Signature=yNSz-1knyI03qNI0g4T2MeVjRcsCrMV8EUWWUD5xK0BTwldewWK3PYACcUXf~2YYv3Xb7hsHWM8upw-EIoZi9oHQsOd5cq3bcgUKMFbqnN9YYH79uNXRBZ8rDDjCKlnk3l3H-50aoPIqjLVqOPDfbVyh0taToH5Jbld-Ml4-dL2EBgjFHRljmgRt3DPBOJVG~9h1kZyy9DK02sXjlUnWTuDMdMnhSFZGQRoDKKU7JOtvSeAzWUltIt3SLWVTUmUrvIK47jdlkRXPRpmPF1jDTTj26DG2Xd5r2onQy-OcFEJ2DgV4sbRjdpG7rsapGXUDY3I-FmGhAJ3IVXgm4Ye9sA__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 78
     },
     {
-      "reference": "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/SkinTest.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-hautpflege-erstelle-deine-creme_87ae5318.jpg?Expires=1784738313&Signature=xdU4f6f5m~a0lLCXeOFurkJd4AKrzCXA7jwei0HlA-JpfWgVzkcmNS0413InZQ-ZZBySBDfc5rh0YjeBYSjk1UpcdygyxhXwuCcEbabAM8dcOS5YECjjUseT-zS1mpRq2ruN0GZNrF1Th82v5CeNWvUEE~E9GXkg4-OApEOPfvbEUp1fIplYzFOCpb4UyPwhOPlvUpGoZw8FRJm21EndQfQ4eTQX~DTLNJBmr-6WlMtIKKspdNh52cws-lc8hj4cmKdfxYbujnJxnYtMIvs1toA33DY4vzYucR~1cDzxEnIBdZN1V30ZP7O4xyJ3jTPaL6YDqs3WHdwiL-kZGjNAOw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 58
     },
     {
-      "reference": "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/SkinTest.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg",
       "ok": true,
+      "status": 200,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg?Expires=1784738313&Signature=TRDrbsoXwlSPvzGY3DDbj~KRKrJ5MSdvnfkhuulRcQ8xRnbQ16djve1yVI5jXavcgmxzflA-2O6MdzoACVKZO9FQiZ4KshQHeoqb9uW7aP54eKy4dFBb7A56H1jdWf5dNrfm1N6Cbj4U2AAPl4Yjc3uZfPCjHKm9Av72ZlP7TuYr5q-ykN0flqOTuAog5ofqbkFraX3bOcTSVR6T3u7tMbKGBVL-KkjJQluIoR~qYe3zYd5JAJ6UVHdmrs5bgyS1lZUpyj5HwSTz93FQhnaaCcqTuUVIzVmAJD~Hn9v~Lleqc1LEGiDQyUCYRC3rQPLXwQMIw4T8t27FxTQqzGYTCg__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 89
     },
     {
-      "reference": "/manus-storage/product-ingredient-creme-algenextrakt_2dd0d1ef.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
+      "sourceUrl": "/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg",
       "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-algenextrakt_2dd0d1ef.png?Expires=1784738313&Signature=h4Qe5jwce6g9oQUxxoYmxhqj8ilCqeOVkPOq0~NmeNI9VcyZcLRs0IwohFc~8i6fQvCMzs56n-FVj7pX7fn0jPBGUcl~94cCeAwtus8shYOZiVTWj~IEGjmG9QB1Tb2noJETKg0vI-Zc~Us0oen4TyQ1iuH8lpNndWfcOJhh4szGQ-h5NNJ3rCACdgIJUACEKbBJ5DcpjtWkIQ-N~MiUYr9D11byESdp0l8MRvly9qIPdo9vlskSeKZXXYvW~UKAZjFOHsBX0hLOEjz1vxKPRTDU74rcudA34VZ6gQRK7yKPcfJ3vydS~gIRKOdCBIzV5gk3d1dTODs0dDOIS5gt9A__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
       "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-distelol_8c32e19d.png?Expires=1784738313&Signature=K9CEHC2YVF-o9eAfLW0d4qa0h95IKp30DfKoRYW2p6uODJqHeK5BL1WLmucd7bVTtr7ijSpGdinNM4eGYrQ9crc9AjePH3cV8I-v6A2xN1wukLnjt7PgAHKrn6t59woe0qr5e0ipLGeJ1DGh6-y36SG1ojPz39ojwrgAxp69nhx7qze3hzcUXxAXTVW8-O0DAcici4AlLm29zvs~pplyUd9IVW-2nQu1mHxY4aFh7GD1BHO2yL9G-kzpcI9YyJp2XDSEpAFwCtqX5iJ23V824aZ2wUm3CRR4n8YLk28QyLpFMs4QsMWAhyPc1cc6cVcsyUWXlNW9fo5NMQt1KAIZwQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-hyaluronkomplex_65604b67.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-hyaluronkomplex_65604b67.png?Expires=1784738314&Signature=dt1d8cWGwyiPGTrWfoywp8wwMiq2NTw5ZbkbKeTEZ0n0EsvRdpijTPO42QZldYvDwi42RyZlX-as5CP8gQ9bZSD4u021oNXzxMwTiD07CErcwQubSjibav8njc9xzyoA-4u9wIlZ1ZXYR0iMgow5cAqqKEUSdJ3zLEouyXoeTPemgc7bE3qyBOSZ7WJL46hrWtnH5K2uIf3ePuLwo89iXhPyywqXatMMCwLFiT~ppBceNcn3fQk9avEagGkRmRpYmJrlVA2sRWRHPpsx8rePPSGj8ur0nVJFpESns4X8NbJvmoRrDtPcjtjqDZpRBrNzWpL38qVA0VL3HL4P-8iKEQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-malvenextrakt_c9e29a4e.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-malvenextrakt_c9e29a4e.png?Expires=1784738314&Signature=DCN93l2JAeuYudMu88ZvCbbGRiUTUaezfEq0~em2hDm0ypDZIJohUCO6VkNtwZASBQl8dGkwyUQkGHEnGKno4pGq1~Orc12ozRjz7KUBVT-CJ4T6M8OzkKWaAuFEaYY9DbevSNyWCnYzfSKm9OG4CYYjhFrrPX5t7kOpw5dUVQ65rdxgz9yom0frFhnuUUjcHEPKPTKJwgo4SufTd57iSQVPm5XDhGVlxU3kbuRlNsz0BU5J-17IXgQZZ98sFLcEhuqtEVFLNVZd8Jg5HLeDqmgk2itQBaTqDaBY8MoODit5mQlNoB6iJnRDXdPR4g5P4EZJk~PlgeN0gtjGjN~ZOA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-niacinamide_cc34ad82.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-niacinamide_cc34ad82.png?Expires=1784738314&Signature=Ya2X13gzFc1lxUbDgE5GISSsIL9YqwWHYelzmu-0FSp79i-rZAIUfH9nDU5KdbB7AIxmRvwBBADSBQflwVeCJwXZz3W~ZfS4JHuQQYAVgdb7zMl0diNGwq9eY4GzO35qwHxRm~vB-sqdxwpYP5dX8Hjfw6e3d4vvzxq1g-nuE24z1cl37gAebg6GsJuV-zYRduhUJu-4K-fbkwTbTGo~LJXnBC~3JoKKUk3jLPGYUVeKyfwvDNj~2RWLSrn2Jj5oyXgFYf-LRkSo1BiEYRU4JJsjTWow~58vBPmDMjuzS~YYl83Kw3rLZxT68lGaq1GEV2S4oGlpgpHV46I-2t2Waw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-retinolkomplex_f783a663.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-retinolkomplex_f783a663.png?Expires=1784738314&Signature=oZvIol30NhjN9SMq9yGxa7EElfEa~iLoppL~RTG1Zc5Whfx8lGeBG--t0OOA8XlhYQA4lsrqYGxa7zUGAcV0McmWXkdrmQIwKlmRiHeYrBB6Qlbv6nG0bwXPtKyCNoWAD~5lfuhcKBDyX-dwKP3RId1qG0apl1aHu0~AjaXyzvW4gH5QzA5uUN1wykCBnwI7Wyyt54957IG6UJrmtaOdulSLn0E6cwCEC7sw-O~VVLtovf-tcadDA5tajKOVzmsgZ09HSDTnP8pBRYe0QMjDqWOu9lY862agHlkglirH7hOC56VHsCvCfqOGl1PLQMFffo3aoVa6RG2fRwnVmk4b9g__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-rosskastanienextrakt_25117b5a.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-rosskastanienextrakt_25117b5a.png?Expires=1784738314&Signature=DBNqvOLw5brCcCiR3rEe32359OK1ZQsPzT6VBTSP100aJE2-Ea-sljmZtaBuFwNti4PPnwfXUg45BP7FIvTXhiIkjTI4PKQXpMmQwQJC46Of7DQTnZ716lNJudsX-CjB5VGQT3U7DkmU-~TZMFj4mc~w~wNg1Sv-iafgsT6mWOuy-ETRfITUBkrj59hWNCCpAY585Va30dB1syoUfdSLxJXGYEUTEdc9Van2ki2HVdqLR6oySp8rGYHThYBnJnMaz42C-7aHWS~TsR4jFnuuRiPQIIyxFiMU6u47qkOB-InZSlEIpP0kyEVcQFgDPE2KwKmc4BzYjeH0rEQCf1-cvQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-sanddornol_2707a8c2.png?Expires=1784738314&Signature=unwFMRT64V4bqHSxloOW4frpMQmD9mT-WXhHBD9huNkOquSWi65vg4pEYWryUMLd-nFtjasGVfGmF2cyuzdkhsBWF8qL~QH~OXTFENdETytreQVMQmlXj2hIq5yvodDpqSkBXxd~VyaJ9LplKavZg8UIMIQxWM~kbuLh315Ue~JWPFIlKIC0oM~9fpyvRbgEiKiwHDjM87pDIcsPj4egz5OylvWl79cfqpc2ANKcvdUDdIO0o2cEifJ-csD7aSfa5S1vl7ouKfoflZfPukuAhdbTF3jitigXdGN~ajUF20k03geDFSJmzIv8TMeFHWkW-ba6bTGhS90kVgUI-xUo~g__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png?Expires=1784738314&Signature=sPL9Wt8s65~Y3RBPmf0MdidlKWHmzasz8XUD7uTUDNEhppfzDP07KRxMU1Z5J~mydwc90VBJSq1Is3fofeH0956N2tuQrA3buEMETdJqkgzMr8yqDI2wDVBZ3DCrsk2XQGtrZAYEoTaUTcFKXOR0P3exV4-yvL6tZCtrxQPjQQtj~GphugeCYwGYPQcQpHx9PNXy9xkGqjdeD2QynzZVJF99cfhcU9uQzGDdNfEQXDqgp5V~5dTwBfUhb2r9OZiAmcRSM-TAXME6SFW4FD8NOL~bzpIyJwUl08JADimDSl99-2U74zMknsLJ2UXYPmvUvMGQfKczJKmlxLk~yfnzmw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-traubenkernol_f6f9b948.png?Expires=1784738314&Signature=Gc4HDS92szAeHNUzVbxybTwljqF9Lycoyo230NgAzPilzQAzd4t3gHRs5mDY3QmxbS4V3pKkv0k7CN0sKYIphb2q7fLKiuHrDk2V1uCgmaXhBMEeU0BpTTkqUOVQTHuRUSWpH42klz3oBecv58bzSw4-HRIw40xm2gIACPD4t00bANsjV975U8xbzyWcXN0QEiPezpFTLJT2Gxm0LadT0O1F4-uGczwJp42Kcz7Kty9hNcZVZdRznZiW1dzMZpft~YmcTtVGD8drsc13PNwkkB3diAOBXBjFkQ5lMT5gvzkNvH4Gv-Y9Q7fxpx71cXoiDkbv51SK1YGAKZwc~dFfQw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-vitaminkomplex_13a7064d.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-vitaminkomplex_13a7064d.png?Expires=1784738314&Signature=V3A0t~KkvKeb~1t7yv4R3BHyLoIwmDRhxA-69t6O5VER7kaUZvu-o-0DDGTgEjp5AtwxFCZq0fTqsrZsax4cuSNSNJFJsqkljSFB0tkEHrwA7Rdiondrxt7duvblhFLyN8EPRO2UB26OvTqbEm2bKHBDTzKklpzVOPja~knNv-WOrcumXwUn98aDXe8mo76UJmj8wLOM5DVXPf3OBZIvaDgLZm~sqx4TKbvLr7ldW2tQe06Jy6spXU3J-oPxT0V7sfKyDKZtBPl-zd4mZLgR54y2JBVKGBlGUjgOknPguESFzHL-gzxhtTPvhoSiFXYJK2gjnb12zPqqp--dfeLEFw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-weidenrindenextrakt_0bb34194.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-weidenrindenextrakt_0bb34194.png?Expires=1784738314&Signature=MaAU0rDMZog24y9yzFhpnaXs2qOv6MOSnv9XGTXgGtzSvF7uBwX~SKuLgqbtu1GCjqq2GIyDIYaqSQ5JoHbSf5RqSvCahLdUU6yT6nV3W2MFETQeWN7q~QzEotLOfuew8dPHaGaFwXO~IHaRfX2nEr1EiqWE1Jx7iiX6rqdDQEceKW~qrGMTQfXmlllOnJJWqqT6LvaSMFQRpwjRTcZpKqSXhGB6HAyfyUcUswmyWi9APZ27lT~iXAQ9vhVJMwaLzVT-8boUdKALOQIdULmkfJcNvhZFmGj0M76PSt74OdAxfW~wsOTXVotekanVxoEqEC9o4ef3brwRcUC7AZeWBQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorCreme.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-creme-wildrosenol_a138d80c.png?Expires=1784738314&Signature=DU0BkL3ymOWAfFhYWrprfxxrg2e1j6tjaDqlC5crHJvvcEey5BKosIgKWVZ2aJv-L7DZg0lQZwTgtk0i3vTLYi10XWg-ZrtKqvhn~ojxLq5l2YVMPBLsn98pYcNIis1N2D0QZzgbenyYly9SogTXQPwIkRaUmewrOGAAj6e46su9PZeFRGk0rDq~T7giQ5LklSFHRHZ40a~B1unevfAsn9Y8-5KoPKONDRjePlYnlZNHR4ZRRiWNLIYqtxZAqZjdcUiCdfpwbR-J-614WHw~A3XA3Tgz8p3MRvD6tZ-CYC65~6FMHA4CyZOv6cKlnQQIhle~X96W2tTNvEjEh5QnBg__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-algenextrakt-serum_0220c3ff.png?Expires=1784738314&Signature=AugVNPqgi7TH-DPAuVfGQAqtwG5R70mRHDagtL7fwJqB9cfCeh9XAvPbimzhhrUudO8rR-XNgKwj1SxSma3Yga~KesomqzoxrmTUcwIWhP2TdLd2GiKKL-cOSCUf40EjaB99VM300tGasiCXvWFEDkdPOg3PX1OjQ7GA2DfZPEjufrsgp7U-D98Sdsw8fEO-rHxPg0F5l-pvQu5f3ylFPU1hTe~Sh00kth3zOEFiBMfDrlbB0h8oRPuP0BNfqgssuvD5m7asKMgNauOktfi8GH9ri87ZCv~4sl-d5U3sWC16pqZxw9VbV8rGfYHhIxlXnGF-rekSL1u6QmvGWQub5g__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png?Expires=1784738314&Signature=GhrUJpn2ihwYEz8FWA1DV80AOObxLg5XrcjchiT1KWx9a-X9oU~oTOH1dQiDJ0desgDw3nzPutL09-cOEVXfQag2iCvGIdSxV8V~k3wmCxGyJsvXMvoKz0gYdalgR0l3ueUg8pe3n1XemNs1fIf9pKEZ4sqymBNYHnppvnJe0Fp4-L3vT7Z9aU~JNJznqtRN-XSaxkItv2XMe4oM28psFU8-mS9Jy4IfLneEp35SlMtyIdECQBDWtQDgbHFIzaHDtl1fTZKXXTTjJnjUA531xBljh6K~ybBi-cCrr-GSuYbZx6YVtJ5zy8yMify0VMpo4RujT0Fi-mRtSnjTFPeGLw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png?Expires=1784738314&Signature=vqbQyTL2jId0uOKgQcYMema6iBtdwMPIGUevHr7fCaFGIr2ShHkGah9bLfTKtErKGkZciQACPRKyRbb-Xz4PS3mEamAbg4b0szzcCJAttPGmgqgjAZwZf9eVUCM4jIH4YoaDqQirAhtBfv1ksBVVqUrFlIXQBQPUQ7Pyz-7e2B65SGrfKyOOVoDOK81hES2J3rFLETHhScuABev6T5y1XasTIlxEVbgkv2DVXjflySlE3fZaxWUWwNfX7xnMnmCCsXYN9nwoNNQKH9a0r-1JFtY2O1LL4PggzqwLITv-3Qiba-5MOkkGl7FhB-CmA6TyRbgSSSjGesDcrhT7oZvi0A__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-niacinamide-serum_2e906fce.png?Expires=1784738314&Signature=vNtnwYP7jOPrqT-1Zlj7OvA~Frz4Nmfk2pT1DUmiFv~QNRLQaaFHVSnEVKHOYeqAhGuuLq2YuULfUloT4Dfe5-2u5ANwm585dmEQIWS534mQWY8-AdVC0D0u-5dOPLke2rAxYjbHPiPQaZdUops9qnV7UtcD5eF6JCl~G4SPDImpY9bkFqosDy9~-dfWLbkqRSUuRV~D~iZvaDXvry73Aro6VXp2DDAZjNVm9i9rRn353AG8FzNMrJtAwEb7282Wm3-S4PblIcuY2l0Khx2pzZtWkauSE2auRS3ueZ6yBhfTloMCZ8Iu~Xz0Psm~YfUoRIRSTiHflajazSvBSJjI6A__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-retinolkomplex-serum_556455dc.png?Expires=1784738314&Signature=LAImfnLywaE2EX8MAtOSURYIn1PEpH1Z1AMIlU8tjisxEPFjvSJaazwTH2zE-vGYaKAga4jqB4IhRJbJGagb70f7RZ-WVptzLw5EepQnSM6mz4iv2gmviwc9jgGzzF7lEnUvZm-jUHHB0FWY7DwM4LyFEzpwjGrz3ofuUFG1qzZ~N27DDWWbnQmivsoSFMTb8B9yxvJm5rgVfCtjKCgJi0D5h0sxF0W40Ip1YhKNX4ENA41yTf~lNDOyRxMkEW96qJl5y7f91tsR5mZj60x02zr3JZSCKjWOVCn8qA~rgR26o2SGw73vmck8-1J2yNqdlyUHy6ndRMmScN6MyzsyKQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png?Expires=1784738314&Signature=Bf3~pxSPQnPpq9c6bYA6HpWg~NtjoVfsjoL3omt6wwPU0f1uZk9lBT7FsSnmgu5v1dyfW39NZpUGxSD3UfqcxYIFwo-164fJIZgjvIx6HKGnQLYvjCk7eYI2N7gyG7cQTOhyKaBiKOgGgaqtiMEh7g0xIgw~jc55eRG6SaGdUF3klK~EK3h7d55Ziqfpt2NUl40llod~dt5PbGV5EIVWYEs9~P18EnKxl5Id0LaCXRHXnYF~zOMXk-CMIj9xqEcZ4nibJ4RoDmwSC3upRMvOpVpn-fB8-lBpHDyiJ9UnE8QzMpmHoVGQJdz8n94Hwd8AqmBN9T8oe2sqr2e~8G5mWg__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/components/IngredientDetailModal.tsx",
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-spilantholkomplex_07997302.png?Expires=1784738314&Signature=pB1vUWiLpRFMKrLtpsABQL9IlaWglCAFHzw10FJLRWLa6fsywOr3EH3kYZy9sY6c28h-w1HRx1dd409D89beOhr9ZQwtp3Z6XprLnum1iUf7il5ppNdzTlAUWTz1dp6DCm9lhDsNPt8Txj~zS-6V4g8p9GJuWSvXRco25M4yeze~d3J1hXEmNZTkfG4jR45MpudpeObRw7yL92Kk~k1jcs1XJggNTiTOPlCwgpUMdW4vUa8b~yrYkhWLn4R-0vgepQ5DcYeJE9Pe6kWtUzcLD0HIyayXa7lfSTThE8JD6KVX-4edX6y4QeZ1RQnmFiBDI76qQ6bWO0cbe0B7HeVoHQ__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png?Expires=1784738314&Signature=aY6ABjieYpbsK4ooRH0FCsXwY11NjOEPb9n0PRq60TNhHzQkyo9XnTP0-d~DwsNjxtJS~tnpesZnOmh6aiZoirQHhIyrwy4y-ie4eQRSI6PGcC7dVngLbLtYX7NVfCzH9GBMeAv5U2JzDBD1iH8sU1R4HDJQPuaUj5wnMnrPnWcUAyI0qHn~2hilWFRRnV6DoC9zq4f24RD1ASzLgqOMGHcrASvR1FnFw9xufYlz3PVRcqHyayVm0eb9P7SKHaNSgBbstIhd31GTIrJECBukweXrYK1VPSHPJJLQkAf4c3pX66pKrHatDtFORDE9fnBqdGnJo-iI6PrWuydFfk0FAA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png?Expires=1784738314&Signature=PJNopXdJL8OadxioZl~XSv4s7EmXhkLXPbN2~1FpXjmRXnRnIDNMoYflmkcGlsb8mADbhsnScW8sJvW0inEBXqT4LjLGXp3xbMQ4Azrv14qMcY50bWJtWL9OT0qiIusY8V6bjrNI6bL0HVRjSaTuR30y09mwKbhATqqNSPpQn6CfdHdeqbDdShGpgSJmE-fF-t-59N~JBYwk8fvJyRcN1eMLSLgwGk9g3C45EjjpdTswatbOusogap1kPHJCwX4Cc~CWc0dKz8X1kosTpZ9FwgdVzh6wTDZ2JAHU-stB8xnV7LJ6su9zTlN8vatrZxd0Na2u8keeRDxLYo8e6BwQgg__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-peeling-aha-pha-peeling_333cbf38.png?Expires=1784738314&Signature=b3kWnBqm28bcLKeG2pqhzrXzDcpX~DKxu98r~29pWP4goG3TWpRdaZQbTT6xC02yaBMiGnX8qwzapdvtVP72itI6TVHLh9ERtaN0Xyrq-ozbVsn1Ea3MphUlfgeNUTgMKHGamQM~oEjVW8aaIUqShTIjIG-AterjdiYCHbqpMq8KjGV-Kz9Qeg6eK-Q~sU-yG919vl6venJLaNMHkj7pX4hdLHexOoDMUfmFxj6v1UEt1N03a4aGWdlaZ-U7X4UO0E0cxwy1mRqeabl0imThlObNLhqRDQ1~AlkcnMzpkodQ8ncBWIRLQRr0p7VTIc7b68OnuTmHFZ5md9SsDnpLwA__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts"
-      ],
-      "status": 200,
-      "ok": true,
-      "contentType": "image/png",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-peeling-bha-azelainsaure-peeling_2bd366e6.png?Expires=1784738314&Signature=P7j8OsfcFj9O0W4XNtK380zhN-rAtQRe8jxoMIUimTM~f7L-Eo55RPSGK4F6HjsOVwSWv6rueuNq7LjzJmSC~PGacPZCmrf-G5bndSFoMKB2R6MPfa4GsLBrTosmv-69pMHIVJC0J4ZilNMrEX-qnauAnI3nUoo7Ru8seigamLVjHFVluR62yJhWOErLFibLOkkA5HTwqNOY7j2l3qPn~XcyC8PggxDllKtPhG6bvzCh0CWgg-6y4KZ3zM-rtdss60vik~KNnPbQoLTtUX~tV4tFTwxLN97ITI45qUsxFkqv4bFnKhhbOe~U-JOPVLKmRpLuW5FqkmptGFBRDMXxEw__&Key-Pair-Id=K1MP89RTKNH4J"
-    },
-    {
-      "reference": "/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg",
-      "kind": "web_asset",
-      "localFileExists": null,
-      "referencedBy": [
-        "client/src/lib/recoveredAssets.ts",
-        "client/src/pages/ConfiguratorSerum.tsx"
-      ],
-      "status": 200,
-      "ok": true,
       "contentType": "image/jpeg",
-      "finalUrl": "https://d36hbw14aib5lz.cloudfront.net/310519663746048126/AZ5ntGLFXbnepJCJUroqKK/product-serum-basic-basiscreme-serum_2fc5bae8.jpg?Expires=1784738314&Signature=WXirCRLQxLg9QczuWDpRVW5BEaTFtloR7f7yiVyCLj~IUU~XY01ENB5W0THNMsoxKg26er-RG4sdg870jMgEsSx4oFBXBNFH4-pVybV5XZHkIepTkJ~VDN3RrkbeTXRV8z-LxqBhoX6RMP7~WVe2pSYBKyTiFIyXoi9PBRebPPT4UoKHSHH2qm1nj4jx3MUv0dnGthzFXfA~qwb8JdrmeQkqGP0CFCTFz2hbFJ4fAhOVI7xaOeFc~iJjccDI0flf7~xr0Au~0sLkPXOczPeAWcmh2C9CoBzgCuC91E7U6LnZEecfcC3J9xJtP86TtFC494lG2TH1u5ZNxM1aFv~EYw__&Key-Pair-Id=K1MP89RTKNH4J"
+      "durationMs": 99
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-algenextrakt_2dd0d1ef.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-algenextrakt_2dd0d1ef.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 88
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-distelol_8c32e19d.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 100
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-hyaluronkomplex_65604b67.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-hyaluronkomplex_65604b67.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 84
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-malvenextrakt_c9e29a4e.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-malvenextrakt_c9e29a4e.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 89
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-niacinamide_cc34ad82.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-niacinamide_cc34ad82.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 91
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-retinolkomplex_f783a663.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-retinolkomplex_f783a663.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 112
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-rosskastanienextrakt_25117b5a.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-rosskastanienextrakt_25117b5a.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 97
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-sanddornol_2707a8c2.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 63
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-spilantholkomplex-creme_37a25a01.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 91
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-traubenkernol_f6f9b948.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 85
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-vitaminkomplex_13a7064d.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-vitaminkomplex_13a7064d.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 86
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-weidenrindenextrakt_0bb34194.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-weidenrindenextrakt_0bb34194.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 82
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-creme-wildrosenol_a138d80c.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 75
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-algenextrakt-serum_0220c3ff.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 98
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-hyaluronkomplex-serum_61df0621.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 80
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-malvenextrakt-serum_9b59eeb9.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 91
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-niacinamide-serum_2e906fce.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 94
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-retinolkomplex-serum_556455dc.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 63
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-rosskastanienextrakt-serum_448723aa.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 95
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-spilantholkomplex_07997302.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 82
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-vitaminkomplex-serum_dc12670a.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 70
+    },
+    {
+      "sourceUrl": "/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-ingredient-serum-weidenrindenextrakt-serum_df236911.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 79
+    },
+    {
+      "sourceUrl": "/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-peeling-aha-pha-peeling_333cbf38.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 69
+    },
+    {
+      "sourceUrl": "/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-peeling-bha-azelainsaure-peeling_2bd366e6.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "durationMs": 82
+    },
+    {
+      "sourceUrl": "/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg",
+      "requestUrl": "https://3000-i2jpdvklqdsuqn7439cdy-a8493557.us2.manus.computer/manus-storage/product-serum-basic-basiscreme-serum_2fc5bae8.jpg",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/jpeg",
+      "durationMs": 89
+    },
+    {
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/0517/5702/3400/files/hbs_logo_Zeichenflache_1.svg?v=1635415875",
+      "requestUrl": "https://cdn.shopify.com/s/files/1/0517/5702/3400/files/hbs_logo_Zeichenflache_1.svg?v=1635415875",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "durationMs": 49
+    },
+    {
+      "sourceUrl": "https://github.com/shadcn.png",
+      "requestUrl": "https://github.com/shadcn.png",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/jpeg",
+      "durationMs": 104
     }
   ]
 }

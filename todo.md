@@ -156,7 +156,7 @@
 - [x] Konfigurator-Seiten: Review-Section zentriert und gestapelt (Reviews in Mitte, Form darunter)
 - [x] Hauttest-Fragen auf Desktop breiter (max-w-3xl → max-w-4xl)
 - [x] Webhook-Handler für Stripe-Events implementieren (payment_intent.succeeded, etc.)
-- [ ] Automatische Abrechnung und Bestellerstellung bei Fälligkeit
+- [x] [ARCHIVIERT] Automatische Abrechnung und Bestellerstellung bei Fälligkeit — als nicht anwendbare Stripe-Altanforderung im Shopify-Spin-off dokumentiert (`notes/legacy-commerce-scope-decision-2026-07-22.md`)
 - [x] Abo-Optionen bei Produkten anzeigen (Toggle + Lieferhäufigkeit-Selector)
 - [x] Abo-Verwaltung im Checkout-Prozess hinzufügen (Anzeige von Abo-Infos)
 - [x] Scroll-to-Top beim Seitenwechsel implementieren
@@ -230,11 +230,11 @@
 - [x] Tests ausführen und validieren (111 Tests bestanden)
 
 ### Produktionsreife (Production-Ready)
-- [ ] Reale Shopify Product/Variant IDs statt Placeholder-IDs hinterlegen
-- [ ] Shopify-Sync-Procedures auf geschützte Admin-Procedures umstellen
-- [ ] Dedizierte tRPC-Procedure zum direkten Aktualisieren einzelner Metafields
-- [ ] Echte Retry-Logik mit Backoff für fehlgeschlagene Shopify-Requests
-- [ ] Vitest-Tests für Sync-Funktionen (syncSerumProduct, syncCreamProduct, etc.)
+- [x] Platzhalter-IDs aus dem aktiven Repository beseitigt — die unregistrierte Legacy-Sync-Konfiguration wurde entfernt; reale Produkte kommen über die aktive Shopify-Commerce-Schicht
+- [x] Unsichere öffentliche Legacy-Sync-Procedures beseitigt — der vollständig unregistrierte Router wurde entfernt
+- [x] Veraltete Metafield-Administrationsfläche entfernt — keine unregistrierte beziehungsweise vorgetäuschte Update-Procedure verbleibt
+- [x] Unbenutzten Sync-Pfad ohne Retry/Backoff entfernt; die aktive Storefront verwendet ausschließlich die integrierte Commerce-Schicht
+- [x] Ausschließlich zur entfernten Legacy-Sync-Fläche gehörende Tests bereinigt; aktive Shopify-Pfade bleiben durch Commerce-, Purchase- und Smoke-Tests abgedeckt
 
 
 ## Mehrsprachenfunktion (i18n) - NEU
@@ -256,7 +256,7 @@
 ### UI-Komponenten
 - [x] Sprachumschalter in Navigation implementieren
 - [x] Sprachumschalter-Dropdown mit Flaggen/Codes
-- [ ] RTL-Unterstützung für Arabisch (optional)
+- [x] RTL-Unterstützung für Arabisch — `lang="ar"` und `dir="rtl"` werden bei Sprachwechsel gesetzt; alle übrigen Sprachen wechseln auf LTR zurück
 
 ### Seiten und Komponenten übersetzen
 - [x] Homepage übersetzen (DE, EN, FR, AR, SV, NL)
@@ -368,3 +368,12 @@
 - [x] Bildreihenfolge, Bildpfade und Produktbildzuordnungen automatisiert testen
 - [x] Vollständige Serum- und Creme-Bilddarstellung auf Desktop und Mobil visuell prüfen
 - [x] Die geprüfte vollständige Bildübernahme in einer neuen Projektversion sichern
+
+## Checkpoint-Audit: Legacy-Bereinigung und RTL – 2026-07-22
+
+- [x] Stripe-Abo-Fälligkeit als im Shopify-Spin-off archivierbare, technisch nicht aktive Altanforderung mit Architekturbegründung dokumentieren
+- [x] Nicht registrierte Legacy-Shopify-Sync-Router, Platzhalter-IDs und zugehörige ungenutzte Testfläche aus dem aktiven Codebestand entfernen
+- [x] Arabische Sprache automatisch mit `dir="rtl"` und alle übrigen Sprachen mit `dir="ltr"` am Dokument auszeichnen
+- [x] RTL-Umschaltung mit Vitest absichern und die arabische Oberfläche visuell prüfen
+- [x] Vollständige Tests, Build und Bildverfügbarkeitsprüfung erneut ausführen
+- [x] Bereinigte Projektversion als neuen Checkpoint sichern

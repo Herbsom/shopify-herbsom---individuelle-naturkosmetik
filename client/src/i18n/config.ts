@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { bindDocumentDirection } from "./direction";
 
 // Import translation files
 import de from "./locales/de.json";
@@ -33,6 +34,9 @@ i18n
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],
     },
+  })
+  .then(() => {
+    bindDocumentDirection(i18n);
   });
 
 export default i18n;
