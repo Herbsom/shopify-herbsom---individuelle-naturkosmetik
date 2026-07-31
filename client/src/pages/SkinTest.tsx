@@ -750,7 +750,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
                   { id: "sonnenschutzfluid", name: "Sonnenschutzfluid SPF 50+", quantity: 1 },
                 ]}
                 onPurchase={handleAddAll}
-                className="btn-outline-dark"
+                className="px-8 py-3 font-body text-xs tracking-[0.12em] uppercase border bg-[#F8F5F0] text-[#5B5B38] border-[#F8F5F0] hover:bg-transparent hover:text-[#F8F5F0] transition-all"
               >
                 Gesamte Routine in den Warenkorb
               </ShopifyPurchaseButton>
