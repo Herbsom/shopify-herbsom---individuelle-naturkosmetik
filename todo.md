@@ -387,3 +387,4 @@
 - [x] Routine-Seiten: Button zum in den Warenkorb legen im Gesamtpreis-Feld wie auf der individuellen Creme-Seite
 - [x] Hauttest-Ergebnis-Seite: Button zum in den Warenkorb legen im Gesamtpreis-Feld wie auf der individuellen Creme-Seite
 - [x] Button-Design korrigieren: Beiger Button mit grüner Schrift (wie "Zum Warenkorb" Button auf individueller Creme-Seite) auf allen Routine-Seiten und Hauttest-Seite
+- [x] Warenkorb: Konfigurationsanzeige für Peelings, Reiniger und Sonnenschutz entfernen

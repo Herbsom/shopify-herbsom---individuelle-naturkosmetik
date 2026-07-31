@@ -117,7 +117,7 @@ export default function Cart() {
                           </button>
                         </div>
 
-                        {visibleAttributes.length > 0 && (
+                        {visibleAttributes.length > 0 && configuratorLink && (
                           <div className="mt-3 space-y-1 border-l-2 border-[#C7C7A5] pl-3">
                             {visibleAttributes.map(attribute => (
                               <p key={`${item.lineId}-${attribute.key}`} className="font-body text-xs leading-relaxed text-[#5B5B38]">
