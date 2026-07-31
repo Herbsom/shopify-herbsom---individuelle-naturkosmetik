@@ -72,7 +72,11 @@ export default function CartSidebar() {
               )}
 
               {items.map(item => {
-                const visibleAttributes = item.attributes.filter(attribute => !attribute.key.startsWith("_"));
+                const configurationId = item.attributes.find(
+                  attribute => attribute.key === "_Herbsom-Konfiguration-ID"
+                )?.value;
+                const hasConfigurator = configurationId?.startsWith("serum-") || configurationId?.startsWith("creme-");
+                const visibleAttributes = hasConfigurator ? item.attributes.filter(attribute => !attribute.key.startsWith("_")) : [];
                 return (
                   <article key={item.lineId} className="border-b border-[#E5E0D8] pb-5">
                     <div className="flex gap-4">
