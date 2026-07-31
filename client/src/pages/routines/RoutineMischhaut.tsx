@@ -1,5 +1,5 @@
 /*
- * Routine Seite – Mischhaut
+ * Routine Seite – Reife Haut
  * Design: Nordischer Minimalismus × Pharmazeutische Präzision (wie Homepage)
  * Farben: Cremeweiß (#F8F5F0) ↔ Dunkelgrün (#5B5B38), Salbeigrün (#7D7D5D)
  * Typografie: Cormorant Garamond (Display) + Inter (Body)
@@ -11,17 +11,17 @@ import { ArrowRight, Star, ShoppingBag, Pencil, Info } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import { toast } from "sonner";
 import { Link } from "wouter";
-import { ROUTINE_MISCHHAUT } from "@/lib/routineRecommendations";
+import { ROUTINE_REIFE_HAUT } from "@/lib/routineRecommendations";
 import ProductDetailModal, { STANDARD_PRODUCT_DETAILS, type ProductDetail } from "@/components/ProductDetailModal";
 import { SERUM_INGREDIENT_DETAILS, CREME_INGREDIENT_DETAILS } from "@/components/IngredientDetailModal";
 import { useTranslation } from "react-i18next";
 import ShopifyLegacyProductPrice from "@/components/ShopifyLegacyProductPrice";
 import ShopifyPurchaseButton from "@/components/ShopifyPurchaseButton";
 
-export default function RoutineReifHaut() {
+export default function RoutineMischhaut() {
   const { t } = useTranslation();
   const { addItem } = useCart();
-  const rec = ROUTINE_MISCHHAUT;
+  const rec = ROUTINE_REIFE_HAUT;
 
   const products = [
     {
@@ -116,13 +116,13 @@ export default function RoutineReifHaut() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F0] via-[#F8F5F0]/50 to-transparent" />
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <p className="font-body text-xs tracking-[0.12em] uppercase mb-4 text-[#7D7D5D]">
-              Routine für Mischhaut
+              Routine für Reife Haut
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-light mb-6 leading-tight text-[#1C1C1A]">
-              Balancierte Haut
+              Jugendliche Ausstrahlung
             </h1>
             <p className="font-body text-base md:text-lg leading-relaxed text-[#4A4A48]">
-              Eine Routine individuell auf Mischhaut zugeschnitten – für Ausgleich und Harmonie
+              Eine Routine individuell auf reife Haut zugeschnitten – gegen Falten, Fältchen & Hautalterung
             </p>
           </div>
         </section>
@@ -132,9 +132,9 @@ export default function RoutineReifHaut() {
           <div className="container max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               {[
-                { icon: "✓", title: "Ausgleichende Pflege", text: "mit gezielten Wirkstoffen für jede Zone" },
-                { icon: "✓", title: "Reguliert Talgproduktion", text: "und spendet Feuchtigkeit wo nötig" },
-                { icon: "✓", title: "Sichtbare Ergebnisse", text: "bereits nach 3–5 Wochen" },
+                { icon: "✓", title: "Intensive Anti-Aging Pflege", text: "mit hochkonzentrierten Wirkstoffen" },
+                { icon: "✓", title: "Stärkt die Hautbarriere", text: "und erhöht die Elastizität" },
+                { icon: "✓", title: "Sichtbare Ergebnisse", text: "bereits nach 4–6 Wochen" },
               ].map((item, idx) => (
                 <div key={idx}>
                   <div className="text-4xl mb-4 text-[#F8F5F0]">{item.icon}</div>
@@ -153,166 +153,84 @@ export default function RoutineReifHaut() {
               Deine Routine
             </h2>
             <p className="font-body text-center text-[#7D7D5D] mb-16">
-              Fünf Schritte für perfekt ausbalancierte, strahlende Haut
+              Fünf Schritte gegen Falten und für jugendliche Ausstrahlung
             </p>
 
             <div className="space-y-20 lg:space-y-24">
               {products.map((product, idx) => (
-                <div key={product.id} className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                  {idx % 2 === 0 ? (
-                    <>
-                      <div>
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
-                            <span className="text-white font-display text-sm font-light">{product.label}</span>
-                          </div>
-                          <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
-                            Schritt {product.label}
-                          </span>
-                        </div>
+                <div key={product.id} className="flex flex-col gap-12 lg:gap-20">
+                  <div className="aspect-square flex items-center justify-center group">
+                    {product.image ? (
+                      <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+                    ) : (
+                      <div className="text-8xl">🧴</div>
+                    )}
+                  </div>
 
-                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
-                          {product.name}
-                        </h3>
-
-                        <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
-                          {product.description}
-                        </p>
-
-                        {product.benefits && product.benefits.length > 0 && (
-                          <ul className="space-y-2 mb-8">
-                            {product.benefits.map((benefit, bidx) => (
-                              <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
-                                <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
-                                <span>{benefit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
-                          <ShopifyPurchaseButton
-                            item={{
-                              id: product.id,
-                              name: product.name,
-                              quantity: 1,
-                              description: product.description,
-                            }}
-                            onPurchase={() => handleAddToCart(product)}
-                            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
-                          >
-                            <ShoppingBag size={16} />
-                            In den Warenkorb
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </ShopifyPurchaseButton>
-                                                    <button
-                            onClick={() => handleProductClick(product)}
-                            className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            title="Produktdetails anzeigen"
-                          >
-                            <Info size={12} />
-                            Details
-                          </button>
-{product.href?.startsWith("/configurator") && (
-                            <Link
-                              href={product.href}
-                              className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            >
-                              <Pencil size={12} />
-                              Anpassen
-                            </Link>
-                          )}
-                        </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
+                        <span className="text-white font-display text-sm font-light">{product.label}</span>
                       </div>
+                      <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
+                        Schritt {product.label}
+                      </span>
+                    </div>
 
-                      <div className="aspect-square flex items-center justify-center group">
-                        {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-                        ) : (
-                          <div className="text-8xl">🧴</div>
-                        )}
-                      </div>
-                    </>
-                  ) : (
-                    <>
+                    <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
+                      {product.name}
+                    </h3>
+
+                    <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
+                      {product.description}
+                    </p>
+
+                    {product.benefits && product.benefits.length > 0 && (
+                      <ul className="space-y-2 mb-8">
+                        {product.benefits.map((benefit, bidx) => (
+                          <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
+                            <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                      <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
+                      <ShopifyPurchaseButton
+                        item={{
+                          id: product.id,
+                          name: product.name,
+                          quantity: 1,
+                          description: product.description,
+                        }}
+                        onPurchase={() => handleAddToCart(product)}
+                        className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
+                      >
+                        <ShoppingBag size={16} />
+                        In den Warenkorb
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </ShopifyPurchaseButton>
                       <button
                         onClick={() => handleProductClick(product)}
-                        className="aspect-square flex items-center justify-center order-last md:order-first group cursor-pointer hover:opacity-80 transition-opacity"
+                        className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
+                        title="Produktdetails anzeigen"
                       >
-                        {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-                        ) : (
-                          <div className="text-8xl">🧴</div>
-                        )}
+                        <Info size={12} />
+                        Details
                       </button>
-
-                      <div>
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
-                            <span className="text-white font-display text-sm font-light">{product.label}</span>
-                          </div>
-                          <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
-                            Schritt {product.label}
-                          </span>
-                        </div>
-
-                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
-                          {product.name}
-                        </h3>
-
-                        <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
-                          {product.description}
-                        </p>
-
-                        {product.benefits && product.benefits.length > 0 && (
-                          <ul className="space-y-2 mb-8">
-                            {product.benefits.map((benefit, bidx) => (
-                              <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
-                                <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
-                                <span>{benefit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
-                          <ShopifyPurchaseButton
-                            item={{
-                              id: product.id,
-                              name: product.name,
-                              quantity: 1,
-                              description: product.description,
-                            }}
-                            onPurchase={() => handleAddToCart(product)}
-                            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
-                          >
-                            <ShoppingBag size={16} />
-                            In den Warenkorb
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </ShopifyPurchaseButton>
-                                                    <button
-                            onClick={() => handleProductClick(product)}
-                            className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            title="Produktdetails anzeigen"
-                          >
-                            <Info size={12} />
-                            Details
-                          </button>
-{product.href?.startsWith("/configurator") && (
-                            <Link
-                              href={product.href}
-                              className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            >
-                              <Pencil size={12} />
-                              Anpassen
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </>
-                  )}
+                      {product.href?.startsWith("/configurator") && (
+                        <Link
+                          href={product.href}
+                          className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
+                        >
+                          <Pencil size={12} />
+                          Anpassen
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -358,11 +276,11 @@ export default function RoutineReifHaut() {
 
                 <div className="space-y-8 lg:space-y-10">
                   {[
-                    { step: "1", title: "Morgens & Abends: Reinigen", desc: "Reinige dein Gesicht mit dem Reinigungsgel, um Talg und Unreinheiten zu entfernen." },
-                    { step: "2", title: "2x pro Woche: Peeling", desc: "Trage das BHA & Azelainsäure Peeling zweimal pro Woche auf, um Poren zu klären." },
-                    { step: "3", title: "Morgens & Abends: Serum", desc: "Dein individuelles Serum mit Niacinamid & Hyaluronsäure reguliert Talg und spendet Feuchtigkeit." },
-                    { step: "4", title: "Abends: Creme", desc: "Deine individuelle Creme mit leichter Textur regeneriert die Haut ohne zu beschweren." },
-                    { step: "5", title: "Morgens: Sonnenschutz", desc: "Das Sonnenschutzfluid schützt vor UV-Strahlung und reguliert den Glanz." },
+                    { step: "1", title: "Morgens & Abends: Reinigen", desc: "Reinige dein Gesicht mit der sanften Reinigungsmilch, um Make-up und Unreinheiten zu entfernen." },
+                    { step: "2", title: "2x pro Woche: Peeling", desc: "Trage das AHA & PHA Peeling zweimal pro Woche auf, um abgestorbene Hautzellen zu entfernen." },
+                    { step: "3", title: "Morgens & Abends: Serum", desc: "Dein individuelles Serum mit Retinol, Vitamin C & Spilanthol glättet Falten und stärkt die Hautstruktur." },
+                    { step: "4", title: "Abends: Creme", desc: "Deine individuelle Creme mit Retinol, Hyaluron & Sanddornöl regeneriert die Haut über Nacht." },
+                    { step: "5", title: "Morgens: Sonnenschutz", desc: "Das Sonnenschutzfluid schützt vor UV-Strahlung und Hautalterung – essentiell für reife Haut." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4 lg:gap-6 group">
                       <div className="w-12 h-12 lg:w-14 lg:h-14 bg-[#F8F5F0] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#7D7D5D] transition-colors duration-300">
@@ -377,7 +295,7 @@ export default function RoutineReifHaut() {
                 </div>
               </div>
               
-              {/* Visual timeline on right for desktop */}
+              {/* Application image on right for desktop */}
               <div className="hidden lg:flex items-center justify-center">
                 <img
                   src="/manus-storage/editorial-home-skincare_7e8e0204.jpg"

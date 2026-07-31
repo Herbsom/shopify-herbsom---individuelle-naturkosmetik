@@ -377,3 +377,10 @@
 - [x] RTL-Umschaltung mit Vitest absichern und die arabische Oberfläche visuell prüfen
 - [x] Vollständige Tests, Build und Bildverfügbarkeitsprüfung erneut ausführen
 - [x] Bereinigte Projektversion als neuen Checkpoint sichern
+- [x] Routine-Seite Normale Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Reife Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Trockene Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Unreine Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Mischhaut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Empfindliche Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seite Sensible Haut: Produktbilder über den Texten positioniert

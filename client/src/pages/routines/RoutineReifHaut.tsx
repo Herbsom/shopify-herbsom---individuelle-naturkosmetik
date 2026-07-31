@@ -158,161 +158,79 @@ export default function RoutineReifHaut() {
 
             <div className="space-y-20 lg:space-y-24">
               {products.map((product, idx) => (
-                <div key={product.id} className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                  {idx % 2 === 0 ? (
-                    <>
-                      <div>
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
-                            <span className="text-white font-display text-sm font-light">{product.label}</span>
-                          </div>
-                          <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
-                            Schritt {product.label}
-                          </span>
-                        </div>
+                <div key={product.id} className="flex flex-col gap-12 lg:gap-20">
+                  <div className="aspect-square flex items-center justify-center group">
+                    {product.image ? (
+                      <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+                    ) : (
+                      <div className="text-8xl">🧴</div>
+                    )}
+                  </div>
 
-                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
-                          {product.name}
-                        </h3>
-
-                        <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
-                          {product.description}
-                        </p>
-
-                        {product.benefits && product.benefits.length > 0 && (
-                          <ul className="space-y-2 mb-8">
-                            {product.benefits.map((benefit, bidx) => (
-                              <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
-                                <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
-                                <span>{benefit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
-                          <ShopifyPurchaseButton
-                            item={{
-                              id: product.id,
-                              name: product.name,
-                              quantity: 1,
-                              description: product.description,
-                            }}
-                            onPurchase={() => handleAddToCart(product)}
-                            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
-                          >
-                            <ShoppingBag size={16} />
-                            In den Warenkorb
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </ShopifyPurchaseButton>
-                                                    <button
-                            onClick={() => handleProductClick(product)}
-                            className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            title="Produktdetails anzeigen"
-                          >
-                            <Info size={12} />
-                            Details
-                          </button>
-{product.href?.startsWith("/configurator") && (
-                            <Link
-                              href={product.href}
-                              className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            >
-                              <Pencil size={12} />
-                              Anpassen
-                            </Link>
-                          )}
-                        </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
+                        <span className="text-white font-display text-sm font-light">{product.label}</span>
                       </div>
+                      <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
+                        Schritt {product.label}
+                      </span>
+                    </div>
 
-                      <div className="aspect-square flex items-center justify-center group">
-                        {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-                        ) : (
-                          <div className="text-8xl">🧴</div>
-                        )}
-                      </div>
-                    </>
-                  ) : (
-                    <>
+                    <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
+                      {product.name}
+                    </h3>
+
+                    <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
+                      {product.description}
+                    </p>
+
+                    {product.benefits && product.benefits.length > 0 && (
+                      <ul className="space-y-2 mb-8">
+                        {product.benefits.map((benefit, bidx) => (
+                          <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
+                            <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                      <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
+                      <ShopifyPurchaseButton
+                        item={{
+                          id: product.id,
+                          name: product.name,
+                          quantity: 1,
+                          description: product.description,
+                        }}
+                        onPurchase={() => handleAddToCart(product)}
+                        className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
+                      >
+                        <ShoppingBag size={16} />
+                        In den Warenkorb
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </ShopifyPurchaseButton>
                       <button
                         onClick={() => handleProductClick(product)}
-                        className="aspect-square flex items-center justify-center order-last md:order-first group cursor-pointer hover:opacity-80 transition-opacity"
+                        className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
+                        title="Produktdetails anzeigen"
                       >
-                        {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-                        ) : (
-                          <div className="text-8xl">🧴</div>
-                        )}
+                        <Info size={12} />
+                        Details
                       </button>
-
-                      <div>
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="w-10 h-10 bg-[#5B5B38] rounded-full flex items-center justify-center">
-                            <span className="text-white font-display text-sm font-light">{product.label}</span>
-                          </div>
-                          <span className="font-body text-xs tracking-[0.12em] uppercase text-[#7D7D5D]">
-                            Schritt {product.label}
-                          </span>
-                        </div>
-
-                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1C1C1A] mb-4 font-light leading-tight">
-                          {product.name}
-                        </h3>
-
-                        <p className="font-body text-base lg:text-lg text-[#4A4A48] leading-relaxed mb-8">
-                          {product.description}
-                        </p>
-
-                        {product.benefits && product.benefits.length > 0 && (
-                          <ul className="space-y-2 mb-8">
-                            {product.benefits.map((benefit, bidx) => (
-                              <li key={bidx} className="flex items-start gap-3 font-body text-sm text-[#4A4A48]">
-                                <span className="text-[#5B5B38] font-semibold mt-0.5">•</span>
-                                <span>{benefit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                          <ShopifyLegacyProductPrice item={product} className="font-display text-2xl text-[#5B5B38]" />
-                          <ShopifyPurchaseButton
-                            item={{
-                              id: product.id,
-                              name: product.name,
-                              quantity: 1,
-                              description: product.description,
-                            }}
-                            onPurchase={() => handleAddToCart(product)}
-                            className="bg-[#5B5B38] text-[#F8F5F0] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-6 lg:px-8 py-3 lg:py-4 rounded-sm hover:bg-[#424226] transition-all duration-300 flex items-center gap-2 group shadow-sm hover:shadow-md"
-                          >
-                            <ShoppingBag size={16} />
-                            In den Warenkorb
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                          </ShopifyPurchaseButton>
-                                                    <button
-                            onClick={() => handleProductClick(product)}
-                            className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            title="Produktdetails anzeigen"
-                          >
-                            <Info size={12} />
-                            Details
-                          </button>
-{product.href?.startsWith("/configurator") && (
-                            <Link
-                              href={product.href}
-                              className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
-                            >
-                              <Pencil size={12} />
-                              Anpassen
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </>
-                  )}
+                      {product.href?.startsWith("/configurator") && (
+                        <Link
+                          href={product.href}
+                          className="flex items-center gap-1 font-body text-xs text-[#5B5B38] hover:text-[#424226] transition-colors duration-200 tracking-[0.08em] uppercase"
+                        >
+                          <Pencil size={12} />
+                          Anpassen
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
