@@ -322,7 +322,7 @@ export default function RoutineReifHaut() {
               <div className="bg-gradient-to-r from-[#5B5B38] to-[#424226] rounded-lg p-8 md:p-16 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg">
                 <div className="text-center md:text-left">
                   <p className="font-body text-sm text-[#E8E3DB] mb-2">Gesamtpreis der Routine</p>
-                  <p className="font-display text-3xl lg:text-4xl text-[#F8F5F0] font-light">Aktueller Gesamtpreis im Shopify-Warenkorb</p>
+                  <p className="font-display text-3xl lg:text-4xl text-[#F8F5F0] font-light">€210</p>
                 </div>
                 <ShopifyPurchaseButton
                   items={products.map((product) => ({

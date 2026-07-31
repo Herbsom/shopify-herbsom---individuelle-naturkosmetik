@@ -546,7 +546,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/product-hautpflege-individuelle-serum-creme_59b5acd0.jpg" alt="Individuelles Serum" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/serum_reference_final_6866c5a2.webp" alt="Individuelles Serum" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">
@@ -613,7 +613,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/product-hautpflege-erstelle-deine-creme_87ae5318.jpg" alt="Individuelle Creme" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/creme_correct_final_006ac061.png" alt="Individuelle Creme" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">
@@ -682,7 +682,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
-                  <img src="/manus-storage/product-general-sonnenschutzfluid-spf-50_870ad93a.jpg" alt="Sonnenschutzfluid SPF 50+" className="w-full h-full object-cover" />
+                  <img src="/manus-storage/sunscreen_collection_reference_50af2848.webp" alt="Sonnenschutzfluid SPF 50+" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="flex-1">
@@ -725,8 +725,11 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div>
                 <p className="font-body text-xs tracking-[0.15em] uppercase text-[#7D7D5D] mb-2">Gesamte Routine</p>
-                <p className="font-display text-3xl md:text-4xl text-[#F8F5F0] font-light">Aktuelle Shopify-Preise</p>
-                <p className="font-body text-sm text-[#A8B8A6] mt-2">5 Produkte · Der exakte Gesamtpreis erscheint im Warenkorb</p>
+                <div className="flex items-baseline gap-3">
+                  <p className="font-display text-3xl md:text-4xl text-[#F8F5F0] font-light">€210</p>
+                  <p className="font-body text-sm text-[#A8B8A6]">Gesamtpreis</p>
+                </div>
+                <p className="font-body text-sm text-[#A8B8A6] mt-2">5 Produkte · Alle Preise zusammengefasst</p>
               </div>
               <ShopifyPurchaseButton
                 items={[
