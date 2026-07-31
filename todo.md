@@ -384,3 +384,5 @@
 - [x] Routine-Seite Mischhaut: Produktbilder über den Texten positioniert
 - [x] Routine-Seite Empfindliche Haut: Produktbilder über den Texten positioniert
 - [x] Routine-Seite Sensible Haut: Produktbilder über den Texten positioniert
+- [x] Routine-Seiten: Button zum in den Warenkorb legen im Gesamtpreis-Feld wie auf der individuellen Creme-Seite
+- [x] Hauttest-Ergebnis-Seite: Button zum in den Warenkorb legen im Gesamtpreis-Feld wie auf der individuellen Creme-Seite

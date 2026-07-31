@@ -334,13 +334,9 @@ export default function RoutineReifHaut() {
                   onPurchase={() => {
                     products.forEach((product) => handleAddToCart(product));
                   }}
-                  wrapperClassName="items-center"
-                  messageClassName="text-[#F2D7CE]"
-                  className="bg-[#F8F5F0] text-[#5B5B38] font-body text-xs lg:text-sm tracking-[0.12em] uppercase px-8 lg:px-10 py-4 lg:py-5 rounded-sm hover:bg-[#E8E3DB] transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-lg hover:scale-105"
+                  className="btn-outline-dark"
                 >
-                  <ShoppingBag size={18} className="flex-shrink-0" />
-                  <span className="whitespace-nowrap">Gesamte Routine hinzufügen</span>
-                  <ArrowRight size={16} className="flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                  Gesamte Routine in den Warenkorb
                 </ShopifyPurchaseButton>
               </div>
             </div>
