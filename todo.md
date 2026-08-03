@@ -390,3 +390,4 @@
 - [x] Warenkorb: Konfigurationsanzeige für Peelings, Reiniger und Sonnenschutz entfernen
 - [x] Warenkorb-Übersicht: Konfigurationsanzeige für Peelings, Reiniger und Sonnenschutz entfernen
 - [x] Warenkorb: Produktbilder von den Routine-Seiten hinzufügen (Cart.tsx und CartSidebar.tsx)
+- [x] Produktbilder aktualisieren: Reinigungsgel, Reinigungsmilch, BHA Peeling und AHA Peeling mit neuen Bildern auf Routine-Seiten und Hauttest verwenden

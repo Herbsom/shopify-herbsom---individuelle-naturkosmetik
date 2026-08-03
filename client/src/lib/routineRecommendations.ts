@@ -62,10 +62,10 @@ function buildCremeProduct(base: "light" | "rich", ingredientIds: string[]): Rou
 // Produktbilder für individuelle Produkte auf allen Routine-Seiten
 const CREME_IMAGE = "/manus-storage/005-Basiscreme_3e6c66de-e4b561e1_cae0329b.webp";
 const SERUM_IMAGE = "/manus-storage/006-Basisserum_554e7d2b-2df68e64_4a0ad959.webp";
-const CLEANSER_GEL_IMAGE = "/manus-storage/013-Reinigungsgel_1x1_db035e0b-fa696024_e5708ee7.webp";
-const CLEANSER_MILK_IMAGE = "/manus-storage/016-Reinigungsmilch_1x1_02140d62-da2b525c_748e4ea9.webp";
-const AHA_PHA_PEELING_IMAGE = "/manus-storage/001-AHA-PHAPeeling_1x1_c777c7c7-acdf8796_06ea1d90.webp";
-const BHA_AZELAINSAEURE_PEELING_IMAGE = "/manus-storage/004-BHAAzelainsaeurePeeling_1x1_e9bcbca7-7814a63c_4f08ce89.webp";
+const CLEANSER_GEL_IMAGE = "/manus-storage/pasted_file_s3pLzQ_hf_20260703_113305_14e70eb1-e6e6-4811-b7d8-b8678907a980_7a09cfb7.png";
+const CLEANSER_MILK_IMAGE = "/manus-storage/pasted_file_wK4oR6_hf_20260703_113353_f88aba45-a1f2-43eb-ac4e-f77d68332aeb_ed97fc2a.png";
+const AHA_PHA_PEELING_IMAGE = "/manus-storage/pasted_file_0dKTmn_hf_20260703_113606_83cd50f6-863d-44be-996a-0dec15e15d4b_9ba05a0f.png";
+const BHA_AZELAINSAEURE_PEELING_IMAGE = "/manus-storage/pasted_file_dV9wlH_hf_20260703_113510_262fdf41-3775-4461-ae9e-b455f3949051_b1fd9d42.png";
 
 /**
  * Routine: Reife Haut
