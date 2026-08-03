@@ -226,9 +226,9 @@ export default function RoutineReifHaut() {
                         </div>
                       </div>
 
-                      <div className="aspect-square flex items-center justify-center group">
+                      <div className="aspect-square flex items-center justify-center group bg-[#F0EBE3] rounded-lg overflow-hidden">
                         {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+                          <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                         ) : (
                           <div className="text-8xl">🧴</div>
                         )}
@@ -238,10 +238,10 @@ export default function RoutineReifHaut() {
                     <>
                       <button
                         onClick={() => handleProductClick(product)}
-                        className="aspect-square flex items-center justify-center order-last md:order-first group cursor-pointer hover:opacity-80 transition-opacity"
+                        className="aspect-square flex items-center justify-center order-last md:order-first group cursor-pointer hover:opacity-80 transition-opacity bg-[#F0EBE3] rounded-lg overflow-hidden"
                       >
                         {product.image ? (
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+                          <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                         ) : (
                           <div className="text-8xl">🧴</div>
                         )}

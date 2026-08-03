@@ -459,7 +459,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
           <div className="container max-w-5xl">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
-                <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
+                <div className="w-48 h-48 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
                   <img src={result.cleanser.image} alt={result.cleanser.name} className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -502,7 +502,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
           <div className="container max-w-5xl">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
               <div className="flex-shrink-0 mb-6 md:mb-0">
-                <div className="w-40 h-40 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
+                <div className="w-48 h-48 bg-[#F0EBE3] rounded-lg overflow-hidden border border-[#E5E0D8] flex-shrink-0">
                   <img src={result.peeling.image} alt={result.peeling.name} className="w-full h-full object-cover" />
                 </div>
               </div>
