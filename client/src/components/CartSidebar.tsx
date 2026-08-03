@@ -2,6 +2,29 @@ import { ArrowRight, Loader2, Minus, Plus, ShoppingBag, Trash2, X } from "lucide
 import { Link } from "wouter";
 import { useCart } from "@/contexts/CartContext";
 import { formatMoney } from "@/lib/format";
+import { ROUTINE_NORMALE_HAUT, ROUTINE_REIFE_HAUT, ROUTINE_TROCKENE_HAUT, ROUTINE_UNREINE_HAUT, ROUTINE_MISCHHAUT, ROUTINE_EMPFINDLICHE_HAUT, ROUTINE_SENSIBLE_HAUT } from "@/lib/routineRecommendations";
+
+// Map product IDs to their images from routine recommendations
+function getProductImage(productHandle: string): string | null {
+  const routines = [
+    ROUTINE_NORMALE_HAUT,
+    ROUTINE_REIFE_HAUT,
+    ROUTINE_TROCKENE_HAUT,
+    ROUTINE_UNREINE_HAUT,
+    ROUTINE_MISCHHAUT,
+    ROUTINE_EMPFINDLICHE_HAUT,
+    ROUTINE_SENSIBLE_HAUT,
+  ];
+
+  for (const routine of routines) {
+    if (routine.serum.id === productHandle) return routine.serum.image || null;
+    if (routine.creme.id === productHandle) return routine.creme.image || null;
+    if (routine.cleanser.id === productHandle) return routine.cleanser.image || null;
+    if (routine.peeling.id === productHandle) return routine.peeling.image || null;
+    if (routine.sunscreen.id === productHandle) return routine.sunscreen.image || null;
+  }
+  return null;
+}
 
 export default function CartSidebar() {
   const {
@@ -77,14 +100,16 @@ export default function CartSidebar() {
                 )?.value;
                 const hasConfigurator = configurationId?.startsWith("serum-") || configurationId?.startsWith("creme-");
                 const visibleAttributes = hasConfigurator ? item.attributes.filter(attribute => !attribute.key.startsWith("_")) : [];
+                const routineImage = getProductImage(item.productHandle);
+                const displayImage = routineImage || item.image;
                 return (
                   <article key={item.lineId} className="border-b border-[#E5E0D8] pb-5">
                     <div className="flex gap-4">
-                      {item.image && (
+                      {displayImage && (
                         <img
-                          src={item.image.url}
-                          alt={item.image.altText ?? item.productTitle}
-                          className="h-20 w-20 flex-none bg-[#F0EBE3] object-cover"
+                          src={routineImage || item.image?.url}
+                          alt={item.image?.altText ?? item.productTitle}
+                          className="h-20 w-20 flex-none bg-[#F0EBE3] object-contain"
                         />
                       )}
                       <div className="min-w-0 flex-1">

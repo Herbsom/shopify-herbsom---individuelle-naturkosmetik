@@ -389,3 +389,4 @@
 - [x] Button-Design korrigieren: Beiger Button mit grüner Schrift (wie "Zum Warenkorb" Button auf individueller Creme-Seite) auf allen Routine-Seiten und Hauttest-Seite
 - [x] Warenkorb: Konfigurationsanzeige für Peelings, Reiniger und Sonnenschutz entfernen
 - [x] Warenkorb-Übersicht: Konfigurationsanzeige für Peelings, Reiniger und Sonnenschutz entfernen
+- [x] Warenkorb: Produktbilder von den Routine-Seiten hinzufügen (Cart.tsx und CartSidebar.tsx)

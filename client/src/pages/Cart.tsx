@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import { useCart } from "@/contexts/CartContext";
 import { formatMoney } from "@/lib/format";
 import type { CartItem } from "@shared/commerce/types";
+import { ROUTINE_NORMALE_HAUT, ROUTINE_REIFE_HAUT, ROUTINE_TROCKENE_HAUT, ROUTINE_UNREINE_HAUT, ROUTINE_MISCHHAUT, ROUTINE_EMPFINDLICHE_HAUT, ROUTINE_SENSIBLE_HAUT } from "@/lib/routineRecommendations";
 import {
   ArrowLeft,
   ArrowRight,
@@ -15,6 +16,28 @@ import {
   Trash2,
 } from "lucide-react";
 import { Link } from "wouter";
+
+// Map product IDs to their images from routine recommendations
+function getProductImage(productId: string): string | null {
+  const routines = [
+    ROUTINE_NORMALE_HAUT,
+    ROUTINE_REIFE_HAUT,
+    ROUTINE_TROCKENE_HAUT,
+    ROUTINE_UNREINE_HAUT,
+    ROUTINE_MISCHHAUT,
+    ROUTINE_EMPFINDLICHE_HAUT,
+    ROUTINE_SENSIBLE_HAUT,
+  ];
+
+  for (const routine of routines) {
+    if (routine.serum.id === productId) return routine.serum.image || null;
+    if (routine.creme.id === productId) return routine.creme.image || null;
+    if (routine.cleanser.id === productId) return routine.cleanser.image || null;
+    if (routine.peeling.id === productId) return routine.peeling.image || null;
+    if (routine.sunscreen.id === productId) return routine.sunscreen.image || null;
+  }
+  return null;
+}
 
 function getConfiguratorLink(item: CartItem): string | null {
   const configurationId = item.attributes.find(
@@ -80,17 +103,19 @@ export default function Cart() {
                 {items.map(item => {
                   const configuratorLink = getConfiguratorLink(item);
                   const visibleAttributes = item.attributes.filter(attribute => !attribute.key.startsWith("_"));
+                  const routineImage = getProductImage(item.productHandle);
+                  const displayImage = routineImage || item.image;
 
                   return (
                     <article
                       key={item.lineId}
                       className="flex flex-col gap-5 border border-[#E5E0D8] bg-white p-6 transition-colors hover:border-[#7D7D5D] sm:flex-row md:p-8"
                     >
-                      {item.image && (
+                      {displayImage && (
                         <img
-                          src={item.image.url}
-                          alt={item.image.altText ?? item.productTitle}
-                          className="h-28 w-28 flex-none bg-[#F0EBE3] object-cover sm:h-32 sm:w-32"
+                          src={routineImage || item.image?.url}
+                          alt={item.image?.altText ?? item.productTitle}
+                          className="h-28 w-28 flex-none bg-[#F0EBE3] object-contain sm:h-32 sm:w-32"
                         />
                       )}
 
