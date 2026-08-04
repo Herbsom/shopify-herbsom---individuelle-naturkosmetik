@@ -119,6 +119,7 @@ function ingredientCount(item: LegacyCartItem): number | null {
 
 export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
   const attributes: CartAttribute[] = [];
+console.log("inferCartAttributes called with item:", item);
   const description = item.description?.trim();
 
   if (description) {
@@ -149,6 +150,7 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
       };
       const ean = eanMap[name];
       if (ean) {
+console.log(`Adding EAN attribute: _Wirkstoff-EAN-${index + 1}: ${ean}`);
         attributes.push({
           key: `_Wirkstoff-EAN-${index + 1}`,
           value: ean,
