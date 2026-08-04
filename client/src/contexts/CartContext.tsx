@@ -127,6 +127,34 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
       key: /^Wirkstoffe:/i.test(description) ? "Wirkstoffe" : "Konfiguration",
       value: ingredients || description,
     });
+
+    // Add individual ingredient EANs for backend tracking
+    const ingredientNames = ingredients.split(",").map(s => s.trim());
+    ingredientNames.forEach((name, index) => {
+      // Map ingredient names to EANs
+      const eanMap: Record<string, string> = {
+        "Niacinamide-Komplex": "0038407203991",
+        "Spilantholkomplex": "0653415982203",
+        "Hyaluronkomplex": "0038407203984",
+        "Algenextrakt": "0038407203908",
+        "Vitamin C-Komplex": "0038407204004",
+        "Retinolkomplex": "0038407204011",
+        "Weidenrindenextrakt": "0038407203977",
+        "Malvenextrakt": "0038407204028",
+        "Rosskastanienextrakt": "0038407204035",
+        "Wildrosenöl": "0038407203960",
+        "Sanddornöl": "0038407203953",
+        "Traubenkernöl": "0038407203946",
+        "Distelöl": "0038407203939",
+      };
+      const ean = eanMap[name];
+      if (ean) {
+        attributes.push({
+          key: `_Wirkstoff-EAN-${index + 1}`,
+          value: ean,
+        });
+      }
+    });
   }
 
   const normalizedId = normalizeSearchValue(item.id);

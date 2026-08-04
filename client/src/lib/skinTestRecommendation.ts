@@ -18,6 +18,7 @@ export interface IngredientRecommendation {
   id: string;
   name: string;
   description: string;
+  ean?: string; // Barcode/EAN für Backend-Tracking
 }
 
 export interface SkinTestResult {
@@ -58,24 +59,24 @@ export interface SkinTestResult {
 
 // Serum-Wirkstoffe (gleiche IDs wie ConfiguratorSerum)
 export const SERUM_INGREDIENTS: Record<string, IngredientRecommendation> = {
-  willow: { id: "willow", name: "Weidenrindenextrakt", description: "Reduziert Hautglanz und behandelt Unreinheiten" },
-  niacinamide: { id: "niacinamide", name: "Niacinamide-Komplex", description: "Verfeinert vergrößerte Poren" },
-  vitaminc: { id: "vitaminc", name: "Vitamin C-Komplex", description: "Beugt Hautalterung vor und hellt Pigmentflecken auf" },
-  retinol: { id: "retinol", name: "Retinolkomplex", description: "Reduziert Falten und erneuert die Haut" },
-  spilanthol: { id: "spilanthol", name: "Spilantholkomplex", description: "Entspannt die Mimik und glättet die Haut sofort" },
-  mallow: { id: "mallow", name: "Malvenextrakt", description: "Beruhigt und reduziert Rötungen" },
-  horsechestnut: { id: "horsechestnut", name: "Rosskastanienextrakt", description: "Mindert rote Äderchen, Couperose und Rosazea" },
-  algae: { id: "algae", name: "Algenextrakt", description: "Spendet intensiv Feuchtigkeit" },
-  hyaluronic: { id: "hyaluronic", name: "Hyaluronkomplex", description: "Glättet und polstert auf" },
+  willow: { id: "willow", name: "Weidenrindenextrakt", description: "Reduziert Hautglanz und behandelt Unreinheiten", ean: "0038407203977" },
+  niacinamide: { id: "niacinamide", name: "Niacinamide-Komplex", description: "Verfeinert vergrößerte Poren", ean: "0038407203991" },
+  vitaminc: { id: "vitaminc", name: "Vitamin C-Komplex", description: "Beugt Hautalterung vor und hellt Pigmentflecken auf", ean: "0038407204004" },
+  retinol: { id: "retinol", name: "Retinolkomplex", description: "Reduziert Falten und erneuert die Haut", ean: "0038407204011" },
+  spilanthol: { id: "spilanthol", name: "Spilantholkomplex", description: "Entspannt die Mimik und glättet die Haut sofort", ean: "0653415982203" },
+  mallow: { id: "mallow", name: "Malvenextrakt", description: "Beruhigt und reduziert Rötungen", ean: "0038407204028" },
+  horsechestnut: { id: "horsechestnut", name: "Rosskastanienextrakt", description: "Mindert rote Äderchen, Couperose und Rosazea", ean: "0038407204035" },
+  algae: { id: "algae", name: "Algenextrakt", description: "Spendet intensiv Feuchtigkeit", ean: "0038407203908" },
+  hyaluronic: { id: "hyaluronic", name: "Hyaluronkomplex", description: "Glättet und polstert auf", ean: "0038407203984" },
 };
 
 // Creme-Wirkstoffe (gleiche IDs wie ConfiguratorCreme, inkl. Öle)
 export const CREME_INGREDIENTS: Record<string, IngredientRecommendation> = {
   ...SERUM_INGREDIENTS,
-  rosehip: { id: "rosehip", name: "Wildrosenöl", description: "Versorgt trockene Haut und erhöht die Vitalität der Haut" },
-  seabuckthorn: { id: "seabuckthorn", name: "Sanddornöl", description: "Versorgt trockene Haut und glättet Falten" },
-  grapeseed: { id: "grapeseed", name: "Traubenkernöl", description: "Versorgt trockene Haut und schützt die Zellen" },
-  thistle: { id: "thistle", name: "Distelöl", description: "Versorgt trockene Stellen ohne die Poren zu verstopfen" },
+  rosehip: { id: "rosehip", name: "Wildrosenöl", description: "Versorgt trockene Haut und erhöht die Vitalität der Haut", ean: "0038407203960" },
+  seabuckthorn: { id: "seabuckthorn", name: "Sanddornöl", description: "Versorgt trockene Haut und glättet Falten", ean: "0038407203953" },
+  grapeseed: { id: "grapeseed", name: "Traubenkernöl", description: "Versorgt trockene Haut und schützt die Zellen", ean: "0038407203946" },
+  thistle: { id: "thistle", name: "Distelöl", description: "Versorgt trockene Stellen ohne die Poren zu verstopfen", ean: "0038407203939" },
 };
 
 export const CREME_PRICES: Record<number, number> = { 2: 36, 3: 41, 4: 46 };

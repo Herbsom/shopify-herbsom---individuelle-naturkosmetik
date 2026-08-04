@@ -395,3 +395,6 @@
 - [x] EANs für Produkte hinterlegen: Basis-Produkte (Basiscreme, Basisserum) und Wirkstoffe mit EANs in Shopify aktualisieren
 - [x] Bestellungen mit EAN-Informationen anzeigen: Warenkorb und Bestellbestätigung sollten EANs für Basis und Wirkstoffe enthalten
 - [x] Bestellungen: EAN-Nummern werden jetzt automatisch zu Bestellattributen hinzugefügt
+- [ ] EANs für einzelne Wirkstoffe: Alle Wirkstoffe (Niacinamide-Komplex, Wildrosenöl, etc.) mit EANs in Bestellattributen hinzufügen (Backend-sichtbar, nicht für Kunden)
+
+- [x] EANs für individuelle Wirkstoffe in Creme und Serum als versteckte Attribute in Shopify-Bestellungen hinterlegen.
