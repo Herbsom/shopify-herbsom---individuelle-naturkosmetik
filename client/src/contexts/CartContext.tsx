@@ -173,15 +173,26 @@ export async function resolveLegacyCartLine(
   const handle = inferShopifyHandle(item);
   const product = await loadProduct(handle);
   if (!product) {
-    throw new Error(`Das Shopify-Produkt „${handle}“ ist nicht im Storefront-Verkaufskanal verfügbar.`);
+    throw new Error(`Das Shopify-Produkt "${handle}" ist nicht im Storefront-Verkaufskanal verfügbar.`);
+  }
+
+  const variant = selectVariantForLegacyItem(product, item);
+  const attributes = inferCartAttributes(item);
+
+  // Add barcode to attributes if available
+  if (variant.barcode) {
+    attributes.push({
+      key: "EAN",
+      value: variant.barcode,
+    });
   }
 
   return {
     handle,
     line: {
-      variantId: selectVariantForLegacyItem(product, item).id,
+      variantId: variant.id,
       quantity: item.quantity,
-      attributes: inferCartAttributes(item),
+      attributes,
     },
   };
 }

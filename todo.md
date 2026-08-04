@@ -394,3 +394,4 @@
 - [x] Produktbilder als Quadrate zuschneiden auf Routine-Seiten und Hauttest-Ergebnis-Seite
 - [x] EANs für Produkte hinterlegen: Basis-Produkte (Basiscreme, Basisserum) und Wirkstoffe mit EANs in Shopify aktualisieren
 - [x] Bestellungen mit EAN-Informationen anzeigen: Warenkorb und Bestellbestätigung sollten EANs für Basis und Wirkstoffe enthalten
+- [x] Bestellungen: EAN-Nummern werden jetzt automatisch zu Bestellattributen hinzugefügt
