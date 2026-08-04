@@ -392,3 +392,5 @@
 - [x] Warenkorb: Produktbilder von den Routine-Seiten hinzufügen (Cart.tsx und CartSidebar.tsx)
 - [x] Produktbilder aktualisieren: Reinigungsgel, Reinigungsmilch, BHA Peeling und AHA Peeling mit neuen Bildern auf Routine-Seiten und Hauttest verwenden
 - [x] Produktbilder als Quadrate zuschneiden auf Routine-Seiten und Hauttest-Ergebnis-Seite
+- [x] EANs für Produkte hinterlegen: Basis-Produkte (Basiscreme, Basisserum) und Wirkstoffe mit EANs in Shopify aktualisieren
+- [x] Bestellungen mit EAN-Informationen anzeigen: Warenkorb und Bestellbestätigung sollten EANs für Basis und Wirkstoffe enthalten

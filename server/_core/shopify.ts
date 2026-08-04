@@ -196,6 +196,7 @@ const VARIANT_FRAGMENT = /* GraphQL */ `
     price { ...MoneyFields }
     compareAtPrice { ...MoneyFields }
     selectedOptions { name value }
+    barcode
   }
 `;
 
@@ -258,6 +259,7 @@ const CART_FRAGMENT = /* GraphQL */ `
               id
               title
               price { ...MoneyFields }
+              barcode
               product {
                 handle
                 title

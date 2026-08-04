@@ -44,6 +44,8 @@ export type ProductVariant = {
   availableForSale: boolean;
   /** Flat list of selected options — sized for variant pickers. */
   selectedOptions: SelectedOption[];
+  /** EAN/Barcode for the variant. */
+  barcode: string | null;
 };
 
 export type Product = {
@@ -90,6 +92,8 @@ export type CartItem = {
   lineTotal: Money;
   /** Customization details persisted into the Shopify order. */
   attributes: CartAttribute[];
+  /** EAN/Barcode for the product. */
+  barcode: string | null;
 };
 
 export type Cart = {

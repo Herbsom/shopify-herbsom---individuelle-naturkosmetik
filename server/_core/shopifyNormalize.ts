@@ -40,6 +40,7 @@ type RawVariant = {
   price: RawMoney;
   compareAtPrice: RawMoney | null;
   selectedOptions: RawSelectedOption[];
+  barcode: string | null;
 };
 
 export type RawProduct = {
@@ -74,6 +75,7 @@ export type RawCartLine = {
     id: string;
     title: string;
     price: RawMoney;
+    barcode: string | null;
     product: {
       handle: string;
       title: string;
@@ -116,6 +118,7 @@ function normalizeVariant(v: RawVariant): ProductVariant {
     compareAtPrice: v.compareAtPrice ? normalizeMoney(v.compareAtPrice) : null,
     availableForSale: v.availableForSale,
     selectedOptions: (v.selectedOptions ?? []).map(normalizeSelectedOption),
+    barcode: v.barcode || null,
   };
 }
 
@@ -162,6 +165,7 @@ function normalizeCartItem(line: RawCartLine): CartItem {
     quantity: line.quantity,
     lineTotal: normalizeMoney(line.cost.totalAmount),
     attributes: line.attributes ?? [],
+    barcode: line.merchandise.barcode || null,
   };
 }
 
