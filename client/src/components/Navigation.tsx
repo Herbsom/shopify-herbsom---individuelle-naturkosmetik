@@ -49,13 +49,13 @@ export default function Navigation() {
   ];
 
   const routinenLinks = [
-    { label: t("nav.mature_skin"), href: "/routines/reife-haut" },
-    { label: t("nav.dry_skin"), href: "/routines/trockene-haut" },
-    { label: t("nav.oily_skin"), href: "/routines/unreine-haut" },
-    { label: t("nav.combination_skin"), href: "/routines/mischhaut" },
-    { label: t("nav.sensitive_skin"), href: "/routines/empfindliche-haut" },
-    { label: t("nav.normal_skin"), href: "/routines/normale-haut" },
-    { label: t("nav.sensible_skin"), href: "/routines/sensible-haut" },
+    { label: t("nav.mature_skin"), href: "/routine/reife-haut" },
+    { label: t("nav.dry_skin"), href: "/routine/trockene-haut" },
+    { label: t("nav.oily_skin"), href: "/routine/unreine-haut" },
+    { label: t("nav.combination_skin"), href: "/routine/mischhaut" },
+    { label: t("nav.sensitive_skin"), href: "/routine/empfindliche-haut" },
+    { label: t("nav.normal_skin"), href: "/routine/normale-haut" },
+    { label: t("nav.sensible_skin"), href: "/routine/sensible-haut" },
   ];
 
   return (
