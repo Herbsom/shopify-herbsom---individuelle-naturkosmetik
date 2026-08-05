@@ -34,7 +34,7 @@ interface RoutineConfig {
   subtitle: string;
   description: string;
   benefitItems: Array<{ icon: string; title: string; text: string }>;
-  applicationSteps: Array<{ step: string; title: string; desc: string }>;
+  applicationSteps: Array<{ step: string; title: string; desc: string; image?: string }>;
   totalPrice: number;
   recommendation: RoutineRecommendation;
   image: string;
@@ -43,20 +43,20 @@ interface RoutineConfig {
 const ROUTINES: Record<string, RoutineConfig> = {
   "reife-haut": {
     label: "Reife Haut",
-    title: "Jugendliche Ausstrahlung",
+    title: "Youthful Radiance",
     subtitle: "Routine für Reife Haut",
-    description: "Eine Routine individuell auf reife Haut zugeschnitten – gegen Falten, Fältchen & Hautalterung",
+    description: "Eine Routine speziell für reife Haut – gegen Falten, feine Linien und Hautalterung",
     benefitItems: [
       { icon: "✓", title: "Intensive Anti-Aging Pflege", text: "mit hochkonzentrierten Wirkstoffen" },
       { icon: "✓", title: "Stärkt die Hautbarriere", text: "und erhöht die Elastizität" },
       { icon: "✓", title: "Sichtbare Ergebnisse", text: "bereits nach 4–6 Wochen" },
     ],
     applicationSteps: [
-      { step: "1", title: "Morgens & Abends: Reinigen", desc: "Reinige dein Gesicht mit der sanften Reinigungsmilch, um Make-up und Unreinheiten zu entfernen." },
-      { step: "2", title: "2x pro Woche: Peeling", desc: "Trage das AHA & PHA Peeling zweimal pro Woche auf, um abgestorbene Hautzellen zu entfernen." },
-      { step: "3", title: "Morgens & Abends: Serum", desc: "Dein individuelles Serum mit Retinol, Vitamin C & Spilanthol glättet Falten und stärkt die Hautstruktur." },
-      { step: "4", title: "Abends: Creme", desc: "Deine individuelle Creme mit Retinol, Hyaluron & Sanddornöl regeneriert die Haut über Nacht." },
-      { step: "5", title: "Morgens: Sonnenschutz", desc: "Das Sonnenschutzfluid schützt vor UV-Strahlung und Hautalterung – essentiell für reife Haut." },
+      { step: "1", title: "Morgens & Abends: Reinigen", desc: "Reinige dein Gesicht mit der sanften Reinigungsmilch, um Make-up und Unreinheiten zu entfernen.", image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-BpFhsKZdphtdbIhAmzLUK4_na1fn_UmVpbmlndW5nc21pbGNo.webp?Expires=1786102178&Signature=MEYCIQC9-RxRKjl~XN1G-DG5m6ZDTUO2uZtdsQBIC07MtsppGQIhAKLFSRvKBYbWji3-Y~AWB9HE0Hm5ZtJk~cxaTuhyHR2T&Key-Pair-Id=K1K5N5YNBUUMMN" },
+      { step: "2", title: "2x pro Woche: Peeling", desc: "Trage das AHA & PHA Peeling zweimal pro Woche auf, um die Hautstruktur zu verfeinern.", image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-mIlTNzAOpnziIbMfQUjBMl_na1fn_QUhBJlBIQVBlZWxpbmc.webp?Expires=1786102178&Signature=MEUCIQDu6yvpgMNA3tI4criCLfYttraxQiWK6xbgIAexDjlCqgIgSHv1aAuHNuCxHCubOcQnskr3XP5urdCBymRM~5SCO84_&Key-Pair-Id=K1K5N5YNBUUMMN" },
+      { step: "3", title: "Morgens & Abends: Serum", desc: "Dein individuelles Serum mit Vitamin C und Hyaluron verleiht Glanz und Schutz.", image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-sBtbRJeC799oIjSO70AMWT_na1fn_Vml0YW1pbkNLb21wbGV4MTBtbA.webp?Expires=1786102178&Signature=MEQCIFBBHwBCm2PdrHjcNbFZoPiE0X2G72bDY-Es3-GcjzdaAiBJr-sS~eHlNqy--UDFLQFur-80yas0tMVnLnMkm~SC2A__&Key-Pair-Id=K1K5N5YNBUUMMN" },
+      { step: "4", title: "Morgens & Abends: Creme", desc: "Deine reichhaltige individuelle Creme mit Retinol und Hyaluron regeneriert intensiv.", image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-Wm77fdUqrvyJHfTWEth50H_na1fn_QmFzaXNzZXJ1bQ.webp?Expires=1786102178&Signature=MEUCIHgkBj57yt5K47WnhE~aPBrcO9NgOsyvc-myqFnsRnk4AiEAjXAaeZnYLQJNxnjKRl2TCbi5y02e2EBlral4qIvfYOY_&Key-Pair-Id=K1K5N5YNBUUMMN" },
+      { step: "5", title: "Morgens: Sonnenschutz", desc: "Das Sonnenschutzfluid schützt vor UV-Strahlung und Hautalterung – essentiell für reife Haut.", image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-06TjZ287FAsy7Oirk4btMJ_na1fn_UmVpbmlndW5nc2dlbA.webp?Expires=1786102178&Signature=MEUCIA6tYurmOIaFI4rZkY1~JLEZ7xVLoBEUfvKOwX~6QnuoAiEAm~X0Oz3ocb5iYOWPg6BEAFOtlBOJ6N-4EjLXsPM23Mc_&Key-Pair-Id=K1K5N5YNBUUMMN" },
     ],
     totalPrice: 210,
     recommendation: ROUTINE_REIFE_HAUT,
@@ -444,37 +444,36 @@ export default function RoutineTemplate() {
         {/* Application Section */}
         <section className="py-16 md:py-24 lg:py-32 bg-[#5B5B38]">
           <div className="container max-w-7xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-              <div>
-                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-[#F8F5F0] mb-12 lg:mb-16 font-light leading-tight">
-                  Die Anwendung
-                </h2>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-[#F8F5F0] mb-12 lg:mb-16 font-light leading-tight">
+              Die Anwendung
+            </h2>
 
-                <div className="space-y-8 lg:space-y-10">
-                  {config.applicationSteps.map((item) => (
-                    <div key={item.step} className="flex gap-4 lg:gap-6 group">
-                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-[#F8F5F0] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#7D7D5D] transition-colors duration-300">
-                        <span className="font-display text-base lg:text-lg font-light text-[#5B5B38] group-hover:text-[#F8F5F0] transition-colors duration-300">{item.step}</span>
-                      </div>
-                      <div>
-                        <h4 className="font-display text-lg lg:text-xl text-[#F8F5F0] mb-2 font-light">{item.title}</h4>
-                        <p className="font-body text-sm lg:text-base text-[#E8E3DB] leading-relaxed">{item.desc}</p>
-                      </div>
+            <div className="space-y-12 lg:space-y-16">
+              {config.applicationSteps.map((item) => (
+                <div key={item.step} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                  {/* Text content */}
+                  <div className="flex gap-4 lg:gap-6 group">
+                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-[#F8F5F0] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#7D7D5D] transition-colors duration-300">
+                      <span className="font-display text-base lg:text-lg font-light text-[#5B5B38] group-hover:text-[#F8F5F0] transition-colors duration-300">{item.step}</span>
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="font-display text-lg lg:text-xl text-[#F8F5F0] mb-2 font-light">{item.title}</h4>
+                      <p className="font-body text-sm lg:text-base text-[#E8E3DB] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Product image */}
+                  {item.image && (
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full max-w-sm h-auto object-cover rounded-lg shadow-lg"
+                      />
+                    </div>
+                  )}
                 </div>
-              </div>
-              
-              {/* Application image on right for desktop */}
-              {config.image && (
-                <div className="hidden lg:flex items-center justify-center">
-                  <img
-                    src={config.image}
-                    alt="Hautpflege-Anwendung"
-                    className="w-full h-auto object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              )}
+              ))}
             </div>
           </div>
         </section>
