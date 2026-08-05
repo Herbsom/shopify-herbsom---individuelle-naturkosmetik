@@ -118,80 +118,87 @@ function ingredientCount(item: LegacyCartItem): number | null {
 }
 
 export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
-      const attributes: CartAttribute[] = [];
-      
-
-
-
-
+  const attributes: CartAttribute[] = [];
   const description = item.description?.trim();
 
   if (description) {
-    const ingredientsMatch = description.match(/^Wirkstoffe:\s*(.*)/i);
-    const ingredients = ingredientsMatch ? ingredientsMatch[1].trim() : description;
+    // Extract ingredients from description
+    // Handles formats like: "Konfiguration: Mit Vitamin C-Komplex, Spilantholkomplex, Hyaluronkomplex"
+    const ingredients = description.replace(/^(?:Wirkstoffe:|Konfiguration:\s*Mit\s*|Konfiguration:)\s*/i, '').trim();
 
-    
+    attributes.push({
+      key: "Wirkstoffe",
+      value: ingredients,
+    });
 
+    // Split ingredients by comma or "und"/"mit" (but not as part of compound names)
+    const ingredientNames = ingredients
+      .split(/,\s*|\s+und\s+/i)
+      .map(s => s.trim())
+      .filter(s => s.length > 0);
 
-    if (ingredientsMatch) {
-      attributes.push({
-        key: "Wirkstoffe",
-        value: ingredients,
-      });
-    } else {
-      attributes.push({
-        key: "Konfiguration",
-        value: description,
-      });
-    }
+    const eanMap: Record<string, string> = {
+      "Niacinamide-Komplex": "0038407203991",
+      "Spilantholkomplex": "0653415982203",
+      "Hyaluronkomplex": "0038407203984",
+      "Vitamin C-Komplex": "0038407204004",
+      "Algenextrakt": "0038407203908",
+      "Retinolkomplex": "0038407204011",
+      "Weidenrindenextrakt": "0038407203977",
+      "Malvenextrakt": "0038407204028",
+      "Rosskastanienextrakt": "0038407204035",
+      "Wildrosenöl": "0038407203960",
+      "Sanddornöl": "0038407203953",
+      "Traubenkernöl": "0038407203946",
+      "Distelöl": "0038407203939",
+    };
 
-    // Add individual ingredient EANs for backend tracking
-    const ingredientNames = ingredients.split(/,\s*(?![^()]*\))|\s*und\s*/).map(s => s.trim()).filter(Boolean);
-    
+    // Track which ingredients we've added to avoid duplicates
+    const addedIngredients = new Set<string>();
 
+    ingredientNames.forEach((name) => {
+      // Normalize the name for lookup
+      const normalizedName = name.trim();
+      
+      // Try exact match first
+      let ean = eanMap[normalizedName];
+      
+      // If no exact match, try case-insensitive search
+      if (!ean) {
+        const lowerName = normalizedName.toLowerCase();
+        for (const [key, value] of Object.entries(eanMap)) {
+          if (key.toLowerCase() === lowerName) {
+            ean = value;
+            break;
+          }
+        }
+      }
 
-    ingredientNames.forEach((name, index) => {
-      // Map ingredient names to EANs
-      const eanMap: Record<string, string> = {
-        "Niacinamide-Komplex": "0038407203991",
-        "Spilantholkomplex": "0653415982203",
-        "Hyaluronkomplex": "0038407203984",
-        "Algenextrakt": "0038407203908",
-        "Vitamin C-Komplex": "0038407204004",
-        "Retinolkomplex": "0038407204011",
-        "Weidenrindenextrakt": "0038407203977",
-        "Malvenextrakt": "0038407204028",
-        "Rosskastanienextrakt": "0038407204035",
-        "Wildrosenöl": "0038407203960",
-        "Sanddornöl": "0038407203953",
-        "Traubenkernöl": "0038407203946",
-        "Distelöl": "0038407203939",
-      };
-      const ean = eanMap[name];
-      if (ean) {
-        
-        
-
-
-
-
+      if (ean && !addedIngredients.has(normalizedName)) {
+        addedIngredients.add(normalizedName);
+        const ingredientIndex = addedIngredients.size;
         attributes.push({
-          key: `_Wirkstoff-${index + 1}: ${name}`,
+          key: `_Wirkstoff-${ingredientIndex}: ${normalizedName}`,
           value: ean,
         });
-
       }
     });
   }
 
   const normalizedId = normalizeSearchValue(item.id);
-  if (normalizedId.startsWith("creme-") || normalizedId.startsWith("serum-")) {
-    attributes.push({ key: "_Herbsom-Konfiguration-ID", value: item.id });
-  }
+  
+  // Add base product EAN before configuration ID
   if (normalizedId.startsWith("creme-light")) {
     attributes.push({ key: "_Basis-Leicht", value: "0038407203892" });
   } else if (normalizedId.startsWith("creme-rich")) {
     attributes.push({ key: "_Basis-Reichhaltig", value: "0038407203892" });
+  } else if (normalizedId.startsWith("serum-")) {
+    attributes.push({ key: "_Basis-Serum", value: "0038407203885" });
+  }
+  
+  // Add configuration ID after base product
+  if (normalizedId.startsWith("creme-") || normalizedId.startsWith("serum-")) {
+    attributes.push({ key: "_Herbsom-Konfiguration-ID", value: item.id });
   }
   
 
@@ -200,6 +207,9 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
 
 
   
+
+
+
   return attributes;
 }
 

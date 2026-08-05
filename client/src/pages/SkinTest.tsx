@@ -328,6 +328,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
       quantity: 1,
       description: `Wirkstoffe: ${serumIngredients.map((i) => i.name).join(", ")}`,
     });
+    console.log("Description passed to addItem for serum:", `Wirkstoffe: ${serumIngredients.map((i) => i.name).join(", ")}`);
     toast.success("Individuelles Serum wurde in den Warenkorb gelegt!");
   };
 
