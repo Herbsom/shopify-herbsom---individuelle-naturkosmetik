@@ -217,9 +217,9 @@ export async function resolveLegacyCartLine(
   const attributes = inferCartAttributes(item);
 
   // Add barcode to attributes if available, but not for custom creams/serums
-  if (variant.barcode && product.handle !== "erstelle-deine-creme") {
+  if (variant.barcode && item.id.startsWith("serum-")) {
     attributes.push({
-      key: `EAN: ${item.name}`,
+      key: `EAN: Individuelles Serum`,
       value: variant.barcode,
     });
   }
