@@ -134,7 +134,7 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
     });
 
     // Add individual ingredient EANs for backend tracking
-    const ingredientNames = ingredients.split(",").map(s => s.trim());
+    const ingredientNames = ingredients.split(/,\s*(?![^()]*\))/).map(s => s.trim());
     ingredientNames.forEach((name, index) => {
       // Map ingredient names to EANs
       const eanMap: Record<string, string> = {
@@ -162,6 +162,7 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
           key: `_Wirkstoff-${index + 1}: ${name}`,
           value: ean,
         });
+
       }
     });
   }
@@ -175,6 +176,8 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
   } else if (normalizedId.startsWith("creme-rich")) {
     attributes.push({ key: "_Basis-Reichhaltig", value: "0038407203892" });
   }
+
+
 
   return attributes;
 }
@@ -217,12 +220,7 @@ export async function resolveLegacyCartLine(
   const attributes = inferCartAttributes(item);
 
   // Add barcode to attributes if available, but not for custom creams/serums
-  if (variant.barcode && item.id.startsWith("serum-")) {
-    attributes.push({
-      key: `EAN: Individuelles Serum`,
-      value: variant.barcode,
-    });
-  }
+
 
   return {
     handle,
@@ -421,7 +419,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             });
           }
         } catch (error) {
-          console.error("[Shopify Cart] Artikel konnte nicht hinzugefügt werden:", error);
+          
           toast.error(shopifyCartErrorMessage(error, "Der Artikel konnte nicht hinzugefügt werden."));
         } finally {
           setLoading(false);
@@ -443,7 +441,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
           });
           commitCart(nextCart);
         } catch (error) {
-          console.error("[Shopify Cart] Menge konnte nicht geändert werden:", error);
+          
           toast.error("Die Menge konnte nicht geändert werden.");
         } finally {
           setLoading(false);
@@ -465,7 +463,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
           });
           commitCart(nextCart);
         } catch (error) {
-          console.error("[Shopify Cart] Artikel konnte nicht entfernt werden:", error);
+          
           toast.error("Der Artikel konnte nicht entfernt werden.");
         } finally {
           setLoading(false);
@@ -498,7 +496,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
           const line = await resolveLegacyItem(newItem);
           await addResolvedLine(line);
         } catch (error) {
-          console.error("[Shopify Cart] Konfiguration konnte nicht ersetzt werden:", error);
+          
           toast.error(shopifyCartErrorMessage(error, "Die Konfiguration konnte nicht gespeichert werden."));
         } finally {
           setLoading(false);
