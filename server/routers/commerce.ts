@@ -76,6 +76,7 @@ export const commerceRouter = router({
     create: publicProcedure
       .input(z.object({ lines: z.array(cartLineInputSchema).min(1).max(50) }))
       .mutation(async ({ input }) => {
+        console.log("createCart input lines:", JSON.stringify(input.lines, null, 2));
         return createCart(input.lines);
       }),
     get: publicProcedure
@@ -91,6 +92,8 @@ export const commerceRouter = router({
         })
       )
       .mutation(async ({ input }) => {
+        console.log("addLines input cartId:", input.cartId);
+        console.log("addLines input lines:", JSON.stringify(input.lines, null, 2));
         return addCartLines(input.cartId, input.lines);
       }),
     updateLines: publicProcedure

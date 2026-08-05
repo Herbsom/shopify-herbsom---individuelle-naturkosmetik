@@ -118,8 +118,12 @@ function ingredientCount(item: LegacyCartItem): number | null {
 }
 
 export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
-  const attributes: CartAttribute[] = [];
-console.log("inferCartAttributes called with item:", item);
+      const attributes: CartAttribute[] = [];
+      
+
+
+
+
   const description = item.description?.trim();
 
   if (description) {
@@ -150,9 +154,12 @@ console.log("inferCartAttributes called with item:", item);
       };
       const ean = eanMap[name];
       if (ean) {
-console.log(`Adding EAN attribute: _Wirkstoff-EAN-${index + 1}: ${ean}`);
+        
+
+
+
         attributes.push({
-          key: `_Wirkstoff-EAN-${index + 1}`,
+          key: `_Wirkstoff-EAN-${index + 1}: ${name}`,
           value: ean,
         });
       }
@@ -212,7 +219,7 @@ export async function resolveLegacyCartLine(
   // Add barcode to attributes if available
   if (variant.barcode) {
     attributes.push({
-      key: "EAN",
+      key: `EAN: ${item.name}`,
       value: variant.barcode,
     });
   }
@@ -366,6 +373,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     async (line: ResolvedCartLine) => {
       let currentCart = cartRef.current;
       let currentCartId = cartIdRef.current;
+      
+
+
 
       if (currentCartId && !currentCart) {
         currentCart = await utils.commerce.cart.get.fetch({ cartId: currentCartId });
@@ -375,12 +385,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
         }
       }
 
+
       const nextCart = !currentCartId || !currentCart
         ? await utils.client.commerce.cart.create.mutate({ lines: [line] })
         : await utils.client.commerce.cart.addLines.mutate({
             cartId: currentCartId,
             lines: [line],
           });
+        
+
+
+
 
       commitCart(nextCart);
       const added = [...nextCart.items].reverse().find(item => item.variantId === line.variantId) ?? null;
@@ -398,6 +413,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
           if (typeof input === "string") {
             await addResolvedLine({ variantId: input, quantity });
           } else {
+
             await performLegacyAddToCart(input, {
               resolveItem: resolveLegacyItem,
               addLine: addResolvedLine,
