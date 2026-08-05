@@ -127,14 +127,29 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
   const description = item.description?.trim();
 
   if (description) {
-    const ingredients = description.replace(/^Wirkstoffe:\s*/i, "").trim();
-    attributes.push({
-      key: /^Wirkstoffe:/i.test(description) ? "Wirkstoffe" : "Konfiguration",
-      value: ingredients || description,
-    });
+    const ingredientsMatch = description.match(/^Wirkstoffe:\s*(.*)/i);
+    const ingredients = ingredientsMatch ? ingredientsMatch[1].trim() : description;
+
+    
+
+
+    if (ingredientsMatch) {
+      attributes.push({
+        key: "Wirkstoffe",
+        value: ingredients,
+      });
+    } else {
+      attributes.push({
+        key: "Konfiguration",
+        value: description,
+      });
+    }
 
     // Add individual ingredient EANs for backend tracking
-    const ingredientNames = ingredients.split(/,\s*(?![^()]*\))/).map(s => s.trim());
+    const ingredientNames = ingredients.split(/,\s*(?![^()]*\))|\s*und\s*/).map(s => s.trim()).filter(Boolean);
+    
+
+
     ingredientNames.forEach((name, index) => {
       // Map ingredient names to EANs
       const eanMap: Record<string, string> = {
@@ -155,6 +170,8 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
       const ean = eanMap[name];
       if (ean) {
         
+        
+
 
 
 
@@ -176,9 +193,13 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
   } else if (normalizedId.startsWith("creme-rich")) {
     attributes.push({ key: "_Basis-Reichhaltig", value: "0038407203892" });
   }
+  
 
 
 
+
+
+  
   return attributes;
 }
 
