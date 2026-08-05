@@ -243,7 +243,12 @@
 - [x] Unsichere öffentliche Legacy-Sync-Procedures beseitigt — der vollständig unregistrierte Router wurde entfernt
 - [x] Veraltete Metafield-Administrationsfläche entfernt — keine unregistrierte beziehungsweise vorgetäuschte Update-Procedure verbleibt
 - [x] Unbenutzten Sync-Pfad ohne Retry/Backoff entfernt; die aktive Storefront verwendet ausschließlich die integrierte Commerce-Schicht
+- [x] Generierte Hero-Bilder gelöscht (alle Bild-URLs auf leer gesetzt)
+- [x] Produktbilder aus dem referenzierten Projekt geprüft (nur 1 Bild vorhanden, nicht geeignet)
+- [x] Alternative: Produktbilder aus bestehenden Produktseiten verwenden (ShopifyProductGallery-Komponente)
+
 - [x] Ausschließlich zur entfernten Legacy-Sync-Fläche gehörende Tests bereinigt; aktive Shopify-Pfade bleiben durch Commerce-, Purchase- und Smoke-Tests abgedeckt
+- [x] Hero-Bilder auf Routine-Seiten entfernt (nicht mehr nötig)
 
 
 ## Mehrsprachenfunktion (i18n) - NEU

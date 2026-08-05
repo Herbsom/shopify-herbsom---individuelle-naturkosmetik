@@ -60,7 +60,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_REIFE_HAUT,
-    image: "/manus-storage/routine-reife-haut_5ab1fe92.jpg",
+    image: "",
   },
   "trockene-haut": {
     label: "Trockene Haut",
@@ -81,7 +81,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_TROCKENE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-bFcR8KzbzOP8bxzIzLOisk_na1fn_aGZfMjAyNjA2MTdfMTA1NTIxX2MxOWU3NWYxLTBjNzgtNGU3ZS04Y2E1LTg2MGFjYWJiYTRhOA.png",
+    image: "",
   },
   "unreine-haut": {
     label: "Unreine Haut",
@@ -102,7 +102,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_UNREINE_HAUT,
-    image: "/manus-storage/routine-unreine-haut_6b0cc822.jpg",
+    image: "",
   },
   "mischhaut": {
     label: "Mischhaut",
@@ -123,7 +123,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_MISCHHAUT,
-    image: "/manus-storage/routine-mischhaut_441c4438.jpg",
+    image: "",
   },
   "empfindliche-haut": {
     label: "Empfindliche Haut",
@@ -144,7 +144,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_EMPFINDLICHE_HAUT,
-    image: "/manus-storage/routine-empfindliche-haut_c9c8e832.jpg",
+    image: "",
   },
   "normale-haut": {
     label: "Normale Haut",
@@ -165,7 +165,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_NORMALE_HAUT,
-    image: "/manus-storage/routine-normale-haut_907a8d9e.jpg",
+    image: "",
   },
   "sensible-haut": {
     label: "Sensible Haut",
@@ -186,7 +186,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_SENSIBLE_HAUT,
-    image: "/manus-storage/routine-sensible-haut_97a56700.jpg",
+    image: "",
   },
 };
 
