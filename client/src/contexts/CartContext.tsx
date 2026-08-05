@@ -159,7 +159,7 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
 
 
         attributes.push({
-          key: `_Wirkstoff-EAN-${index + 1}: ${name}`,
+          key: `_Wirkstoff-${index + 1}: ${name}`,
           value: ean,
         });
       }
@@ -171,9 +171,9 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
     attributes.push({ key: "_Herbsom-Konfiguration-ID", value: item.id });
   }
   if (normalizedId.startsWith("creme-light")) {
-    attributes.push({ key: "Basis", value: "Leicht" });
+    attributes.push({ key: "_Basis-Leicht", value: "0038407203892" });
   } else if (normalizedId.startsWith("creme-rich")) {
-    attributes.push({ key: "Basis", value: "Reichhaltig" });
+    attributes.push({ key: "_Basis-Reichhaltig", value: "0038407203892" });
   }
 
   return attributes;
