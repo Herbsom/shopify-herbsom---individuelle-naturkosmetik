@@ -216,8 +216,8 @@ export async function resolveLegacyCartLine(
   const variant = selectVariantForLegacyItem(product, item);
   const attributes = inferCartAttributes(item);
 
-  // Add barcode to attributes if available
-  if (variant.barcode) {
+  // Add barcode to attributes if available, but not for custom creams/serums
+  if (variant.barcode && product.handle !== "erstelle-deine-creme" && product.handle !== "individuelle-serum-creme") {
     attributes.push({
       key: `EAN: ${item.name}`,
       value: variant.barcode,
