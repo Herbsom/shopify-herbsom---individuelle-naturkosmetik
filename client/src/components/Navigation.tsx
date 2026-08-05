@@ -1,4 +1,4 @@
-/**
+/*
  * Navigation – Herbsom wie herbsom.de
  * Logo links, Navigation rechts, Icons rechts
  */
@@ -53,8 +53,9 @@ export default function Navigation() {
     { label: t("nav.dry_skin"), href: "/routines/trockene-haut" },
     { label: t("nav.oily_skin"), href: "/routines/unreine-haut" },
     { label: t("nav.combination_skin"), href: "/routines/mischhaut" },
-    { label: t("nav.sensitive_skin"), href: "/routines/sensible-haut" },
+    { label: t("nav.sensitive_skin"), href: "/routines/empfindliche-haut" },
     { label: t("nav.normal_skin"), href: "/routines/normale-haut" },
+    { label: t("nav.sensible_skin"), href: "/routines/sensible-haut" },
   ];
 
   return (

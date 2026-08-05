@@ -163,12 +163,12 @@
 
 ## Routine-Seiten Überarbeitung - NEU
 
-- [ ] Generische Routine-Komponente erstellen (RoutineTemplate.tsx)
-- [ ] URL-Routing für Routine-Seiten anpassen (App.tsx)
-- [ ] Alle 7 Routine-Dateien durch generische Komponente ersetzen
-- [ ] Navigation aktualisieren, um Routine-Seiten als Sub-Items anzuzeigen
-- [ ] Routine-Seiten testen und verifizieren, dass unterschiedliche Inhalte angezeigt werden
-- [ ] Shopify-Integration mit EANs für alle Routine-Seiten testen
+- [x] Generische Routine-Komponente erstellen (RoutineTemplate.tsx)
+- [x] URL-Routing für Routine-Seiten anpassen (App.tsx)
+- [x] Alle 7 Routine-Dateien durch generische Komponente ersetzen
+- [x] Navigation aktualisieren, um Routine-Seiten als Sub-Items anzuzeigen
+- [x] Routine-Seiten testen und verifizieren, dass unterschiedliche Inhalte angezeigt werden
+- [x] Shopify-Integration mit EANs für alle Routine-Seiten testen
 - [x] "Vor Gebrauch schütteln" zu Serum und Sonnenschutz hinzugefügt
 - [x] E-Mail-Benachrichtigungen für Abo-Events (Owner-Notifications via notifyOwner für neue Abos, Abrechnungen, Kündigungen, Disputes)
 - [x] Abo-Rabatte/Promotionen implementieren (SUBSCRIBE15 Code für aktive Abonnenten, Banner in Subscriptions-Seite)
