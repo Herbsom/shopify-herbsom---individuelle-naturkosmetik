@@ -29,13 +29,7 @@ import ConfiguratorSerum from "./pages/ConfiguratorSerum";
 import ConfiguratorCreme from "./pages/ConfiguratorCreme";
 
 import RoutineOverview from "./pages/RoutineOverview";
-import RoutineReifHaut from "./pages/routines/RoutineReifHaut";
-import RoutineTrockenHaut from "./pages/routines/RoutineTrockenHaut";
-import RoutineUnreineHaut from "./pages/routines/RoutineUnreineHaut";
-import RoutineMischhaut from "./pages/routines/RoutineMischhaut";
-import RoutineEmpfindlichHaut from "./pages/routines/RoutineEmpfindlichHaut";
-import RoutineNormaleHaut from "./pages/routines/RoutineNormaleHaut";
-import RoutineSensibleHaut from "./pages/routines/RoutineSensibleHaut";
+import RoutineTemplate from "./pages/RoutineTemplate";
 import SkinTest from "./pages/SkinTest";
 import Gutschein from "./pages/Gutschein";
 import ShopifyAccountRedirect from "./pages/ShopifyAccountRedirect";
@@ -82,13 +76,7 @@ function Router() {
 
       <Route path={"/products"} component={RoutineOverview} />
       <Route path={"/routines"} component={RoutineOverview} />
-      <Route path={"/routines/reife-haut"} component={RoutineReifHaut} />
-      <Route path={"/routines/trockene-haut"} component={RoutineTrockenHaut} />
-      <Route path={"/routines/unreine-haut"} component={RoutineUnreineHaut} />
-      <Route path={"/routines/mischhaut"} component={RoutineMischhaut} />
-      <Route path={"/routines/empfindliche-haut"} component={RoutineEmpfindlichHaut} />
-      <Route path={"/routines/normale-haut"} component={RoutineNormaleHaut} />
-      <Route path={"/routines/sensible-haut"} component={RoutineSensibleHaut} />
+      <Route path={"/routines/:type"} component={RoutineTemplate} />
       <Route path={"/hauttest"} component={SkinTest} />
       <Route path={"/skin-test"} component={SkinTest} />
       <Route path={"/gutschein"} component={Gutschein} />
