@@ -60,7 +60,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_REIFE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-YbI6XkL2bCArvi8dr1hI3f_na1fn_aGZfMjAyNjA2MTdfMTA1MTMyXzE2ODQ0MjE1LTI3ZDAtNDViNS04NWZkLTg5OWU4MjE5ODVlMA.png",
+    image: "/manus-storage/routine-reife-haut_5ab1fe92.jpg",
   },
   "trockene-haut": {
     label: "Trockene Haut",
@@ -102,7 +102,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_UNREINE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-YbvWjc9jUkg1pAEaWcUbGj_na1fn_aGZfMjAyNjA2MTdfMTA0NzM1Xzk2YTEzNDg3LTdjYjQtNGI3NC1iYzliLTk2YmVjMDZkODI5OQ.png",
+    image: "/manus-storage/routine-unreine-haut_6b0cc822.jpg",
   },
   "mischhaut": {
     label: "Mischhaut",
@@ -123,7 +123,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_MISCHHAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-UBdW7RoACys498ShouRK7w_na1fn_aGZfMjAyNjA2MTdfMTA0NDE3XzVmY2ZhN2E4LWZhOGUtNGZlZC1hNzNiLWY3NGRlZmIyYjFlMw.png",
+    image: "/manus-storage/routine-mischhaut_441c4438.jpg",
   },
   "empfindliche-haut": {
     label: "Empfindliche Haut",
@@ -144,7 +144,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_EMPFINDLICHE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-TRj5az6YtrQieIkwpacYaC_na1fn_aGZfMjAyNjA2MTdfMTAzNjI2X2Q0NDkxZjg4LWM5ZGItNDlkOS05OWYxLWRlYmIyYjMxMWNiMw.png",
+    image: "/manus-storage/routine-empfindliche-haut_c9c8e832.jpg",
   },
   "normale-haut": {
     label: "Normale Haut",
@@ -165,7 +165,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_NORMALE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-U19uKaWXBrjed8AlmfKfVu_na1fn_aGZfMjAyNjA2MTdfMDYzNzQ2XzdlYWY4MWM4LTE5MTgtNGRmZi1iZTU3LTc1NmRiYzdhZGJiYQ.png",
+    image: "/manus-storage/routine-normale-haut_907a8d9e.jpg",
   },
   "sensible-haut": {
     label: "Sensible Haut",
@@ -186,7 +186,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_SENSIBLE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-TKcnxA83xFwzrkpcxT5sTo_na1fn_aGZfMjAyNjA2MTdfMDYzNTQ3XzkxNGM2MWRkLWFmMDgtNGRkYy1iMWI1LWEwZDk3OWY1MmI2ZA.png",
+    image: "/manus-storage/routine-sensible-haut_97a56700.jpg",
   },
 };
 
@@ -289,6 +289,14 @@ export default function RoutineTemplate() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-96 md:h-[600px] bg-[#F8F5F0] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          {config.image && (
+            <img
+              src={config.image}
+              alt={config.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F0] via-[#F8F5F0]/50 to-transparent" />
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <p className="font-body text-xs tracking-[0.12em] uppercase mb-4 text-[#7D7D5D]">
