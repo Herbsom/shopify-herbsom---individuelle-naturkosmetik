@@ -138,15 +138,17 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
       .filter(s => s.length > 0);
 
     const eanMap: Record<string, string> = {
-      "Niacinamide-Komplex": "0038407203991",
-      "Spilantholkomplex": "0653415982203",
-      "Hyaluronkomplex": "0038407203984",
-      "Vitamin C-Komplex": "0038407204004",
-      "Algenextrakt": "0038407203908",
-      "Retinolkomplex": "0038407204011",
+      // Serum-Wirkstoffe und Creme-Wirkstoffe
       "Weidenrindenextrakt": "0038407203977",
+      "Niacinamide-Komplex": "0038407203991",
+      "Vitamin C-Komplex": "0038407204004",
+      "Retinolkomplex": "0038407204011",
+      "Spilantholkomplex": "0653415982203",
       "Malvenextrakt": "0038407204028",
       "Rosskastanienextrakt": "0038407204035",
+      "Algenextrakt": "0038407203908",
+      "Hyaluronkomplex": "0038407203984",
+      // Creme-Öle
       "Wildrosenöl": "0038407203960",
       "Sanddornöl": "0038407203953",
       "Traubenkernöl": "0038407203946",

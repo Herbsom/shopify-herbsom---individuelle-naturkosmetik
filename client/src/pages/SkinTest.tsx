@@ -727,7 +727,7 @@ function ResultsPage({ result }: { result: SkinTestResult }) {
               <div>
                 <p className="font-body text-xs tracking-[0.15em] uppercase text-[#7D7D5D] mb-2">Gesamte Routine</p>
                 <div className="flex items-baseline gap-3">
-                  <p className="font-display text-3xl md:text-4xl text-[#F8F5F0] font-light">€210</p>
+                  <p className="font-display text-3xl md:text-4xl text-[#F8F5F0] font-light">€{(result.serumPrice + result.cremePrice + result.cleanser.price + result.peeling.price + 32).toFixed(0)}</p>
                   <p className="font-body text-sm text-[#A8B8A6]">Gesamtpreis</p>
                 </div>
                 <p className="font-body text-sm text-[#A8B8A6] mt-2">5 Produkte · Alle Preise zusammengefasst</p>

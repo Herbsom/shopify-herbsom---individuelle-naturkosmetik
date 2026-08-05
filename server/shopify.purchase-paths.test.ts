@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
+
 import { describe, expect, it, vi } from "vitest";
 import type { Cart, Product } from "../shared/commerce/types";
 import {
@@ -31,9 +32,9 @@ const overviewAndPurchasePages = [
   "client/src/pages/ConfiguratorSerum.tsx",
 ];
 
-const routinePages = readdirSync(resolve(root, "client/src/pages/routines"))
-  .filter((name) => name.endsWith(".tsx"))
-  .map((name) => `client/src/pages/routines/${name}`);
+// Routine-Seiten werden jetzt über RoutineTemplate.tsx generisch gerendert
+// Das routines-Verzeichnis existiert nicht mehr
+const routinePages: string[] = [];
 
 const priceComponentPages = [
   ...detailPages,
