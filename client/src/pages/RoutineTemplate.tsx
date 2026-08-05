@@ -60,7 +60,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_REIFE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-Qz4PkhovkOej0ziYH4xRds_na1fn_cGFzdGVkX2ZpbGVfZmxUWWs4X0NvbXBvbmVudDE0OQ.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-YbI6XkL2bCArvi8dr1hI3f_na1fn_aGZfMjAyNjA2MTdfMTA1MTMyXzE2ODQ0MjE1LTI3ZDAtNDViNS04NWZkLTg5OWU4MjE5ODVlMA.png",
   },
   "trockene-haut": {
     label: "Trockene Haut",
@@ -81,7 +81,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_TROCKENE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-oRAizy3S2gCuveGuGquMcl_na1fn_cGFzdGVkX2ZpbGVfSWlMMXdmX0NvbXBvbmVudDE0MA.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-bFcR8KzbzOP8bxzIzLOisk_na1fn_aGZfMjAyNjA2MTdfMTA1NTIxX2MxOWU3NWYxLTBjNzgtNGU3ZS04Y2E1LTg2MGFjYWJiYTRhOA.png",
   },
   "unreine-haut": {
     label: "Unreine Haut",
@@ -102,7 +102,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_UNREINE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-jjU9lALoOqCphqxfdJcsMl_na1fn_cGFzdGVkX2ZpbGVfNHFRcXRCX0NvbXBvbmVudDEzOA.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-YbvWjc9jUkg1pAEaWcUbGj_na1fn_aGZfMjAyNjA2MTdfMTA0NzM1Xzk2YTEzNDg3LTdjYjQtNGI3NC1iYzliLTk2YmVjMDZkODI5OQ.png",
   },
   "mischhaut": {
     label: "Mischhaut",
@@ -123,7 +123,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_MISCHHAUT,
-    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-25izA0feAfkQ0o2ov9DepK_na1fn_cGFzdGVkX2ZpbGVfaDZad3k1X0NvbXBvbmVudDEzOQ.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-UBdW7RoACys498ShouRK7w_na1fn_aGZfMjAyNjA2MTdfMTA0NDE3XzVmY2ZhN2E4LWZhOGUtNGZlZC1hNzNiLWY3NGRlZmIyYjFlMw.png",
   },
   "empfindliche-haut": {
     label: "Empfindliche Haut",
@@ -144,7 +144,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_EMPFINDLICHE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/GeVO2ZWsKxqAj119SQ0U3o_1781604408046_ogw3BMwVx4kgguto6Lqmx8_na1fn_cGFzdGVkX2ZpbGVfTnlmeHFMX0NvbXBvbmVudDEzNQ.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-TRj5az6YtrQieIkwpacYaC_na1fn_aGZfMjAyNjA2MTdfMTAzNjI2X2Q0NDkxZjg4LWM5ZGItNDlkOS05OWYxLWRlYmIyYjMxMWNiMw.png",
   },
   "normale-haut": {
     label: "Normale Haut",
@@ -165,7 +165,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_NORMALE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/4kfsUdOCmIcleyeXKRrQP8_1781604396355_5GhMxUE9XpO6VpMTidLrHQ_na1fn_cGFzdGVkX2ZpbGVfY2VDa1hmX0NvbXBvbmVudDEzNA.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-U19uKaWXBrjed8AlmfKfVu_na1fn_aGZfMjAyNjA2MTdfMDYzNzQ2XzdlYWY4MWM4LTE5MTgtNGRmZi1iZTU3LTc1NmRiYzdhZGJiYQ.png",
   },
   "sensible-haut": {
     label: "Sensible Haut",
@@ -186,7 +186,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_SENSIBLE_HAUT,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/Eo590hOWL9Z7MS7uVvtB5l_1781604402346_ZNJoyD0p4Lk8VYTzaunEi9_na1fn_cGFzdGVkX2ZpbGVfQ3Z2cVZJX0NvbXBvbmVudDEzNw.webp",
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-TKcnxA83xFwzrkpcxT5sTo_na1fn_aGZfMjAyNjA2MTdfMDYzNTQ3XzkxNGM2MWRkLWFmMDgtNGRkYy1iMWI1LWEwZDk3OWY1MmI2ZA.png",
   },
 };
 
