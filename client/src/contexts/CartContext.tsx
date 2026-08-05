@@ -123,8 +123,8 @@ export function inferCartAttributes(item: LegacyCartItem): CartAttribute[] {
 
   if (description) {
     // Extract ingredients from description
-    // Handles formats like: "Konfiguration: Mit Vitamin C-Komplex, Spilantholkomplex, Hyaluronkomplex"
-    const ingredients = description.replace(/^(?:Wirkstoffe:|Konfiguration:\s*Mit\s*|Konfiguration:)\s*/i, '').trim();
+    // Handles formats like: "Mit Vitamin C-Komplex, Spilantholkomplex, Hyaluronkomplex" or "Konfiguration: Mit ..."
+    const ingredients = description.replace(/^(?:Wirkstoffe:|Konfiguration:\s*Mit\s*|Konfiguration:|Mit\s*)\s*/i, '').trim();
 
     attributes.push({
       key: "Wirkstoffe",
