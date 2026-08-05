@@ -76,7 +76,7 @@ function Router() {
 
       <Route path={"/products"} component={RoutineOverview} />
       <Route path={"/routines"} component={RoutineOverview} />
-      <Route path={"/routines/:type"} component={RoutineTemplate} />
+      <Route path={"/routine/:type"} component={RoutineTemplate} />
       <Route path={"/hauttest"} component={SkinTest} />
       <Route path={"/skin-test"} component={SkinTest} />
       <Route path={"/gutschein"} component={Gutschein} />

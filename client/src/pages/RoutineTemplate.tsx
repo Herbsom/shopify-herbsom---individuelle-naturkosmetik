@@ -37,6 +37,7 @@ interface RoutineConfig {
   applicationSteps: Array<{ step: string; title: string; desc: string }>;
   totalPrice: number;
   recommendation: RoutineRecommendation;
+  image: string;
 }
 
 const ROUTINES: Record<string, RoutineConfig> = {
@@ -59,6 +60,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_REIFE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-Qz4PkhovkOej0ziYH4xRds_na1fn_cGFzdGVkX2ZpbGVfZmxUWWs4X0NvbXBvbmVudDE0OQ.webp",
   },
   "trockene-haut": {
     label: "Trockene Haut",
@@ -79,6 +81,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_TROCKENE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-oRAizy3S2gCuveGuGquMcl_na1fn_cGFzdGVkX2ZpbGVfSWlMMXdmX0NvbXBvbmVudDE0MA.webp",
   },
   "unreine-haut": {
     label: "Unreine Haut",
@@ -99,6 +102,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_UNREINE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-jjU9lALoOqCphqxfdJcsMl_na1fn_cGFzdGVkX2ZpbGVfNHFRcXRCX0NvbXBvbmVudDEzOA.webp",
   },
   "mischhaut": {
     label: "Mischhaut",
@@ -119,6 +123,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_MISCHHAUT,
+    image: "https://private-us-east-1.manuscdn.com/users/310519663746048126/uploads/temp-25izA0feAfkQ0o2ov9DepK_na1fn_cGFzdGVkX2ZpbGVfaDZad3k1X0NvbXBvbmVudDEzOQ.webp",
   },
   "empfindliche-haut": {
     label: "Empfindliche Haut",
@@ -139,6 +144,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_EMPFINDLICHE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/GeVO2ZWsKxqAj119SQ0U3o_1781604408046_ogw3BMwVx4kgguto6Lqmx8_na1fn_cGFzdGVkX2ZpbGVfTnlmeHFMX0NvbXBvbmVudDEzNQ.webp",
   },
   "normale-haut": {
     label: "Normale Haut",
@@ -159,6 +165,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_NORMALE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/4kfsUdOCmIcleyeXKRrQP8_1781604396355_5GhMxUE9XpO6VpMTidLrHQ_na1fn_cGFzdGVkX2ZpbGVfY2VDa1hmX0NvbXBvbmVudDEzNA.webp",
   },
   "sensible-haut": {
     label: "Sensible Haut",
@@ -179,6 +186,7 @@ const ROUTINES: Record<string, RoutineConfig> = {
     ],
     totalPrice: 210,
     recommendation: ROUTINE_SENSIBLE_HAUT,
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/YSAhJ3awNcnCc3DDT8f5Ku/sandbox/Eo590hOWL9Z7MS7uVvtB5l_1781604402346_ZNJoyD0p4Lk8VYTzaunEi9_na1fn_cGFzdGVkX2ZpbGVfQ3Z2cVZJX0NvbXBvbmVudDEzNw.webp",
   },
 };
 
@@ -450,13 +458,15 @@ export default function RoutineTemplate() {
               </div>
               
               {/* Application image on right for desktop */}
-              <div className="hidden lg:flex items-center justify-center">
-                <img
-                  src="/manus-storage/editorial-home-skincare_7e8e0204.jpg"
-                  alt="Hautpflege-Anwendung"
-                  className="w-full h-auto object-cover rounded-lg shadow-lg"
-                />
-              </div>
+              {config.image && (
+                <div className="hidden lg:flex items-center justify-center">
+                  <img
+                    src={config.image}
+                    alt="Hautpflege-Anwendung"
+                    className="w-full h-auto object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>

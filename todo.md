@@ -409,3 +409,11 @@
 - [x] EANs für individuelle Wirkstoffe in Creme und Serum als versteckte Attribute in Shopify-Bestellungen hinterlegen.
 - [x] Hardcodierte Preisanzeige €210 in SkinTest.tsx durch dynamische Berechnung ersetzt
 - [x] Alte Routine-Dateien-Verzeichnis aus Tests entfernt (routines-Verzeichnis existiert nicht mehr)
+
+
+## Bilder für Routine-Seiten - NEU
+
+- [x] Bilder aus dem referenzierten Projekt (YSAhJ3awNcnCc3DDT8f5Ku) extrahieren
+- [x] Bilder für jeden Hauttyp hochladen (manus-upload-file --webdev)
+- [x] RoutineTemplate.tsx aktualisieren, um unterschiedliche Bilder pro Hauttyp anzuzeigen
+- [x] Bilder testen und verifizieren, dass sie auf allen Routine-Seiten korrekt laden
