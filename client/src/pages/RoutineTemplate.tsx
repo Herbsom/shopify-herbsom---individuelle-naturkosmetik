@@ -217,11 +217,11 @@ export default function RoutineTemplate() {
 
   const rec = config.recommendation;
   const products = [
-    { ...rec.cleanser, label: "01" },
-    { ...rec.peeling, label: "02" },
-    { ...rec.serum, label: "03" },
-    { ...rec.creme, label: "04" },
-    { ...rec.sunscreen, label: "05" },
+    { ...rec.cleanser, label: "01", image: rec.cleanser.image },
+    { ...rec.peeling, label: "02", image: rec.peeling.image },
+    { ...rec.serum, label: "03", image: rec.serum.image },
+    { ...rec.creme, label: "04", image: rec.creme.image },
+    { ...rec.sunscreen, label: "05", image: rec.sunscreen.image },
   ];
   const [selectedProduct, setSelectedProduct] = useState<ProductDetail | null>(null);
 
