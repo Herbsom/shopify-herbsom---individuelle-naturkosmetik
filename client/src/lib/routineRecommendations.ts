@@ -107,7 +107,7 @@ export const ROUTINE_REIFE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };
@@ -151,7 +151,7 @@ export const ROUTINE_TROCKENE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };
@@ -371,7 +371,7 @@ export const ROUTINE_NORMALE_HAUT: RoutineRecommendation = {
     description: "Leichtes Sonnenschutzfluid mit Schutz vor UVA, UVB und Blaulicht.",
     price: 35,
     href: "/product/sunscreen",
-    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png",
+    image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
     benefits: ["Breitspektrum-Schutz SPF 50+", "Schützt vor vorzeitiger Hautalterung", "Leichte, nicht-fettende Textur"],
   },
 };
