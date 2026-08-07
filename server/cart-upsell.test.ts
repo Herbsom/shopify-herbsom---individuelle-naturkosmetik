@@ -25,6 +25,7 @@ describe("cart shipping progress and suggestions", () => {
 
     expect(suggestions).toContain('name: "50 ml Reinigungsgel"');
     expect(suggestions).toContain('handle: "mini-reiniger"');
+    expect(suggestions).toContain('image: "/manus-storage/50ml-reinigungsgel-warenkorb_0faad0fb.jpeg"');
     expect(suggestions).toContain('name: "Gua Sha Jade"');
     expect(suggestions).toContain('handle: "gua-sha-jade-stein"');
     expect(cartContext).toContain('return "gua-sha-jade-stein"');

@@ -8,7 +8,7 @@ const CART_SUGGESTIONS = [
     name: "50 ml Reinigungsgel",
     handle: "mini-reiniger",
     href: "/product/cleaner",
-    image: "https://cdn.shopify.com/s/files/1/0517/5702/3400/files/Reinigungsgel_Licht_1.png?v=1714644028",
+    image: "/manus-storage/50ml-reinigungsgel-warenkorb_0faad0fb.jpeg",
   },
   {
     name: "Reinigungsgel",

@@ -444,3 +444,8 @@
 - [x] 50-ml-Reiniger mit dem vorhandenen Shopify-Produkt als direkt kaufbare Warenkorb-Empfehlung ergänzen
 - [x] Gua-Sha-Jadestein mit dem neu angelegten Shopify-Produkt, korrektem Referenzpreis und der Bezeichnung „Gua Sha Jade“ als Warenkorb-Empfehlung ergänzen
 - [x] Preise, Verfügbarkeit und direkte Warenkorb-Aktionen der neuen Empfehlungen testen
+
+## Produktbild 50-ml-Reinigungsgel im Warenkorb – 2026-08-07
+
+- [x] Bereitgestelltes quadratisches Produktfoto als Bild der 50-ml-Reiniger-Empfehlung im Warenkorb verwenden
+- [x] Darstellung und Kaufpfad nach der Bildaktualisierung testen
