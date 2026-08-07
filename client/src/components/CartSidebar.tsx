@@ -32,6 +32,9 @@ function getProductImage(productHandle: string): string | null {
   if (productHandle === "sonnenschutzfluid-spf-50" || productHandle === "sunscreen") {
     return "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png";
   }
+  if (productHandle === "gua-sha-jade-stein") {
+    return "https://cdn.shopify.com/s/files/1/0517/5702/3400/files/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_1.png?v=1786100350";
+  }
   
   return null;
 }

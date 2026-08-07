@@ -93,6 +93,9 @@ export function inferShopifyHandle(item: LegacyCartItem): string {
   if (value.includes("sonnen") || value.includes("sunscreen") || value.includes("spf50")) {
     return "sonnenschutzfluid-spf-50";
   }
+  if (value.includes("gua sha") || value.includes("guasha") || value.includes("jade stein")) {
+    return "gua-sha-jade-stein";
+  }
   if (value.includes("gutschein") || value.includes("gift")) {
     return "unser-gutschein-1";
   }

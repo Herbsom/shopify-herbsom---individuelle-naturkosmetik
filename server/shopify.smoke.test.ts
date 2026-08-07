@@ -56,6 +56,21 @@ describe.skipIf(!configured)("shopify smoke (live)", () => {
       ).toBeTruthy();
     }
   );
+
+  it(
+    "exposes the Gua Sha Jade Stein as a purchasable storefront product",
+    { timeout: 30_000 },
+    async () => {
+      const products = await listProducts({ first: 100 });
+      const guaSha = products.find(product => product.handle === "gua-sha-jade-stein");
+
+      expect(guaSha, "Gua Sha Jade Stein is missing from the Storefront sales channel").toBeTruthy();
+      expect(guaSha?.title).toBe("Gua Sha Jade Stein");
+      expect(Number.parseFloat(guaSha?.priceRange.min.amount ?? "NaN")).toBe(14);
+      expect(guaSha?.images[0]?.url).toBeTruthy();
+      expect(guaSha?.variants.some(variant => variant.availableForSale)).toBe(true);
+    }
+  );
 });
 
 // Visible reminder when the suite is skipped — keeps it from looking like a

@@ -438,3 +438,9 @@
 - [x] Dynamischen Fortschrittsbalken für kostenlosen Versand ab 60 € im Warenkorb ergänzen
 - [x] Passende Produktvorschläge wie auf der Referenzseite im Warenkorb anzeigen und direkt hinzufügbar machen
 - [x] Versand-Schwellenwert, Warenkorb-Interaktion und mobile Darstellung testen
+
+## Zusätzliche Warenkorb-Empfehlungen – 2026-08-07
+
+- [x] 50-ml-Reiniger mit dem vorhandenen Shopify-Produkt als direkt kaufbare Warenkorb-Empfehlung ergänzen
+- [x] Gua-Sha-Jadestein mit dem neu angelegten Shopify-Produkt, korrektem Referenzpreis und der Bezeichnung „Gua Sha Jade“ als Warenkorb-Empfehlung ergänzen
+- [x] Preise, Verfügbarkeit und direkte Warenkorb-Aktionen der neuen Empfehlungen testen

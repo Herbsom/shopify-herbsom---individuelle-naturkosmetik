@@ -18,4 +18,15 @@ describe("cart shipping progress and suggestions", () => {
     expect(source).toContain("<ShopifyPurchaseButton");
     expect(source).toContain("item={{ id: product.handle, name: product.name, quantity: 1 }}");
   });
+
+  it("adds the 50-ml cleanser and Gua Sha Jade with their dedicated Shopify handles", () => {
+    const suggestions = read("client/src/components/CartProductSuggestions.tsx");
+    const cartContext = read("client/src/contexts/CartContext.tsx");
+
+    expect(suggestions).toContain('name: "50 ml Reinigungsgel"');
+    expect(suggestions).toContain('handle: "mini-reiniger"');
+    expect(suggestions).toContain('name: "Gua Sha Jade"');
+    expect(suggestions).toContain('handle: "gua-sha-jade-stein"');
+    expect(cartContext).toContain('return "gua-sha-jade-stein"');
+  });
 });
