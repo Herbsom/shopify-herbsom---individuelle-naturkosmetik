@@ -322,7 +322,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksames Peeling mit Salicylsäure und Azelainsäure. Befreit verstopfte Poren, reduziert Unreinheiten und reguliert die Talgproduktion.",
         price: 38,
         href: "/product/peeling",
-        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
+        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792.png",
       }
     : {
         id: "aha-pha-peeling",
