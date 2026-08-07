@@ -422,3 +422,8 @@
 - [x] Bilder für jeden Hauttyp hochladen (manus-upload-file --webdev)
 - [x] RoutineTemplate.tsx aktualisieren, um unterschiedliche Bilder pro Hauttyp anzuzeigen
 - [x] Bilder testen und verifizieren, dass sie auf allen Routine-Seiten korrekt laden
+
+## Vollständiger Import echter Kundenbewertungen – 2026-08-07
+
+- [x] Alle Bewertungen aus der bereitgestellten Judge.me-CSV in die Produktbewertungsdatenbank importieren
+- [x] Importmenge, Produktzuordnung und Sichtbarkeit auf den jeweiligen Produktseiten verifizieren
