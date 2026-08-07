@@ -28,8 +28,8 @@ function getProductImage(productHandle: string): string | null {
   if (productHandle === "aha-pha-peeling") {
     return ROUTINE_REIFE_HAUT.peeling.image || null;
   }
-  if (productHandle === "sonnenschutzfluid-spf-50") {
-    return ROUTINE_UNREINE_HAUT.sunscreen.image || null;
+  if (productHandle === "sonnenschutzfluid-spf-50" || productHandle === "sunscreen") {
+    return "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214129_1222f463-787a-4d2f-b0ae-e43ad47d1b11_ff3763c6.png";
   }
   
   return null;
