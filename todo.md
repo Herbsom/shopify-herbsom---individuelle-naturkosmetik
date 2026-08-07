@@ -427,3 +427,8 @@
 
 - [x] Alle Bewertungen aus der bereitgestellten Judge.me-CSV in die Produktbewertungsdatenbank importieren
 - [x] Importmenge, Produktzuordnung und Sichtbarkeit auf den jeweiligen Produktseiten verifizieren
+
+## Direkte Warenkorb-Aktionen in Produkt-Empfehlungen – 2026-08-07
+
+- [x] Empfohlene Produkte auf Reiniger-, Peeling- und Sonnenschutz-Seiten direkt zum Shopify-Warenkorb hinzufügen können
+- [x] Warenkorb-Aktion und responsive Darstellung auf allen betroffenen Seiten testen

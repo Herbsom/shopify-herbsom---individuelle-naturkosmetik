@@ -367,26 +367,35 @@ export default function ProductCleanerMilk() {
             </h2>
             <div className="grid grid-cols-2 gap-6">
               {relatedProducts.map((prod, i) => (
-                <Link key={i} href={prod.href}>
-                  <div className="group cursor-pointer">
-                    <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      {prod.image ? (
-                        <img src={prod.image} alt={prod.name} className="h-full w-full object-cover" />
-                      ) : (
-                        <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
-                      )}
+                <div key={i} className="flex flex-col gap-3">
+                  <Link href={prod.href}>
+                    <div className="group cursor-pointer">
+                      <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                        {prod.image ? (
+                          <img src={prod.image} alt={prod.name} className="h-full w-full object-cover" />
+                        ) : (
+                          <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
+                        )}
+                      </div>
+                      <h3
+                        className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2"
+                      >
+                        {prod.name}
+                      </h3>
+                      <div className="flex items-center gap-1 text-[#5B5B38] font-body text-xs tracking-[0.12em] uppercase mt-2 group-hover:gap-2 transition-all">
+                        Ansehen
+                        <ChevronRight size={12} />
+                      </div>
                     </div>
-                    <h3
-                      className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2"
-                    >
-                      {prod.name}
-                    </h3>
-                    <div className="flex items-center gap-1 text-[#5B5B38] font-body text-xs tracking-[0.12em] uppercase mt-2 group-hover:gap-2 transition-all">
-                      Ansehen
-                      <ChevronRight size={12} />
-                    </div>
-                  </div>
-                </Link>
+                  </Link>
+                  <ShopifyPurchaseButton
+                    item={{ id: prod.handle, name: prod.name, quantity: 1 }}
+                    wrapperClassName="w-full"
+                    className="w-full border border-[#5B5B38] text-[#5B5B38] font-body text-[10px] tracking-[0.12em] uppercase px-3 py-2.5 hover:bg-[#5B5B38] hover:text-[#F8F5F0] transition-all duration-200 active:scale-[0.98]"
+                  >
+                    In den Warenkorb
+                  </ShopifyPurchaseButton>
+                </div>
               ))}
             </div>
           </div>

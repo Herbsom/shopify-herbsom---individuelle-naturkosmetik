@@ -159,6 +159,19 @@ describe("Shopify purchase-button UI guards", () => {
     expect(source).toContain("onPurchase={handleAddSunscreen}");
     expect(source).toContain("onPurchase={handleAddAll}");
   });
+
+  it.each([
+    "ProductCleaner.tsx",
+    "ProductCleanerMilk.tsx",
+    "ProductPeeling.tsx",
+    "ProductPeelingAHA.tsx",
+    "ProductSunscreen.tsx",
+  ])("%s provides Shopify-guarded add-to-cart actions for recommended products", (name) => {
+    const source = read(`client/src/pages/${name}`);
+    expect(source).toContain("Diese Produkte passen dazu");
+    expect(source).toMatch(/item=\{\{ id: (?:product|prod)\.handle, name: (?:product|prod)\.name, quantity: 1 \}\}/);
+    expect(source).toContain("In den Warenkorb");
+  });
 });
 
 describe("strict Shopify purchase blocking", () => {

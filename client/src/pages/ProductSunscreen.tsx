@@ -400,8 +400,8 @@ export default function ProductSunscreen() {
             </h2>
             <div className="grid grid-cols-2 gap-6">
               {relatedProducts.map((prod, i) => (
-                <a key={i} href={prod.href}>
-                  <div className="group cursor-pointer">
+                <div key={i} className="flex flex-col gap-3">
+                  <a href={prod.href} className="group cursor-pointer">
                     <div className="bg-white rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
                       {prod.image ? (
                         <img src={prod.image} alt={prod.name} className="h-full w-full object-cover" />
@@ -418,8 +418,15 @@ export default function ProductSunscreen() {
                       Ansehen
                       <ChevronRight size={12} />
                     </div>
-                  </div>
-                </a>
+                  </a>
+                  <ShopifyPurchaseButton
+                    item={{ id: prod.handle, name: prod.name, quantity: 1 }}
+                    wrapperClassName="w-full"
+                    className="w-full border border-[#5B5B38] text-[#5B5B38] font-body text-[10px] tracking-[0.12em] uppercase px-3 py-2.5 hover:bg-[#5B5B38] hover:text-[#F8F5F0] transition-all duration-200 active:scale-[0.98]"
+                  >
+                    In den Warenkorb
+                  </ShopifyPurchaseButton>
+                </div>
               ))}
             </div>
           </div>
