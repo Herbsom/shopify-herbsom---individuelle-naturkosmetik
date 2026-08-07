@@ -1,17 +1,11 @@
-import { drizzle } from "drizzle-orm/mysql2";
-import fs from "fs";
-import { parse } from "csv-parse/sync";
-import { reviews } from "../drizzle/schema.ts";
+#!/usr/bin/env node
+import fs from 'fs';
+import { parse } from 'csv-parse/sync';
+import { getDb } from '../server/db.ts';
+import { reviews, users } from '../drizzle/schema.ts';
+import { eq } from 'drizzle-orm';
 
-const dbUrl = process.env.DATABASE_URL;
 const csvFile = process.argv[2] || '/home/ubuntu/upload/herbsom-all-published-reviews-in-judgeme-format-2026-08-07-1786093184.csv';
-
-if (!dbUrl) {
-  console.error("DATABASE_URL not set");
-  process.exit(1);
-}
-
-const db = drizzle(dbUrl);
 
 // Mapping von product_handle zu product_id
 const PRODUCT_MAPPING = {
@@ -32,6 +26,12 @@ const PRODUCT_MAPPING = {
 
 async function importReviews() {
   try {
+    const db = await getDb();
+    if (!db) {
+      console.error('Database not available');
+      process.exit(1);
+    }
+
     console.log(`Reading CSV file: ${csvFile}`);
     
     // Lese CSV-Datei
@@ -45,13 +45,13 @@ async function importReviews() {
     
     // Hole System-Benutzer oder erstelle ihn
     let systemUser = await db.query.users.findFirst({
-      where: (users, { eq }) => eq(users.openId, 'system-reviews'),
+      where: eq(users.openId, 'system-reviews'),
     });
     
     if (!systemUser) {
       console.log('Creating system user for reviews...');
       // Erstelle System-Benutzer
-      const result = await db.insert(users).values({
+      await db.insert(users).values({
         openId: 'system-reviews',
         name: 'System Reviews',
         email: 'system@herbsom.de',
@@ -60,7 +60,7 @@ async function importReviews() {
         updatedAt: new Date(),
       });
       systemUser = await db.query.users.findFirst({
-        where: (users, { eq }) => eq(users.openId, 'system-reviews'),
+        where: eq(users.openId, 'system-reviews'),
       });
     }
     
