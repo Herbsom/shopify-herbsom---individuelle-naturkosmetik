@@ -66,7 +66,7 @@ const SERUM_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20
 const CLEANSER_GEL_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png";
 const CLEANSER_MILK_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png";
 const AHA_PHA_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png";
-const BHA_AZELAINSAEURE_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png";
+const BHA_AZELAINSAEURE_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105132_16844215-27d0-45b5-85fd-899e821985e0_ae142792.png";
 
 /**
  * Routine: Reife Haut
