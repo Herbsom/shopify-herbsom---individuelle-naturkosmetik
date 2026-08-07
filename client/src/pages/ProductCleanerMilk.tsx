@@ -20,6 +20,14 @@ export default function ProductCleanerMilk() {
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState("effects");
 
+  // Reinigungsmilch-Bilder von der Live-Website
+  const cleanerMilkImages = [
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/Reinigungsmilch_webp.webp",
+      altText: "Reinigungsmilch",
+    },
+  ];
+
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
     { id: "activeIngredients", label: "Wirkstoffe" },
@@ -28,8 +36,18 @@ export default function ProductCleanerMilk() {
     { id: "details", label: "Details" },
   ];
   const relatedProducts = [
-    { name: "AHA & PHA Peeling", href: "/product/peeling/aha", handle: "aha-pha-peeling" },
-    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", handle: "sonnenschutzfluid-spf-50" },
+    {
+      name: "AHA & PHA Peeling",
+      href: "/product/peeling/aha",
+      handle: "aha-pha-peeling",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
+    },
+    {
+      name: "Sonnenschutzfluid SPF 50+",
+      href: "/product/sunscreen",
+      handle: "sonnenschutzfluid-spf-50",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+    },
   ];
   return (
     <div className="min-h-screen bg-[#F8F5F0] flex flex-col">
@@ -54,6 +72,7 @@ export default function ProductCleanerMilk() {
               <ShopifyProductGallery
                 handle="reinigungs-milch"
                 alt="Reinigungsmilch"
+                referenceImages={cleanerMilkImages}
                 className="aspect-square rounded-sm bg-[#F0EBE3]"
               />
               {/* Product Info */}
@@ -351,7 +370,11 @@ export default function ProductCleanerMilk() {
                 <Link key={i} href={prod.href}>
                   <div className="group cursor-pointer">
                     <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
+                      {prod.image ? (
+                        <img src={prod.image} alt={prod.name} className="h-full w-full object-cover" />
+                      ) : (
+                        <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
+                      )}
                     </div>
                     <h3
                       className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2"
