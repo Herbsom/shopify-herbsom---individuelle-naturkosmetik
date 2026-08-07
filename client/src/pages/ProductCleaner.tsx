@@ -23,6 +23,14 @@ export default function ProductCleaner() {
   const [selectedSize, setSelectedSize] = useState("200ml");
   const [activeTab, setActiveTab] = useState("effects");
 
+  // Reiniger-Bilder von der Live-Website
+  const cleanerImages = [
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/Reinigungsgel_bcbacfba.webp",
+      altText: "Reinigungsgel",
+    },
+  ];
+
   const sizes = [
     { id: "200ml", label: "200ml", handle: "reinigungsgel" },
     { id: "50ml", label: "50ml", handle: "mini-reiniger" },
@@ -30,8 +38,18 @@ export default function ProductCleaner() {
 
   const selectedProduct = sizes.find((size) => size.id === selectedSize) ?? sizes[0];
   const relatedProducts = [
-    { name: "BHA & Azelainsäure Peeling", href: "/product/peeling", handle: "bha-azelainsaure-peeling" },
-    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", handle: "sonnenschutzfluid-spf-50" },
+    {
+      name: "BHA & Azelainsäure Peeling",
+      href: "/product/peeling",
+      handle: "bha-azelainsaure-peeling",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/bha_azelainsaeure_peeling_1x1_white_f4b48e3e.webp",
+    },
+    {
+      name: "Sonnenschutzfluid SPF 50+",
+      href: "/product/sunscreen",
+      handle: "sonnenschutzfluid-spf-50",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+    },
   ];
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
@@ -62,7 +80,8 @@ export default function ProductCleaner() {
               {/* Product Gallery */}
               <ShopifyProductGallery
                 handle={selectedProduct.handle}
-                alt={`Reinigungsgel ${selectedSize}`}
+                alt="Reinigungsgel"
+                referenceImages={cleanerImages}
                 className="aspect-square rounded-sm bg-[#F0EBE3]"
               />
               {/* Product Info */}
@@ -388,7 +407,11 @@ export default function ProductCleaner() {
                 <Link key={i} href={product.href}>
                   <div className="group cursor-pointer">
                     <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <ShopifyProductCardImage handle={product.handle} alt={product.name} />
+                      {product.image ? (
+                        <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
+                      ) : (
+                        <ShopifyProductCardImage handle={product.handle} alt={product.name} />
+                      )}
                     </div>
                     <h3 className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2">
                       {product.name}

@@ -19,9 +19,32 @@ export default function ProductPeeling() {
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState("effects");
+  
+  // BHA & Azelainsäure Peeling-Bilder von der Live-Website
+  const peelingImages = [
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/bha_azelainsaeure_peeling_efb61fca.webp",
+      altText: "BHA & Azelainsäure Peeling - Hauptbild",
+    },
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/bha_azelainsaeure_peeling_2_2dc2890a.webp",
+      altText: "BHA & Azelainsäure Peeling - Detailbild",
+    },
+  ];
+  
   const relatedProducts = [
-    { name: "Reinigungsgel", href: "/product/cleaner", handle: "reinigungsgel" },
-    { name: "Sonnenschutzfluid SPF 50+", href: "/product/sunscreen", handle: "sonnenschutzfluid-spf-50" },
+    {
+      name: "Reinigungsgel",
+      href: "/product/cleaner",
+      handle: "reinigungsgel",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/Reinigungsgel_8698b809.webp",
+    },
+    {
+      name: "Sonnenschutzfluid SPF 50+",
+      href: "/product/sunscreen",
+      handle: "sonnenschutzfluid-spf-50",
+      image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+    },
   ];
   const tabs = [
     { id: "effects", label: "Hauptwirkungen" },
@@ -53,6 +76,7 @@ export default function ProductPeeling() {
               <ShopifyProductGallery
                 handle="bha-azelainsaure-peeling"
                 alt="BHA & Azelainsäure Peeling"
+                referenceImages={peelingImages}
                 className="aspect-square rounded-sm bg-[#F0EBE3]"
               />
               {/* Product Info */}
@@ -359,7 +383,11 @@ export default function ProductPeeling() {
                 <Link key={i} href={prod.href}>
                   <div className="group cursor-pointer">
                     <div className="bg-[#F0EBE3] rounded-sm aspect-square flex items-center justify-center mb-3 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
+                      {prod.image ? (
+                        <img src={prod.image} alt={prod.name} className="h-full w-full object-cover" />
+                      ) : (
+                        <ShopifyProductCardImage handle={prod.handle} alt={prod.name} />
+                      )}
                     </div>
                     <h3
                       className="font-display text-sm text-[#1C1C1A] font-light group-hover:text-[#5B5B38] transition-colors line-clamp-2"
