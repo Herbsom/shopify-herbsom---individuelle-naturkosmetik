@@ -17,8 +17,8 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 
-// Map product IDs to their images from routine recommendations
-function getProductImage(productId: string): string | null {
+// Map product handles to their images from routine recommendations
+function getProductImage(productHandle: string): string | null {
   const routines = [
     ROUTINE_NORMALE_HAUT,
     ROUTINE_REIFE_HAUT,
@@ -29,13 +29,29 @@ function getProductImage(productId: string): string | null {
     ROUTINE_SENSIBLE_HAUT,
   ];
 
-  for (const routine of routines) {
-    if (routine.serum.id === productId) return routine.serum.image || null;
-    if (routine.creme.id === productId) return routine.creme.image || null;
-    if (routine.cleanser.id === productId) return routine.cleanser.image || null;
-    if (routine.peeling.id === productId) return routine.peeling.image || null;
-    if (routine.sunscreen.id === productId) return routine.sunscreen.image || null;
+  // Map Shopify handles to routine product images
+  if (productHandle === "individuelle-serum-creme") {
+    return ROUTINE_UNREINE_HAUT.serum.image || null;
   }
+  if (productHandle === "erstelle-deine-creme") {
+    return ROUTINE_UNREINE_HAUT.creme.image || null;
+  }
+  if (productHandle === "reinigungsgel") {
+    return ROUTINE_UNREINE_HAUT.cleanser.image || null;
+  }
+  if (productHandle === "reinigungs-milch") {
+    return ROUTINE_REIFE_HAUT.cleanser.image || null;
+  }
+  if (productHandle === "bha-azelainsaure-peeling") {
+    return ROUTINE_UNREINE_HAUT.peeling.image || null;
+  }
+  if (productHandle === "aha-pha-peeling") {
+    return ROUTINE_REIFE_HAUT.peeling.image || null;
+  }
+  if (productHandle === "sonnenschutzfluid-spf-50") {
+    return ROUTINE_UNREINE_HAUT.sunscreen.image || null;
+  }
+  
   return null;
 }
 
