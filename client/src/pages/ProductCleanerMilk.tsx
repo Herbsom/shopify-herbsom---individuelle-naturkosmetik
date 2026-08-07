@@ -23,7 +23,7 @@ export default function ProductCleanerMilk() {
   // Reinigungsmilch-Bilder von der Live-Website
   const cleanerMilkImages = [
     {
-      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/Reinigungsmilch_webp.webp",
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/Reinigungsmilch_9b8c254d.webp",
       altText: "Reinigungsmilch",
     },
   ];
