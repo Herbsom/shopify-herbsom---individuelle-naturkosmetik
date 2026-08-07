@@ -49,6 +49,14 @@ describe("Referenzbilder für individuelle Serum- und Creme-Produkte", () => {
     expect(source.match(/url: CREME_REFERENCE_IMAGES\./g)).toHaveLength(14);
   });
 
+  it("übernimmt für Spilanthol im Serum das kuratierte Referenzmotiv", () => {
+    const source = readClientSource("lib/productReferenceImages.ts");
+
+    expect(source).toContain(
+      'spilanthol: "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp"'
+    );
+  });
+
   it("bindet die vollständigen Referenzbildreihen in beide Produktgalerien ein", () => {
     const serumSource = readClientSource("pages/ProductSerum.tsx");
     const cremeSource = readClientSource("pages/ProductCreme.tsx");

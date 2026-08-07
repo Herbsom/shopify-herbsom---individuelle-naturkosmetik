@@ -14,7 +14,8 @@ export const SERUM_REFERENCE_IMAGES = {
   niacinamide: "/manus-storage/011-Niacinamide10ml_33886026-6ab6b8a9_4438b599.webp",
   vitaminc: "/manus-storage/023-VitaminCKomplex10ml_0c8eb29b-45103e9a_951b68bf.webp",
   retinol: "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
-  spilanthol: "/manus-storage/022-Spilantholkomplex2ml_2a92a4a7-7ee9370b_bebafc42.webp",
+  // Das Serum-Referenzprojekt verwendet dieses kuratierte Motiv für Spilanthol.
+  spilanthol: "/manus-storage/018-Retinolkomplex10ml_f568e46a-6c0d91b1_f65b4dca.webp",
   mallow: "/manus-storage/009-Malvenextrakt10ml_58cfd435-2c10d31f_642ebdf1.webp",
   horsechestnut: "/manus-storage/020-Rosskastanienexktrakt10ml_40fc0471-b4ba701e_b27b2416.webp",
   algae: "/manus-storage/002-Algenextrakt10ml_004e3f2d-710e9e81_1667a394.webp",

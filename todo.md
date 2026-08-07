@@ -460,3 +460,8 @@
 
 - [x] Fehlerhaften „Mehr erfahren“-Link des AHA-&-PHA-Peelings im Warenkorb auf die gültige Detailseite korrigieren
 - [x] Weiterleitung und Warenkorb-Empfehlung nach der Korrektur testen
+
+## Spilantholkomplex im individuellen Serum – 2026-08-07
+
+- [x] Korrektes Spilantholkomplex-Bild von der Serum-Referenzseite übernehmen
+- [x] Bilddarstellung im individuellen Serum-Konfigurator testen
