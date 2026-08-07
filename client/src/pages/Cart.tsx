@@ -42,6 +42,9 @@ function getProductImage(productHandle: string): string | null {
   if (productHandle === "reinigungs-milch") {
     return ROUTINE_REIFE_HAUT.cleanser.image || null;
   }
+  if (productHandle === "mini-reiniger") {
+    return ROUTINE_UNREINE_HAUT.cleanser.image || null;
+  }
   if (productHandle === "bha-azelainsaure-peeling") {
     return ROUTINE_UNREINE_HAUT.peeling.image || null;
   }
