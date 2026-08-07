@@ -115,7 +115,7 @@ export default function Cart() {
                         <img
                           src={routineImage || item.image?.url}
                           alt={item.image?.altText ?? item.productTitle}
-                          className="h-28 w-28 flex-none bg-[#F0EBE3] object-contain sm:h-32 sm:w-32"
+                          className="h-28 w-28 flex-none bg-[#F0EBE3] object-cover sm:h-32 sm:w-32"
                         />
                       )}
 
