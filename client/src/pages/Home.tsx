@@ -188,10 +188,14 @@ export default function Home() {
                 className={`bg-[#F8F5F0] p-8 md:p-12 group cursor-pointer hover:bg-[#F0EBE3] transition-colors duration-500 reveal reveal-delay-${i + 1} block flex flex-col`}
               >
                 {product.image && (
-                  <div
-                    className="w-full h-64 md:h-72 bg-cover bg-center mb-8 rounded-sm"
-                    style={{ backgroundImage: `url(${product.image})` }}
-                  />
+                  <div className="mb-8 aspect-square w-full overflow-hidden rounded-sm bg-[#F0EBE3] md:aspect-auto md:h-72">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-full w-full object-contain md:object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                 )}
                 <div className="flex items-start justify-between mb-8">
               <span className="font-display text-5xl text-[#E5E0D8] font-light">

@@ -465,3 +465,8 @@
 
 - [x] Korrektes Spilantholkomplex-Bild von der Serum-Referenzseite übernehmen
 - [x] Bilddarstellung im individuellen Serum-Konfigurator testen
+
+## Mobile Produktübersicht auf der Startseite – 2026-08-07
+
+- [x] Produktbilder in der Startseiten-Produktübersicht auf kleinen Bildschirmen quadratisch und vollständig darstellen
+- [x] Mobile und Desktop-Darstellung der Produktübersicht testen
