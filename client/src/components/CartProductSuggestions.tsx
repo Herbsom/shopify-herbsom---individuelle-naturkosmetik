@@ -19,7 +19,7 @@ const CART_SUGGESTIONS = [
   {
     name: "AHA & PHA Peeling",
     handle: "aha-pha-peeling",
-    href: "/product/peeling/aha",
+    href: "/product/peeling-aha",
     image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/aha_pha_peeling_1x1_white_aad680df.webp",
   },
   {

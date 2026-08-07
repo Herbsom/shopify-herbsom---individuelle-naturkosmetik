@@ -455,3 +455,8 @@
 - [x] „Mehr erfahren“-Links für alle Warenkorb-Empfehlungen ergänzen
 - [x] Detailseite für Gua Sha Jade ergänzen und aus der Warenkorb-Empfehlung verlinken
 - [x] Navigation zu Detailseiten und direkte Warenkorb-Aktion testen
+
+## AHA-Peeling-Detailseiten-Link – 2026-08-07
+
+- [x] Fehlerhaften „Mehr erfahren“-Link des AHA-&-PHA-Peelings im Warenkorb auf die gültige Detailseite korrigieren
+- [x] Weiterleitung und Warenkorb-Empfehlung nach der Korrektur testen

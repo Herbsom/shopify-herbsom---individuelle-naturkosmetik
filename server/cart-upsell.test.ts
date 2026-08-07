@@ -36,6 +36,7 @@ describe("cart shipping progress and suggestions", () => {
     const app = read("client/src/App.tsx");
 
     expect(suggestions).toContain("Mehr erfahren");
+    expect(suggestions).toContain('href: "/product/peeling-aha"');
     expect(suggestions).toContain('href: "/product/gua-sha-jade"');
     expect(app).toContain('<Route path={"/product/gua-sha-jade"} component={ProductGuaSha} />');
   });
