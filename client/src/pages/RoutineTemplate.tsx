@@ -43,9 +43,9 @@ interface RoutineConfig {
 const ROUTINES: Record<string, RoutineConfig> = {
   "reife-haut": {
     label: "Reife Haut",
-    title: "Youthful Radiance",
+    title: "routines.reife_haut_title",
     subtitle: "Routine für Reife Haut",
-    description: "Eine Routine speziell für reife Haut – gegen Falten, feine Linien und Hautalterung",
+    description: "routines.reife_haut_desc",
     benefitItems: [
       { icon: "✓", title: "Intensive Anti-Aging Pflege", text: "mit hochkonzentrierten Wirkstoffen" },
       { icon: "✓", title: "Stärkt die Hautbarriere", text: "und erhöht die Elastizität" },
@@ -303,10 +303,10 @@ export default function RoutineTemplate() {
               Routine für {config.label}
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-light mb-6 leading-tight text-[#1C1C1A]">
-              {config.title}
+              {t(config.title)}
             </h1>
             <p className="font-body text-base md:text-lg leading-relaxed text-[#4A4A48]">
-              {config.description}
+              {t(config.description)}
             </p>
           </div>
         </section>

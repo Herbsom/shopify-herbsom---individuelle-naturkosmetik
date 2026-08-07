@@ -216,5 +216,21 @@
     "normal_skin": "Normale Haut",
     "sensible_skin": "Sensible Haut",
     "oily_skin_alt": "Fettige Haut"
+  },
+  "routines": {
+    "reife_haut_title": "Strahlende Jugendlichkeit",
+    "reife_haut_desc": "Eine Routine speziell für reife Haut – gegen Falten, feine Linien und Hautalterung",
+    "trockene_haut_title": "Intensive Feuchtigkeitspflege",
+    "trockene_haut_desc": "Eine Routine speziell für trockene Haut – mit intensiver Feuchtigkeitszufuhr und Nährstoffen",
+    "unreine_haut_title": "Klare Haut",
+    "unreine_haut_desc": "Eine Routine speziell für unreine Haut – mit Talgregulation und Porenverfeinerung",
+    "mischhaut_title": "Ausgewogene Balance",
+    "mischhaut_desc": "Eine Routine speziell für Mischhaut – mit ausgewogener Pflege für alle Hautbereiche",
+    "empfindliche_haut_title": "Beruhigende Intensivpflege",
+    "empfindliche_haut_desc": "Eine Routine speziell für empfindliche Haut – mit sanften Wirkstoffen und Beruhigung",
+    "normale_haut_title": "Strahlende Ausstrahlung",
+    "normale_haut_desc": "Eine Routine speziell für normale Haut – mit optimaler Pflege und Schutz",
+    "sensible_haut_title": "Intensive Beruhigung",
+    "sensible_haut_desc": "Eine Routine speziell für sensible Haut – mit hochkonzentrierten Wirkstoffen und Regeneration"
   }
 }
