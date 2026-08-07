@@ -4,25 +4,34 @@ import { useCart } from "@/contexts/CartContext";
 import { formatMoney } from "@/lib/format";
 import { ROUTINE_NORMALE_HAUT, ROUTINE_REIFE_HAUT, ROUTINE_TROCKENE_HAUT, ROUTINE_UNREINE_HAUT, ROUTINE_MISCHHAUT, ROUTINE_EMPFINDLICHE_HAUT, ROUTINE_SENSIBLE_HAUT } from "@/lib/routineRecommendations";
 
-// Map product IDs to their images from routine recommendations
+// Map product handles to their images from routine recommendations
 function getProductImage(productHandle: string): string | null {
-  const routines = [
-    ROUTINE_NORMALE_HAUT,
-    ROUTINE_REIFE_HAUT,
-    ROUTINE_TROCKENE_HAUT,
-    ROUTINE_UNREINE_HAUT,
-    ROUTINE_MISCHHAUT,
-    ROUTINE_EMPFINDLICHE_HAUT,
-    ROUTINE_SENSIBLE_HAUT,
-  ];
-
-  for (const routine of routines) {
-    if (routine.serum.id === productHandle) return routine.serum.image || null;
-    if (routine.creme.id === productHandle) return routine.creme.image || null;
-    if (routine.cleanser.id === productHandle) return routine.cleanser.image || null;
-    if (routine.peeling.id === productHandle) return routine.peeling.image || null;
-    if (routine.sunscreen.id === productHandle) return routine.sunscreen.image || null;
+  // Map Shopify handles to routine product images
+  if (productHandle === "individuelle-serum-creme") {
+    return ROUTINE_UNREINE_HAUT.serum.image || null;
   }
+  if (productHandle === "erstelle-deine-creme") {
+    return ROUTINE_UNREINE_HAUT.creme.image || null;
+  }
+  if (productHandle === "reinigungsgel") {
+    return ROUTINE_UNREINE_HAUT.cleanser.image || null;
+  }
+  if (productHandle === "reinigungs-milch") {
+    return ROUTINE_REIFE_HAUT.cleanser.image || null;
+  }
+  if (productHandle === "mini-reiniger") {
+    return ROUTINE_UNREINE_HAUT.cleanser.image || null;
+  }
+  if (productHandle === "bha-azelainsaure-peeling") {
+    return ROUTINE_UNREINE_HAUT.peeling.image || null;
+  }
+  if (productHandle === "aha-pha-peeling") {
+    return ROUTINE_REIFE_HAUT.peeling.image || null;
+  }
+  if (productHandle === "sonnenschutzfluid-spf-50") {
+    return ROUTINE_UNREINE_HAUT.sunscreen.image || null;
+  }
+  
   return null;
 }
 
