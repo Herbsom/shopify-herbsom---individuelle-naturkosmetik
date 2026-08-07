@@ -63,10 +63,10 @@ function buildCremeProduct(base: "light" | "rich", ingredientIds: string[]): Rou
 // URLs von der Live-Website herbsomweb-rcxwgckf.manus.space
 const CREME_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_073341_a333548e-590d-40be-85dc-8fab622efb62(1)_b174e817.png";
 const SERUM_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_081131_6c43fbf2-5ff1-4e70-b1e5-84a04df359ae_99d10a88.png";
-const CLEANSER_GEL_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png";
+const CLEANSER_GEL_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png";
 const CLEANSER_MILK_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png";
 const AHA_PHA_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png";
-const BHA_AZELAINSAEURE_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png";
+const BHA_AZELAINSAEURE_PEELING_IMAGE = "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png";
 
 /**
  * Routine: Reife Haut

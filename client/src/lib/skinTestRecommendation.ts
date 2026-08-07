@@ -291,7 +291,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksame Reinigung für ölige und unreine Haut. Entfernt überschüssigen Talg und befreit verstopfte Poren.",
         price: 32,
         href: "/product/cleaner",
-        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_063746_7eaf81c8-1918-4dff-be57-756dbc7adbba_6eb8b6c2.png",
+        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
       }
     : {
         id: "reinigungsmilch",
@@ -322,7 +322,7 @@ export function calculateRecommendation(answers: QuizAnswer[]): SkinTestResult {
         description: "Tiefenwirksames Peeling mit Salicylsäure und Azelainsäure. Befreit verstopfte Poren, reduziert Unreinheiten und reguliert die Talgproduktion.",
         price: 38,
         href: "/product/peeling",
-        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_105521_c19e75f1-0c78-4e7e-8ca5-860acabba4a8_8179ae66.png",
+        image: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260617_104735_96a13487-7cb4-4b74-bc9b-96bec06d8299_99af9690.png",
       }
     : {
         id: "aha-pha-peeling",
