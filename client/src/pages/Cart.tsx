@@ -2,6 +2,8 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import { useCart } from "@/contexts/CartContext";
 import { formatMoney } from "@/lib/format";
+import FreeShippingProgress from "@/components/FreeShippingProgress";
+import CartProductSuggestions from "@/components/CartProductSuggestions";
 import type { CartItem } from "@shared/commerce/types";
 import { ROUTINE_NORMALE_HAUT, ROUTINE_REIFE_HAUT, ROUTINE_TROCKENE_HAUT, ROUTINE_UNREINE_HAUT, ROUTINE_MISCHHAUT, ROUTINE_EMPFINDLICHE_HAUT, ROUTINE_SENSIBLE_HAUT } from "@/lib/routineRecommendations";
 import {
@@ -237,6 +239,8 @@ export default function Cart() {
                     Warenkorb leeren
                   </button>
                 </div>
+
+                <CartProductSuggestions />
               </div>
 
               <aside className="lg:col-span-1">
@@ -244,6 +248,8 @@ export default function Cart() {
                   <h2 className="mb-6 font-display text-xl font-light text-[#1C1C1A]">
                     Zusammenfassung
                   </h2>
+
+                  <FreeShippingProgress subtotal={cart?.subtotal ?? 0} />
 
                   <div className="mb-6 space-y-3">
                     <div className="flex justify-between font-body text-sm text-[#6B6B69]">

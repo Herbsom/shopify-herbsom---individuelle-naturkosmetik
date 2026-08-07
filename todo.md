@@ -432,3 +432,9 @@
 
 - [x] Empfohlene Produkte auf Reiniger-, Peeling- und Sonnenschutz-Seiten direkt zum Shopify-Warenkorb hinzufügen können
 - [x] Warenkorb-Aktion und responsive Darstellung auf allen betroffenen Seiten testen
+
+## Kostenloser Versand und Warenkorb-Empfehlungen – 2026-08-07
+
+- [x] Dynamischen Fortschrittsbalken für kostenlosen Versand ab 60 € im Warenkorb ergänzen
+- [x] Passende Produktvorschläge wie auf der Referenzseite im Warenkorb anzeigen und direkt hinzufügbar machen
+- [x] Versand-Schwellenwert, Warenkorb-Interaktion und mobile Darstellung testen

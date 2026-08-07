@@ -143,7 +143,7 @@ export default function ProductSunscreen() {
                   </div>
                   <div className="pt-4 border-t border-[#E5E0D8] space-y-2 text-center">
                     <p className="font-body text-xs text-[#6B6B69]">
-                      ✓ Kostenloser Versand ab 50 €
+                      ✓ Kostenloser Versand ab 60 €
                     </p>
                     <p className="font-body text-xs text-[#6B6B69]">
                       ✓ 30 Tage Rückgabe

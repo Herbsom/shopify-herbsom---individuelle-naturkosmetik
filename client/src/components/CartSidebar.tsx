@@ -2,6 +2,7 @@ import { ArrowRight, Loader2, Minus, Plus, ShoppingBag, Trash2, X } from "lucide
 import { Link } from "wouter";
 import { useCart } from "@/contexts/CartContext";
 import { formatMoney } from "@/lib/format";
+import FreeShippingProgress from "@/components/FreeShippingProgress";
 import { ROUTINE_NORMALE_HAUT, ROUTINE_REIFE_HAUT, ROUTINE_TROCKENE_HAUT, ROUTINE_UNREINE_HAUT, ROUTINE_MISCHHAUT, ROUTINE_EMPFINDLICHE_HAUT, ROUTINE_SENSIBLE_HAUT } from "@/lib/routineRecommendations";
 
 // Map product handles to their images from routine recommendations
@@ -187,6 +188,7 @@ export default function CartSidebar() {
 
         {cart && items.length > 0 && (
           <div className="space-y-4 border-t border-[#E5E0D8] p-6">
+            <FreeShippingProgress subtotal={cart.subtotal} compact />
             <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
               <p className="font-body text-sm text-[#4A4A48]">Zwischensumme</p>
               <p className="font-display text-2xl font-light text-[#5B5B38]">
