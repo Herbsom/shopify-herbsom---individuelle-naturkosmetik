@@ -30,4 +30,13 @@ describe("cart shipping progress and suggestions", () => {
     expect(suggestions).toContain('handle: "gua-sha-jade-stein"');
     expect(cartContext).toContain('return "gua-sha-jade-stein"');
   });
+
+  it("links every suggestion to a detail page and registers the Gua Sha Jade route", () => {
+    const suggestions = read("client/src/components/CartProductSuggestions.tsx");
+    const app = read("client/src/App.tsx");
+
+    expect(suggestions).toContain("Mehr erfahren");
+    expect(suggestions).toContain('href: "/product/gua-sha-jade"');
+    expect(app).toContain('<Route path={"/product/gua-sha-jade"} component={ProductGuaSha} />');
+  });
 });

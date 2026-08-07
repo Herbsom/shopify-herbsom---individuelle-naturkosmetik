@@ -25,6 +25,7 @@ import ProductCleanerMilk from "./pages/ProductCleanerMilk";
 import ProductPeeling from "./pages/ProductPeeling";
 import ProductPeelingAHA from "./pages/ProductPeelingAHA";
 import ProductSunscreen from "./pages/ProductSunscreen";
+import ProductGuaSha from "./pages/ProductGuaSha";
 import ConfiguratorSerum from "./pages/ConfiguratorSerum";
 import ConfiguratorCreme from "./pages/ConfiguratorCreme";
 
@@ -71,6 +72,7 @@ function Router() {
       <Route path={"/product/peeling"} component={ProductPeeling} />
       <Route path={"/product/peeling-aha"} component={ProductPeelingAHA} />
       <Route path={"/product/sunscreen"} component={ProductSunscreen} />
+      <Route path={"/product/gua-sha-jade"} component={ProductGuaSha} />
       <Route path={"/configurator/serum"} component={ConfiguratorSerum} />
       <Route path={"/configurator/creme"} component={ConfiguratorCreme} />
 

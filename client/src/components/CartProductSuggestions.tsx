@@ -31,6 +31,7 @@ const CART_SUGGESTIONS = [
   {
     name: "Gua Sha Jade",
     handle: "gua-sha-jade-stein",
+    href: "/product/gua-sha-jade",
     image: "https://cdn.shopify.com/s/files/1/0517/5702/3400/files/hf_20260618_101521_5f7c0ade-0380-49e9-85a5-c4a9b90d6395_1.png?v=1786100350",
   },
 ] as const;
@@ -59,24 +60,20 @@ export default function CartProductSuggestions() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {suggestions.map(product => (
           <article key={product.handle} className="flex gap-4 border border-[#E5E0D8] bg-white p-4">
-            {"href" in product ? (
-              <Link href={product.href} className="block h-20 w-20 flex-none overflow-hidden bg-[#F0EBE3]">
-                <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
-              </Link>
-            ) : (
-              <div className="h-20 w-20 flex-none overflow-hidden bg-[#F0EBE3]">
-                <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
-              </div>
-            )}
+            <Link href={product.href} className="block h-20 w-20 flex-none overflow-hidden bg-[#F0EBE3]">
+              <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
+            </Link>
             <div className="flex min-w-0 flex-1 flex-col">
-              {"href" in product ? (
-                <Link href={product.href} className="font-display text-base font-light text-[#1C1C1A] transition-colors hover:text-[#5B5B38]">
-                  {product.name}
-                </Link>
-              ) : (
-                <h3 className="font-display text-base font-light text-[#1C1C1A]">{product.name}</h3>
-              )}
+              <Link href={product.href} className="font-display text-base font-light text-[#1C1C1A] transition-colors hover:text-[#5B5B38]">
+                {product.name}
+              </Link>
               <ShopifyProductPrice handle={product.handle} showFrom={false} className="mt-1 font-body text-xs text-[#7D7D5D]" />
+              <Link
+                href={product.href}
+                className="mt-2 font-body text-[10px] uppercase tracking-[0.12em] text-[#5B5B38] underline-offset-4 transition-colors hover:text-[#424226] hover:underline"
+              >
+                Mehr erfahren
+              </Link>
               <ShopifyPurchaseButton
                 item={{ id: product.handle, name: product.name, quantity: 1 }}
                 wrapperClassName="mt-auto w-full pt-3"

@@ -449,3 +449,9 @@
 
 - [x] Bereitgestelltes quadratisches Produktfoto als Bild der 50-ml-Reiniger-Empfehlung im Warenkorb verwenden
 - [x] Darstellung und Kaufpfad nach der Bildaktualisierung testen
+
+## Detailseiten aus Warenkorb-Empfehlungen – 2026-08-07
+
+- [x] „Mehr erfahren“-Links für alle Warenkorb-Empfehlungen ergänzen
+- [x] Detailseite für Gua Sha Jade ergänzen und aus der Warenkorb-Empfehlung verlinken
+- [x] Navigation zu Detailseiten und direkte Warenkorb-Aktion testen
