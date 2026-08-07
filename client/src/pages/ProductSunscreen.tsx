@@ -20,6 +20,19 @@ export default function ProductSunscreen() {
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState("effects");
+  
+  // Sonnenschutz-Bilder von der Live-Website
+  const sunscreenImages = [
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214302_5233e72b-a663-4b93-a6d9-685e4cbb5b18_94230957.png",
+      altText: "Sonnenschutzfluid SPF 50+ - Hauptbild",
+    },
+    {
+      url: "https://herbsomweb-rcxwgckf.manus.space/manus-storage/hf_20260616_214514_0e1dcffd-1470-4f0b-aa37-7ef5266f1fba_4fbcaee3.png",
+      altText: "Sonnenschutzfluid SPF 50+ - Detailbild",
+    },
+  ];
+  
   const relatedProducts = [
     { name: "Reinigungsgel", href: "/product/cleaner", handle: "reinigungsgel" },
     { name: "AHA & PHA Peeling", href: "/product/peeling/aha", handle: "aha-pha-peeling" },
@@ -43,6 +56,7 @@ export default function ProductSunscreen() {
               <ShopifyProductGallery
                 handle="sonnenschutzfluid-spf-50"
                 alt="Sonnenschutzfluid SPF 50+"
+                referenceImages={sunscreenImages}
                 className="aspect-square rounded-sm bg-[#F0EBE3]"
               />
               {/* Product Info */}
