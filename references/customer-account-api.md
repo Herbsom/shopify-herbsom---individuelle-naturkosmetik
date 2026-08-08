@@ -16,3 +16,7 @@ Das Kunden-Dashboard verwendet OAuth 2.0 mit PKCE, einen vertraulichen Client un
 3. [Customer Account API access scopes](https://shopify.dev/docs/api/usage/access-scopes)
 4. [Customer API Order object](https://shopify.dev/docs/api/customer/latest/objects/Order)
 5. [Customer API LineItem object](https://shopify.dev/docs/api/customer/latest/objects/LineItem)
+
+## Produktionsprüfung
+
+Am 08.08.2026 leitete `https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login` erfolgreich zur Shopify-Anmeldeseite unter `https://account.herbsom.de/authentication/login` weiter. Der abschließende Login und die Abfrage echter Bestellhistorien erfordern die Anmeldung eines Kundenkontos.

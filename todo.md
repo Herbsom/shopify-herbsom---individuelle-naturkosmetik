@@ -478,3 +478,13 @@
 - [x] Kunden-Dashboard mit Bestellhistorie und Wiederkauf-Aktionen gestalten
 - [x] Bewertungsaktionen für gekaufte Produkte im Kunden-Dashboard ergänzen
 - [ ] Datenschutz, Authentifizierung und Kundenflüsse testen
+
+## Kundenkonto-Button – dringende Korrektur
+
+- [ ] Fehler beheben, durch den „Kundenkonto öffnen“ auf der Live-Seite keine Weiterleitung auslöst
+- [ ] Live-Weiterleitung zur Shopify-Anmeldung erneut testen
+
+## Kundenkonto-Button – browserübergreifende Korrektur
+
+- [x] Robuste Klickaktion für „Kundenkonto öffnen“ implementieren
+- [ ] Live-Weiterleitung im Browser und über direkte URL verifizieren

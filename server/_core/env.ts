@@ -17,4 +17,6 @@ export const ENV = {
     process.env.SHOPIFY_CUSTOMER_ACCOUNT_TOKEN_ENDPOINT ?? "",
   shopifyCustomerAccountLogoutEndpoint:
     process.env.SHOPIFY_CUSTOMER_ACCOUNT_LOGOUT_ENDPOINT ?? "",
+  shopifyCustomerAccountCallbackUrl:
+    process.env.SHOPIFY_CUSTOMER_ACCOUNT_CALLBACK_URL ?? "",
 };

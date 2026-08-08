@@ -109,7 +109,7 @@ function requestOrigin(req: Request) {
 }
 
 function callbackUrl(req: Request) {
-  return `${requestOrigin(req)}/api/shopify/customer-account/callback`;
+  return process.env.SHOPIFY_CUSTOMER_ACCOUNT_CALLBACK_URL?.trim() || `${requestOrigin(req)}/api/shopify/customer-account/callback`;
 }
 
 function encryptionKey() {
