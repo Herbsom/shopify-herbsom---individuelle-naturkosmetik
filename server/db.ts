@@ -1,6 +1,6 @@
 import { eq, desc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, orders, orderItems, InsertOrder, InsertOrderItem, reviews, Review, InsertReview, subscriptions, subscriptionItems, subscriptionHistory, subscriptionOrders, Subscription, InsertSubscription, InsertSubscriptionItem, InsertSubscriptionHistory, SubscriptionOrder, InsertSubscriptionOrder } from "../drizzle/schema";
+import { InsertUser, users, orders, orderItems, InsertOrder, InsertOrderItem, reviews, Review, InsertReview, subscriptions, subscriptionItems, subscriptionHistory, subscriptionOrders, Subscription, InsertSubscription, InsertSubscriptionItem, InsertSubscriptionHistory, SubscriptionOrder, InsertSubscriptionOrder, shopifyCustomerAuthStates, shopifyCustomerSessions } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -87,6 +87,77 @@ export async function getUserByOpenId(openId: string) {
   const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
 
   return result.length > 0 ? result[0] : undefined;
+}
+
+// ─── Shopify Customer Account OAuth ─────────────────────────────────────────
+
+export async function createShopifyCustomerAuthState(input: {
+  state: string;
+  encryptedVerifier: string;
+  expiresAt: Date;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  await db.insert(shopifyCustomerAuthStates).values(input);
+}
+
+export async function consumeShopifyCustomerAuthState(state: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const [record] = await db
+    .select()
+    .from(shopifyCustomerAuthStates)
+    .where(eq(shopifyCustomerAuthStates.state, state))
+    .limit(1);
+
+  if (record) {
+    await db.delete(shopifyCustomerAuthStates).where(eq(shopifyCustomerAuthStates.state, state));
+  }
+
+  if (!record || record.expiresAt.getTime() < Date.now()) return null;
+  return record;
+}
+
+export async function getShopifyCustomerSession(sessionId: string) {
+  const db = await getDb();
+  if (!db) return null;
+
+  const [record] = await db
+    .select()
+    .from(shopifyCustomerSessions)
+    .where(eq(shopifyCustomerSessions.id, sessionId))
+    .limit(1);
+
+  return record ?? null;
+}
+
+export async function upsertShopifyCustomerSession(input: {
+  id: string;
+  customerId?: string | null;
+  encryptedAccessToken: string;
+  encryptedRefreshToken?: string | null;
+  expiresAt?: Date | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  await db.insert(shopifyCustomerSessions).values(input).onDuplicateKeyUpdate({
+    set: {
+      customerId: input.customerId ?? null,
+      encryptedAccessToken: input.encryptedAccessToken,
+      encryptedRefreshToken: input.encryptedRefreshToken ?? null,
+      expiresAt: input.expiresAt ?? null,
+    },
+  });
+}
+
+export async function deleteShopifyCustomerSession(sessionId: string) {
+  const db = await getDb();
+  if (!db) return;
+
+  await db.delete(shopifyCustomerSessions).where(eq(shopifyCustomerSessions.id, sessionId));
 }
 
 // ─── Order Queries ─────────────────────────────────────────────────────────

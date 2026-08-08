@@ -19,6 +19,34 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 /**
+ * One-time OAuth state for a Shopify Customer Account authorization request.
+ * The PKCE verifier is stored encrypted and removed once the callback completes.
+ */
+export const shopifyCustomerAuthStates = mysqlTable("shopifyCustomerAuthStates", {
+  state: varchar("state", { length: 128 }).primaryKey(),
+  encryptedVerifier: text("encryptedVerifier").notNull(),
+  expiresAt: timestamp("expiresAt").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+/**
+ * Customer Account API session tokens are encrypted at rest and are never
+ * returned to the browser. The browser receives only the opaque session ID.
+ */
+export const shopifyCustomerSessions = mysqlTable("shopifyCustomerSessions", {
+  id: varchar("id", { length: 128 }).primaryKey(),
+  customerId: varchar("customerId", { length: 255 }),
+  encryptedAccessToken: text("encryptedAccessToken").notNull(),
+  encryptedRefreshToken: text("encryptedRefreshToken"),
+  expiresAt: timestamp("expiresAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ShopifyCustomerAuthState = typeof shopifyCustomerAuthStates.$inferSelect;
+export type ShopifyCustomerSession = typeof shopifyCustomerSessions.$inferSelect;
+
+/**
  * Orders table – stores completed orders for each user.
  */
 export const orders = mysqlTable("orders", {

@@ -470,3 +470,11 @@
 
 - [x] Produktbilder in der Startseiten-Produktübersicht auf kleinen Bildschirmen quadratisch und vollständig darstellen
 - [x] Mobile und Desktop-Darstellung der Produktübersicht testen
+
+## Kunden-Dashboard im Loginbereich – 2026-08-07
+
+- [x] Shopify-Kundenkonto-, Bestell- und Bewertungs-Schnittstellen für Wiederkauf prüfen
+- [x] Shopify-Customer-Account-API mit sicheren Zugangsdaten konfigurieren
+- [x] Kunden-Dashboard mit Bestellhistorie und Wiederkauf-Aktionen gestalten
+- [x] Bewertungsaktionen für gekaufte Produkte im Kunden-Dashboard ergänzen
+- [ ] Datenschutz, Authentifizierung und Kundenflüsse testen

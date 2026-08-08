@@ -6,9 +6,10 @@ import { toast } from "sonner";
 interface ReviewFormProps {
   productId: string;
   onSuccess?: () => void;
+  customerAccount?: boolean;
 }
 
-export default function ReviewForm({ productId, onSuccess }: ReviewFormProps) {
+export default function ReviewForm({ productId, onSuccess, customerAccount = false }: ReviewFormProps) {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [title, setTitle] = useState("");
@@ -16,6 +17,7 @@ export default function ReviewForm({ productId, onSuccess }: ReviewFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const createReview = trpc.reviews.create.useMutation();
+  const createVerifiedCustomerReview = trpc.customerAccount.createReview.useMutation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,12 +40,17 @@ export default function ReviewForm({ productId, onSuccess }: ReviewFormProps) {
     setIsSubmitting(true);
 
     try {
-      await createReview.mutateAsync({
+      const reviewInput = {
         productId,
         rating,
         title: title.trim(),
         content: content.trim(),
-      });
+      };
+      if (customerAccount) {
+        await createVerifiedCustomerReview.mutateAsync(reviewInput);
+      } else {
+        await createReview.mutateAsync(reviewInput);
+      }
 
       toast.success("Bewertung eingereicht! Sie wird nach Prüfung veröffentlicht.");
       setRating(0);
@@ -121,7 +128,7 @@ export default function ReviewForm({ productId, onSuccess }: ReviewFormProps) {
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || createVerifiedCustomerReview.isPending || createReview.isPending}
         className="w-full bg-[#5B5B38] text-[#F8F5F0] font-body text-xs tracking-[0.12em] uppercase px-6 py-3 hover:bg-[#424226] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 active:scale-[0.97]"
       >
         {isSubmitting ? "Wird eingereicht..." : "Bewertung einreichen"}
