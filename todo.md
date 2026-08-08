@@ -481,10 +481,10 @@
 
 ## Kundenkonto-Button – dringende Korrektur
 
-- [ ] Fehler beheben, durch den „Kundenkonto öffnen“ auf der Live-Seite keine Weiterleitung auslöst
-- [ ] Live-Weiterleitung zur Shopify-Anmeldung erneut testen
+- [x] Fehler beheben, durch den „Kundenkonto öffnen“ auf der Live-Seite keine Weiterleitung auslöst
+- [x] Live-Weiterleitung zur Shopify-Anmeldung erneut testen
 
 ## Kundenkonto-Button – browserübergreifende Korrektur
 
 - [x] Robuste Klickaktion für „Kundenkonto öffnen“ implementieren
-- [ ] Live-Weiterleitung im Browser und über direkte URL verifizieren
+- [x] Live-Weiterleitung im Browser und über direkte URL verifizieren
