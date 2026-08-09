@@ -493,4 +493,4 @@
 
 - [x] Unsichtbare Klickschichten und Markup-Konflikte am Kundenkonto-Einstieg prüfen
 - [x] Blockierungsfreie Anmeldeaktion und sichtbare Alternativ-URL umsetzen
-- [ ] Klickbarkeit auf der Live-Seite erneut validieren
+- [x] Klickbarkeit auf der Live-Seite erneut validieren
