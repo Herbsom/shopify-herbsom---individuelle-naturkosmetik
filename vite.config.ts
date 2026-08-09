@@ -167,6 +167,14 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        // Die CDN-Assets werden langfristig gecacht. Ein versionsspezifischer
+        // Einstiegspfad stellt sicher, dass veröffentlichte Interaktionsfixes
+        // wie der Kundenkonto-Login sofort im Browser ankommen.
+        entryFileNames: "assets/[name]-[hash]-20260809.js",
+      },
+    },
   },
   server: {
     host: true,
