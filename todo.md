@@ -488,3 +488,9 @@
 
 - [x] Robuste Klickaktion für „Kundenkonto öffnen“ implementieren
 - [x] Live-Weiterleitung im Browser und über direkte URL verifizieren
+
+## Kundenkonto-Button – Klickbarkeit auf Live-Seite
+
+- [x] Unsichtbare Klickschichten und Markup-Konflikte am Kundenkonto-Einstieg prüfen
+- [x] Blockierungsfreie Anmeldeaktion und sichtbare Alternativ-URL umsetzen
+- [ ] Klickbarkeit auf der Live-Seite erneut validieren
