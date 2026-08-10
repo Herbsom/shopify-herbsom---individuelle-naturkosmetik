@@ -521,3 +521,15 @@
 
 - [x] Primären Kundenkonto-Button als nativen Link ohne JavaScript-Weiterleitung ausführen
 - [ ] Same-Frame-Klick und Shopify-Redirect in der veröffentlichten Seite validieren
+
+## Shopify-Kundenkonto – OAuth-Authorization-Endpunkt korrigieren
+
+- [x] Tatsächlich erzeugte Shopify-Authorization-URL und verschachtelte Redirect-Parameter analysieren
+- [x] Shopify-Authorization-Endpunkt sowie Redirect-URI-Verwendung nach OAuth-Spezifikation mit der Live-Discovery verifizieren
+- [ ] Erfolgreiche Shopify-Anmeldung, Callback und Dashboard-Rückkehr mit einem Kundenkonto validieren
+
+## Shopify-Kundenkonto – sichere Neu-Tab-Anmeldung
+
+- [x] Primären Kundenkonto-Einstieg als nativen Link in einem neuen Tab öffnen
+- [x] Eindeutigen Hinweis für eingebettete Browseransichten ergänzen
+- [ ] Shopify-Anmeldung und Callback im neuen Tab live validieren

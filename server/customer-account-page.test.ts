@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 describe("CustomerAccount-Anmeldestart", () => {
-  it("nutzt eine same-origin Login-Route mit direkten Browser-Fallbacks", () => {
+  it("nutzt eine sichere native Neu-Tab-Route für die Shopify-Anmeldung", () => {
     const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
 
     expect(source).toContain('const customerAccountLoginPath = "/api/shopify/customer-account/login"');
@@ -11,11 +11,9 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('target="_blank"');
     expect(source).not.toContain('target="_top"');
     expect(source).toContain('data-testid="customer-account-login-primary"');
-    expect(source).not.toContain('data-testid="customer-account-login-direct"');
-    expect(source).toContain('data-testid="customer-account-login-new-tab"');
-    expect(source).toContain('<a href={customerAccountLoginPath} data-testid="customer-account-login-primary"');
+    expect(source).toContain('<a href={customerAccountLoginPath} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary"');
     expect(source).toContain("Shopify-Kundenkonto öffnen");
-    expect(source).toContain("Falls nötig: Anmeldung in neuem Tab öffnen");
+    expect(source).toContain("Die sichere Shopify-Anmeldung öffnet sich in einem neuen Tab.");
   });
 
   it("validiert den einmaligen OAuth-State serverseitig statt über ein Browser-Cookie", () => {
