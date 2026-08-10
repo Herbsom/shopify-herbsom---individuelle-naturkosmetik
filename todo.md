@@ -504,4 +504,4 @@
 
 - [x] Veröffentlichte Login-URL und externes Weiterleitungsverhalten prüfen
 - [x] Browserunabhängigen Shopify-Login-Einstieg umsetzen
-- [ ] Live-Weiterleitung mit dem sichtbaren Kundenkonto-Einstieg testen
+- [x] Live-Weiterleitung mit dem sichtbaren Kundenkonto-Einstieg testen
