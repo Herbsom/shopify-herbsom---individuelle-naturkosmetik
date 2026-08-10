@@ -21,4 +21,21 @@ describe("Shopify Customer Account OAuth", () => {
     expect(url.searchParams.get("code_challenge")).toBe("pkce-challenge");
     expect(url.searchParams.get("code_challenge_method")).toBe("S256");
   });
+
+  it("leitet Account-Komponenten-Loginparameter sicher an Shopify weiter", () => {
+    const url = new URL(buildCustomerAuthorizationUrl({
+      authorizationEndpoint: "https://account.herbsom.de/authentication/oauth/authorize",
+      clientId: "client-id",
+      redirectUri: "https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/callback",
+      state: "csrf-state",
+      codeChallenge: "pkce-challenge",
+      loginHint: "kunde@example.com",
+      loginHintMode: "email",
+      locale: "de-DE",
+    }));
+
+    expect(url.searchParams.get("login_hint")).toBe("kunde@example.com");
+    expect(url.searchParams.get("login_hint_mode")).toBe("email");
+    expect(url.searchParams.get("locale")).toBe("de-DE");
+  });
 });

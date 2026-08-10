@@ -5,7 +5,7 @@ import { useCart, type LegacyCartItem } from "@/contexts/CartContext";
 import { trpc } from "@/lib/trpc";
 import type { Product, SellingPlanAllocation } from "@shared/commerce/types";
 import { ArrowRight, CalendarClock, CheckCircle2, ExternalLink, Heart, LogIn, Package, RefreshCw, ShieldCheck, ShoppingBag, Sparkles, Star } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -34,6 +34,21 @@ function subscriptionOptions(product: Product) {
   );
 }
 
+function EmbeddedShopifyLogin({ loginUrl }: { loginUrl: string }) {
+  const publicAccessToken = import.meta.env.VITE_SHOPIFY_ACCOUNT_PUBLIC_STOREFRONT_TOKEN;
+  if (!publicAccessToken) {
+    return <a href={loginUrl} className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]"><LogIn size={15} /> Mein Herbsom-Konto öffnen</a>;
+  }
+
+  return <shopify-store store-domain="https://herbsom.myshopify.com" public-access-token={publicAccessToken}>
+    <shopify-account menu="customer-account-main-menu" sign-in-url={loginUrl} className="block">
+      <button slot="signed-out-avatar" type="button" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
+        <LogIn size={15} /> Mein Herbsom-Konto öffnen
+      </button>
+    </shopify-account>
+  </shopify-store>;
+}
+
 export default function CustomerAccount() {
   const { data, isLoading, refetch } = trpc.customerAccount.dashboard.useQuery(undefined, { retry: false });
   const { data: catalog = [], isLoading: catalogLoading } = trpc.commerce.products.list.useQuery({ first: 100 });
@@ -47,9 +62,18 @@ export default function CustomerAccount() {
   const [reorderingOrderId, setReorderingOrderId] = useState<string | null>(null);
   const [addingProductId, setAddingProductId] = useState<string | null>(null);
   const [selectedPlans, setSelectedPlans] = useState<Record<string, string>>({});
-  const nativeShopifyAccountUrl = "https://account.herbsom.de";
+  const [showLoginSurface, setShowLoginSurface] = useState(false);
   const customerAccountLoginUrl = "/api/shopify/customer-account/login";
   const loginError = typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("shopify-error");
+
+  useEffect(() => {
+    if (data?.connected) {
+      setShowLoginSurface(false);
+      return;
+    }
+    const timeout = window.setTimeout(() => setShowLoginSurface(true), 900);
+    return () => window.clearTimeout(timeout);
+  }, [data?.connected]);
 
   const orders = data?.orders ?? [];
   const portalProducts = useMemo(() => {
@@ -132,7 +156,7 @@ export default function CustomerAccount() {
     <div className="min-h-screen bg-[#F8F5F0] text-[#1C1C1A]">
       <Navigation />
       <main className="container py-20 md:py-28">
-        {!data?.connected && !isLoading && (
+        {!data?.connected && (!isLoading || showLoginSurface) && (
           <>
             <section className="overflow-hidden border border-[#E3DDD0] bg-white md:grid md:grid-cols-[1.15fr_0.85fr]">
               <div className="px-7 py-12 md:px-14 md:py-16">
@@ -141,9 +165,7 @@ export default function CustomerAccount() {
                 <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
                 {loginError && <div role="alert" className="mt-6 max-w-xl border border-[#C78B71] bg-[#FFF8F3] p-4 font-body text-sm leading-relaxed text-[#754B3B]" data-testid="customer-account-login-error"><p className="font-medium">Die Shopify-Anmeldung wurde noch nicht abgeschlossen.</p><p className="mt-1">Bitte starte die Anmeldung erneut und schließe sie mit der E-Mail-Adresse deines Kundenkontos ab. Wenn der Hinweis anschließend erneut erscheint, wurde der technische Schritt sicher protokolliert und kann gezielt korrigiert werden.</p></div>}
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <a href={customerAccountLoginUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
-                    <LogIn size={15} /> Mein Herbsom-Konto öffnen
-                  </a>
+                  <div data-testid="customer-account-login-primary"><EmbeddedShopifyLogin loginUrl={customerAccountLoginUrl} /></div>
                   <a href="#wiederkauf" className="inline-flex items-center justify-center gap-2 border border-[#8A8A69] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#4C5238] transition-colors hover:bg-[#F4F0E5] active:scale-[0.97]">
                     Direkt nachbestellen <ArrowRight size={15} />
                   </a>
@@ -202,13 +224,13 @@ export default function CustomerAccount() {
                       <button disabled={!selected || cartLoading || addingProductId === `${product.id}-${selected.allocation.sellingPlanId}`} onClick={() => selected && handleSubscriptionAdd(product, selected)} className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#5B5B38] px-4 py-3 font-body text-[11px] uppercase tracking-[0.12em] text-[#F8F5F0] transition-colors hover:bg-[#424226] disabled:cursor-not-allowed disabled:opacity-50"><CalendarClock size={14} />{addingProductId === `${product.id}-${selected?.allocation.sellingPlanId}` ? "Wird hinzugefügt" : "Als Abo auswählen"}</button>
                     </article>;
                   })}
-                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7" data-testid="customer-subscription-status"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Dein Abo im Herbsom-Konto.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">Melde dich zuerst sicher in deinem Herbsom-Konto an. Nach der Anmeldung werden dir die verfügbaren Abo-Produkte und Lieferintervalle direkt hier angezeigt. Der Abschluss und die spätere Verwaltung bleiben sicher bei Shopify.</p><a href={customerAccountLoginUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] underline underline-offset-4">Jetzt sicher anmelden <LogIn size={14} /></a></div>}
+                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7" data-testid="customer-subscription-status"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Dein Abo im Herbsom-Konto.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">Melde dich über die Herbsom-Anmeldemaske oben an. Danach werden dir die verfügbaren Abo-Produkte und Lieferintervalle direkt hier angezeigt. Der Abschluss und die spätere Verwaltung bleiben sicher bei Shopify.</p></div>}
               </div>
             </section>
           </>
         )}
 
-        {isLoading && (
+        {isLoading && !showLoginSurface && (
           <div className="py-28 text-center font-body text-sm text-[#6B6B69]">Dein Kundenkonto wird geladen …</div>
         )}
 

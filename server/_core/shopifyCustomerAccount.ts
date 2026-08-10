@@ -175,6 +175,10 @@ export function buildCustomerAuthorizationUrl(input: {
   redirectUri: string;
   state: string;
   codeChallenge: string;
+  acrValues?: string;
+  loginHint?: string;
+  loginHintMode?: string;
+  locale?: string;
 }) {
   const url = new URL(input.authorizationEndpoint);
   url.searchParams.set("client_id", input.clientId);
@@ -184,6 +188,10 @@ export function buildCustomerAuthorizationUrl(input: {
   url.searchParams.set("state", input.state);
   url.searchParams.set("code_challenge", input.codeChallenge);
   url.searchParams.set("code_challenge_method", "S256");
+  if (input.acrValues) url.searchParams.set("acr_values", input.acrValues);
+  if (input.loginHint) url.searchParams.set("login_hint", input.loginHint);
+  if (input.loginHintMode) url.searchParams.set("login_hint_mode", input.loginHintMode);
+  if (input.locale) url.searchParams.set("locale", input.locale);
   return url.toString();
 }
 
@@ -419,6 +427,10 @@ export function registerShopifyCustomerAccountRoutes(app: Express) {
         redirectUri: callbackUrl(req),
         state,
         codeChallenge: buildCodeChallenge(verifier),
+        acrValues: typeof req.query.acr_values === "string" ? req.query.acr_values : undefined,
+        loginHint: typeof req.query.login_hint === "string" ? req.query.login_hint : undefined,
+        loginHintMode: typeof req.query.login_hint_mode === "string" ? req.query.login_hint_mode : undefined,
+        locale: typeof req.query.locale === "string" ? req.query.locale : undefined,
       }));
     } catch (error) {
       console.error("[Shopify Customer Account] Login initialization failed", error);
