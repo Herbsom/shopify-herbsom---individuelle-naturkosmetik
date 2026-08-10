@@ -7,10 +7,12 @@ const homeSource = readFileSync(
   "utf8"
 );
 
-describe("mobile product overview", () => {
-  it("uses square uncropped product images on small screens", () => {
+describe("product overview image presentation", () => {
+  it("uses square uncropped product images on desktop and small screens", () => {
     expect(homeSource).toContain("aspect-square w-full overflow-hidden");
-    expect(homeSource).toContain("object-contain md:object-cover");
+    expect(homeSource).toContain('className="h-full w-full object-contain"');
+    expect(homeSource).not.toContain("md:aspect-auto md:h-72");
+    expect(homeSource).not.toContain("md:object-cover");
     expect(homeSource).toContain('alt={product.name}');
   });
 });

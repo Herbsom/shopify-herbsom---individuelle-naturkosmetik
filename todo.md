@@ -471,6 +471,11 @@
 - [x] Produktbilder in der Startseiten-Produktübersicht auf kleinen Bildschirmen quadratisch und vollständig darstellen
 - [x] Mobile und Desktop-Darstellung der Produktübersicht testen
 
+## Einheitliche Startseiten-Produktbilder – 2026-08-09
+
+- [x] Produktbilder in der Startseiten-Produktübersicht auf Desktop und Mobil in 1:1-Flächen vollständig darstellen
+- [x] Quadratische Desktop- und Mobile-Darstellung testen
+
 ## Kunden-Dashboard im Loginbereich – 2026-08-07
 
 - [x] Shopify-Kundenkonto-, Bestell- und Bewertungs-Schnittstellen für Wiederkauf prüfen

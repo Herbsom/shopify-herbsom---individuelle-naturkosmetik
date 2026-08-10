@@ -188,11 +188,11 @@ export default function Home() {
                 className={`bg-[#F8F5F0] p-8 md:p-12 group cursor-pointer hover:bg-[#F0EBE3] transition-colors duration-500 reveal reveal-delay-${i + 1} block flex flex-col`}
               >
                 {product.image && (
-                  <div className="mb-8 aspect-square w-full overflow-hidden rounded-sm bg-[#F0EBE3] md:aspect-auto md:h-72">
+                  <div className="mb-8 aspect-square w-full overflow-hidden rounded-sm bg-[#F0EBE3]">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="h-full w-full object-contain md:object-cover"
+                      className="h-full w-full object-contain"
                       loading="lazy"
                     />
                   </div>
