@@ -9,13 +9,12 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('const customerAccountLoginPath = "/api/shopify/customer-account/login"');
     expect(source).toContain("window.location.href = customerAccountLoginPath");
     expect(source).toContain('target="_blank"');
-    expect(source).toContain('target="_top"');
-    expect(source).toContain('data-testid="customer-account-login-top"');
-    expect(source).toContain('data-testid="customer-account-login-direct"');
+    expect(source).not.toContain('target="_top"');
+    expect(source).toContain('data-testid="customer-account-login-primary"');
+    expect(source).not.toContain('data-testid="customer-account-login-direct"');
     expect(source).toContain('data-testid="customer-account-login-new-tab"');
     expect(source).toContain("Shopify-Kundenkonto öffnen");
-    expect(source).toContain("Anmeldung direkt in diesem Fenster öffnen");
-    expect(source).toContain("Anmeldung in neuem Tab öffnen");
+    expect(source).toContain("Falls nötig: Anmeldung in neuem Tab öffnen");
   });
 
   it("validiert den einmaligen OAuth-State serverseitig statt über ein Browser-Cookie", () => {

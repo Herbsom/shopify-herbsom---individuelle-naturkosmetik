@@ -511,3 +511,8 @@
 - [x] OAuth-Weiterleitung und Shopify-Callback-Konfiguration vollständig prüfen
 - [x] Direkten sicheren Shopify-Authorization-Einstieg ohne interne Zwischenroute implementieren
 - [ ] Externe Anmeldung und Rückkehr zum Kunden-Dashboard live validieren
+
+## Shopify-Kundenkonto – Top-Frame-Fehlleitung korrigieren
+
+- [x] Primäre Anmeldeaktion ohne `target=_top` in derselben Browseransicht ausführen
+- [ ] Veröffentlichtes Frontend auf die neue Klickaktion aktualisieren und live prüfen
