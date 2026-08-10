@@ -7,12 +7,13 @@ describe("CustomerAccount-Anmeldestart", () => {
     const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
 
     expect(source).toContain('const customerAccountLoginPath = "/api/shopify/customer-account/login"');
-    expect(source).toContain("window.location.href = customerAccountLoginPath");
+    expect(source).not.toContain("window.location.href = customerAccountLoginPath");
     expect(source).toContain('target="_blank"');
     expect(source).not.toContain('target="_top"');
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).not.toContain('data-testid="customer-account-login-direct"');
     expect(source).toContain('data-testid="customer-account-login-new-tab"');
+    expect(source).toContain('<a href={customerAccountLoginPath} data-testid="customer-account-login-primary"');
     expect(source).toContain("Shopify-Kundenkonto öffnen");
     expect(source).toContain("Falls nötig: Anmeldung in neuem Tab öffnen");
   });

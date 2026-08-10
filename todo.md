@@ -516,3 +516,8 @@
 
 - [x] Primäre Anmeldeaktion ohne `target=_top` in derselben Browseransicht ausführen
 - [ ] Veröffentlichtes Frontend auf die neue Klickaktion aktualisieren und live prüfen
+
+## Shopify-Kundenkonto – native Same-Frame-Verlinkung
+
+- [x] Primären Kundenkonto-Button als nativen Link ohne JavaScript-Weiterleitung ausführen
+- [ ] Same-Frame-Klick und Shopify-Redirect in der veröffentlichten Seite validieren
