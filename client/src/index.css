@@ -127,6 +127,29 @@
 }
 
 @layer components {
+  .herbsom-account-component {
+    --shopify-account-color-accent: #5B5B38;
+    --shopify-account-color-accent-hover: #424226;
+    --shopify-account-color-accent-text: #F8F5F0;
+    --shopify-account-color-background: #F8F5F0;
+    --shopify-account-color-background-subdued: #EFEADF;
+    --shopify-account-color-text: #1C1C1A;
+    --shopify-account-color-text-subdued: #67675F;
+    --shopify-account-color-border: #D9D3C8;
+    --shopify-account-color-control-background: #FFFFFF;
+    --shopify-account-color-control-text: #1C1C1A;
+    --shopify-account-color-shadow: rgba(45, 45, 25, 0.24);
+    --shopify-account-font-body: 'Inter', sans-serif;
+    --shopify-account-font-heading: 'Cormorant Garamond', serif;
+    --shopify-account-font-body-weight: 400;
+    --shopify-account-font-heading-weight: 400;
+    --shopify-account-radius-base: 0px;
+    --shopify-account-radius-button: 0px;
+    --shopify-account-radius-dialog: 0px;
+    --shopify-account-radius-input: 0px;
+    --shopify-account-dialog-position-top: 5.5rem;
+  }
+
   .container {
     width: 100%;
     margin-left: auto;

@@ -572,6 +572,7 @@
 - [ ] Ersten Klick auf Login, E-Mail-Erfassung und sichere Shopify-Identifikationsübergabe als durchgängigen Fluss prüfen
 - [x] Öffentlichen Shopify-Storefront-Token mit Customer-Account-Berechtigungen für die eingebettete Account-Komponente bereitstellen
 - [x] Offizielle `shopify-account`-Komponente als markenkonformes eingebettetes Herbsom-Login integrieren
+- [x] Eingebettete Account-Maske mit klarer Herbsom-Kennzeichnung, Herbsom-Farben, höherer Lesbarkeit und mobilfreundlicher Führung gestalten
 - [x] Veraltete native Shopify-Produktlinks ohne Abo-Widget aus dem Kundenportal entfernen und durch den sicheren Herbsom-Konto-Einstieg ersetzen
 - [x] Vorhandene Shopify-Bestellhistorie, Wiederkaufpfad und Abonnement-Selling-Plans im Shop erfassen (keine Selling Plans vorhanden)
 - [x] Abo-Architektur und Shopify Subscriptions als native Subscription-App festlegen

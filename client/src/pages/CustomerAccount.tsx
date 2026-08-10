@@ -41,9 +41,9 @@ function EmbeddedShopifyLogin({ loginUrl }: { loginUrl: string }) {
   }
 
   return <shopify-store store-domain="https://herbsom.myshopify.com" public-access-token={publicAccessToken}>
-    <shopify-account menu="customer-account-main-menu" sign-in-url={loginUrl} className="block">
-      <button slot="signed-out-avatar" type="button" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
-        <LogIn size={15} /> Mein Herbsom-Konto öffnen
+    <shopify-account menu="customer-account-main-menu" sign-in-url={loginUrl} className="herbsom-account-component block">
+      <button slot="signed-out-avatar" type="button" className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
+        <LogIn size={16} /> E-Mail sicher anmelden
       </button>
     </shopify-account>
   </shopify-store>;
@@ -162,7 +162,7 @@ export default function CustomerAccount() {
               <div className="px-7 py-12 md:px-14 md:py-16">
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
-                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
+                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Die E-Mail-Eingabe öffnet sich direkt auf dieser Seite. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
                 {loginError && <div role="alert" className="mt-6 max-w-xl border border-[#C78B71] bg-[#FFF8F3] p-4 font-body text-sm leading-relaxed text-[#754B3B]" data-testid="customer-account-login-error"><p className="font-medium">Die Shopify-Anmeldung wurde noch nicht abgeschlossen.</p><p className="mt-1">Bitte starte die Anmeldung erneut und schließe sie mit der E-Mail-Adresse deines Kundenkontos ab. Wenn der Hinweis anschließend erneut erscheint, wurde der technische Schritt sicher protokolliert und kann gezielt korrigiert werden.</p></div>}
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <div data-testid="customer-account-login-primary"><EmbeddedShopifyLogin loginUrl={customerAccountLoginUrl} /></div>
@@ -170,7 +170,7 @@ export default function CustomerAccount() {
                     Direkt nachbestellen <ArrowRight size={15} />
                   </a>
                 </div>
-                <p className="mt-5 flex items-center gap-2 font-body text-xs text-[#838277]"><ShieldCheck size={14} className="text-[#5B5B38]" /> Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.</p>
+                <p className="mt-5 flex items-center gap-2 font-body text-xs text-[#838277]"><ShieldCheck size={14} className="text-[#5B5B38]" /> Die sichere E-Mail-Maske öffnet sich direkt in dieser Ansicht; Anmeldung und Zahlungsdaten bleiben bei Shopify.</p>
               </div>
               <aside className="relative overflow-hidden bg-[#5B5B38] px-7 py-10 text-[#F8F5F0] md:px-10 md:py-14">
                 <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full border border-[#CFC6A9]/25" />

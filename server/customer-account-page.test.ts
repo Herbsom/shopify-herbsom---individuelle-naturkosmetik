@@ -13,11 +13,13 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('<EmbeddedShopifyLogin loginUrl={customerAccountLoginUrl} />');
     expect(source).toContain("Mein Herbsom-Konto öffnen");
     expect(source).toContain("Melde dich sicher mit deinem Shopify-Kundenkonto an.");
-    expect(source).toContain("Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
+    expect(source).toContain("Anmeldung und Zahlungsdaten bleiben bei Shopify.");
+    expect(source).toContain("Die sichere E-Mail-Maske öffnet sich direkt in dieser Ansicht");
     expect(source).toContain('data-testid="customer-account-login-error"');
     expect(source).toContain('get("shopify-error")');
     expect(source).toContain("EmbeddedShopifyLogin");
     expect(source).toContain("shopify-account");
+    expect(source).toContain("E-Mail sicher anmelden");
     expect(source).toContain("showLoginSurface");
   });
 
