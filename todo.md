@@ -565,7 +565,10 @@
 - [x] Abo-Architektur und Shopify Subscriptions als native Subscription-App festlegen
 - [x] Markenkonformes Herbsom-Kundenportal mit sicherem Shopify-Anmeldeübergang gestalten
 - [x] Wiederkauf-Einstieg mit dynamischer Produktauswahl und Warenkorbübergabe implementieren
+- [x] Gemeinsamen Selling Plan „Abonnement Herbsom“ den vorgesehenen Abo-Produkten vollständig zuordnen (Creme, Serum, Reiniger, Reinigungsmilch, beide Peelings und Sonnenschutzfluid)
 - [ ] Produkt-Abo-Auswahl mit Lieferintervallen und klaren Konditionen gestalten
 - [ ] Shopify-kompatiblen Abo-Checkout mit Selling-Plan-Daten implementieren oder die erforderliche Shop-Konfiguration transparent ausweisen
 - [ ] Headless-Storefront-Token um den Shopify-Scope `unauthenticated_read_selling_plans` ergänzen
+- [x] Shopify-eigenen Abo-Kaufpfad als Alternative ohne Headless-Selling-Plan-Leserecht evaluieren (nicht veröffentlicht, da der Onlineshop die Abo-Variante als ausverkauft ablehnt)
+- [x] Online-Store-Verfügbarkeit der Abo-Produkte für den nativen Shopify-Checkout prüfen und nicht verfügbare Kaufaktionen sperren
 - [ ] Kundenportal, Wiederkauf und Abo-Kaufpfad mit Tests und Live-Prüfung absichern

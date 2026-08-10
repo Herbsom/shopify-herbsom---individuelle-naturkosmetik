@@ -133,7 +133,7 @@ export default function CustomerAccount() {
               <div className="px-7 py-12 md:px-14 md:py-16">
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
-                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Entdecke deine vertrauten Pflege-Essentials, lege sie mit einem Klick erneut in den Warenkorb oder schließe ein Produkt-Abo ab. Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet.</p>
+                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Entdecke deine vertrauten Pflege-Essentials und lege sie mit einem Klick erneut in den Warenkorb. Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet; Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.</p>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
                     <LogIn size={15} /> Meine Bestellungen verwalten
@@ -152,7 +152,7 @@ export default function CustomerAccount() {
                   <h2 className="mt-3 font-display text-4xl font-light leading-tight">Weniger denken.<br />Mehr pflegen.</h2>
                   <div className="mt-9 space-y-4 border-t border-[#B7B08F]/45 pt-7 font-body text-sm leading-relaxed text-[#F3EEDF]">
                     <p className="flex gap-3"><Heart size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Vertraute Produkte unkompliziert wiederbestellen.</p>
-                    <p className="flex gap-3"><CalendarClock size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Abos mit Lieferintervallen aus Shopify auswählen.</p>
+                    <p className="flex gap-3"><CalendarClock size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Abo-Intervalle werden direkt aus Shopify synchronisiert.</p>
                     <p className="flex gap-3"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Verträge direkt im Shopify-Konto verwalten.</p>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function CustomerAccount() {
                       <button disabled={!selected || cartLoading || addingProductId === `${product.id}-${selected.allocation.sellingPlanId}`} onClick={() => selected && handleSubscriptionAdd(product, selected)} className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#5B5B38] px-4 py-3 font-body text-[11px] uppercase tracking-[0.12em] text-[#F8F5F0] transition-colors hover:bg-[#424226] disabled:cursor-not-allowed disabled:opacity-50"><CalendarClock size={14} />{addingProductId === `${product.id}-${selected?.allocation.sellingPlanId}` ? "Wird hinzugefügt" : "Als Abo auswählen"}</button>
                     </article>;
                   })}
-                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Abo-Angebote werden synchronisiert.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">{subscriptionQuery.error ? "Für die Abo-Auswahl fehlt noch die Shopify-Berechtigung für Selling Plans im Headless-Storefront. Sobald sie aktiviert ist, erscheinen hier deine in Shopify eingerichteten Intervalle und Preise." : "Sobald die Abo-Intervalle den ausgewählten Produkten in Shopify zugeordnet sind, erscheinen sie hier mit dem korrekten Preis und können direkt in den Shopify-Checkout übernommen werden."}</p><a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] underline underline-offset-4">Bestehende Abos bei Shopify verwalten <ExternalLink size={14} /></a></div>}
+                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7" data-testid="subscription-connection-status"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Deine Abo-Angebote sind vorbereitet.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">Der gemeinsame Shopify-Plan ist den vorgesehenen Produkten zugeordnet. Die Lieferintervalle und Preise werden angezeigt, sobald der verbundene Headless-Storefront-Token die Shopify-Selling-Plan-Daten bereitstellt. Bis dahin bleiben alle Wiederkauf-Aktionen unverändert verfügbar.</p><a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] underline underline-offset-4">Bestehende Abos bei Shopify verwalten <ExternalLink size={14} /></a></div>}
               </div>
             </section>
           </>

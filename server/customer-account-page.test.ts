@@ -13,7 +13,8 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).toContain('<a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary"');
     expect(source).toContain("Meine Bestellungen verwalten");
-    expect(source).toContain("Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet.");
+    expect(source).toContain("Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet; Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.");
+    expect(source).toContain("Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.");
     expect(source).toContain("Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
   });
 
@@ -25,7 +26,16 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain("Erneut bestellen");
     expect(source).toContain("Als Abo auswählen");
     expect(source).toContain("sellingPlanId: selection.allocation.sellingPlanId");
-    expect(source).toContain("Abo-Angebote werden synchronisiert.");
+    expect(source).toContain("Deine Abo-Angebote sind vorbereitet.");
+  });
+
+  it("zeigt einen sicheren Abo-Status, wenn der Headless-Token Selling Plans nicht lesen darf", () => {
+    const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
+
+    expect(source).toContain('data-testid="subscription-connection-status"');
+    expect(source).toContain("Deine Abo-Angebote sind vorbereitet.");
+    expect(source).toContain("verbundene Headless-Storefront-Token");
+    expect(source).not.toContain("https://herbsom.myshopify.com/cart/add");
   });
 
   it("validiert den einmaligen OAuth-State serverseitig statt über ein Browser-Cookie", () => {
