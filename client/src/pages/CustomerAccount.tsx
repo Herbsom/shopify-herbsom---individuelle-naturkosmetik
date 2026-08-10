@@ -41,7 +41,10 @@ function subscriptionOptions(product: Product) {
 export default function CustomerAccount() {
   const { data, isLoading, refetch } = trpc.customerAccount.dashboard.useQuery(undefined, { retry: false });
   const { data: catalog = [], isLoading: catalogLoading } = trpc.commerce.products.list.useQuery({ first: 100 });
-  const subscriptionQuery = trpc.commerce.subscriptions.list.useQuery({ first: 50 }, { retry: false });
+  const subscriptionQuery = trpc.commerce.subscriptions.list.useQuery(
+    { first: 50 },
+    { retry: false, enabled: Boolean(data?.connected) }
+  );
   const prepareReorder = trpc.customerAccount.prepareReorder.useMutation();
   const { addItem, loading: cartLoading } = useCart();
   const [reviewProduct, setReviewProduct] = useState<{ id: string; name: string } | null>(null);
@@ -49,6 +52,7 @@ export default function CustomerAccount() {
   const [addingProductId, setAddingProductId] = useState<string | null>(null);
   const [selectedPlans, setSelectedPlans] = useState<Record<string, string>>({});
   const nativeShopifyAccountUrl = "https://account.herbsom.de";
+  const customerAccountLoginUrl = "/api/shopify/customer-account/login";
 
   const orders = data?.orders ?? [];
   const portalProducts = useMemo(() => {
@@ -137,10 +141,10 @@ export default function CustomerAccount() {
               <div className="px-7 py-12 md:px-14 md:py-16">
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
-                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Entdecke deine vertrauten Pflege-Essentials und lege sie mit einem Klick erneut in den Warenkorb. Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet; Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.</p>
+                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
-                    <LogIn size={15} /> Meine Bestellungen verwalten
+                  <a href={customerAccountLoginUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
+                    <LogIn size={15} /> Mein Herbsom-Konto öffnen
                   </a>
                   <a href="#wiederkauf" className="inline-flex items-center justify-center gap-2 border border-[#8A8A69] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#4C5238] transition-colors hover:bg-[#F4F0E5] active:scale-[0.97]">
                     Direkt nachbestellen <ArrowRight size={15} />
@@ -156,8 +160,8 @@ export default function CustomerAccount() {
                   <h2 className="mt-3 font-display text-4xl font-light leading-tight">Weniger denken.<br />Mehr pflegen.</h2>
                   <div className="mt-9 space-y-4 border-t border-[#B7B08F]/45 pt-7 font-body text-sm leading-relaxed text-[#F3EEDF]">
                     <p className="flex gap-3"><Heart size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Vertraute Produkte unkompliziert wiederbestellen.</p>
-                    <p className="flex gap-3"><CalendarClock size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Abo-Intervalle werden direkt aus Shopify synchronisiert.</p>
-                    <p className="flex gap-3"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Verträge direkt im Shopify-Konto verwalten.</p>
+                    <p className="flex gap-3"><Star size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Gekaufte Produkte direkt aus der Bestellhistorie bewerten.</p>
+                    <p className="flex gap-3"><CalendarClock size={16} className="mt-0.5 shrink-0 text-[#E4D8B9]" /> Abos sicher über Shopify abschließen und verwalten.</p>
                   </div>
                 </div>
               </aside>

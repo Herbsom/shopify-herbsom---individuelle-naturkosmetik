@@ -561,6 +561,11 @@
 
 ## Herbsom-Kundenportal mit Wiederkauf und Produkt-Abos
 
+- [ ] Einheitlichen markenkonformen Kundenportalfluss für Login, Wiederbestellung, Bewertungen und Abos festlegen
+- [ ] Nach Shopify-Login verlässliche Kundenidentifikation und Bestellhistorie für den eigenen Portalbereich herstellen
+- [ ] Wiederbestellaktion aus echten vergangenen Bestellungen in den Herbsom-Warenkorb anbinden
+- [ ] Bewertungsaktionen ausschließlich für erworbene Produkte im Kundenportal bereitstellen
+- [ ] Abo-Abschluss und Abo-Verwaltung als vollständig funktionsfähigen Shopify-Subscriptions-Fluss integrieren
 - [x] Vorhandene Shopify-Bestellhistorie, Wiederkaufpfad und Abonnement-Selling-Plans im Shop erfassen (keine Selling Plans vorhanden)
 - [x] Abo-Architektur und Shopify Subscriptions als native Subscription-App festlegen
 - [x] Markenkonformes Herbsom-Kundenportal mit sicherem Shopify-Anmeldeübergang gestalten
@@ -571,6 +576,9 @@
 - [ ] Headless-Storefront-Token um den Shopify-Scope `unauthenticated_read_selling_plans` ergänzen
 - [ ] Offengelegten Shopify-Subscriptions-Token widerrufen, neu erzeugen und ausschließlich über das sichere Eingabefeld hinterlegen
 - [ ] Shopify-Subscriptions-Block auf den nativen Shopify-Produktseiten aktivieren und dessen Abo-Checkout prüfen
+- [ ] Subscription-Widget im veröffentlichten Theme innerhalb von „Produktinformationen“ neben der Warenkorb-Schaltfläche platzieren und den App-Embed ausschalten
+- [ ] Theme-Zugriff oder die konkrete Produktvorlage ermitteln, um das Shopify-Subscriptions-Code-Snippet sicher an der Warenkorb-Position einzufügen
+- [ ] Individuell gestaltetes Shopify-Subscriptions-Widget mit Selling-Plan-Auswahl direkt beim Warenkorb integrieren
 - [x] Herbsom-Kundenportal mit den nativen Shopify-Produktseiten als Abo-Einstieg verlinken
 - [x] Shopify-eigenen Abo-Kaufpfad als Alternative ohne Headless-Selling-Plan-Leserecht evaluieren (nicht veröffentlicht, da der Onlineshop die Abo-Variante als ausverkauft ablehnt)
 - [x] Online-Store-Verfügbarkeit der Abo-Produkte für den nativen Shopify-Checkout prüfen und nicht verfügbare Kaufaktionen sperren

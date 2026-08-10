@@ -3,18 +3,17 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 describe("CustomerAccount-Anmeldestart", () => {
-  it("nutzt die direkte native Shopify-Kundenkonto-Adresse ohne eigenen OAuth-Callback", () => {
+  it("nutzt den bestätigten Herbsom-Shopify-OAuth-Einstieg für das eigene Kundenportal", () => {
     const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
 
     expect(source).toContain('const nativeShopifyAccountUrl = "https://account.herbsom.de"');
-    expect(source).not.toContain('"/api/shopify/customer-account/login"');
+    expect(source).toContain('const customerAccountLoginUrl = "/api/shopify/customer-account/login"');
     expect(source).toContain('target="_blank"');
     expect(source).not.toContain('target="_top"');
     expect(source).toContain('data-testid="customer-account-login-primary"');
-    expect(source).toContain('<a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary"');
-    expect(source).toContain("Meine Bestellungen verwalten");
-    expect(source).toContain("Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet; Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.");
-    expect(source).toContain("Abo-Optionen werden nach der Shopify-Synchronisierung hier ergänzt.");
+    expect(source).toContain('<a href={customerAccountLoginUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary"');
+    expect(source).toContain("Mein Herbsom-Konto öffnen");
+    expect(source).toContain("Melde dich sicher mit deinem Shopify-Kundenkonto an.");
     expect(source).toContain("Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
   });
 
@@ -27,6 +26,7 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain("Als Abo auswählen");
     expect(source).toContain("sellingPlanId: selection.allocation.sellingPlanId");
     expect(source).toContain("Dein Abo, direkt bei Shopify.");
+    expect(source).toContain("enabled: Boolean(data?.connected)");
   });
 
   it("bietet native Shopify-Produktseiten als sicheren Abo-Einstieg, wenn der Headless-Token Selling Plans nicht lesen darf", () => {
