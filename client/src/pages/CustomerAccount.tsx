@@ -28,6 +28,10 @@ function productPath(handle: string) {
   return paths[handle] ?? "/products";
 }
 
+function nativeShopifyProductUrl(handle: string) {
+  return `https://herbsom.de/products/${handle}`;
+}
+
 function subscriptionOptions(product: Product) {
   return product.variants.flatMap(variant =>
     variant.sellingPlanAllocations.map(allocation => ({ variant, allocation }))
@@ -196,7 +200,7 @@ export default function CustomerAccount() {
                       <button disabled={!selected || cartLoading || addingProductId === `${product.id}-${selected.allocation.sellingPlanId}`} onClick={() => selected && handleSubscriptionAdd(product, selected)} className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#5B5B38] px-4 py-3 font-body text-[11px] uppercase tracking-[0.12em] text-[#F8F5F0] transition-colors hover:bg-[#424226] disabled:cursor-not-allowed disabled:opacity-50"><CalendarClock size={14} />{addingProductId === `${product.id}-${selected?.allocation.sellingPlanId}` ? "Wird hinzugefügt" : "Als Abo auswählen"}</button>
                     </article>;
                   })}
-                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7" data-testid="subscription-connection-status"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Deine Abo-Angebote sind vorbereitet.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">Der gemeinsame Shopify-Plan ist den vorgesehenen Produkten zugeordnet. Die Lieferintervalle und Preise werden angezeigt, sobald der verbundene Headless-Storefront-Token die Shopify-Selling-Plan-Daten bereitstellt. Bis dahin bleiben alle Wiederkauf-Aktionen unverändert verfügbar.</p><a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] underline underline-offset-4">Bestehende Abos bei Shopify verwalten <ExternalLink size={14} /></a></div>}
+                </div> : <div className="border border-dashed border-[#BDB39D] bg-[#F8F5F0]/70 p-7" data-testid="native-shopify-subscription-entry"><CalendarClock size={22} className="text-[#5B5B38]" /><h3 className="mt-5 font-display text-3xl font-light">Dein Abo, direkt bei Shopify.</h3><p className="mt-3 max-w-xl font-body text-sm leading-relaxed text-[#6D6A61]">Wähle dein Pflegeprodukt und starte dein Abo auf der sicheren Shopify-Produktseite. Dort wählst du den Lieferintervall, schließt den Vertrag im Shopify-Checkout ab und verwaltest ihn später im Kundenkonto.</p><div className="mt-6 grid gap-3 sm:grid-cols-2">{portalProducts.map(product => <a key={product.id} href={nativeShopifyProductUrl(product.handle)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 border border-[#D8D0BD] bg-white px-4 py-4 font-body text-xs uppercase tracking-[0.1em] text-[#4D5734] transition-colors hover:border-[#5B5B38] hover:bg-[#F5F1E8]"><span>{product.title}</span><ExternalLink size={15} /></a>)}</div><p className="mt-5 font-body text-xs leading-relaxed text-[#7A7568]">Individuelle Creme und individuelles Serum kannst du zunächst über deinen persönlichen Konfigurator zusammenstellen; die Abo-Option wird anschließend im Shopify-Checkout ergänzt.</p><a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.12em] text-[#5B5B38] underline underline-offset-4">Bestehende Abos bei Shopify verwalten <ExternalLink size={14} /></a></div>}
               </div>
             </section>
           </>

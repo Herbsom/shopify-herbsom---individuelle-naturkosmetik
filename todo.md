@@ -569,6 +569,9 @@
 - [ ] Produkt-Abo-Auswahl mit Lieferintervallen und klaren Konditionen gestalten
 - [ ] Shopify-kompatiblen Abo-Checkout mit Selling-Plan-Daten implementieren oder die erforderliche Shop-Konfiguration transparent ausweisen
 - [ ] Headless-Storefront-Token um den Shopify-Scope `unauthenticated_read_selling_plans` ergänzen
+- [ ] Offengelegten Shopify-Subscriptions-Token widerrufen, neu erzeugen und ausschließlich über das sichere Eingabefeld hinterlegen
+- [ ] Shopify-Subscriptions-Block auf den nativen Shopify-Produktseiten aktivieren und dessen Abo-Checkout prüfen
+- [x] Herbsom-Kundenportal mit den nativen Shopify-Produktseiten als Abo-Einstieg verlinken
 - [x] Shopify-eigenen Abo-Kaufpfad als Alternative ohne Headless-Selling-Plan-Leserecht evaluieren (nicht veröffentlicht, da der Onlineshop die Abo-Variante als ausverkauft ablehnt)
 - [x] Online-Store-Verfügbarkeit der Abo-Produkte für den nativen Shopify-Checkout prüfen und nicht verfügbare Kaufaktionen sperren
 - [ ] Kundenportal, Wiederkauf und Abo-Kaufpfad mit Tests und Live-Prüfung absichern

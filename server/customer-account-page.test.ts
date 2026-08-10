@@ -26,15 +26,16 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain("Erneut bestellen");
     expect(source).toContain("Als Abo auswählen");
     expect(source).toContain("sellingPlanId: selection.allocation.sellingPlanId");
-    expect(source).toContain("Deine Abo-Angebote sind vorbereitet.");
+    expect(source).toContain("Dein Abo, direkt bei Shopify.");
   });
 
-  it("zeigt einen sicheren Abo-Status, wenn der Headless-Token Selling Plans nicht lesen darf", () => {
+  it("bietet native Shopify-Produktseiten als sicheren Abo-Einstieg, wenn der Headless-Token Selling Plans nicht lesen darf", () => {
     const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
 
-    expect(source).toContain('data-testid="subscription-connection-status"');
-    expect(source).toContain("Deine Abo-Angebote sind vorbereitet.");
-    expect(source).toContain("verbundene Headless-Storefront-Token");
+    expect(source).toContain('data-testid="native-shopify-subscription-entry"');
+    expect(source).toContain("Dein Abo, direkt bei Shopify.");
+    expect(source).toContain("function nativeShopifyProductUrl(handle: string)");
+    expect(source).toContain("https://herbsom.de/products/");
     expect(source).not.toContain("https://herbsom.myshopify.com/cart/add");
   });
 
