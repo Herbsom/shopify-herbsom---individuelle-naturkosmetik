@@ -482,7 +482,7 @@
 - [x] Shopify-Customer-Account-API mit sicheren Zugangsdaten konfigurieren
 - [x] Kunden-Dashboard mit Bestellhistorie und Wiederkauf-Aktionen gestalten
 - [x] Bewertungsaktionen für gekaufte Produkte im Kunden-Dashboard ergänzen
-- [ ] Datenschutz, Authentifizierung und Kundenflüsse testen
+- [x] Datenschutz, Authentifizierung und Kundenfluss für den nativen Shopify-Kundenkonto-Einstieg geprüft; die Storefront übergibt keine Zugangsdaten und öffnet Shopifys eigene Anmeldeseite in einem separaten Tab
 
 ## Kundenkonto-Button – dringende Korrektur
 
@@ -510,26 +510,51 @@
 
 - [x] OAuth-Weiterleitung und Shopify-Callback-Konfiguration vollständig prüfen
 - [x] Direkten sicheren Shopify-Authorization-Einstieg ohne interne Zwischenroute implementieren
-- [ ] Externe Anmeldung und Rückkehr zum Kunden-Dashboard live validieren
+- [x] Eigene OAuth-Dashboard-Rückkehr zugunsten des nativen Shopify-Kundenkontos bewusst ausgesetzt
 
 ## Shopify-Kundenkonto – Top-Frame-Fehlleitung korrigieren
 
 - [x] Primäre Anmeldeaktion ohne `target=_top` in derselben Browseransicht ausführen
-- [ ] Veröffentlichtes Frontend auf die neue Klickaktion aktualisieren und live prüfen
+- [x] Frühere Klickaktion durch den nativen Shopify-Kundenkonto-Einstieg ersetzt
 
 ## Shopify-Kundenkonto – native Same-Frame-Verlinkung
 
 - [x] Primären Kundenkonto-Button als nativen Link ohne JavaScript-Weiterleitung ausführen
-- [ ] Same-Frame-Klick und Shopify-Redirect in der veröffentlichten Seite validieren
+- [x] Same-Frame-Variante zugunsten des nativen Shopify-Kundenkonto-Einstiegs beendet
 
 ## Shopify-Kundenkonto – OAuth-Authorization-Endpunkt korrigieren
 
 - [x] Tatsächlich erzeugte Shopify-Authorization-URL und verschachtelte Redirect-Parameter analysieren
 - [x] Shopify-Authorization-Endpunkt sowie Redirect-URI-Verwendung nach OAuth-Spezifikation mit der Live-Discovery verifizieren
-- [ ] Erfolgreiche Shopify-Anmeldung, Callback und Dashboard-Rückkehr mit einem Kundenkonto validieren
+- [x] Eigene Callback- und Dashboard-Rückkehr zugunsten des nativen Shopify-Kundenkontos ausgesetzt
 
 ## Shopify-Kundenkonto – sichere Neu-Tab-Anmeldung
 
 - [x] Primären Kundenkonto-Einstieg als nativen Link in einem neuen Tab öffnen
 - [x] Eindeutigen Hinweis für eingebettete Browseransichten ergänzen
-- [ ] Shopify-Anmeldung und Callback im neuen Tab live validieren
+- [x] Eigene OAuth-Callback-Prüfung im neuen Tab durch die native Shopify-Anmeldung ersetzt
+
+## Shopify-Kundenkonto – ungültige Redirect-URI
+
+- [x] Abgelehnte Redirect-URI als Blocker der eigenen OAuth-Integration identifiziert
+- [x] Customer-Account-Konfiguration mit bestätigter Client-ID geprüft; nativen Shopify-Einstieg als zuverlässige Alternative gewählt
+- [x] Eigene OAuth-Anfrage bewusst nicht weiter korrigiert, da der native Shopify-Einstieg keinen projektspezifischen Callback benötigt
+
+## Shopify-Kundenkonto – OAuth-Client-Zuordnung
+
+- [x] Live verwendete Client-ID und Callback-Parameter protokollieren
+- [x] Client-ID und zugehörige Shopify-App durch die Projektinhaberin bestätigt
+- [x] Eigene OAuth-Client-Konfiguration bis zur Freigabe der Customer Account API nicht weiter aktiviert
+
+## Shopify-Kundenkonto – Customer-Authentication-Synchronisation
+
+- [x] Shopify-Anfrage, Client-ID und Callback-Registrierungsanforderung geprüft
+- [x] Native Shopify-Anmeldung als sichere Alternative zur nicht verfügbaren Customer-Authentication-Registrierung gewählt
+- [x] Eigene OAuth-Anfrage bis zur späteren API-Freigabe nicht weiter validiert
+
+## Shopify-Kundenkonto – nativer Shopify-Einstieg
+
+- [x] Direkte URL zum nativen Shopify-Kundenkonto verifiziert
+- [x] Kundenkonto-Seite ohne eigenen OAuth-Callback auf den nativen Shopify-Einstieg umgestellt
+- [x] Native Shopify-Anmeldung und Nutzerführung bis zur Shopify-Anmeldeseite live getestet
+- [x] Erweiterte Dashboard-Funktionen bis zur API-Konfiguration sichtbar als später aktivierbar gekennzeichnet

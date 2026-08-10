@@ -22,7 +22,7 @@ export default function CustomerAccount() {
   const { addItem, loading: cartLoading } = useCart();
   const [reviewProduct, setReviewProduct] = useState<{ id: string; name: string } | null>(null);
   const [reorderingOrderId, setReorderingOrderId] = useState<string | null>(null);
-  const customerAccountLoginPath = "/api/shopify/customer-account/login";
+  const nativeShopifyAccountUrl = "https://account.herbsom.de";
 
   const orders = data?.orders ?? [];
   const purchasedProductCount = useMemo(
@@ -71,12 +71,13 @@ export default function CustomerAccount() {
             <p className="section-label mb-4">Mein Kundenkonto</p>
             <h1 className="font-display text-4xl font-light md:text-6xl">Deine Pflege. Immer griffbereit.</h1>
             <p className="mx-auto mt-6 max-w-xl font-body text-sm leading-relaxed text-[#6B6B69] md:text-base">
-              Melde dich mit deinem Shopify-Kundenkonto an, um deine Bestellungen erneut zu kaufen und Produkte aus deinen Käufen zu bewerten.
+              Melde dich direkt im sicheren Shopify-Kundenkonto an. Dort kannst du deine über Shopify geführten Bestellungen und Kontodaten einsehen und verwalten.
             </p>
-            <a href={customerAccountLoginPath} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="mt-9 inline-flex items-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-all hover:bg-[#424226] active:scale-[0.97]">
-              <LogIn size={15} /> Shopify-Kundenkonto öffnen
+            <a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="mt-9 inline-flex items-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-all hover:bg-[#424226] active:scale-[0.97]">
+              <LogIn size={15} /> Zum Shopify-Kundenkonto
             </a>
-            <p className="mt-5 font-body text-xs leading-relaxed text-[#85837D]">Die sichere Shopify-Anmeldung öffnet sich in einem neuen Tab. Nach der Anmeldung kommst du dort direkt zu deinem Kundenkonto zurück.</p>
+            <p className="mt-5 font-body text-xs leading-relaxed text-[#85837D]">Das Kundenkonto öffnet sich in einem neuen Tab und wird direkt von Shopify verwaltet.</p>
+            <p className="mx-auto mt-2 max-w-lg font-body text-xs leading-relaxed text-[#85837D]">Wiederkauf und Bestellverwaltung erfolgen derzeit im Shopify-Kundenkonto. Die erweiterte Kontoansicht auf Herbsom wird nach Freigabe der Customer Account API wieder aktiviert.</p>
           </section>
         )}
 
