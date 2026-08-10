@@ -9,6 +9,8 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('href="https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login"');
     expect(source).toContain('target="_blank"');
     expect(source).toContain('target="_top"');
+    expect(source).toContain('data-testid="customer-account-login-top"');
+    expect(source).toContain('data-testid="customer-account-login-new-tab"');
     expect(source).toContain("Shopify-Kundenkonto öffnen");
     expect(source).toContain("Anmeldung in neuem Tab öffnen");
   });
