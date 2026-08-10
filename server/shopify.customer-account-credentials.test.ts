@@ -6,7 +6,7 @@ const tokenEndpoint = process.env.SHOPIFY_CUSTOMER_ACCOUNT_TOKEN_ENDPOINT;
 
 describe("Shopify Customer Account credentials", () => {
   it.skipIf(!clientId || !clientSecret || !tokenEndpoint)(
-    "authenticates the confidential client before implementing customer data flows",
+    "authenticates the configured confidential client before implementing customer data flows",
     async () => {
       const response = await fetch(tokenEndpoint!, {
         method: "POST",

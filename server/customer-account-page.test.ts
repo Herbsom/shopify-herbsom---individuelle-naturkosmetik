@@ -15,6 +15,8 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain("Mein Herbsom-Konto öffnen");
     expect(source).toContain("Melde dich sicher mit deinem Shopify-Kundenkonto an.");
     expect(source).toContain("Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
+    expect(source).toContain('data-testid="customer-account-login-error"');
+    expect(source).toContain('get("shopify-error")');
   });
 
   it("bietet einen eigenen Herbsom-Einstieg mit Wiederkauf und dynamischer Shopify-Abo-Auswahl", () => {

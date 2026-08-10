@@ -49,6 +49,7 @@ export default function CustomerAccount() {
   const [selectedPlans, setSelectedPlans] = useState<Record<string, string>>({});
   const nativeShopifyAccountUrl = "https://account.herbsom.de";
   const customerAccountLoginUrl = "/api/shopify/customer-account/login";
+  const loginError = typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("shopify-error");
 
   const orders = data?.orders ?? [];
   const portalProducts = useMemo(() => {
@@ -138,6 +139,7 @@ export default function CustomerAccount() {
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
                 <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
+                {loginError && <div role="alert" className="mt-6 max-w-xl border border-[#C78B71] bg-[#FFF8F3] p-4 font-body text-sm leading-relaxed text-[#754B3B]" data-testid="customer-account-login-error"><p className="font-medium">Die Shopify-Anmeldung wurde noch nicht abgeschlossen.</p><p className="mt-1">Bitte starte die Anmeldung erneut und schließe sie mit der E-Mail-Adresse deines Kundenkontos ab. Wenn der Hinweis anschließend erneut erscheint, wurde der technische Schritt sicher protokolliert und kann gezielt korrigiert werden.</p></div>}
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <a href={customerAccountLoginUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary" className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
                     <LogIn size={15} /> Mein Herbsom-Konto öffnen
