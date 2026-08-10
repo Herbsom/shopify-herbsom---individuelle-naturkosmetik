@@ -44,6 +44,9 @@ function getShopifyStoreDomain(): string {
 function getShopifyStorefrontToken(): string {
   return process.env.SHOPIFY_STOREFRONT_API_ACCESS_TOKEN ?? "";
 }
+function getShopifySubscriptionsStorefrontToken(): string {
+  return process.env.SHOPIFY_SUBSCRIPTIONS_STOREFRONT_TOKEN?.trim() || getShopifyStorefrontToken();
+}
 export function isShopifyConfigured(): boolean {
   return Boolean(getShopifyStoreDomain() && getShopifyStorefrontToken());
 }
@@ -80,9 +83,10 @@ type ShopifyUserError = {
 
 async function storefrontFetch<T>(
   query: string,
-  variables?: Record<string, unknown>
+  variables?: Record<string, unknown>,
+  accessToken: string = getShopifyStorefrontToken()
 ): Promise<T> {
-  if (!isShopifyConfigured()) {
+  if (!getShopifyStoreDomain() || !accessToken) {
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
       message: "Shopify Storefront API is not configured",
@@ -95,7 +99,7 @@ async function storefrontFetch<T>(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Shopify-Storefront-Access-Token": getShopifyStorefrontToken(),
+        "X-Shopify-Storefront-Access-Token": accessToken,
       },
       body: JSON.stringify({ query, variables }),
     });
@@ -411,7 +415,8 @@ export async function listSubscriptionProducts(first: number = 50): Promise<Prod
          edges { node { ...SubscriptionProductFields } }
        }
      }`,
-    { first }
+    { first },
+    getShopifySubscriptionsStorefrontToken()
   );
   return data.products.edges
     .map(edge => normalizeProduct(edge.node))
