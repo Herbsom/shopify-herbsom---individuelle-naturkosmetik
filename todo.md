@@ -499,3 +499,9 @@
 - [x] Unsichtbare Klickschichten und Markup-Konflikte am Kundenkonto-Einstieg prüfen
 - [x] Blockierungsfreie Anmeldeaktion und sichtbare Alternativ-URL umsetzen
 - [x] Klickbarkeit auf der Live-Seite erneut validieren
+
+## Shopify-Kundenkonto-Weiterleitung – erneute Korrektur
+
+- [x] Veröffentlichte Login-URL und externes Weiterleitungsverhalten prüfen
+- [x] Browserunabhängigen Shopify-Login-Einstieg umsetzen
+- [ ] Live-Weiterleitung mit dem sichtbaren Kundenkonto-Einstieg testen

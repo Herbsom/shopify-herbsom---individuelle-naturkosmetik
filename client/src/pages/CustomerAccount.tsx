@@ -72,11 +72,11 @@ export default function CustomerAccount() {
             <p className="mx-auto mt-6 max-w-xl font-body text-sm leading-relaxed text-[#6B6B69] md:text-base">
               Melde dich mit deinem Shopify-Kundenkonto an, um deine Bestellungen erneut zu kaufen und Produkte aus deinen Käufen zu bewerten.
             </p>
-            <a href="https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login" target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-all hover:bg-[#424226] active:scale-[0.97]">
+            <a href="https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login" target="_top" className="mt-9 inline-flex items-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-all hover:bg-[#424226] active:scale-[0.97]">
               <LogIn size={15} /> Shopify-Kundenkonto öffnen
             </a>
             <p className="mt-5 font-body text-xs text-[#85837D]">Deine Bestellhistorie wird sicher direkt über Shopify geladen.</p>
-            <a href="https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login" className="mt-3 inline-block font-body text-xs uppercase tracking-[0.1em] text-[#5B5B38] underline underline-offset-4">Anmeldung im selben Tab öffnen</a>
+            <a href="https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-body text-xs uppercase tracking-[0.1em] text-[#5B5B38] underline underline-offset-4">Anmeldung in neuem Tab öffnen</a>
           </section>
         )}
 
