@@ -505,3 +505,9 @@
 - [x] Veröffentlichte Login-URL und externes Weiterleitungsverhalten prüfen
 - [x] Browserunabhängigen Shopify-Login-Einstieg umsetzen
 - [x] Live-Weiterleitung mit dem sichtbaren Kundenkonto-Einstieg testen
+
+## Shopify-Kundenkonto – endgültiger Authorization-Einstieg
+
+- [x] OAuth-Weiterleitung und Shopify-Callback-Konfiguration vollständig prüfen
+- [x] Direkten sicheren Shopify-Authorization-Einstieg ohne interne Zwischenroute implementieren
+- [ ] Externe Anmeldung und Rückkehr zum Kunden-Dashboard live validieren

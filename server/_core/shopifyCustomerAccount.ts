@@ -12,7 +12,6 @@ import { getSessionCookieOptions } from "./cookies";
 import { listProducts } from "./shopify";
 
 const CUSTOMER_SESSION_COOKIE = "herbsom_customer_account";
-const CUSTOMER_STATE_COOKIE = "herbsom_customer_account_state";
 const CUSTOMER_API_VERSION = "2026-07";
 const AUTH_STATE_LIFETIME_MS = 10 * 60 * 1000;
 const SESSION_REFRESH_BUFFER_MS = 60 * 1000;
@@ -164,10 +163,6 @@ function readCookie(req: Request, key: string) {
 
 function sessionCookieOptions(req: Request) {
   return { ...getSessionCookieOptions(req), sameSite: "lax" as const, maxAge: 60 * 60 * 24 * 30 * 1000 };
-}
-
-function stateCookieOptions(req: Request) {
-  return { ...getSessionCookieOptions(req), sameSite: "lax" as const, maxAge: AUTH_STATE_LIFETIME_MS };
 }
 
 function buildCodeChallenge(verifier: string) {
@@ -418,7 +413,6 @@ export function registerShopifyCustomerAccountRoutes(app: Express) {
         encryptedVerifier: encrypt(verifier),
         expiresAt: new Date(Date.now() + AUTH_STATE_LIFETIME_MS),
       });
-      res.cookie(CUSTOMER_STATE_COOKIE, signOpaqueId(state), stateCookieOptions(req));
       res.redirect(302, buildCustomerAuthorizationUrl({
         authorizationEndpoint,
         clientId,
@@ -436,10 +430,7 @@ export function registerShopifyCustomerAccountRoutes(app: Express) {
     const code = typeof req.query.code === "string" ? req.query.code : undefined;
     const state = typeof req.query.state === "string" ? req.query.state : undefined;
     try {
-      const signedState = readCookie(req, CUSTOMER_STATE_COOKIE);
-      if (!code || !state || verifyOpaqueId(signedState) !== state) {
-        throw new Error("Invalid customer account OAuth state");
-      }
+      if (!code || !state) throw new Error("Missing customer account OAuth callback parameters");
       const storedState = await consumeShopifyCustomerAuthState(state);
       if (!storedState) throw new Error("Expired customer account OAuth state");
       const token = await exchangeToken({
@@ -455,12 +446,10 @@ export function registerShopifyCustomerAccountRoutes(app: Express) {
         encryptedRefreshToken: token.refresh_token ? encrypt(token.refresh_token) : null,
         expiresAt: token.expires_in ? new Date(Date.now() + token.expires_in * 1000) : null,
       });
-      res.clearCookie(CUSTOMER_STATE_COOKIE, stateCookieOptions(req));
       res.cookie(CUSTOMER_SESSION_COOKIE, signOpaqueId(sessionId), sessionCookieOptions(req));
       res.redirect(302, "/account?shopify-connected=1");
     } catch (error) {
       console.error("[Shopify Customer Account] Callback failed", error);
-      res.clearCookie(CUSTOMER_STATE_COOKIE, stateCookieOptions(req));
       res.redirect(302, "/account?shopify-error=callback");
     }
   });
