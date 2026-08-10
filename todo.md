@@ -566,6 +566,8 @@
 - [ ] Wiederbestellaktion aus echten vergangenen Bestellungen in den Herbsom-Warenkorb anbinden
 - [ ] Bewertungsaktionen ausschließlich für erworbene Produkte im Kundenportal bereitstellen
 - [ ] Abo-Abschluss und Abo-Verwaltung als vollständig funktionsfähigen Shopify-Subscriptions-Fluss integrieren
+- [ ] Fehlerhafte Rückkehr vom Shopify-Login in das Herbsom-Portal analysieren und korrigieren
+- [x] Veraltete native Shopify-Produktlinks ohne Abo-Widget aus dem Kundenportal entfernen und durch den sicheren Herbsom-Konto-Einstieg ersetzen
 - [x] Vorhandene Shopify-Bestellhistorie, Wiederkaufpfad und Abonnement-Selling-Plans im Shop erfassen (keine Selling Plans vorhanden)
 - [x] Abo-Architektur und Shopify Subscriptions als native Subscription-App festlegen
 - [x] Markenkonformes Herbsom-Kundenportal mit sicherem Shopify-Anmeldeübergang gestalten
