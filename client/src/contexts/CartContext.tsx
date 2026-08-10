@@ -28,7 +28,12 @@ export type LegacyCartItem = {
   description?: string;
 };
 
-type AddItemInput = string | LegacyCartItem;
+export type SubscriptionCartItem = {
+  variantId: string;
+  sellingPlanId: string;
+};
+
+type AddItemInput = string | LegacyCartItem | SubscriptionCartItem;
 
 type CartContextValue = {
   cart: Cart | null;
@@ -283,6 +288,7 @@ type ResolvedCartLine = {
   variantId: string;
   quantity: number;
   attributes?: CartAttribute[];
+  sellingPlanId?: string;
 };
 
 export async function performLegacyAddToCart(
@@ -446,6 +452,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
         try {
           if (typeof input === "string") {
             await addResolvedLine({ variantId: input, quantity });
+          } else if ("sellingPlanId" in input) {
+            await addResolvedLine({
+              variantId: input.variantId,
+              quantity,
+              sellingPlanId: input.sellingPlanId,
+            });
           } else {
 
             await performLegacyAddToCart(input, {

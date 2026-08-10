@@ -34,6 +34,17 @@ export type SelectedOption = {
   value: string;
 };
 
+/** A Shopify-managed recurring purchase option for a product variant. */
+export type SellingPlanAllocation = {
+  sellingPlanId: string;
+  name: string;
+  description: string | null;
+  options: SelectedOption[];
+  price: Money;
+  compareAtPrice: Money;
+  perDeliveryPrice: Money;
+};
+
 export type ProductVariant = {
   /** Opaque variant identifier — pass back to addItem / cart mutations as-is. */
   id: string;
@@ -46,6 +57,8 @@ export type ProductVariant = {
   selectedOptions: SelectedOption[];
   /** EAN/Barcode for the variant. */
   barcode: string | null;
+  /** Shopify-provided subscription options available for this variant. */
+  sellingPlanAllocations: SellingPlanAllocation[];
 };
 
 export type Product = {
@@ -94,6 +107,8 @@ export type CartItem = {
   attributes: CartAttribute[];
   /** EAN/Barcode for the product. */
   barcode: string | null;
+  /** Subscription choice attached to this cart line, when applicable. */
+  sellingPlanName: string | null;
 };
 
 export type Cart = {

@@ -226,6 +226,65 @@ const PRODUCT_FRAGMENT = /* GraphQL */ `
   }
 `;
 
+/**
+ * Subscription data requires Shopify's separate
+ * `unauthenticated_read_selling_plans` Storefront scope. It is intentionally
+ * kept out of PRODUCT_FRAGMENT so a missing subscription scope can never
+ * interrupt the normal product catalog or checkout flow.
+ */
+const SUBSCRIPTION_PRODUCT_FRAGMENT = /* GraphQL */ `
+  ${IMAGE_FRAGMENT}
+  ${MONEY_FRAGMENT}
+  fragment SubscriptionProductFields on Product {
+    id
+    title
+    handle
+    description
+    descriptionHtml
+    productType
+    vendor
+    tags
+    options { name values }
+    priceRange {
+      minVariantPrice { ...MoneyFields }
+      maxVariantPrice { ...MoneyFields }
+    }
+    images(first: 8) {
+      edges { node { ...ImageFields } }
+    }
+    variants(first: 25) {
+      edges {
+        node {
+          id
+          title
+          availableForSale
+          price { ...MoneyFields }
+          compareAtPrice { ...MoneyFields }
+          selectedOptions { name value }
+          barcode
+          sellingPlanAllocations(first: 10) {
+            edges {
+              node {
+                sellingPlan {
+                  id
+                  name
+                  description
+                  options { name value }
+                }
+                priceAdjustments {
+                  price { ...MoneyFields }
+                  compareAtPrice { ...MoneyFields }
+                  perDeliveryPrice { ...MoneyFields }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 const COLLECTION_FRAGMENT = /* GraphQL */ `
   ${IMAGE_FRAGMENT}
   fragment CollectionFields on Collection {
@@ -339,6 +398,26 @@ export async function getProductByHandle(handle: string): Promise<Product> {
   return normalizeProduct(data.productByHandle);
 }
 
+/**
+ * Reads only products that can be purchased with a Shopify Selling Plan. This
+ * API is isolated from the normal catalog because it requires Shopify's
+ * unauthenticated_read_selling_plans Storefront permission.
+ */
+export async function listSubscriptionProducts(first: number = 50): Promise<Product[]> {
+  const data = await storefrontFetch<{ products: Edges<RawProduct> }>(
+    `${SUBSCRIPTION_PRODUCT_FRAGMENT}
+     query listSubscriptionProducts($first: Int!) {
+       products(first: $first, sortKey: TITLE) {
+         edges { node { ...SubscriptionProductFields } }
+       }
+     }`,
+    { first }
+  );
+  return data.products.edges
+    .map(edge => normalizeProduct(edge.node))
+    .filter(product => product.variants.some(variant => variant.sellingPlanAllocations.length > 0));
+}
+
 export async function listCollections(first: number = 10): Promise<Collection[]> {
   const data = await storefrontFetch<{ collections: Edges<RawCollection> }>(
     `${COLLECTION_FRAGMENT}
@@ -377,6 +456,7 @@ export type CartLineInput = {
   variantId: string;
   quantity: number;
   attributes?: Array<{ key: string; value: string }>;
+  sellingPlanId?: string;
 };
 export type CartLineUpdate = { lineId: string; quantity: number };
 
@@ -400,6 +480,7 @@ export async function createCart(lines: CartLineInput[]): Promise<Cart> {
           merchandiseId: l.variantId,
           quantity: l.quantity,
           attributes: l.attributes,
+          sellingPlanId: l.sellingPlanId,
         })),
       },
     }
@@ -434,8 +515,9 @@ export async function addCartLines(
       cartId,
       lines: lines.map(l => ({
         merchandiseId: l.variantId,
-        quantity: l.quantity,
-        attributes: l.attributes,
+          quantity: l.quantity,
+          attributes: l.attributes,
+          sellingPlanId: l.sellingPlanId,
       })),
     }
   );

@@ -17,6 +17,7 @@ import {
   getProductByHandle,
   listCollections,
   listProducts,
+  listSubscriptionProducts,
   removeCartLines,
   updateCartLines,
 } from "../_core/shopify";
@@ -31,6 +32,7 @@ const cartLineInputSchema = z.object({
   variantId: z.string().min(1),
   quantity: z.number().int().min(1).max(99),
   attributes: z.array(cartAttributeSchema).max(20).optional(),
+  sellingPlanId: z.string().min(1).optional(),
 });
 
 const cartLineUpdateSchema = z.object({
@@ -59,6 +61,11 @@ export const commerceRouter = router({
       .query(async ({ input }) => {
         return getProductByHandle(input.handle);
       }),
+  }),
+  subscriptions: router({
+    list: publicProcedure
+      .input(z.object({ first: z.number().int().min(1).max(100).optional() }).optional())
+      .query(async ({ input }) => listSubscriptionProducts(input?.first)),
   }),
   collections: router({
     list: publicProcedure

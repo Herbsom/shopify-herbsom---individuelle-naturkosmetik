@@ -22,6 +22,7 @@ import type {
   Product,
   ProductOption,
   ProductVariant,
+  SellingPlanAllocation,
   SelectedOption,
 } from "@shared/commerce/types";
 
@@ -33,6 +34,20 @@ type RawSelectedOption = { name: string; value: string };
 type RawProductOption = { name: string; values: string[] };
 type Edges<T> = { edges: Array<{ node: T }> };
 
+type RawSellingPlanAllocation = {
+  sellingPlan: {
+    id: string;
+    name: string;
+    description: string | null;
+    options: RawSelectedOption[];
+  };
+  priceAdjustments: {
+    price: RawMoney;
+    compareAtPrice: RawMoney;
+    perDeliveryPrice: RawMoney;
+  };
+};
+
 type RawVariant = {
   id: string;
   title: string;
@@ -41,6 +56,7 @@ type RawVariant = {
   compareAtPrice: RawMoney | null;
   selectedOptions: RawSelectedOption[];
   barcode: string | null;
+  sellingPlanAllocations?: Edges<RawSellingPlanAllocation>;
 };
 
 export type RawProduct = {
@@ -82,6 +98,9 @@ export type RawCartLine = {
       images: Edges<{ url: string; altText: string | null; width?: number; height?: number }>;
     };
   };
+  sellingPlanAllocation?: {
+    sellingPlan: { id: string; name: string };
+  } | null;
 };
 
 export type RawCart = {
@@ -110,6 +129,18 @@ function normalizeProductOption(o: RawProductOption): ProductOption {
   return { name: o.name, values: o.values };
 }
 
+function normalizeSellingPlanAllocation(allocation: RawSellingPlanAllocation): SellingPlanAllocation {
+  return {
+    sellingPlanId: allocation.sellingPlan.id,
+    name: allocation.sellingPlan.name,
+    description: allocation.sellingPlan.description ?? null,
+    options: (allocation.sellingPlan.options ?? []).map(normalizeSelectedOption),
+    price: normalizeMoney(allocation.priceAdjustments.price),
+    compareAtPrice: normalizeMoney(allocation.priceAdjustments.compareAtPrice),
+    perDeliveryPrice: normalizeMoney(allocation.priceAdjustments.perDeliveryPrice),
+  };
+}
+
 function normalizeVariant(v: RawVariant): ProductVariant {
   return {
     id: v.id,
@@ -119,6 +150,7 @@ function normalizeVariant(v: RawVariant): ProductVariant {
     availableForSale: v.availableForSale,
     selectedOptions: (v.selectedOptions ?? []).map(normalizeSelectedOption),
     barcode: v.barcode || null,
+    sellingPlanAllocations: (v.sellingPlanAllocations?.edges ?? []).map(edge => normalizeSellingPlanAllocation(edge.node)),
   };
 }
 
@@ -166,6 +198,7 @@ function normalizeCartItem(line: RawCartLine): CartItem {
     lineTotal: normalizeMoney(line.cost.totalAmount),
     attributes: line.attributes ?? [],
     barcode: line.merchandise.barcode || null,
+    sellingPlanName: line.sellingPlanAllocation?.sellingPlan.name ?? null,
   };
 }
 

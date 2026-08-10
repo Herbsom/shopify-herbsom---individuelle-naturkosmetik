@@ -558,3 +558,14 @@
 - [x] Kundenkonto-Seite ohne eigenen OAuth-Callback auf den nativen Shopify-Einstieg umgestellt
 - [x] Native Shopify-Anmeldung und Nutzerführung bis zur Shopify-Anmeldeseite live getestet
 - [x] Erweiterte Dashboard-Funktionen bis zur API-Konfiguration sichtbar als später aktivierbar gekennzeichnet
+
+## Herbsom-Kundenportal mit Wiederkauf und Produkt-Abos
+
+- [x] Vorhandene Shopify-Bestellhistorie, Wiederkaufpfad und Abonnement-Selling-Plans im Shop erfassen (keine Selling Plans vorhanden)
+- [x] Abo-Architektur und Shopify Subscriptions als native Subscription-App festlegen
+- [x] Markenkonformes Herbsom-Kundenportal mit sicherem Shopify-Anmeldeübergang gestalten
+- [x] Wiederkauf-Einstieg mit dynamischer Produktauswahl und Warenkorbübergabe implementieren
+- [ ] Produkt-Abo-Auswahl mit Lieferintervallen und klaren Konditionen gestalten
+- [ ] Shopify-kompatiblen Abo-Checkout mit Selling-Plan-Daten implementieren oder die erforderliche Shop-Konfiguration transparent ausweisen
+- [ ] Headless-Storefront-Token um den Shopify-Scope `unauthenticated_read_selling_plans` ergänzen
+- [ ] Kundenportal, Wiederkauf und Abo-Kaufpfad mit Tests und Live-Prüfung absichern

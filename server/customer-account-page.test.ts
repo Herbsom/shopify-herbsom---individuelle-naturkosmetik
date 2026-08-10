@@ -12,9 +12,20 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).not.toContain('target="_top"');
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).toContain('<a href={nativeShopifyAccountUrl} target="_blank" rel="noopener noreferrer" data-testid="customer-account-login-primary"');
-    expect(source).toContain("Zum Shopify-Kundenkonto");
-    expect(source).toContain("Das Kundenkonto öffnet sich in einem neuen Tab und wird direkt von Shopify verwaltet.");
-    expect(source).toContain("Die erweiterte Kontoansicht auf Herbsom wird nach Freigabe der Customer Account API wieder aktiviert.");
+    expect(source).toContain("Meine Bestellungen verwalten");
+    expect(source).toContain("Dein sicheres Konto und deine Daten werden dabei direkt von Shopify verwaltet.");
+    expect(source).toContain("Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
+  });
+
+  it("bietet einen eigenen Herbsom-Einstieg mit Wiederkauf und dynamischer Shopify-Abo-Auswahl", () => {
+    const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
+
+    expect(source).toContain('data-testid="customer-subscription-section"');
+    expect(source).toContain("Direkt nachbestellen");
+    expect(source).toContain("Erneut bestellen");
+    expect(source).toContain("Als Abo auswählen");
+    expect(source).toContain("sellingPlanId: selection.allocation.sellingPlanId");
+    expect(source).toContain("Abo-Angebote werden synchronisiert.");
   });
 
   it("validiert den einmaligen OAuth-State serverseitig statt über ein Browser-Cookie", () => {
