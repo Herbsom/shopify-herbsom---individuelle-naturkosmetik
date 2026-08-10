@@ -34,6 +34,7 @@ import RoutineTemplate from "./pages/RoutineTemplate";
 import SkinTest from "./pages/SkinTest";
 import Gutschein from "./pages/Gutschein";
 import ShopifyAccountRedirect from "./pages/ShopifyAccountRedirect";
+import ShopifyLoginBridge from "./pages/ShopifyLoginBridge";
 import CustomerAccount from "./pages/CustomerAccount";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
@@ -84,6 +85,7 @@ function Router() {
       <Route path={"/skin-test"} component={SkinTest} />
       <Route path={"/gutschein"} component={Gutschein} />
       <Route path={"/account"} component={CustomerAccount} />
+      <Route path={"/konto/anmelden"} component={ShopifyLoginBridge} />
       <Route path={"/account/subscriptions"} component={ShopifyAccountRedirect} />
       <Route path={"/cart"} component={Cart} />
       <Route path={"/checkout"} component={Checkout} />

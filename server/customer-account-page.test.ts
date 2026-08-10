@@ -19,6 +19,7 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('get("shopify-error")');
     expect(source).toContain("EmbeddedShopifyLogin");
     expect(source).toContain("shopify-account");
+    expect(source).toContain('sign-in-url="/konto/anmelden"');
     expect(source).toContain("E-Mail sicher anmelden");
     expect(source).toContain("showLoginSurface");
   });
@@ -51,5 +52,14 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain("await consumeShopifyCustomerAuthState(state)");
     expect(source).toContain('if (!code || !state) throw new Error("Missing customer account OAuth callback parameters")');
     expect(source).not.toContain("CUSTOMER_STATE_COOKIE");
+  });
+
+  it("führt die eingebettete Shopify-Anmeldung über eine sichtbare Herbsom-Brückenseite", () => {
+    const bridge = readFileSync(resolve(process.cwd(), "client/src/pages/ShopifyLoginBridge.tsx"), "utf8");
+    const app = readFileSync(resolve(process.cwd(), "client/src/App.tsx"), "utf8");
+
+    expect(bridge).toContain("/api/shopify/customer-account/login${window.location.search}");
+    expect(bridge).toContain("Deine sichere Anmeldung");
+    expect(app).toContain('path={"/konto/anmelden"} component={ShopifyLoginBridge}');
   });
 });

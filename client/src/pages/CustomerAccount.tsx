@@ -41,7 +41,7 @@ function EmbeddedShopifyLogin({ loginUrl }: { loginUrl: string }) {
   }
 
   return <shopify-store store-domain="https://herbsom.myshopify.com" public-access-token={publicAccessToken}>
-    <shopify-account menu="customer-account-main-menu" sign-in-url={loginUrl} className="herbsom-account-component block">
+    <shopify-account menu="customer-account-main-menu" sign-in-url="/konto/anmelden" className="herbsom-account-component block">
       <button slot="signed-out-avatar" type="button" className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
         <LogIn size={16} /> E-Mail sicher anmelden
       </button>
