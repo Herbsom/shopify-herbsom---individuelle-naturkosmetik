@@ -6,19 +6,20 @@ describe("CustomerAccount-Anmeldestart", () => {
   it("nutzt den bestätigten Herbsom-Shopify-OAuth-Einstieg für das eigene Kundenportal", () => {
     const source = readFileSync(resolve(process.cwd(), "client/src/pages/CustomerAccount.tsx"), "utf8");
 
-    expect(source).not.toContain('target="_blank"');
     expect(source).not.toContain('target="_top"');
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).toContain("HerbsomEmailLogin");
     expect(source).toContain('data-testid="customer-account-email-login"');
-    expect(source).toContain('window.location.assign(`/konto/anmelden?${params.toString()}`)');
-    expect(source).toContain('login_hint_mode: "submit"');
+    expect(source).toContain('action="/konto/anmelden" method="get" target="_blank"');
+    expect(source).toContain('name="login_hint_mode" value="submit"');
+    expect(source).toContain('name="login_hint"');
     expect(source).toContain("Shopify sendet dir anschließend einen einmaligen Code.");
     expect(source).toContain("E-Mail-Code, Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.");
     expect(source).toContain('data-testid="customer-account-login-error"');
     expect(source).toContain('get("shopify-error")');
     expect(source).not.toContain("shopify-account");
-    expect(source).toContain("Sicher anmelden");
+    expect(source).toContain("Code-Seite öffnen");
+    expect(source).toContain("Die Shopify-Code-Seite öffnet sich in einem neuen Tab");
     expect(source).toContain("showLoginSurface");
   });
 

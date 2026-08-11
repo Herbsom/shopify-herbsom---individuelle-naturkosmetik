@@ -35,29 +35,18 @@ function subscriptionOptions(product: Product) {
 }
 
 function HerbsomEmailLogin() {
-  const [email, setEmail] = useState("");
-
-  function submitLogin(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const normalizedEmail = email.trim();
-    if (!normalizedEmail) return;
-    const params = new URLSearchParams({
-      return_to: "/account",
-      login_hint: normalizedEmail,
-      login_hint_mode: "submit",
-      locale: "de-DE",
-    });
-    window.location.assign(`/konto/anmelden?${params.toString()}`);
-  }
-
-  return <form onSubmit={submitLogin} className="w-full max-w-xl" data-testid="customer-account-email-login">
+  return <form action="/konto/anmelden" method="get" target="_blank" className="w-full max-w-xl" data-testid="customer-account-email-login">
+    <input type="hidden" name="return_to" value="/account" />
+    <input type="hidden" name="login_hint_mode" value="submit" />
+    <input type="hidden" name="locale" value="de-DE" />
     <label htmlFor="customer-login-email" className="mb-2 block font-body text-[11px] uppercase tracking-[0.14em] text-[#5B5B38]">E-Mail-Adresse</label>
     <div className="flex flex-col gap-3 sm:flex-row">
-      <input id="customer-login-email" type="email" autoComplete="email" required value={email} onChange={event => setEmail(event.target.value)} placeholder="deine@email.de" className="min-h-14 flex-1 border border-[#BEB8A9] bg-[#FBFAF6] px-4 font-body text-sm text-[#25251F] outline-none transition-colors placeholder:text-[#999386] focus:border-[#5B5B38]" />
+      <input id="customer-login-email" name="login_hint" type="email" autoComplete="email" required placeholder="deine@email.de" className="min-h-14 flex-1 border border-[#BEB8A9] bg-[#FBFAF6] px-4 font-body text-sm text-[#25251F] outline-none transition-colors placeholder:text-[#999386] focus:border-[#5B5B38]" />
       <button type="submit" className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
-        <LogIn size={16} /> Sicher anmelden
+        <LogIn size={16} /> Code-Seite öffnen
       </button>
     </div>
+    <p className="mt-3 font-body text-xs leading-relaxed text-[#77756D]">Die Shopify-Code-Seite öffnet sich in einem neuen Tab und kehrt nach erfolgreicher Anmeldung in dein Herbsom-Konto zurück.</p>
   </form>;
 }
 

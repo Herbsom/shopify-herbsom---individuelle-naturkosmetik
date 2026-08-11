@@ -567,6 +567,7 @@
 - [ ] Bewertungsaktionen ausschließlich für erworbene Produkte im Kundenportal bereitstellen
 - [ ] Abo-Abschluss und Abo-Verwaltung als vollständig funktionsfähigen Shopify-Subscriptions-Fluss integrieren
 - [ ] Fehlerhafte Rückkehr vom Shopify-Login in das Herbsom-Portal analysieren und korrigieren
+- [ ] Produktionsseitigen Shopify-Abbruch vor der Code-Seite mit realer Fehlerantwort erfassen und beheben
 - [ ] Rückkehrparameter der eingebetteten Shopify-Account-Komponente vollständig protokollieren und an den OAuth-Callback übergeben
 - [x] Tatsächlich ausgelöste Produktionsroute nach der E-Mail-Eingabe erfassen und den stillen Rücksprung auf `/account` durch eine direkte Herbsom-E-Mail-Maske beseitigen
 - [x] Eigene sichtbare Herbsom-Login-Brückenseite zwischen Account-Maske und OAuth-Start einführen
