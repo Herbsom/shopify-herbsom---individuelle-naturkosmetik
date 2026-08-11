@@ -34,19 +34,31 @@ function subscriptionOptions(product: Product) {
   );
 }
 
-function EmbeddedShopifyLogin({ loginUrl }: { loginUrl: string }) {
-  const publicAccessToken = import.meta.env.VITE_SHOPIFY_ACCOUNT_PUBLIC_STOREFRONT_TOKEN;
-  if (!publicAccessToken) {
-    return <a href={loginUrl} className="inline-flex items-center justify-center gap-2 bg-[#5B5B38] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]"><LogIn size={15} /> Mein Herbsom-Konto öffnen</a>;
+function HerbsomEmailLogin() {
+  const [email, setEmail] = useState("");
+
+  function submitLogin(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const normalizedEmail = email.trim();
+    if (!normalizedEmail) return;
+    const params = new URLSearchParams({
+      return_to: "/account",
+      login_hint: normalizedEmail,
+      login_hint_mode: "submit",
+      locale: "de-DE",
+    });
+    window.location.assign(`/konto/anmelden?${params.toString()}`);
   }
 
-  return <shopify-store store-domain="https://herbsom.myshopify.com" public-access-token={publicAccessToken}>
-    <shopify-account menu="customer-account-main-menu" sign-in-url="/konto/anmelden" className="herbsom-account-component block">
-      <button slot="signed-out-avatar" type="button" className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
-        <LogIn size={16} /> E-Mail sicher anmelden
+  return <form onSubmit={submitLogin} className="w-full max-w-xl" data-testid="customer-account-email-login">
+    <label htmlFor="customer-login-email" className="mb-2 block font-body text-[11px] uppercase tracking-[0.14em] text-[#5B5B38]">E-Mail-Adresse</label>
+    <div className="flex flex-col gap-3 sm:flex-row">
+      <input id="customer-login-email" type="email" autoComplete="email" required value={email} onChange={event => setEmail(event.target.value)} placeholder="deine@email.de" className="min-h-14 flex-1 border border-[#BEB8A9] bg-[#FBFAF6] px-4 font-body text-sm text-[#25251F] outline-none transition-colors placeholder:text-[#999386] focus:border-[#5B5B38]" />
+      <button type="submit" className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97]">
+        <LogIn size={16} /> Sicher anmelden
       </button>
-    </shopify-account>
-  </shopify-store>;
+    </div>
+  </form>;
 }
 
 export default function CustomerAccount() {
@@ -63,7 +75,6 @@ export default function CustomerAccount() {
   const [addingProductId, setAddingProductId] = useState<string | null>(null);
   const [selectedPlans, setSelectedPlans] = useState<Record<string, string>>({});
   const [showLoginSurface, setShowLoginSurface] = useState(false);
-  const customerAccountLoginUrl = "/api/shopify/customer-account/login";
   const loginError = typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("shopify-error");
 
   useEffect(() => {
@@ -162,15 +173,11 @@ export default function CustomerAccount() {
               <div className="px-7 py-12 md:px-14 md:py-16">
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
-                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich sicher mit deinem Shopify-Kundenkonto an. Die E-Mail-Eingabe öffnet sich direkt auf dieser Seite. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
+                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Melde dich direkt mit der E-Mail-Adresse deines Shopify-Kundenkontos an. Shopify sendet dir anschließend einen einmaligen Code. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
                 {loginError && <div role="alert" className="mt-6 max-w-xl border border-[#C78B71] bg-[#FFF8F3] p-4 font-body text-sm leading-relaxed text-[#754B3B]" data-testid="customer-account-login-error"><p className="font-medium">Die Shopify-Anmeldung wurde noch nicht abgeschlossen.</p><p className="mt-1">Bitte starte die Anmeldung erneut und schließe sie mit der E-Mail-Adresse deines Kundenkontos ab. Wenn der Hinweis anschließend erneut erscheint, wurde der technische Schritt sicher protokolliert und kann gezielt korrigiert werden.</p></div>}
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <div data-testid="customer-account-login-primary"><EmbeddedShopifyLogin loginUrl={customerAccountLoginUrl} /></div>
-                  <a href="#wiederkauf" className="inline-flex items-center justify-center gap-2 border border-[#8A8A69] px-6 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#4C5238] transition-colors hover:bg-[#F4F0E5] active:scale-[0.97]">
-                    Direkt nachbestellen <ArrowRight size={15} />
-                  </a>
-                </div>
-                <p className="mt-5 flex items-center gap-2 font-body text-xs text-[#838277]"><ShieldCheck size={14} className="text-[#5B5B38]" /> Die sichere E-Mail-Maske öffnet sich direkt in dieser Ansicht; Anmeldung und Zahlungsdaten bleiben bei Shopify.</p>
+                <div className="mt-9" data-testid="customer-account-login-primary"><HerbsomEmailLogin /></div>
+                <div className="mt-4"><a href="#wiederkauf" className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.13em] text-[#5B5B38] underline underline-offset-4">Ohne Anmeldung direkt nachbestellen <ArrowRight size={14} /></a></div>
+                <p className="mt-5 flex items-center gap-2 font-body text-xs text-[#838277]"><ShieldCheck size={14} className="text-[#5B5B38]" /> Herbsom speichert kein Passwort. E-Mail-Code, Anmeldung und Zahlungsdaten bleiben sicher bei Shopify.</p>
               </div>
               <aside className="relative overflow-hidden bg-[#5B5B38] px-7 py-10 text-[#F8F5F0] md:px-10 md:py-14">
                 <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full border border-[#CFC6A9]/25" />

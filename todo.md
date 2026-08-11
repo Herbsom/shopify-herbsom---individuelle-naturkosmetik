@@ -568,6 +568,7 @@
 - [ ] Abo-Abschluss und Abo-Verwaltung als vollständig funktionsfähigen Shopify-Subscriptions-Fluss integrieren
 - [ ] Fehlerhafte Rückkehr vom Shopify-Login in das Herbsom-Portal analysieren und korrigieren
 - [ ] Rückkehrparameter der eingebetteten Shopify-Account-Komponente vollständig protokollieren und an den OAuth-Callback übergeben
+- [x] Tatsächlich ausgelöste Produktionsroute nach der E-Mail-Eingabe erfassen und den stillen Rücksprung auf `/account` durch eine direkte Herbsom-E-Mail-Maske beseitigen
 - [x] Eigene sichtbare Herbsom-Login-Brückenseite zwischen Account-Maske und OAuth-Start einführen
 - [x] Neue Shopify Customer-Account-Client-ID, zugehöriges Secret und Callback-Adresse sicher hinterlegen und validieren
 - [x] Eigene Herbsom-Anmeldemaske als direkt sichtbaren Einstieg ohne Browser-Weiterleitung gestalten
