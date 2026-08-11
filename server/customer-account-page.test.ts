@@ -14,6 +14,9 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('name="locale" value="de-DE"');
     expect(source).toContain('data-testid="customer-account-login-fallback"');
     expect(source).toContain('Shopify-Anmeldung starten');
+    expect(source).toContain('data-testid="customer-account-external-login"');
+    expect(source).toContain('https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login?locale=de-DE');
+    expect(source).toContain('Adresse kopieren');
     expect(source).not.toContain('action="/konto/anmelden"');
     expect(source).not.toContain('name="login_hint"');
     expect(source).toContain("Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify im selben Browserfenster.");

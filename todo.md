@@ -565,7 +565,8 @@
 - [x] Eigenen Herbsom-Code-Login zugunsten der sicheren Shopify-E-Mail- und Code-Authentifizierung zurückbauen
 - [x] Individuelle Herbsom-Login-Oberfläche mit klarer Übergabe zur Shopify-Authentifizierung ausarbeiten
 - [ ] Shopify-Authentifizierung, Callback und Rückkehr in die persönliche Herbsom-Ansicht erneut verlässlich validieren
-- [ ] Browserunabhängigen sichtbaren Shopify-Login-Einstieg mit kopierbarer Adresse und eindeutiger Statusanzeige bereitstellen
+- [x] Browserunabhängigen sichtbaren Shopify-Login-Einstieg mit kopierbarer Adresse und eindeutiger Statusanzeige bereitstellen
+- [x] Externen Browser-Einstieg für die Shopify-Anmeldung außerhalb der eingebetteten Vorschau eindeutig bereitstellen
 - [x] Login-Link durch nativen Same-Window-Formular-Submit mit sichtbarer Fallback-Adresse ersetzen
 - [x] Sichtbaren Herbsom-Loginbutton ohne neuen Tab im selben Browserfenster zu Shopify führen
 - [ ] Zulässigkeit und technische Machbarkeit eines eigenen Herbsom-E-Mail-Code-Logins mit Shopify-Kundendaten abschließend prüfen

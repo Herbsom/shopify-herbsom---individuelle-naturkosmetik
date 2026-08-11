@@ -4,7 +4,7 @@ import ReviewForm from "@/components/ReviewForm";
 import { useCart, type LegacyCartItem } from "@/contexts/CartContext";
 import { trpc } from "@/lib/trpc";
 import type { Product, SellingPlanAllocation } from "@shared/commerce/types";
-import { ArrowRight, CalendarClock, CheckCircle2, ExternalLink, Heart, LogIn, Package, RefreshCw, ShieldCheck, ShoppingBag, Sparkles, Star } from "lucide-react";
+import { ArrowRight, CalendarClock, CheckCircle2, Copy, ExternalLink, Heart, LogIn, Package, RefreshCw, ShieldCheck, ShoppingBag, Sparkles, Star } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -35,6 +35,17 @@ function subscriptionOptions(product: Product) {
 }
 
 function HerbsomEmailLogin() {
+  const externalLoginUrl = "https://herbsomshop-az5ntglf.manus.space/api/shopify/customer-account/login?locale=de-DE";
+
+  async function copyExternalLoginUrl() {
+    try {
+      await navigator.clipboard.writeText(externalLoginUrl);
+      toast.success("Die externe Login-Adresse wurde kopiert.");
+    } catch {
+      toast.error("Bitte markiere und kopiere die angezeigte Adresse manuell.");
+    }
+  }
+
   return <div className="w-full max-w-xl" data-testid="customer-account-email-login">
     <p className="mb-2 font-body text-[11px] uppercase tracking-[0.14em] text-[#5B5B38]">Sicherer Kontozugang</p>
     <form action="/api/shopify/customer-account/login" method="get" className="inline-block" data-testid="customer-account-login-submit">
@@ -46,6 +57,15 @@ function HerbsomEmailLogin() {
     <div className="mt-4 border-l-2 border-[#CFC6A9] pl-4 font-body text-xs leading-relaxed text-[#77756D]" data-testid="customer-account-login-fallback">
       <p>E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft. Die sichere Anmeldung öffnet sich im selben Browserfenster; nach der Bestätigung kehrst du in dein persönliches Herbsom-Konto zurück.</p>
       <p className="mt-2">Falls dein Browser den Button blockiert, öffne diese Adresse direkt: <a href="/api/shopify/customer-account/login?locale=de-DE" className="font-medium text-[#4D5734] underline underline-offset-4">Shopify-Anmeldung starten</a></p>
+    </div>
+    <div className="mt-5 border border-[#DDD5C3] bg-[#F8F5F0] p-4" data-testid="customer-account-external-login">
+      <p className="font-body text-[11px] uppercase tracking-[0.13em] text-[#5B5B38]">Login außerhalb der Vorschau</p>
+      <p className="mt-2 font-body text-xs leading-relaxed text-[#716E64]">Wenn diese Seite in einer eingebetteten Vorschau geöffnet ist, kopiere die Adresse und öffne sie direkt in Safari, Chrome oder Firefox.</p>
+      <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+        <input aria-label="Externe Shopify-Login-Adresse" readOnly value={externalLoginUrl} className="min-w-0 flex-1 border border-[#CFC7B5] bg-white px-3 py-2 font-mono text-[10px] text-[#55554D] outline-none" />
+        <button type="button" onClick={copyExternalLoginUrl} className="inline-flex items-center justify-center gap-2 border border-[#5B5B38] px-4 py-2 font-body text-[11px] uppercase tracking-[0.11em] text-[#4D5734] hover:bg-[#EDE9D9]"><Copy size={13} /> Adresse kopieren</button>
+      </div>
+      <a href={externalLoginUrl} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 font-body text-[11px] uppercase tracking-[0.11em] text-[#4D5734] underline underline-offset-4">Im externen Browser öffnen <ExternalLink size={13} /></a>
     </div>
   </div>;
 }
