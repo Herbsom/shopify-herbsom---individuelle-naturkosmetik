@@ -10,16 +10,17 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).toContain("HerbsomEmailLogin");
     expect(source).toContain('data-testid="customer-account-email-login"');
-    expect(source).toContain('href="/api/shopify/customer-account/login?locale=de-DE" target="_blank" rel="noopener noreferrer"');
+    expect(source).toContain('href="/api/shopify/customer-account/login?locale=de-DE" className=');
+    expect(source).not.toContain('target="_blank" rel="noopener noreferrer"');
     expect(source).not.toContain('action="/konto/anmelden"');
     expect(source).not.toContain('name="login_hint"');
-    expect(source).toContain("Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify in einem separaten Tab.");
+    expect(source).toContain("Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify im selben Browserfenster.");
     expect(source).toContain("Herbsom speichert kein Passwort, keine E-Mail-Codes und keine Zahlungsdaten.");
     expect(source).toContain('data-testid="customer-account-login-error"');
     expect(source).toContain('get("shopify-error")');
     expect(source).not.toContain("shopify-account");
     expect(source).toContain("Mit Shopify sicher anmelden");
-    expect(source).toContain("E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft.");
+    expect(source).toContain("Die sichere Anmeldung öffnet sich im selben Browserfenster;");
     expect(source).toContain("showLoginSurface");
   });
 

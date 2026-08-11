@@ -37,10 +37,10 @@ function subscriptionOptions(product: Product) {
 function HerbsomEmailLogin() {
   return <div className="w-full max-w-xl" data-testid="customer-account-email-login">
     <p className="mb-2 font-body text-[11px] uppercase tracking-[0.14em] text-[#5B5B38]">Sicherer Kontozugang</p>
-    <a href="/api/shopify/customer-account/login?locale=de-DE" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 w-full items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97] sm:w-auto">
+    <a href="/api/shopify/customer-account/login?locale=de-DE" className="inline-flex min-h-14 w-full items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97] sm:w-auto">
       <LogIn size={16} /> Mit Shopify sicher anmelden
     </a>
-    <p className="mt-3 font-body text-xs leading-relaxed text-[#77756D]">E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft. Nach der Bestätigung kehrst du in dein persönliches Herbsom-Konto zurück.</p>
+    <p className="mt-3 font-body text-xs leading-relaxed text-[#77756D]">E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft. Die sichere Anmeldung öffnet sich im selben Browserfenster; nach der Bestätigung kehrst du in dein persönliches Herbsom-Konto zurück.</p>
   </div>;
 }
 
@@ -156,7 +156,7 @@ export default function CustomerAccount() {
               <div className="px-7 py-12 md:px-14 md:py-16">
                 <p className="section-label mb-5">Mein Herbsom</p>
                 <h1 className="max-w-2xl font-display text-4xl font-light leading-[0.98] md:text-6xl">Deine Routine.<br /><em>Ganz bei dir.</em></h1>
-                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Dein Herbsom-Konto ist individuell für dich gestaltet. Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify in einem separaten Tab. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
+                <p className="mt-7 max-w-xl font-body text-sm leading-relaxed text-[#67675F] md:text-base">Dein Herbsom-Konto ist individuell für dich gestaltet. Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify im selben Browserfenster. Danach siehst du deine vergangenen Bestellungen, kannst passende Produkte erneut kaufen und nur tatsächlich gekaufte Produkte bewerten.</p>
                 {loginError && <div role="alert" className="mt-6 max-w-xl border border-[#C78B71] bg-[#FFF8F3] p-4 font-body text-sm leading-relaxed text-[#754B3B]" data-testid="customer-account-login-error"><p className="font-medium">Die Shopify-Anmeldung wurde noch nicht abgeschlossen.</p><p className="mt-1">Bitte starte die Anmeldung erneut und schließe sie mit der E-Mail-Adresse deines Kundenkontos ab. Wenn der Hinweis anschließend erneut erscheint, wurde der technische Schritt sicher protokolliert und kann gezielt korrigiert werden.</p></div>}
                 <div className="mt-9" data-testid="customer-account-login-primary"><HerbsomEmailLogin /></div>
                 <div className="mt-4"><a href="#wiederkauf" className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.13em] text-[#5B5B38] underline underline-offset-4">Ohne Anmeldung direkt nachbestellen <ArrowRight size={14} /></a></div>
