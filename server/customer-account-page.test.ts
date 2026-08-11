@@ -10,8 +10,10 @@ describe("CustomerAccount-Anmeldestart", () => {
     expect(source).toContain('data-testid="customer-account-login-primary"');
     expect(source).toContain("HerbsomEmailLogin");
     expect(source).toContain('data-testid="customer-account-email-login"');
-    expect(source).toContain('href="/api/shopify/customer-account/login?locale=de-DE" className=');
-    expect(source).not.toContain('target="_blank" rel="noopener noreferrer"');
+    expect(source).toContain('action="/api/shopify/customer-account/login" method="get"');
+    expect(source).toContain('name="locale" value="de-DE"');
+    expect(source).toContain('data-testid="customer-account-login-fallback"');
+    expect(source).toContain('Shopify-Anmeldung starten');
     expect(source).not.toContain('action="/konto/anmelden"');
     expect(source).not.toContain('name="login_hint"');
     expect(source).toContain("Für die sichere E-Mail- und Code-Prüfung öffnet sich Shopify im selben Browserfenster.");

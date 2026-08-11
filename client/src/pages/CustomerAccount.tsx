@@ -37,10 +37,16 @@ function subscriptionOptions(product: Product) {
 function HerbsomEmailLogin() {
   return <div className="w-full max-w-xl" data-testid="customer-account-email-login">
     <p className="mb-2 font-body text-[11px] uppercase tracking-[0.14em] text-[#5B5B38]">Sicherer Kontozugang</p>
-    <a href="/api/shopify/customer-account/login?locale=de-DE" className="inline-flex min-h-14 w-full items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97] sm:w-auto">
-      <LogIn size={16} /> Mit Shopify sicher anmelden
-    </a>
-    <p className="mt-3 font-body text-xs leading-relaxed text-[#77756D]">E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft. Die sichere Anmeldung öffnet sich im selben Browserfenster; nach der Bestätigung kehrst du in dein persönliches Herbsom-Konto zurück.</p>
+    <form action="/api/shopify/customer-account/login" method="get" className="inline-block" data-testid="customer-account-login-submit">
+      <input type="hidden" name="locale" value="de-DE" />
+      <button type="submit" className="inline-flex min-h-14 w-full items-center justify-center gap-2 bg-[#5B5B38] px-7 py-4 font-body text-xs uppercase tracking-[0.14em] text-[#F8F5F0] transition-colors hover:bg-[#424226] active:scale-[0.97] sm:w-auto">
+        <LogIn size={16} /> Mit Shopify sicher anmelden
+      </button>
+    </form>
+    <div className="mt-4 border-l-2 border-[#CFC6A9] pl-4 font-body text-xs leading-relaxed text-[#77756D]" data-testid="customer-account-login-fallback">
+      <p>E-Mail-Adresse und Einmalcode werden ausschließlich von Shopify geprüft. Die sichere Anmeldung öffnet sich im selben Browserfenster; nach der Bestätigung kehrst du in dein persönliches Herbsom-Konto zurück.</p>
+      <p className="mt-2">Falls dein Browser den Button blockiert, öffne diese Adresse direkt: <a href="/api/shopify/customer-account/login?locale=de-DE" className="font-medium text-[#4D5734] underline underline-offset-4">Shopify-Anmeldung starten</a></p>
+    </div>
   </div>;
 }
 
