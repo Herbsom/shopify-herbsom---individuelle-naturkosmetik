@@ -562,6 +562,14 @@
 ## Herbsom-Kundenportal mit Wiederkauf und Produkt-Abos
 
 - [ ] Einheitlichen markenkonformen Kundenportalfluss für Login, Wiederbestellung, Bewertungen und Abos festlegen
+- [x] Eigenen Herbsom-Code-Login zugunsten der sicheren Shopify-E-Mail- und Code-Authentifizierung zurückbauen
+- [x] Individuelle Herbsom-Login-Oberfläche mit klarer Übergabe zur Shopify-Authentifizierung ausarbeiten
+- [ ] Shopify-Authentifizierung, Callback und Rückkehr in die persönliche Herbsom-Ansicht erneut verlässlich validieren
+- [ ] Zulässigkeit und technische Machbarkeit eines eigenen Herbsom-E-Mail-Code-Logins mit Shopify-Kundendaten abschließend prüfen
+- [ ] Shopify-Admin-App-Zugriff für Kundensuche und Bestellhistorie mit minimalen Scopes bereitstellen
+- [ ] Transaktionalen E-Mail-Dienst für kurzlebige Herbsom-Login-Codes sicher konfigurieren
+- [ ] Eigenen Herbsom-E-Mail-Code-Login mit sicheren, kurzlebigen Codes und serverseitiger Sitzung implementieren
+- [ ] Verifizierte Herbsom-E-Mail serverseitig einem Shopify-Kunden und dessen Bestellungen zuordnen
 - [ ] Nach Shopify-Login verlässliche Kundenidentifikation und Bestellhistorie für den eigenen Portalbereich herstellen
 - [ ] Wiederbestellaktion aus echten vergangenen Bestellungen in den Herbsom-Warenkorb anbinden
 - [ ] Bewertungsaktionen ausschließlich für erworbene Produkte im Kundenportal bereitstellen
